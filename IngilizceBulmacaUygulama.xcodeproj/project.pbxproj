@@ -14,6 +14,8 @@
 		D7EE3C052A1BADAC000EC0F9 /* IngilizceBulmacaUygulama.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7EE3C032A1BADAC000EC0F9 /* IngilizceBulmacaUygulama.xcdatamodeld */; };
 		D7EE3C072A1BADAD000EC0F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7EE3C062A1BADAD000EC0F9 /* Assets.xcassets */; };
 		D7EE3C0A2A1BADAD000EC0F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7EE3C082A1BADAD000EC0F9 /* LaunchScreen.storyboard */; };
+		D7EE3C122A1BAEC6000EC0F9 /* BezierCrossWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EE3C112A1BAEC6000EC0F9 /* BezierCrossWordView.swift */; };
+		D7EE3C142A1BB03B000EC0F9 /* SingletonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EE3C132A1BB03B000EC0F9 /* SingletonClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		D7EE3C062A1BADAD000EC0F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7EE3C092A1BADAD000EC0F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7EE3C0B2A1BADAD000EC0F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7EE3C112A1BAEC6000EC0F9 /* BezierCrossWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierCrossWordView.swift; sourceTree = "<group>"; };
+		D7EE3C132A1BB03B000EC0F9 /* SingletonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 				D7EE3C062A1BADAD000EC0F9 /* Assets.xcassets */,
 				D7EE3C082A1BADAD000EC0F9 /* LaunchScreen.storyboard */,
 				D7EE3C0B2A1BADAD000EC0F9 /* Info.plist */,
+				D7EE3C112A1BAEC6000EC0F9 /* BezierCrossWordView.swift */,
+				D7EE3C132A1BB03B000EC0F9 /* SingletonClass.swift */,
 				D7EE3C032A1BADAC000EC0F9 /* IngilizceBulmacaUygulama.xcdatamodeld */,
 			);
 			path = IngilizceBulmacaUygulama;
@@ -141,9 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7EE3C142A1BB03B000EC0F9 /* SingletonClass.swift in Sources */,
 				D7EE3BFF2A1BADAC000EC0F9 /* ViewController.swift in Sources */,
 				D7EE3C052A1BADAC000EC0F9 /* IngilizceBulmacaUygulama.xcdatamodeld in Sources */,
 				D7EE3BFB2A1BADAC000EC0F9 /* AppDelegate.swift in Sources */,
+				D7EE3C122A1BAEC6000EC0F9 /* BezierCrossWordView.swift in Sources */,
 				D7EE3BFD2A1BADAC000EC0F9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,11 +302,12 @@
 				DEVELOPMENT_TEAM = 49CUMHZT5K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IngilizceBulmacaUygulama/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "İngilizce Bulmaca";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,11 +331,12 @@
 				DEVELOPMENT_TEAM = 49CUMHZT5K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IngilizceBulmacaUygulama/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "İngilizce Bulmaca";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

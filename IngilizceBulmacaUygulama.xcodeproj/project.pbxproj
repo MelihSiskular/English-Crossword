@@ -19,6 +19,9 @@
 		D7EE3C0A2A1BADAD000EC0F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7EE3C082A1BADAD000EC0F9 /* LaunchScreen.storyboard */; };
 		D7EE3C122A1BAEC6000EC0F9 /* BezierCrossWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EE3C112A1BAEC6000EC0F9 /* BezierCrossWordView.swift */; };
 		D7EE3C142A1BB03B000EC0F9 /* SingletonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EE3C132A1BB03B000EC0F9 /* SingletonClass.swift */; };
+		D7F518852A1E8267006A36B5 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F518842A1E8267006A36B5 /* CollectionViewCell.swift */; };
+		D7F518872A1E8397006A36B5 /* CrossWordFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F518862A1E8397006A36B5 /* CrossWordFile.swift */; };
+		D7F518892A1E9A40006A36B5 /* CrossWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F518882A1E9A40006A36B5 /* CrossWordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		D7EE3C0B2A1BADAD000EC0F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7EE3C112A1BAEC6000EC0F9 /* BezierCrossWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierCrossWordView.swift; sourceTree = "<group>"; };
 		D7EE3C132A1BB03B000EC0F9 /* SingletonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonClass.swift; sourceTree = "<group>"; };
+		D7F518842A1E8267006A36B5 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		D7F518862A1E8397006A36B5 /* CrossWordFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossWordFile.swift; sourceTree = "<group>"; };
+		D7F518882A1E9A40006A36B5 /* CrossWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossWordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 				D799C2492A1D1A610060F3A9 /* MyProfileViewController.swift */,
 				D799C24B2A1D5D490060F3A9 /* CollectionViewController.swift */,
 				D799C24D2A1D5D610060F3A9 /* StatisticViewController.swift */,
+				D7F518882A1E9A40006A36B5 /* CrossWordViewController.swift */,
 				D7EE3C002A1BADAC000EC0F9 /* Main.storyboard */,
 				D7EE3C062A1BADAD000EC0F9 /* Assets.xcassets */,
 				D7EE3C082A1BADAD000EC0F9 /* LaunchScreen.storyboard */,
@@ -81,6 +88,8 @@
 				D7EE3C112A1BAEC6000EC0F9 /* BezierCrossWordView.swift */,
 				D7EE3C132A1BB03B000EC0F9 /* SingletonClass.swift */,
 				D7EE3C032A1BADAC000EC0F9 /* IngilizceBulmacaUygulama.xcdatamodeld */,
+				D7F518842A1E8267006A36B5 /* CollectionViewCell.swift */,
+				D7F518862A1E8397006A36B5 /* CrossWordFile.swift */,
 			);
 			path = IngilizceBulmacaUygulama;
 			sourceTree = "<group>";
@@ -156,13 +165,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7F518852A1E8267006A36B5 /* CollectionViewCell.swift in Sources */,
 				D7EE3C142A1BB03B000EC0F9 /* SingletonClass.swift in Sources */,
 				D7EE3BFF2A1BADAC000EC0F9 /* ViewController.swift in Sources */,
+				D7F518872A1E8397006A36B5 /* CrossWordFile.swift in Sources */,
 				D799C24A2A1D1A610060F3A9 /* MyProfileViewController.swift in Sources */,
 				D7EE3C052A1BADAC000EC0F9 /* IngilizceBulmacaUygulama.xcdatamodeld in Sources */,
 				D799C24C2A1D5D490060F3A9 /* CollectionViewController.swift in Sources */,
 				D7EE3BFB2A1BADAC000EC0F9 /* AppDelegate.swift in Sources */,
 				D799C24E2A1D5D610060F3A9 /* StatisticViewController.swift in Sources */,
+				D7F518892A1E9A40006A36B5 /* CrossWordViewController.swift in Sources */,
 				D7EE3C122A1BAEC6000EC0F9 /* BezierCrossWordView.swift in Sources */,
 				D7EE3BFD2A1BADAC000EC0F9 /* SceneDelegate.swift in Sources */,
 			);

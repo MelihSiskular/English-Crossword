@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -61,14 +62,99 @@
                     <view key="view" contentMode="scaleToFill" id="wVJ-ak-QOA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hne-La-UjG">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Geg-b1-ogh">
+                                    <size key="itemSize" width="190" height="277"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="XBr-yc-kHW" customClass="CollectionViewCell" customModule="IngilizceBulmacaUygulama" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="190" height="277"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jR1-Gu-SDo">
+                                            <rect key="frame" x="0.0" y="0.0" width="190" height="277"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aHA-ub-TU6">
+                                                    <rect key="frame" x="18.666666666666671" y="8" width="152.66666666666663" height="153"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="153" id="MtE-XU-tco"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Konu Adi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxe-WL-kXv">
+                                                    <rect key="frame" x="8" y="169" width="174" height="24.333333333333343"/>
+                                                    <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jU-kn-IXa">
+                                                    <rect key="frame" x="8" y="195.33333333333334" width="174" height="18"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Italic" family="Optima" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7jU-kn-IXa" firstAttribute="centerX" secondItem="aHA-ub-TU6" secondAttribute="centerX" id="0fJ-NJ-jAi"/>
+                                                <constraint firstItem="7jU-kn-IXa" firstAttribute="leading" secondItem="zxe-WL-kXv" secondAttribute="leading" id="12G-DR-hq3"/>
+                                                <constraint firstItem="zxe-WL-kXv" firstAttribute="top" secondItem="aHA-ub-TU6" secondAttribute="bottom" constant="8" id="EV3-9X-KPC"/>
+                                                <constraint firstItem="aHA-ub-TU6" firstAttribute="centerX" secondItem="jR1-Gu-SDo" secondAttribute="centerX" id="JpR-vk-EDB"/>
+                                                <constraint firstItem="7jU-kn-IXa" firstAttribute="top" secondItem="zxe-WL-kXv" secondAttribute="bottom" constant="2" id="Tc9-zs-vwz"/>
+                                                <constraint firstItem="zxe-WL-kXv" firstAttribute="leading" secondItem="jR1-Gu-SDo" secondAttribute="leadingMargin" id="UQ8-mx-f29"/>
+                                                <constraint firstItem="7jU-kn-IXa" firstAttribute="trailing" secondItem="zxe-WL-kXv" secondAttribute="trailing" id="dNy-1D-Fvl"/>
+                                                <constraint firstItem="aHA-ub-TU6" firstAttribute="leading" secondItem="jR1-Gu-SDo" secondAttribute="leading" constant="18.666666666666679" id="nUk-d0-2wF"/>
+                                                <constraint firstItem="aHA-ub-TU6" firstAttribute="top" secondItem="jR1-Gu-SDo" secondAttribute="topMargin" id="yTb-4h-DSm"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="190" height="277"/>
+                                        <connections>
+                                            <outlet property="TitleLabel" destination="zxe-WL-kXv" id="VG2-tl-TBD"/>
+                                            <outlet property="imageView" destination="aHA-ub-TU6" id="azr-wY-hxc"/>
+                                            <outlet property="scoreLabel" destination="7jU-kn-IXa" id="qeq-fM-QdB"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="faX-fa-UWu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hne-La-UjG" firstAttribute="bottom" secondItem="faX-fa-UWu" secondAttribute="bottom" id="4Ac-87-Zhn"/>
+                            <constraint firstItem="hne-La-UjG" firstAttribute="top" secondItem="faX-fa-UWu" secondAttribute="top" id="Ax5-Mx-oXS"/>
+                            <constraint firstItem="hne-La-UjG" firstAttribute="trailing" secondItem="faX-fa-UWu" secondAttribute="trailing" id="NQf-XJ-zF8"/>
+                            <constraint firstItem="hne-La-UjG" firstAttribute="leading" secondItem="faX-fa-UWu" secondAttribute="leading" id="azj-Ov-k7g"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YOf-yk-GvG"/>
+                    <connections>
+                        <outlet property="collectionView" destination="hne-La-UjG" id="I0b-bm-Kxq"/>
+                        <segue destination="fkY-CX-3CC" kind="show" identifier="toSegueCrossword" id="8TS-eF-MYT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4T-MK-SUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1168.7022900763359" y="795.77464788732402"/>
+        </scene>
+        <!--Cross Word View Controller-->
+        <scene sceneID="LMX-Xh-2Qh">
+            <objects>
+                <viewController id="fkY-CX-3CC" customClass="CrossWordViewController" customModule="IngilizceBulmacaUygulama" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jmj-9O-ewk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qYn-hk-5pd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mTD-LJ-1aq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezf-ZR-mDE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1169" y="1517"/>
         </scene>
         <!--My Profile View Controller-->
         <scene sceneID="eM2-Q0-KtM">

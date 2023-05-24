@@ -12,6 +12,8 @@ class BezierCrossWordView: UIView {
     
     let instance = SingletonView.shared
     
+    static var whichCrossword = -1
+    
    
 
     
@@ -1000,24 +1002,49 @@ class BezierCrossWordView: UIView {
     
     override func draw(_ rect: CGRect) {
         let width = instance.width
-        
-        
-        BezierCrossWordView.square8(isVertical: true, x: width * 0.29, y: width * 0.43)
-        BezierCrossWordView.square8(isVertical: false, x: width * 0.15, y: width * 0.57)
-        BezierCrossWordView.square2(isVertical: false, x: width * 0.29, y: width * 0.71)
-        BezierCrossWordView.square8(isVertical: false, x: width * 0.22, y: width * 0.85)
-        BezierCrossWordView.square8(isVertical: true, x: width * 0.57, y: width * 0.57)
-        BezierCrossWordView.square2(isVertical: false, x: width * 0.57, y: width * 0.99)
-        BezierCrossWordView.square2(isVertical: false, x: width * 0.5, y: width * 1.13)
-        BezierCrossWordView.square2(isVertical: false, x: width * 0.57, y: width * 1.20)
-        BezierCrossWordView.square2(isVertical: true, x: width * 0.57, y: width * 1.13)
-        BezierCrossWordView.square5(isVertical: false, x: width * 0.57, y: width * 0.71)
-        BezierCrossWordView.square7(isVertical: false, x: width * 0.08, y: width * 0.99)
-        BezierCrossWordView.square3(isVertical: true, x: width * 0.15, y: width * 0.99)
+        //Bu şekilde hangi indexte hangi görüntü olacağo BELLİ OLUR
+        if BezierCrossWordView.whichCrossword == -1 {
+            BezierCrossWordView.square8(isVertical: true, x: width * 0.29, y: width * 0.43)
+            BezierCrossWordView.square8(isVertical: false, x: width * 0.15, y: width * 0.57)
+            BezierCrossWordView.square2(isVertical: false, x: width * 0.29, y: width * 0.71)
+            BezierCrossWordView.square8(isVertical: false, x: width * 0.22, y: width * 0.85)
+            BezierCrossWordView.square8(isVertical: true, x: width * 0.57, y: width * 0.57)
+            BezierCrossWordView.square2(isVertical: false, x: width * 0.57, y: width * 0.99)
+            BezierCrossWordView.square2(isVertical: false, x: width * 0.5, y: width * 1.13)
+            BezierCrossWordView.square2(isVertical: false, x: width * 0.57, y: width * 1.20)
+            BezierCrossWordView.square2(isVertical: true, x: width * 0.57, y: width * 1.13)
+            BezierCrossWordView.square5(isVertical: false, x: width * 0.57, y: width * 0.71)
+            BezierCrossWordView.square7(isVertical: false, x: width * 0.08, y: width * 0.99)
+            BezierCrossWordView.square3(isVertical: true, x: width * 0.15, y: width * 0.99)
+        }else if BezierCrossWordView.whichCrossword == 0 { // 0. index == BULMACA1
+            BezierCrossWordView.square5(isVertical: false, x: width * 0.57, y: width * 0.71)
+            BezierCrossWordView.square7(isVertical: false, x: width * 0.08, y: width * 0.99)
+            BezierCrossWordView.square3(isVertical: true, x: width * 0.15, y: width * 0.99)
+        }else if BezierCrossWordView.whichCrossword == 1 {// 1. index == BULMACA2
+            BezierCrossWordView.square8(isVertical: true, x: width * 0.57, y: width * 0.57)
+            BezierCrossWordView.square2(isVertical: false, x: width * 0.57, y: width * 0.99)
+            BezierCrossWordView.square2(isVertical: false, x: width * 0.5, y: width * 1.13)
+            
+        }else if BezierCrossWordView.whichCrossword == 2 {
+            
+        }else if BezierCrossWordView.whichCrossword == 3 {
+            
+        }else if BezierCrossWordView.whichCrossword == 4 {
+            
+        }else if BezierCrossWordView.whichCrossword == 5 {
+            
+        }else if BezierCrossWordView.whichCrossword == 6 {
+            
+        }else if BezierCrossWordView.whichCrossword == 7 {
+            
+        }
+     
         
         
         
     }
+    
+    
 
 
 }

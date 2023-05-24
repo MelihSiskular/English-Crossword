@@ -12,6 +12,11 @@ class StatisticViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.topItem?.backButtonTitle = "Ana Sayfa"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationItem.largeTitleDisplayMode = .always
+        navigationItem.title = "İstatisklerin"
+        
+        
         
         view.backgroundColor = .systemGray5
         // Do any additional setup after loading the view.

@@ -145,6 +145,13 @@ class ViewController: UIViewController {
     
     //MARK: - Functions
     
+    ///Her ekran açılımında whichCorssword değeri -1 ile ana ekran görüntümüz gözükür
+    ///Diğer değerli indexi kullanarak prepare segue da atacağız
+    override func viewWillAppear(_ animated: Bool) {
+        BezierCrossWordView.whichCrossword = -1
+    }
+    
+    
     ///Functions for view
     func beginnerView() {
         

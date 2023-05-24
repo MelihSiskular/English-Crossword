@@ -66,6 +66,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         let myColor = UIColor(red: 11/255, green: 153/255, blue: 215/255, alpha: 1)
         
         let width = view.frame.size.width
@@ -75,8 +77,15 @@ class ViewController: UIViewController {
         instanceShared.height = height
         
         let bezierView = BezierCrossWordView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+      
         bezierView.backgroundColor = .systemGray5
+        
         self.view.addSubview(bezierView)
+     
+       
+        
+        
+        
         
         nameOfApp.frame = CGRect(x: width * 0.4 - (width * 0.8)/2, y: height * 0.1, width: width * 0.8, height: height * 0.1)
         nameOfApp.text = "İngilizce\n                      BULMACA"
@@ -329,17 +338,17 @@ class ViewController: UIViewController {
     
     @objc
     func toCollectionView() {
-    
+        performSegue(withIdentifier: "segueToCollectionView", sender: nil)
     }
     
     @objc
     func toStatistic() {
-       
+       performSegue(withIdentifier: "segueToStatistic", sender: nil)
     }
     
     @objc
     func toMyProfile() {
-        
+        performSegue(withIdentifier: "segueToMyProfile", sender: nil)
     }
     
 

@@ -16,15 +16,6 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlz-0t-jfB">
-                                <rect key="frame" x="43" y="227" width="328" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -164,7 +155,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JR5-D3-5iG">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JR5-D3-5iG">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -172,10 +163,14 @@
                         <viewLayoutGuide key="safeArea" id="bVI-pg-ma4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bVI-pg-ma4" firstAttribute="bottom" secondItem="JR5-D3-5iG" secondAttribute="bottom" id="2WZ-ty-Jtv"/>
-                            <constraint firstItem="JR5-D3-5iG" firstAttribute="leading" secondItem="bVI-pg-ma4" secondAttribute="leading" id="CKg-rN-7wq"/>
-                            <constraint firstItem="JR5-D3-5iG" firstAttribute="top" secondItem="bVI-pg-ma4" secondAttribute="top" id="fYu-Fw-gW3"/>
-                            <constraint firstItem="bVI-pg-ma4" firstAttribute="trailing" secondItem="JR5-D3-5iG" secondAttribute="trailing" id="pY0-U6-f5i"/>
+                            <constraint firstItem="JR5-D3-5iG" firstAttribute="top" secondItem="sR9-ZS-UEv" secondAttribute="top" id="CHF-SW-aIp"/>
+                            <constraint firstItem="JR5-D3-5iG" firstAttribute="trailing" secondItem="bVI-pg-ma4" secondAttribute="trailing" id="D7X-gH-B0w"/>
+                            <constraint firstItem="JR5-D3-5iG" firstAttribute="centerX" secondItem="sR9-ZS-UEv" secondAttribute="centerX" id="YhS-Gq-beg"/>
+                            <constraint firstItem="JR5-D3-5iG" firstAttribute="top" secondItem="sR9-ZS-UEv" secondAttribute="top" id="cTp-aO-UtN"/>
+                            <constraint firstItem="JR5-D3-5iG" firstAttribute="bottom" secondItem="bVI-pg-ma4" secondAttribute="bottom" id="e7a-QC-ON2"/>
+                            <constraint firstItem="JR5-D3-5iG" firstAttribute="leading" secondItem="bVI-pg-ma4" secondAttribute="leading" id="kzP-7F-9hW"/>
+                            <constraint firstItem="JR5-D3-5iG" firstAttribute="leading" secondItem="bVI-pg-ma4" secondAttribute="leading" id="lKk-hh-1EZ"/>
+                            <constraint firstItem="JR5-D3-5iG" firstAttribute="bottom" secondItem="bVI-pg-ma4" secondAttribute="bottom" id="ybG-36-2zw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KKn-jM-BLh"/>

@@ -20,7 +20,7 @@ class CollectionViewCell: UICollectionViewCell {
         imageView.image = Crossword.image
         TitleLabel.text = Crossword.title
         scoreLabel.text =
-        "Skor: \(Crossword.score)/\(Crossword.TurkishWordS)"
+        "Skor: \(Crossword.score)/\(Crossword.TurkishWordsArray.count)"
     }
     
 }

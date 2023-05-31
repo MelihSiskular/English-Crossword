@@ -50,6 +50,7 @@ class MyProfileViewController: UIViewController {
         myImageView.image = UIImage(named: "myPhoto")
         myImageView.layer.borderWidth = 4
         myImageView.layer.borderColor = myColor.cgColor
+       
         
         labelOfMyLife.numberOfLines = 0
         labelOfMyLife.text = """

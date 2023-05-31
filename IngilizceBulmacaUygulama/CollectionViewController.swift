@@ -22,15 +22,19 @@ class CollectionViewController: UIViewController {
         collectionView.delegate = self
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
         
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationItem.largeTitleDisplayMode = .always
-        navigationItem.title = "Bulmacalar"
+    
         
         collectionView.backgroundColor = .systemGray5
         
         view.backgroundColor = .systemGray5
         // Do any additional setup after loading the view.
    
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationItem.largeTitleDisplayMode = .always
+        navigationItem.title = "Bulmacalar"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

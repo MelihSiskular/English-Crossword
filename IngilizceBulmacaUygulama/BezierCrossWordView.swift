@@ -19,7 +19,7 @@ class BezierCrossWordView: UIView {
     
     static func square2(isVertical: Bool,x:CGFloat,y:CGFloat) {
         let width = SingletonView.shared.width
-        let height = SingletonView.shared.height
+        
         
         let myColor = UIColor(red: 88/255, green: 159/255, blue: 1.0, alpha: 1)
         
@@ -69,7 +69,7 @@ class BezierCrossWordView: UIView {
     static func square3(isVertical: Bool,x:CGFloat,y:CGFloat) {
         
         let width = SingletonView.shared.width
-        let height = SingletonView.shared.height
+       
         
         let myColor = UIColor(red: 88/255, green: 159/255, blue: 1.0, alpha: 1)
         
@@ -133,7 +133,7 @@ class BezierCrossWordView: UIView {
     static func square4(isVertical: Bool,x:CGFloat,y:CGFloat) {
         
         let width = SingletonView.shared.width
-        let height = SingletonView.shared.height
+       
         
         let myColor = UIColor(red: 88/255, green: 159/255, blue: 1.0, alpha: 1)
         
@@ -212,7 +212,7 @@ class BezierCrossWordView: UIView {
     static func square5(isVertical: Bool,x:CGFloat,y:CGFloat) {
         
         let width = SingletonView.shared.width
-        let height = SingletonView.shared.height
+       
         
         let myColor = UIColor(red: 88/255, green: 159/255, blue: 1.0, alpha: 1)
         
@@ -306,7 +306,7 @@ class BezierCrossWordView: UIView {
     static func square6(isVertical: Bool,x:CGFloat,y:CGFloat) {
         
         let width = SingletonView.shared.width
-        let height = SingletonView.shared.height
+      
         
         let myColor = UIColor(red: 88/255, green: 159/255, blue: 1.0, alpha: 1)
         
@@ -416,7 +416,7 @@ class BezierCrossWordView: UIView {
     static func square7(isVertical: Bool,x:CGFloat,y:CGFloat) {
         
         let width = SingletonView.shared.width
-        let height = SingletonView.shared.height
+       
         
         let myColor = UIColor(red: 88/255, green: 159/255, blue: 1.0, alpha: 1)
         
@@ -542,7 +542,7 @@ class BezierCrossWordView: UIView {
     static func square8(isVertical: Bool,x:CGFloat,y:CGFloat) {
         
         let width = SingletonView.shared.width
-        let height = SingletonView.shared.height
+       
         
         let myColor = UIColor(red: 88/255, green: 159/255, blue: 1.0, alpha: 1)
         
@@ -681,7 +681,7 @@ class BezierCrossWordView: UIView {
     
     static func square9(isVertical:Bool,x:CGFloat,y:CGFloat) {
         let width = SingletonView.shared.width
-        let height = SingletonView.shared.height
+        
         
         let myColor = UIColor(red: 88/255, green: 159/255, blue: 1.0, alpha: 1)
         
@@ -833,7 +833,7 @@ class BezierCrossWordView: UIView {
     
     static func square10(isVertical:Bool,x:CGFloat,y:CGFloat) {
         let width = SingletonView.shared.width
-        let height = SingletonView.shared.height
+        
         
         let myColor = UIColor(red: 88/255, green: 159/255, blue: 1.0, alpha: 1)
         
@@ -996,8 +996,25 @@ class BezierCrossWordView: UIView {
             kare10.stroke()
 
         }
-    }
         
+    }
+    static func Line(is4 : Bool,lineColor: UIColor) {
+        let width = SingletonView.shared.width
+        let cizgi = UIBezierPath()
+        if is4 { //4 satıra göre çizgi
+            cizgi.move(to: CGPoint(x: width * 0.05, y: width * 0.56))
+            cizgi.addLine(to: CGPoint(x: width * 1.95 , y: width * 0.56))
+         
+        }else{ //3 satıra göre çizgi
+            cizgi.move(to: CGPoint(x: width * 0.05, y: width * 0.47))
+            cizgi.addLine(to: CGPoint(x: width * 1.95 , y: width * 0.47))
+        }
+            
+     
+        cizgi.lineWidth = 2
+        lineColor.setStroke()
+        cizgi.stroke()
+    }
     
     
     override func draw(_ rect: CGRect) {
@@ -1016,15 +1033,34 @@ class BezierCrossWordView: UIView {
             BezierCrossWordView.square5(isVertical: false, x: width * 0.57, y: width * 0.71)
             BezierCrossWordView.square7(isVertical: false, x: width * 0.08, y: width * 0.99)
             BezierCrossWordView.square3(isVertical: true, x: width * 0.15, y: width * 0.99)
+            
         }else if BezierCrossWordView.whichCrossword == 0 { // 0. index == BULMACA1
-            BezierCrossWordView.square5(isVertical: false, x: width * 0.57, y: width * 0.71)
-            BezierCrossWordView.square7(isVertical: false, x: width * 0.08, y: width * 0.99)
-            BezierCrossWordView.square3(isVertical: true, x: width * 0.15, y: width * 0.99)
+            BezierCrossWordView.Line(is4: true, lineColor: .black)
+            BezierCrossWordView.square5(isVertical: false, x: width * 0.1, y: width * 0.7)
+            BezierCrossWordView.square6(isVertical: false, x: width * 0.1, y: width * 0.84)
+            BezierCrossWordView.square8(isVertical: true, x: width * 0.17, y: width * 0.63)
+            BezierCrossWordView.square8(isVertical: false, x: width * 0.17, y: width * 1.12)
+            BezierCrossWordView.square7(isVertical: true, x: width * 0.31, y: width * 0.98)
+            BezierCrossWordView.square6(isVertical: false, x: width * 0.1, y: width * 1.4)
+            BezierCrossWordView.square9(isVertical: false, x: width * 0.31, y: width * 0.98)
+            BezierCrossWordView.square9(isVertical: true, x: width * 0.87, y: width * 0.98)
+            BezierCrossWordView.square7(isVertical: false, x: width * 0.45, y: width * 1.54)
+            BezierCrossWordView.square6(isVertical: true, x: width * 0.73, y: width * 1.33)
+            BezierCrossWordView.square8(isVertical: false, x: width * 0.87, y: width * 1.12)
+            BezierCrossWordView.square8(isVertical: true, x: width * 1.15, y: width * 0.91)
+    
+            BezierCrossWordView.square3(isVertical: false, x: width * 1.15, y: width * 1.26)
+            BezierCrossWordView.square5(isVertical: false, x: width * 0.87, y: width * 1.4)
+            BezierCrossWordView.square4(isVertical: false, x: width * 0.24, y: width * 1.26)
+            BezierCrossWordView.square5(isVertical: false, x: width * 0.38, y: width * 1.68)
+            
         }else if BezierCrossWordView.whichCrossword == 1 {// 1. index == BULMACA2
+            BezierCrossWordView.Line(is4: false, lineColor: .black)
             BezierCrossWordView.square8(isVertical: true, x: width * 0.57, y: width * 0.57)
             BezierCrossWordView.square2(isVertical: false, x: width * 0.57, y: width * 0.99)
             BezierCrossWordView.square2(isVertical: false, x: width * 0.5, y: width * 1.13)
-            
+           
+      
         }else if BezierCrossWordView.whichCrossword == 2 {
             
         }else if BezierCrossWordView.whichCrossword == 3 {

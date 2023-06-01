@@ -83,7 +83,7 @@ class CrossWordViewController: UIViewController {
     let wordNumber15 = UILabel()
     let wordNumber16 = UILabel()
     
-    ///Alert Textten gelen cevaplar için
+    ///Alert Textten gelen cevaplar için Dizi
 
     var answerArray1 = [String.Element]()
     var answerArray2 = [String.Element]()
@@ -101,6 +101,27 @@ class CrossWordViewController: UIViewController {
     var answerArray14 = [String.Element]()
     var answerArray15 = [String.Element]()
     var answerArray16 = [String.Element]()
+    
+    ///Alert Textten gelen cevaplar için KONTROL  1-DOĞRU    0-YANLIŞ
+    var answerFromAlertText1 = 0
+    var answerFromAlertText2 = 0
+    var answerFromAlertText3 = 0
+    var answerFromAlertText4 = 0
+    var answerFromAlertText5 = 0
+    var answerFromAlertText6 = 0
+    var answerFromAlertText7 = 0
+    var answerFromAlertText8 = 0
+    var answerFromAlertText9 = 0
+    var answerFromAlertText10 = 0
+    var answerFromAlertText11 = 0
+    var answerFromAlertText12 = 0
+    var answerFromAlertText13 = 0
+    var answerFromAlertText14 = 0
+    var answerFromAlertText15 = 0
+    var answerFromAlertText16 = 0
+    
+    ///TOPLAM VERİLEN CEVAPLARIN COUNT KONTROL EDEBİLCEĞİMİZ DİZİ
+    var howManyAnswerInArray = [Int]()
     
     ///Cevap1 Labelları
     var answerLabel10 = UILabel()
@@ -330,6 +351,7 @@ class CrossWordViewController: UIViewController {
         getKeyFromArray = bulmacalar[choosenIndexPathRow].TurkishWordsArray
         controlOfIndex(with: choosenIndexPathRow)
         answerArrayRemoveAll()
+        resetAnswers()
 
       
     }
@@ -479,6 +501,26 @@ class CrossWordViewController: UIViewController {
         buttonWord14.addTarget(self, action: #selector(button14Func), for: UIControl.Event.touchUpInside)
         buttonWord15.addTarget(self, action: #selector(button15Func), for: UIControl.Event.touchUpInside)
         buttonWord16.addTarget(self, action: #selector(button16Func), for: UIControl.Event.touchUpInside)
+    }
+    
+    func resetAnswers() {
+        howManyAnswerInArray = [Int]()
+        answerFromAlertText1 = -1
+        answerFromAlertText2 = -1
+        answerFromAlertText3 = -1
+        answerFromAlertText4 = -1
+        answerFromAlertText5 = -1
+        answerFromAlertText6 = -1
+        answerFromAlertText7 = -1
+        answerFromAlertText8 = -1
+        answerFromAlertText9 = -1
+        answerFromAlertText10 = -1
+        answerFromAlertText11 = -1
+        answerFromAlertText12 = -1
+        answerFromAlertText13 = -1
+        answerFromAlertText14 = -1
+        answerFromAlertText15 = -1
+        answerFromAlertText16 = -1
     }
     
     ///Aynı tekrarlanan işlemler için
@@ -732,7 +774,51 @@ class CrossWordViewController: UIViewController {
     //MARK: - Complete Button
     @objc
     func completeCrossword() {
-        print("Bulmaca tamamlandı")
+        
+        addAnswersToTotalArray()
+  
+        
+        var amountOf1 = 0
+        var amountOf0 = 0
+        
+        for i in howManyAnswerInArray {
+            if i == 1 {
+                amountOf1 += 1
+            }else if i == 0 {
+                amountOf0 += 1
+            }
+        }
+        
+        if amountOf0 + amountOf1 == bulmacalar[choosenIndexPathRow].TurkishWordsArray.count {
+            //eleman kadar geldiyse bitti
+            print("Bulmaca Tamamlandı!")
+            makeNormalAlertFunc(title: "Bulmaca Tamamlandı!", message: """
+
+Doğru Sayısı: \(amountOf1)
+Yanlış Sayısı: \(amountOf0)
+
+""")
+
+            
+            
+            ///CORE DATA (KAYDETME) İŞLEMERİ BAŞLAYABİLİR
+      
+            
+            
+            ///KAYDETTİKTEN SONRA TAMAMLANDI BUTONU KAPANSIN TIKLANMASIN!
+            navigationController?.navigationBar.topItem?.rightBarButtonItem?.title = "TAMAMLANDI"
+            navigationController?.navigationBar.topItem?.rightBarButtonItem?.isEnabled = false
+        }else {
+            //Bitmemiş alanlar var
+            print("Bulmaca tamamlanmadı")
+            makeNormalAlertFunc(title: "Hata!", message: "Boşluklar var")
+            howManyAnswerInArray.removeAll() //hepsini temizle! --- sonra basınca gene gelcek !
+            
+        }
+      
+       
+        
+   
     }
     
     //MARK: - Crossword Frames 1
@@ -856,6 +942,26 @@ class CrossWordViewController: UIViewController {
         }
     }
     
+    func addAnswersToTotalArray() {
+        
+        howManyAnswerInArray.append(answerFromAlertText1)
+        howManyAnswerInArray.append(answerFromAlertText2)
+        howManyAnswerInArray.append(answerFromAlertText3)
+        howManyAnswerInArray.append(answerFromAlertText4)
+        howManyAnswerInArray.append(answerFromAlertText5)
+        howManyAnswerInArray.append(answerFromAlertText6)
+        howManyAnswerInArray.append(answerFromAlertText7)
+        howManyAnswerInArray.append(answerFromAlertText8)
+        howManyAnswerInArray.append(answerFromAlertText9)
+        howManyAnswerInArray.append(answerFromAlertText10)
+        howManyAnswerInArray.append(answerFromAlertText11)
+        howManyAnswerInArray.append(answerFromAlertText12)
+        howManyAnswerInArray.append(answerFromAlertText13)
+        howManyAnswerInArray.append(answerFromAlertText14)
+        howManyAnswerInArray.append(answerFromAlertText15)
+        howManyAnswerInArray.append(answerFromAlertText16)
+    }
+    
     func answerArrayRemoveAll() {
         answerArray1.removeAll()
         answerArray2.removeAll()
@@ -930,7 +1036,6 @@ class CrossWordViewController: UIViewController {
     func button13Func() {
         makeAlertFuncForButton(index: choosenIndexPathRow, whicButton: 13)
        
-       
     }
     @objc
     func button14Func() {
@@ -943,6 +1048,23 @@ class CrossWordViewController: UIViewController {
     @objc
     func button16Func() {
         makeAlertFuncForButton(index: choosenIndexPathRow, whicButton: 16)
+    }
+    
+    func makeNormalAlertFunc(title:String,message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.view.tintColor = .systemYellow
+        alert.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = .black
+        
+        let titleAttributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 25)!, NSAttributedString.Key.foregroundColor: UIColor.systemYellow]
+        let messageAttributes = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.systemYellow]
+        let titleString = NSAttributedString(string: title, attributes: titleAttributes)
+        let messageString = NSAttributedString(string: "\n\(message)", attributes: messageAttributes)
+        alert.setValue(titleString, forKey: "attributedTitle")
+        alert.setValue(messageString, forKey: "attributedMessage")
+        
+        let button1 = UIAlertAction(title: "Tamam" , style: UIAlertAction.Style.cancel)
+        alert.addAction(button1)
+        self.present(alert, animated: true)
     }
     
     ///index hangi bulmaca olduğu index
@@ -970,11 +1092,21 @@ class CrossWordViewController: UIViewController {
             }
             
             if text != "" {
-                print(text)
                 
+                //KELİME SAYISI KONTROLÜ
                 if text.count == bulmacalar[index].TurkishWordsArray[whicButton-1][1].count { //0 value(TR)   1 key(EN)
                     let arrayAnswer = Array(text.uppercased())
                     print(arrayAnswer)
+                    
+                    //CEVABIN DOĞRULUĞU
+                    if text.uppercased() == bulmacalar[index].TurkishWordsArray[whicButton - 1][1].uppercased() {
+                        print("Cevap Doğru")
+                        answerControlIfTrue(whicButton: whicButton)
+                    }else {
+                        print("Cevap Yanlış")
+                        answerControlIfFalse(whicButton: whicButton)
+                    }
+                    
                     
                     //Verilen cevap ilgili yere gidiyor
                     controlOfAnswerNumber(whicNumber: whicButton, answer: arrayAnswer)
@@ -997,10 +1129,12 @@ class CrossWordViewController: UIViewController {
                     
                 }else {
                     print("İstenen uzunlukta Değil")
+                    makeNormalAlertFunc(title: "Hata!", message: "İstenen Kutucuk Sayısında Değil")
                     
                 }
             }else {
                 print("Değer boş")
+                makeNormalAlertFunc(title: "Hata!", message: "Boş Cevap Veremezsiniz")
             }
         }
         
@@ -1010,6 +1144,81 @@ class CrossWordViewController: UIViewController {
         alertText.addAction(button)
         
     }
+    //MARK: - AnswerValues 0 or 1
+    func answerControlIfTrue(whicButton : Int) {
+        if whicButton == 1 {
+            answerFromAlertText1 = 1
+        }else if whicButton == 2 {
+            answerFromAlertText2 = 1
+        }else if whicButton == 3 {
+            answerFromAlertText3 = 1
+        }else if whicButton == 4 {
+            answerFromAlertText4 = 1
+        }else if whicButton == 5 {
+            answerFromAlertText5 = 1
+        }else if whicButton == 6 {
+            answerFromAlertText6 = 1
+        }else if whicButton == 7 {
+            answerFromAlertText7 = 1
+        }else if whicButton == 8 {
+            answerFromAlertText8 = 1
+        }else if whicButton == 9 {
+            answerFromAlertText9 = 1
+        }else if whicButton == 10 {
+            answerFromAlertText10 = 1
+        }else if whicButton == 11 {
+            answerFromAlertText11 = 1
+        }else if whicButton == 12 {
+            answerFromAlertText12 = 1
+        }else if whicButton == 13 {
+            answerFromAlertText13 = 1
+        }else if whicButton == 14 {
+            answerFromAlertText14 = 1
+        }else if whicButton == 15 {
+            answerFromAlertText15 = 1
+        }else if whicButton == 16 {
+            answerFromAlertText16 = 1
+        }
+    }
+    
+    func answerControlIfFalse(whicButton : Int) {
+        if whicButton == 1 {
+            answerFromAlertText1 = 0
+        }else if whicButton == 2 {
+            answerFromAlertText2 = 0
+        }else if whicButton == 3 {
+            answerFromAlertText3 = 0
+        }else if whicButton == 4 {
+            answerFromAlertText4 = 0
+        }else if whicButton == 5 {
+            answerFromAlertText5 = 0
+        }else if whicButton == 6 {
+            answerFromAlertText6 = 0
+        }else if whicButton == 7 {
+            answerFromAlertText7 = 0
+        }else if whicButton == 8 {
+            answerFromAlertText8 = 0
+        }else if whicButton == 9 {
+            answerFromAlertText9 = 0
+        }else if whicButton == 10 {
+            answerFromAlertText10 = 0
+        }else if whicButton == 11 {
+            answerFromAlertText11 = 0
+        }else if whicButton == 12 {
+            answerFromAlertText12 = 0
+        }else if whicButton == 13 {
+            answerFromAlertText13 = 0
+        }else if whicButton == 14 {
+            answerFromAlertText14 = 0
+        }else if whicButton == 15 {
+            answerFromAlertText15 = 0
+        }else if whicButton == 16 {
+            answerFromAlertText16 = 0
+        }
+    }
+
+    
+    
     //MARK: - ANSWER CONTROL FOR ALERT
     func answerControlForAler(index: Int,whicAnswer: Int,answerArray : [String.Element]) { //otomatik olarak hangi bulmaca hangi adresin olduğuna ulaşup cevabı labellar ile gösterebileceğiz
         if index == 0 { ///YANİ İLK BULMACA CEVAPLARINA GÖRE

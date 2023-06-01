@@ -109,12 +109,14 @@ class MyProfileViewController: UIViewController {
     @objc // ------------PANOYA KOPYALAMA İŞLEMİ-------------
     func pasteBoardInstagram() {
         (UIPasteboard.general.string) = labelOfInstagram.text
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [self] in
             self.labelOfInstagram.textColor = .white
             self.labelOfInstagram.text = "Panoya Kopyalandı"
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            labelOfInstagram.font = UIFont(name: "Menlo", size: 15)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
                 self.labelOfInstagram.textColor = .black
                 self.labelOfInstagram.text = "     https://www.instagram.com/melihsklr/"
+                labelOfInstagram.font = UIFont(name: "Menlo", size: 12.5)
             }
         }
     }

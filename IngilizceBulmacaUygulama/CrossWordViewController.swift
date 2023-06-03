@@ -339,12 +339,7 @@ class CrossWordViewController: UIViewController {
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         navigationItem.title = "\(choosenTitle.uppercased())"
         
-        
-        /*completeButton.setTitle("Tamamla", for: UIControl.State.normal)
-        completeButton.layer.backgroundColor = UIColor.black.cgColor
-        completeButton.layer.cornerRadius = 20
-        completeButton.frame = CGRect(x: width * 0.75 - (width * 0.3)/2, y: width * 0.19 , width: width * 0.3, height: height * 0.05)
-        */
+     
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -382,12 +377,21 @@ class CrossWordViewController: UIViewController {
         view.addSubview(turkishWord15)
         view.addSubview(turkishWord16)
         
-    
+       
+        //MARK: - MAX BULMA
+        var maxValueX = 0.0
+        for i in bulmacalar[choosenIndexPathRow].locationXY {
+            
+            if i[0] > maxValueX { //i den gelen 0.index değeri X--> bize de x lazım x'in slide yapılcak değerine gidiyoruz
+                maxValueX = i[0]
+            }
+        }
+        
         addButtonToScrollView()
 
       
-        
-        scrollView.contentSize = CGSize(width: view.frame.size.width * 2, height: view.frame.size.height)
+        //NE KADAR KAYACAK ----- Özel Bir şey istersek buradan koşulla yaptıraiblirsin choosenIndexPathRow üzerinden! ---> Onun yerine max x değerine göre otomatikleştirdim!
+        scrollView.contentSize = CGSize(width: maxValueX + width * 0.4, height: view.frame.size.height)
         
         
     }
@@ -480,9 +484,6 @@ class CrossWordViewController: UIViewController {
         wordNumber14.textAlignment = .center
         wordNumber15.textAlignment = .center
         wordNumber16.textAlignment = .center
-        
-        
-        
         
         
         buttonWord1.addTarget(self, action: #selector(button1Func), for: UIControl.Event.touchUpInside)
@@ -663,6 +664,18 @@ class CrossWordViewController: UIViewController {
     func controlOfIndex(with index: Int) {
         ///BezierViewler için hangi görübyü oluşacağı zaten collectionView prepareSegue kısmında belli buraya gelince bizimö yapmamız gereken sadece bezierView tanımlayıp, viewe ekleyip, arka plan rengi ile oynamak!!!!!!!
         
+        //Width height değerleri için bunları girebilirsin
+        let minusForLeftButtonX = -(width * 0.065)
+        let minusForLeftNumberX = -(width * 0.055)
+        let plusForLeftButtonY = (width * 0.01)
+        let minusForLeftNumberY = -(width * 0.02)
+        
+        let plusForUpNumberX = (width * 0.055)
+        let minusForUpNumberY = -(width * 0.055)
+        let plusForUpButtonX = (width * 0.005)
+        let minusForUpButtonY = -(width * 0.065)
+        
+        
         TurkishWordArray.removeAll()
         ///Append işlemi yapacağım çıkgir yapınca saçmalamasın diye! remoAll yaptım
         if bulmacalar[index].TurkishWordsArray.count < 13 {///12 tane vardır
@@ -680,6 +693,8 @@ class CrossWordViewController: UIViewController {
             wordNumber14.isHidden = true
             wordNumber15.isHidden = true
             wordNumber16.isHidden = true
+            //12 tane var ise 13,14,15,16 için framlere gerek yok bunları ayırdım!
+            
         }
         else if bulmacalar[index].TurkishWordsArray.count < 14 { ///13 tane vardır
             turkishWord13.text = "13-\(getKeyFromArray[12][0])"
@@ -692,6 +707,15 @@ class CrossWordViewController: UIViewController {
             wordNumber14.isHidden = true
             wordNumber15.isHidden = true
             wordNumber16.isHidden = true
+            if bulmacalar[index].isVerticalArrays[12] {
+                buttonWord13.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+                wordNumber13.frame = CGRect(x:bulmacalar[index].locationXY[13 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[13 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+                buttonWord13.frame = CGRect(x: bulmacalar[index].locationXY[13 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[13 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+            }else {
+                wordNumber13.frame = CGRect(x:bulmacalar[index].locationXY[13 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[13 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+                buttonWord13.frame = CGRect(x:bulmacalar[index].locationXY[13 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[13 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+                buttonWord13.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+            }
             
         }else if bulmacalar[index].TurkishWordsArray.count < 15 {///14 tane vardır
             turkishWord13.text = "13-\(getKeyFromArray[12][0])"
@@ -702,6 +726,28 @@ class CrossWordViewController: UIViewController {
             buttonWord16.isHidden = true
             wordNumber15.isHidden = true
             wordNumber16.isHidden = true
+            if bulmacalar[index].isVerticalArrays[12] {
+                buttonWord13.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+                wordNumber13.frame = CGRect(x:bulmacalar[index].locationXY[13 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[13 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+                buttonWord13.frame = CGRect(x: bulmacalar[index].locationXY[13 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[13 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+            }else {
+                wordNumber13.frame = CGRect(x:bulmacalar[index].locationXY[13 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[13 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+                buttonWord13.frame = CGRect(x:bulmacalar[index].locationXY[13 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[13 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+                buttonWord13.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+            }
+            
+            
+            
+            if bulmacalar[index].isVerticalArrays[13] {
+                buttonWord14.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+                wordNumber14.frame = CGRect(x:bulmacalar[index].locationXY[14 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[14 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+                buttonWord14.frame = CGRect(x: bulmacalar[index].locationXY[14 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[14 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+            }else {
+                
+                wordNumber14.frame = CGRect(x:bulmacalar[index].locationXY[14 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[14 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+                buttonWord14.frame = CGRect(x:bulmacalar[index].locationXY[14 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[14 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+                buttonWord14.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+            }
             
         }else if bulmacalar[index].TurkishWordsArray.count < 16 {///15 tane vardır
             turkishWord13.text = "13-\(getKeyFromArray[12][0])"
@@ -710,40 +756,118 @@ class CrossWordViewController: UIViewController {
             turkishWord16.isHidden = true
             buttonWord16.isHidden = true
             wordNumber16.isHidden = true
+            if bulmacalar[index].isVerticalArrays[12] {
+                buttonWord13.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+                wordNumber13.frame = CGRect(x:bulmacalar[index].locationXY[13 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[13 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+                buttonWord13.frame = CGRect(x: bulmacalar[index].locationXY[13 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[13 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+            }else {
+                wordNumber13.frame = CGRect(x:bulmacalar[index].locationXY[13 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[13 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+                buttonWord13.frame = CGRect(x:bulmacalar[index].locationXY[13 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[13 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+                buttonWord13.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+            }
+            
+            
+            
+            if bulmacalar[index].isVerticalArrays[13] {
+                buttonWord14.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+                wordNumber14.frame = CGRect(x:bulmacalar[index].locationXY[14 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[14 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+                buttonWord14.frame = CGRect(x: bulmacalar[index].locationXY[14 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[14 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+            }else {
+                
+                wordNumber14.frame = CGRect(x:bulmacalar[index].locationXY[14 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[14 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+                buttonWord14.frame = CGRect(x:bulmacalar[index].locationXY[14 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[14 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+                buttonWord14.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+            }
+            
+            
+            
+            if bulmacalar[index].isVerticalArrays[14] {
+                buttonWord15.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+                wordNumber15.frame = CGRect(x:bulmacalar[index].locationXY[15 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[15 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+                buttonWord15.frame = CGRect(x: bulmacalar[index].locationXY[15 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[15 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+            }else {
+                wordNumber15.frame = CGRect(x:bulmacalar[index].locationXY[15 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[15 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+                buttonWord15.frame = CGRect(x:bulmacalar[index].locationXY[15 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[15 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+                buttonWord15.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+            }
         }else {
             ///16 Kelime de var
             turkishWord13.text = "13-\(getKeyFromArray[12][0])"
             turkishWord14.text = "14-\(getKeyFromArray[13][0])"
             turkishWord15.text = "15-\(getKeyFromArray[14][0])"
             turkishWord16.text = "16-\(getKeyFromArray[15][0])"
+            
+            
+            if bulmacalar[index].isVerticalArrays[12] {
+                buttonWord13.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+                wordNumber13.frame = CGRect(x:bulmacalar[index].locationXY[13 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[13 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+                buttonWord13.frame = CGRect(x: bulmacalar[index].locationXY[13 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[13 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+            }else {
+                wordNumber13.frame = CGRect(x:bulmacalar[index].locationXY[13 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[13 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+                buttonWord13.frame = CGRect(x:bulmacalar[index].locationXY[13 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[13 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+                buttonWord13.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+            }
+            
+            
+            
+            if bulmacalar[index].isVerticalArrays[13] {
+                buttonWord14.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+                wordNumber14.frame = CGRect(x:bulmacalar[index].locationXY[14 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[14 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+                buttonWord14.frame = CGRect(x: bulmacalar[index].locationXY[14 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[14 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+            }else {
+                
+                wordNumber14.frame = CGRect(x:bulmacalar[index].locationXY[14 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[14 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+                buttonWord14.frame = CGRect(x:bulmacalar[index].locationXY[14 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[14 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+                buttonWord14.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+            }
+            
+            
+            
+            if bulmacalar[index].isVerticalArrays[14] {
+                buttonWord15.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+                wordNumber15.frame = CGRect(x:bulmacalar[index].locationXY[15 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[15 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+                buttonWord15.frame = CGRect(x: bulmacalar[index].locationXY[15 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[15 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+            }else {
+                wordNumber15.frame = CGRect(x:bulmacalar[index].locationXY[15 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[15 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+                buttonWord15.frame = CGRect(x:bulmacalar[index].locationXY[15 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[15 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+                buttonWord15.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+            }
+            
+            
+            
+            if bulmacalar[index].isVerticalArrays[15] {
+                buttonWord16.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+                wordNumber16.frame = CGRect(x:bulmacalar[index].locationXY[16 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[16 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+                buttonWord16.frame = CGRect(x: bulmacalar[index].locationXY[16 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[16 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+            }else {
+                wordNumber16.frame = CGRect(x:bulmacalar[index].locationXY[16 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[16 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+                buttonWord16.frame = CGRect(x:bulmacalar[index].locationXY[16 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[16 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+                buttonWord16.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+            }
         }
         //MARK: - Crossword Index
+        
+        bezierView = BezierCrossWordView(frame: CGRect(x: 0, y: 0, width: width * 2, height: height))
+        self.view.addSubview(bezierView)
+        
         switch index {
         case 0:
-            print("0.index için olacaklar")
-            
+
             //---Her bulmaca için bu şekil oluştuır onu çek
-            bezierView = BezierCrossWordView(frame: CGRect(x: 0, y: 0, width: width * 2 , height: height))
-            self.view.addSubview(bezierView)
+           
             
             //--Hem view hem bezierPath aynı olsun çünkü bazen y'De özellikle kayma yaparsak diye açıkta boş renk kalmasın
             bezierView.backgroundColor = .systemYellow
             view.backgroundColor = .systemYellow
             
-           crossWordButtonFrames1()
-            
-            
             
            
             
         case 1:
-            print("1.index için olacaklar")
-            bezierView = BezierCrossWordView(frame: CGRect(x: 0, y: 0, width: width * 2 , height: height))
-            self.view.addSubview(bezierView)
-            bezierView.backgroundColor = .systemPink
-            view.backgroundColor = .systemPink
-            
           
+            bezierView.backgroundColor = .systemYellow
+            view.backgroundColor = .systemYellow
+            
             
         case 2:
             print("2.index için olacaklar")
@@ -767,6 +891,7 @@ class CrossWordViewController: UIViewController {
             print("DEFAULT")
             
         }
+        crossWordButtonFrames(HangiBulmaca: choosenIndexPathRow)
         view.addSubview(completeButton) ///BezierPath üstte kalmaması için bunu  sonra ekliyorum.
         toAddViewAddsubivew()
     }
@@ -821,76 +946,173 @@ Yanlış Sayısı: \(amountOf0)
    
     }
     
-    //MARK: - Crossword Frames 1
-    func crossWordButtonFrames1() {
+    //MARK: - Crossword Frames -------------------///OTOMATİKLEŞTİRİYORUZ!
+    func crossWordButtonFrames(HangiBulmaca index: Int) {
+        
+        //Width height değerleri için bunları girebilirsin
+        let minusForLeftButtonX = -(width * 0.065)
+        let minusForLeftNumberX = -(width * 0.055)
+        let plusForLeftButtonY = (width * 0.01)
+        let minusForLeftNumberY = -(width * 0.02)
+        
+        let plusForUpNumberX = (width * 0.055)
+        let minusForUpNumberY = -(width * 0.055)
+        let plusForUpButtonX = (width * 0.005)
+        let minusForUpButtonY = -(width * 0.065)
         
         ///Bu butonlarf her için her bulmacaya özel func oluştur!
-        wordNumber11.frame = CGRect(x: width * 0.045, y: width * 0.68, width: width * 0.04, height:  width * 0.04)
-        buttonWord11.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
-        buttonWord11.frame = CGRect(x: width * 0.035, y: width * 0.71, width: width * 0.06, height:  width * 0.06)
+
+        ///isVertical array  TRUE = DİKEY     FALSE = YATAY
+        if bulmacalar[index].isVerticalArrays[0] {
+            buttonWord1.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+            wordNumber1.frame = CGRect(x:bulmacalar[index].locationXY[1 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[1 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord1.frame = CGRect(x: bulmacalar[index].locationXY[1 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[1 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+        }else {
+            buttonWord1.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+            wordNumber1.frame = CGRect(x:bulmacalar[index].locationXY[1 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[1 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord1.frame = CGRect(x:bulmacalar[index].locationXY[1 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[1 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+        }
         
-        wordNumber1.frame = CGRect(x: width * 0.045, y: width * 0.82, width: width * 0.04, height:  width * 0.04)
-        buttonWord1.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
-        buttonWord1.frame = CGRect(x: width * 0.035, y: width * 0.85, width: width * 0.06, height:  width * 0.06)
         
-        wordNumber12.frame = CGRect(x: width * 0.225, y: width * 0.575, width: width * 0.04, height:  width * 0.04)
-        buttonWord12.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
-        buttonWord12.frame = CGRect(x: width * 0.175, y: width * 0.565, width: width * 0.06, height:  width * 0.06)
+        if bulmacalar[index].isVerticalArrays[1] {
+            buttonWord2.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+            wordNumber2.frame = CGRect(x:bulmacalar[index].locationXY[2 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[2 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord2.frame = CGRect(x: bulmacalar[index].locationXY[2 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[2 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+        }else {
+            wordNumber2.frame = CGRect(x:bulmacalar[index].locationXY[2 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[2 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord2.frame = CGRect(x:bulmacalar[index].locationXY[2 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[2 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+            buttonWord2.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+        }
         
-        wordNumber8.frame = CGRect(x: width * 0.115, y: width * 1.1, width: width * 0.04, height:  width * 0.04)
-        buttonWord8.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
-        buttonWord8.frame = CGRect(x: width * 0.105, y: width * 1.13, width: width * 0.06, height:  width * 0.06)
         
-        wordNumber9.frame = CGRect(x: width * 0.36, y: width * 0.925, width: width * 0.04, height:  width * 0.04)
-        buttonWord9.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
-        buttonWord9.frame = CGRect(x: width * 0.315, y: width * 0.915, width: width * 0.06, height:  width * 0.06)
         
-        wordNumber4.frame = CGRect(x: width * 1.205, y: width * 0.855, width: width * 0.04, height:  width * 0.04)
-        buttonWord4.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
-        buttonWord4.frame = CGRect(x: width * 1.155, y: width * 0.845, width: width * 0.06, height:  width * 0.06)
+        if bulmacalar[index].isVerticalArrays[2] {
+            buttonWord3.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+            wordNumber3.frame = CGRect(x:bulmacalar[index].locationXY[3 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[3 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord3.frame = CGRect(x: bulmacalar[index].locationXY[3 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[3 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+        }else {
+            wordNumber3.frame = CGRect(x:bulmacalar[index].locationXY[3 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[3 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord3.frame = CGRect(x:bulmacalar[index].locationXY[3 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[3 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+            buttonWord3.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+        }
         
-        wordNumber7.frame = CGRect(x: width * 0.785, y: width * 1.275, width: width * 0.04, height:  width * 0.04)
-        buttonWord7.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
-        buttonWord7.frame = CGRect(x: width * 0.735, y: width * 1.265, width: width * 0.06, height:  width * 0.06)
         
-        wordNumber10.frame = CGRect(x: width * 0.925, y: width * 0.93, width: width * 0.04, height:  width * 0.04)
-        buttonWord10.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
-        buttonWord10.frame = CGRect(x: width * 0.875, y: width * 0.92, width: width * 0.06, height:  width * 0.06)
+        if bulmacalar[index].isVerticalArrays[3] {
+            buttonWord4.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+            wordNumber4.frame = CGRect(x:bulmacalar[index].locationXY[4 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[4 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord4.frame = CGRect(x: bulmacalar[index].locationXY[4 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[4 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+        }else {
+            wordNumber4.frame = CGRect(x:bulmacalar[index].locationXY[4 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[4 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord4.frame = CGRect(x:bulmacalar[index].locationXY[4 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[4 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+            buttonWord4.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+        }
         
-        wordNumber16.frame = CGRect(x: width * 0.185, y: width * 1.24, width: width * 0.04, height:  width * 0.04)
-        buttonWord16.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
-        buttonWord16.frame = CGRect(x: width * 0.175, y: width * 1.27, width: width * 0.06, height:  width * 0.06)
         
-        wordNumber5.frame = CGRect(x: width * 0.045, y: width * 1.38, width: width * 0.04, height:  width * 0.04)
-        buttonWord5.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
-        buttonWord5.frame = CGRect(x: width * 0.035, y: width * 1.41, width: width * 0.06, height:  width * 0.06)
         
-        wordNumber2.frame = CGRect(x: width * 0.395, y: width * 1.52, width: width * 0.04, height:  width * 0.04)
-        buttonWord2.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
-        buttonWord2.frame = CGRect(x: width * 0.385, y: width * 1.55, width: width * 0.06, height:  width * 0.06)
+        if bulmacalar[index].isVerticalArrays[4] {
+            buttonWord5.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+            wordNumber5.frame = CGRect(x:bulmacalar[index].locationXY[5 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[5 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord5.frame = CGRect(x: bulmacalar[index].locationXY[5 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[5 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+        }else {
+            wordNumber5.frame = CGRect(x:bulmacalar[index].locationXY[5 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[5 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord5.frame = CGRect(x:bulmacalar[index].locationXY[5 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[5 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+            buttonWord5.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+        }
         
-        wordNumber15.frame = CGRect(x: width * 0.325, y: width * 1.66, width: width * 0.04, height:  width * 0.04)
-        buttonWord15.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
-        buttonWord15.frame = CGRect(x: width * 0.315, y: width * 1.69, width: width * 0.06, height:  width * 0.06)
         
-        wordNumber3.frame = CGRect(x: width * 0.255, y: width * 0.96, width: width * 0.04, height:  width * 0.04)
-        buttonWord3.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
-        buttonWord3.frame = CGRect(x: width * 0.245, y: width * 0.99, width: width * 0.06, height:  width * 0.06)
         
-        wordNumber6.frame  = CGRect(x: width * 0.815, y: width * 1.1, width: width * 0.04, height:  width * 0.04)
-        buttonWord6.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
-        buttonWord6.frame = CGRect(x: width * 0.805, y: width * 1.13, width: width * 0.06, height:  width * 0.06)
+        if bulmacalar[index].isVerticalArrays[5] {
+            buttonWord6.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+            wordNumber6.frame = CGRect(x:bulmacalar[index].locationXY[6 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[6 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord6.frame = CGRect(x: bulmacalar[index].locationXY[6 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[6 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+        }else {
+            wordNumber6.frame = CGRect(x:bulmacalar[index].locationXY[6 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[6 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord6.frame = CGRect(x:bulmacalar[index].locationXY[6 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[6 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+            buttonWord6.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+        }
         
-        wordNumber14.frame = CGRect(x: width * 0.815, y: width * 1.38, width: width * 0.04, height:  width * 0.04)
-        buttonWord14.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
-        buttonWord14.frame = CGRect(x: width * 0.805, y: width * 1.41, width: width * 0.06, height:  width * 0.06)
         
-        wordNumber13.frame  = CGRect(x: width * 1.095, y: width * 1.24, width: width * 0.04, height:  width * 0.04)
-        buttonWord13.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
-        buttonWord13.frame = CGRect(x: width * 1.085, y: width * 1.27, width: width * 0.06, height:  width * 0.06)
         
+        if bulmacalar[index].isVerticalArrays[6] {
+            wordNumber7.frame = CGRect(x:bulmacalar[index].locationXY[7 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[7 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord7.frame = CGRect(x: bulmacalar[index].locationXY[7 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[7 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+            buttonWord7.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+        }else {
+            wordNumber7.frame = CGRect(x:bulmacalar[index].locationXY[7 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[7 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord7.frame = CGRect(x:bulmacalar[index].locationXY[7 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[7 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+            buttonWord7.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+        }
+        
+        
+        
+        if bulmacalar[index].isVerticalArrays[7] {
+            buttonWord8.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+            wordNumber8.frame = CGRect(x:bulmacalar[index].locationXY[8 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[8 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord8.frame = CGRect(x: bulmacalar[index].locationXY[8 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[8 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+        }else {
+            wordNumber8.frame = CGRect(x:bulmacalar[index].locationXY[8 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[8 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord8.frame = CGRect(x:bulmacalar[index].locationXY[8 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[8 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+            buttonWord8.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+        }
+        
+        
+        
+        
+        if bulmacalar[index].isVerticalArrays[8] {
+            wordNumber9.frame = CGRect(x:bulmacalar[index].locationXY[9 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[9 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord9.frame = CGRect(x: bulmacalar[index].locationXY[9 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[9 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+            buttonWord9.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+        }else {
+            wordNumber9.frame = CGRect(x:bulmacalar[index].locationXY[9 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[9 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord9.frame = CGRect(x:bulmacalar[index].locationXY[9 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[9 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+            buttonWord9.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+        }
+        
+        
+        
+        if bulmacalar[index].isVerticalArrays[9] {
+            
+            wordNumber10.frame = CGRect(x:bulmacalar[index].locationXY[10 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[10 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord10.frame = CGRect(x: bulmacalar[index].locationXY[10 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[10 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+            buttonWord10.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+        }else {
+            wordNumber10.frame = CGRect(x:bulmacalar[index].locationXY[10 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[10 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord10.frame = CGRect(x:bulmacalar[index].locationXY[10 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[10 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+            buttonWord10.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+        }
+        
+        
+        
+        if bulmacalar[index].isVerticalArrays[10] {
+            buttonWord11.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+            wordNumber11.frame = CGRect(x:bulmacalar[index].locationXY[11 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[11 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord11.frame = CGRect(x: bulmacalar[index].locationXY[11 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[11 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+        }else {
+            buttonWord11.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+            wordNumber11.frame = CGRect(x:bulmacalar[index].locationXY[11 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[11 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord11.frame = CGRect(x:bulmacalar[index].locationXY[11 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[11 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+        }
+        
+        
+        
+        if bulmacalar[index].isVerticalArrays[11] {
+            wordNumber12.frame = CGRect(x:bulmacalar[index].locationXY[12 - 1][0] + plusForUpNumberX, y: bulmacalar[index].locationXY[12 - 1][1] + minusForUpNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord12.frame = CGRect(x: bulmacalar[index].locationXY[12 - 1][0] + plusForUpButtonX, y: bulmacalar[index].locationXY[12 - 1][1] + minusForUpButtonY, width: width * 0.06, height:  width * 0.06)
+            buttonWord12.setImage(UIImage(systemName: "arrow.down.circle.fill"), for: UIControl.State.normal)
+        }else {
+            wordNumber12.frame = CGRect(x:bulmacalar[index].locationXY[12 - 1][0] + minusForLeftNumberX, y: bulmacalar[index].locationXY[12 - 1][1] + minusForLeftNumberY, width: width * 0.04 , height:  width * 0.04)
+            buttonWord12.frame = CGRect(x:bulmacalar[index].locationXY[12 - 1][0] + minusForLeftButtonX, y:bulmacalar[index].locationXY[12 - 1][1] + plusForLeftButtonY, width: width * 0.06, height:  width * 0.06)
+            buttonWord12.setImage(UIImage(systemName: "arrow.forward.circle.fill"), for: UIControl.State.normal)
+        }
+        
+        
+      
+        
+ 
         }
     
+    
+        
     func controlOfAnswerNumber (whicNumber : Int,answer : [String.Element]) {
         if whicNumber == 1 {
             answerArray1 = answer
@@ -1115,17 +1337,10 @@ Yanlış Sayısı: \(amountOf0)
                     //16 cevap içinde kontrol yaparız!
                     //whicButtondan bunu anlarız! hangi cevap olduğun zaten biliyoruz ona göre çağrılıyor!
                     //sonra her cevap için bulmacadaki o cevabın count öğrenip kontrol ile ona göre kaç harfli olacağını anlayıp createLabelFrameX çağrırız
-                    answerControlForAler(index: index, whicAnswer: whicButton, answerArray: arrayAnswer)
-                    
-                    
-                 
-                  
-                    
-                    
-                   
-                    //Kelimleri tek tek aldık!
-                   // createLabelFrame3(isVertical: false, x: width * 1.15, y: width * 1.26, answer: arrayAnswer)
+                    answerControlForAlert(index: index, whicAnswer: whicButton, answerArray: arrayAnswer)
+
             
+                    
                     
                 }else {
                     print("İstenen uzunlukta Değil")
@@ -1220,62 +1435,316 @@ Yanlış Sayısı: \(amountOf0)
     
     
     //MARK: - ANSWER CONTROL FOR ALERT
-    func answerControlForAler(index: Int,whicAnswer: Int,answerArray : [String.Element]) { //otomatik olarak hangi bulmaca hangi adresin olduğuna ulaşup cevabı labellar ile gösterebileceğiz
-        if index == 0 { ///YANİ İLK BULMACA CEVAPLARINA GÖRE
-            if whicAnswer == 1 { //İLK BULMACANIN 1.CEVABI
-                createLabelFrame6(isVertical: false, x: width * 0.1, y: width * 0.84, answer: answerArray, whicAnswer: whicAnswer)
-            }
-            else if whicAnswer == 2 {
-                createLabelFrame7(isVertical: false, x: width * 0.45, y: width * 1.54, answer: answerArray, whicAnswer: whicAnswer)
-            }
-            else if whicAnswer == 3 {
-                createLabelFrame9(isVertical: false, x: width *  0.31, y: width * 0.98, answer: answerArray, whicAnswer: whicAnswer)
-            }
-            else if whicAnswer == 4 {
-                createLabelFrame8(isVertical: true, x: width * 1.15, y: width * 0.91, answer: answerArray, whicAnswer: whicAnswer)
-            }
-            else if whicAnswer == 5 {
-                createLabelFrame6(isVertical: false, x: width * 0.1, y: width * 1.4, answer: answerArray, whicAnswer: whicAnswer)
-            }
-            else if whicAnswer == 6 {
-                createLabelFrame8(isVertical: false, x: width * 0.87, y: width * 1.12, answer: answerArray, whicAnswer: whicAnswer)
-            }
-            else if whicAnswer == 7 {
-                createLabelFrame6(isVertical: true, x: width * 0.73, y:  width * 1.33, answer: answerArray, whicAnswer: whicAnswer)
-            }
-            else if whicAnswer == 8 {
-                createLabelFrame8(isVertical: false, x: width * 0.17, y: width * 1.12, answer: answerArray, whicAnswer: whicAnswer)
-            }
-            else if whicAnswer == 9 {
-                createLabelFrame7(isVertical: true, x:width *  0.31, y: width * 0.98, answer: answerArray, whicAnswer: whicAnswer)
-            }
-            else if whicAnswer == 10 {
-                createLabelFrame9(isVertical: true, x: width * 0.87, y: width * 0.98, answer: answerArray, whicAnswer: whicAnswer)
-            }
-            else if whicAnswer == 11 {
-                createLabelFrame5(isVertical: false, x: width * 0.1, y: width * 0.7, answer: answerArray, whicAnswer: whicAnswer)
-            }
-            else if whicAnswer == 12 {
-                createLabelFrame8(isVertical: true, x: width * 0.17, y: width * 0.63, answer: answerArray, whicAnswer: whicAnswer)
-            }
-            else if whicAnswer == 13 {
-                createLabelFrame3(isVertical: false, x: width * 1.15, y: width * 1.26, answer: answerArray, whicAnswer: whicAnswer)
-            }
-            else if whicAnswer == 14 {
-                createLabelFrame5(isVertical: false, x: width * 0.87, y: width * 1.4, answer: answerArray, whicAnswer: whicAnswer)
-            }
-            else if whicAnswer == 15 {
-                createLabelFrame6(isVertical: false, x:  width * 0.38, y:  width * 1.68, answer: answerArray, whicAnswer: whicAnswer)
-            }
-            else if whicAnswer == 16 {
-                createLabelFrame4(isVertical: false, x: width * 0.24, y: width * 1.26, answer: answerArray, whicAnswer: whicAnswer)
-            }
-        }else if index == 1 { //1. indexteki yani BULMACA2
+    func answerControlForAlert(index: Int,whicAnswer: Int,answerArray : [String.Element]) { //otomatik olarak hangi bulmaca hangi adresin olduğuna ulaşup cevabı labellar ile gösterebileceğiz
             
-        }else if index == 2 {//2. indexteki yani BULMACA3
+        if whicAnswer == 1 { //İLK BULMACANIN 1.CEVABI
+            if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 3 {
+                createLabelFrame3(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 4 {
+                createLabelFrame4(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 5 {
+                createLabelFrame5(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 6 {
+                createLabelFrame6(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 7 {
+                createLabelFrame7(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 8 {
+                createLabelFrame8(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 9 {
+                createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
+                createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }
             
         }
+        else if whicAnswer == 2 {
+            if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 3 {
+                createLabelFrame3(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 4 {
+                createLabelFrame4(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 5 {
+                createLabelFrame5(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 6 {
+                createLabelFrame6(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 7 {
+                createLabelFrame7(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 8 {
+                createLabelFrame8(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 9 {
+                createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
+                createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }
+        }
+        else if whicAnswer == 3 {
+            if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 3 {
+                createLabelFrame3(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 4 {
+                createLabelFrame4(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 5 {
+                createLabelFrame5(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 6 {
+                createLabelFrame6(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 7 {
+                createLabelFrame7(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 8 {
+                createLabelFrame8(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 9 {
+                createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
+                createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }
+        }
+        else if whicAnswer == 4 {
+            if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 3 {
+                createLabelFrame3(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 4 {
+                createLabelFrame4(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 5 {
+                createLabelFrame5(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 6 {
+                createLabelFrame6(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 7 {
+                createLabelFrame7(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 8 {
+                createLabelFrame8(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 9 {
+                createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
+                createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }
+        }
+        else if whicAnswer == 5 {
+            if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 3 {
+                createLabelFrame3(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 4 {
+                createLabelFrame4(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 5 {
+                createLabelFrame5(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 6 {
+                createLabelFrame6(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 7 {
+                createLabelFrame7(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 8 {
+                createLabelFrame8(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 9 {
+                createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
+                createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }
+        }
+        else if whicAnswer == 6 {
+            if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 3 {
+                createLabelFrame3(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 4 {
+                createLabelFrame4(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 5 {
+                createLabelFrame5(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 6 {
+                createLabelFrame6(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 7 {
+                createLabelFrame7(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 8 {
+                createLabelFrame8(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 9 {
+                createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
+                createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }
+        }
+        else if whicAnswer == 7 {
+            if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 3 {
+                createLabelFrame3(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 4 {
+                createLabelFrame4(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 5 {
+                createLabelFrame5(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 6 {
+                createLabelFrame6(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 7 {
+                createLabelFrame7(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 8 {
+                createLabelFrame8(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 9 {
+                createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
+                createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }
+        }
+        else if whicAnswer == 8 {
+            if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 3 {
+                createLabelFrame3(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 4 {
+                createLabelFrame4(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 5 {
+                createLabelFrame5(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 6 {
+                createLabelFrame6(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 7 {
+                createLabelFrame7(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 8 {
+                createLabelFrame8(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 9 {
+                createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
+                createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }
+        }
+        else if whicAnswer == 9 {
+            if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 3 {
+                createLabelFrame3(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 4 {
+                createLabelFrame4(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 5 {
+                createLabelFrame5(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 6 {
+                createLabelFrame6(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 7 {
+                createLabelFrame7(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 8 {
+                createLabelFrame8(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 9 {
+                createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
+                createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }
+        }
+        else if whicAnswer == 10 {
+            if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 3 {
+                createLabelFrame3(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 4 {
+                createLabelFrame4(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 5 {
+                createLabelFrame5(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 6 {
+                createLabelFrame6(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 7 {
+                createLabelFrame7(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 8 {
+                createLabelFrame8(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 9 {
+                createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
+                createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }
+        }
+        else if whicAnswer == 11 {
+            if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 3 {
+                createLabelFrame3(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 4 {
+                createLabelFrame4(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 5 {
+                createLabelFrame5(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 6 {
+                createLabelFrame6(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 7 {
+                createLabelFrame7(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 8 {
+                createLabelFrame8(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 9 {
+                createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
+                createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }
+        }
+        else if whicAnswer == 12 {
+            if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 3 {
+                createLabelFrame3(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 4 {
+                createLabelFrame4(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 5 {
+                createLabelFrame5(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 6 {
+                createLabelFrame6(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 7 {
+                createLabelFrame7(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 8 {
+                createLabelFrame8(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 9 {
+                createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
+                createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }
+        }
+        else if whicAnswer == 13 {
+            if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 3 {
+                createLabelFrame3(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 4 {
+                createLabelFrame4(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 5 {
+                createLabelFrame5(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 6 {
+                createLabelFrame6(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 7 {
+                createLabelFrame7(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 8 {
+                createLabelFrame8(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 9 {
+                createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
+                createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }
+        }
+        else if whicAnswer == 14 {
+            if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 3 {
+                createLabelFrame3(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 4 {
+                createLabelFrame4(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 5 {
+                createLabelFrame5(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 6 {
+                createLabelFrame6(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 7 {
+                createLabelFrame7(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 8 {
+                createLabelFrame8(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 9 {
+                createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
+                createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }
+        }
+        else if whicAnswer == 15 {
+            if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 3 {
+                createLabelFrame3(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 4 {
+                createLabelFrame4(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 5 {
+                createLabelFrame5(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 6 {
+                createLabelFrame6(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 7 {
+                createLabelFrame7(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 8 {
+                createLabelFrame8(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 9 {
+                createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
+                createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }
+        }
+        else if whicAnswer == 16 {
+            if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 3 {
+                createLabelFrame3(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 4 {
+                createLabelFrame4(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 5 {
+                createLabelFrame5(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 6 {
+                createLabelFrame6(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 7 {
+                createLabelFrame7(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 8 {
+                createLabelFrame8(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 9 {
+                createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
+                createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }
+        }
+        
     }
+    
     
     //MARK: - CREATE LABEL FRAMES
     func createLabelFrame3(isVertical : Bool,x: CGFloat,y:CGFloat,answer : [String.Element],whicAnswer: Int) {

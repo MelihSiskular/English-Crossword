@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CrossWordViewController: UIViewController {
     
@@ -123,6 +124,8 @@ class CrossWordViewController: UIViewController {
     ///TOPLAM VERİLEN CEVAPLARIN COUNT KONTROL EDEBİLCEĞİMİZ DİZİ
     var howManyAnswerInArray = [Int]()
     
+    ///Yanlış cevapları kullanıcıya bildirmemiz için yanlışları tutacağımız ARRAY
+    var wrongAnswersArray = [Int]()
     ///Cevap1 Labelları
     var answerLabel10 = UILabel()
     var answerLabel11 = UILabel()
@@ -134,7 +137,12 @@ class CrossWordViewController: UIViewController {
     var answerLabel17 = UILabel()
     var answerLabel18 = UILabel()
     var answerLabel19 = UILabel()
-    
+    var answerLabel1eleven = UILabel()
+    var answerLabel1twelve = UILabel()
+    var answerLabel1thirteen = UILabel()
+    var answerLabel1fourteen = UILabel()
+    var answerLabel1fifteen = UILabel()
+
     ///Cevap2 Labelları
     var answerLabel20 = UILabel()
     var answerLabel21 = UILabel()
@@ -146,7 +154,12 @@ class CrossWordViewController: UIViewController {
     var answerLabel27 = UILabel()
     var answerLabel28 = UILabel()
     var answerLabel29 = UILabel()
-    
+    var answerLabel2eleven = UILabel()
+    var answerLabel2twelve = UILabel()
+    var answerLabel2thirteen = UILabel()
+    var answerLabel2fourteen = UILabel()
+    var answerLabel2fifteen = UILabel()
+
     ///Cevap3 Labelları
     var answerLabel30 = UILabel()
     var answerLabel31 = UILabel()
@@ -158,7 +171,12 @@ class CrossWordViewController: UIViewController {
     var answerLabel37 = UILabel()
     var answerLabel38 = UILabel()
     var answerLabel39 = UILabel()
-    
+    var answerLabel3eleven = UILabel()
+    var answerLabel3twelve = UILabel()
+    var answerLabel3thirteen = UILabel()
+    var answerLabel3fourteen = UILabel()
+    var answerLabel3fifteen = UILabel()
+
     ///Cevap4 Labelları
     var answerLabel40 = UILabel()
     var answerLabel41 = UILabel()
@@ -170,6 +188,11 @@ class CrossWordViewController: UIViewController {
     var answerLabel47 = UILabel()
     var answerLabel48 = UILabel()
     var answerLabel49 = UILabel()
+    var answerLabel4eleven = UILabel()
+    var answerLabel4twelve = UILabel()
+    var answerLabel4thirteen = UILabel()
+    var answerLabel4fourteen = UILabel()
+    var answerLabel4fifteen = UILabel()
 
     ///Cevap5 Labelları
     var answerLabel50 = UILabel()
@@ -182,7 +205,12 @@ class CrossWordViewController: UIViewController {
     var answerLabel57 = UILabel()
     var answerLabel58 = UILabel()
     var answerLabel59 = UILabel()
-    
+    var answerLabel5eleven = UILabel()
+    var answerLabel5twelve = UILabel()
+    var answerLabel5thirteen = UILabel()
+    var answerLabel5fourteen = UILabel()
+    var answerLabel5fifteen = UILabel()
+
     ///Cevap6 Labelları
     var answerLabel60 = UILabel()
     var answerLabel61 = UILabel()
@@ -194,7 +222,12 @@ class CrossWordViewController: UIViewController {
     var answerLabel67 = UILabel()
     var answerLabel68 = UILabel()
     var answerLabel69 = UILabel()
-    
+    var answerLabel6eleven = UILabel()
+    var answerLabel6twelve = UILabel()
+    var answerLabel6thirteen = UILabel()
+    var answerLabel6fourteen = UILabel()
+    var answerLabel6fifteen = UILabel()
+
     ///Cevap7 Labelları
     var answerLabel70 = UILabel()
     var answerLabel71 = UILabel()
@@ -206,7 +239,12 @@ class CrossWordViewController: UIViewController {
     var answerLabel77 = UILabel()
     var answerLabel78 = UILabel()
     var answerLabel79 = UILabel()
-    
+    var answerLabel7eleven = UILabel()
+    var answerLabel7twelve = UILabel()
+    var answerLabel7thirteen = UILabel()
+    var answerLabel7fourteen = UILabel()
+    var answerLabel7fifteen = UILabel()
+
     ///Cevap8 Labelları
     var answerLabel80 = UILabel()
     var answerLabel81 = UILabel()
@@ -218,7 +256,12 @@ class CrossWordViewController: UIViewController {
     var answerLabel87 = UILabel()
     var answerLabel88 = UILabel()
     var answerLabel89 = UILabel()
-    
+    var answerLabel8eleven = UILabel()
+    var answerLabel8twelve = UILabel()
+    var answerLabel8thirteen = UILabel()
+    var answerLabel8fourteen = UILabel()
+    var answerLabel8fifteen = UILabel()
+
     ///Cevap 9 Labelları
     var answerLabel90 = UILabel()
     var answerLabel91 = UILabel()
@@ -230,7 +273,12 @@ class CrossWordViewController: UIViewController {
     var answerLabel97 = UILabel()
     var answerLabel98 = UILabel()
     var answerLabel99 = UILabel()
-    
+    var answerLabel9eleven = UILabel()
+    var answerLabel9twelve = UILabel()
+    var answerLabel9thirteen = UILabel()
+    var answerLabel9fourteen = UILabel()
+    var answerLabel9fifteen = UILabel()
+
     ///Cevap10 Labelları
     var answerLabel100 = UILabel()
     var answerLabel101 = UILabel()
@@ -242,7 +290,12 @@ class CrossWordViewController: UIViewController {
     var answerLabel107 = UILabel()
     var answerLabel108 = UILabel()
     var answerLabel109 = UILabel()
-    
+    var answerLabel10eleven = UILabel()
+    var answerLabel10twelve = UILabel()
+    var answerLabel10thirteen = UILabel()
+    var answerLabel10fourteen = UILabel()
+    var answerLabel10fifteen = UILabel()
+
     ///Cevap11 Labelları
     var answerLabel110 = UILabel()
     var answerLabel111 = UILabel()
@@ -254,7 +307,12 @@ class CrossWordViewController: UIViewController {
     var answerLabel117 = UILabel()
     var answerLabel118 = UILabel()
     var answerLabel119 = UILabel()
-    
+    var answerLabel11eleven = UILabel()
+    var answerLabel11twelve = UILabel()
+    var answerLabel11thirteen = UILabel()
+    var answerLabel11fourteen = UILabel()
+    var answerLabel11fifteen = UILabel()
+
     ///Cevap12 Labelları
     var answerLabel120 = UILabel()
     var answerLabel121 = UILabel()
@@ -266,6 +324,12 @@ class CrossWordViewController: UIViewController {
     var answerLabel127 = UILabel()
     var answerLabel128 = UILabel()
     var answerLabel129 = UILabel()
+    var answerLabel12eleven = UILabel()
+    var answerLabel12twelve = UILabel()
+    var answerLabel12thirteen = UILabel()
+    var answerLabel12fourteen = UILabel()
+    var answerLabel12fifteen = UILabel()
+
     
     ///Cevap13 Labelları
     var answerLabel130 = UILabel()
@@ -278,7 +342,12 @@ class CrossWordViewController: UIViewController {
     var answerLabel137 = UILabel()
     var answerLabel138 = UILabel()
     var answerLabel139 = UILabel()
-    
+    var answerLabel13eleven = UILabel()
+    var answerLabel13twelve = UILabel()
+    var answerLabel13thirteen = UILabel()
+    var answerLabel13fourteen = UILabel()
+    var answerLabel13fifteen = UILabel()
+
     ///Cevap14 Labelları
     var answerLabel140 = UILabel()
     var answerLabel141 = UILabel()
@@ -290,7 +359,12 @@ class CrossWordViewController: UIViewController {
     var answerLabel147 = UILabel()
     var answerLabel148 = UILabel()
     var answerLabel149 = UILabel()
-    
+    var answerLabel14eleven = UILabel()
+    var answerLabel14twelve = UILabel()
+    var answerLabel14thirteen = UILabel()
+    var answerLabel14fourteen = UILabel()
+    var answerLabel14fifteen = UILabel()
+
     ///Cevap15 Labelları
     var answerLabel150 = UILabel()
     var answerLabel151 = UILabel()
@@ -302,7 +376,12 @@ class CrossWordViewController: UIViewController {
     var answerLabel157 = UILabel()
     var answerLabel158 = UILabel()
     var answerLabel159 = UILabel()
-    
+    var answerLabel15eleven = UILabel()
+    var answerLabel15twelve = UILabel()
+    var answerLabel15thirteen = UILabel()
+    var answerLabel15fourteen = UILabel()
+    var answerLabel15fifteen = UILabel()
+
     ///Cevap16 Labelları
     var answerLabel160 = UILabel()
     var answerLabel161 = UILabel()
@@ -314,7 +393,12 @@ class CrossWordViewController: UIViewController {
     var answerLabel167 = UILabel()
     var answerLabel168 = UILabel()
     var answerLabel169 = UILabel()
-    
+    var answerLabel16eleven = UILabel()
+    var answerLabel16twelve = UILabel()
+    var answerLabel16thirteen = UILabel()
+    var answerLabel16fourteen = UILabel()
+    var answerLabel16fifteen = UILabel()
+
    
 
     
@@ -395,6 +479,8 @@ class CrossWordViewController: UIViewController {
         
         
     }
+    
+    
     ///Kelimeler için Button addSubviewi
     ///Her bulmaca için frame işlemi kendisinde olacak! indexe göre !
     func addButtonToScrollView() {
@@ -505,6 +591,7 @@ class CrossWordViewController: UIViewController {
     }
     
     func resetAnswers() {
+        wrongAnswersArray = [Int]()
         howManyAnswerInArray = [Int]()
         answerFromAlertText1 = -1
         answerFromAlertText2 = -1
@@ -871,24 +958,32 @@ class CrossWordViewController: UIViewController {
             
         case 2:
             print("2.index için olacaklar")
-            
+            bezierView.backgroundColor = .systemYellow
+            view.backgroundColor = .systemYellow
         case 3:
             print("3.index için olacaklar")
-            
+            bezierView.backgroundColor = .systemYellow
+            view.backgroundColor = .systemYellow
         case 4:
             print("4.index için olacaklar")
-            
+            bezierView.backgroundColor = .systemYellow
+            view.backgroundColor = .systemYellow
         case 5:
             print("5.index için olacaklar")
-            
+            bezierView.backgroundColor = .systemYellow
+            view.backgroundColor = .systemYellow
         case 6:
             print("6.index için olacaklar")
-            
+            bezierView.backgroundColor = .systemYellow
+            view.backgroundColor = .systemYellow
         case 7:
             print("7.index için olacaklar")
-
+            bezierView.backgroundColor = .systemYellow
+            view.backgroundColor = .systemYellow
         default:
-            print("DEFAULT")
+            print("DEFAULT") //Belirlenen durum dışında tüm olacaklar için
+            bezierView.backgroundColor = .systemYellow
+            view.backgroundColor = .systemYellow
             
         }
         crossWordButtonFrames(HangiBulmaca: choosenIndexPathRow)
@@ -902,6 +997,7 @@ class CrossWordViewController: UIViewController {
         
         addAnswersToTotalArray()
   
+        var indexCounter = 0
         
         var amountOf1 = 0
         var amountOf0 = 0
@@ -911,7 +1007,10 @@ class CrossWordViewController: UIViewController {
                 amountOf1 += 1
             }else if i == 0 {
                 amountOf0 += 1
+                //Yanlış cevap var
+                wrongAnswersArray.append(indexCounter + 1)
             }
+            indexCounter += 1 //Her kontrolden sonra indexCounter 1 artar yani 0 1 2 3 index doğru bi şekilde gider--> Soruya ulaşmak için (indexCounter + 1) ile hangi soru olduğuna ulaşırız
         }
         
         if amountOf0 + amountOf1 == bulmacalar[choosenIndexPathRow].TurkishWordsArray.count {
@@ -922,13 +1021,16 @@ class CrossWordViewController: UIViewController {
 Doğru Sayısı: \(amountOf1)
 Yanlış Sayısı: \(amountOf0)
 
+Yanlış Sorular: \(wrongAnswersArray)
+
 """)
 
             
             
-            ///CORE DATA (KAYDETME) İŞLEMERİ BAŞLAYABİLİR
-      
+            ///CORE DATA (KAYDETME) İŞLEMERİ BAŞLAYABİLİR ----> Küçük Veriler ile çalışacağım ve sıra işi sıkıntı olacağını düşündüğüm için userdefaults ile kaydedeceğim!
+            UserDefaults.standard.set(amountOf1, forKey: "\(choosenIndexPathRow)")//indexine göre değeri kaydedeceğim!
             
+            UserDefaults.standard.set(1, forKey: "Bulmaca \(choosenIndexPathRow)")
             
             ///KAYDETTİKTEN SONRA TAMAMLANDI BUTONU KAPANSIN TIKLANMASIN!
             navigationController?.navigationBar.topItem?.rightBarButtonItem?.title = "TAMAMLANDI"
@@ -1454,6 +1556,16 @@ Yanlış Sayısı: \(amountOf0)
                 createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
                 createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 11 {
+                createLabelFrame11(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 12 {
+                createLabelFrame12(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 13 {
+                createLabelFrame13(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 14 {
+                createLabelFrame14(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 15 {
+                createLabelFrame15(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }
             
         }
@@ -1474,6 +1586,16 @@ Yanlış Sayısı: \(amountOf0)
                 createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
                 createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 11 {
+                createLabelFrame11(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 12 {
+                createLabelFrame12(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 13 {
+                createLabelFrame13(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 14 {
+                createLabelFrame14(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 15 {
+                createLabelFrame15(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }
         }
         else if whicAnswer == 3 {
@@ -1493,6 +1615,16 @@ Yanlış Sayısı: \(amountOf0)
                 createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
                 createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 11 {
+                createLabelFrame11(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 12 {
+                createLabelFrame12(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 13 {
+                createLabelFrame13(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 14 {
+                createLabelFrame14(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 15 {
+                createLabelFrame15(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }
         }
         else if whicAnswer == 4 {
@@ -1512,6 +1644,16 @@ Yanlış Sayısı: \(amountOf0)
                 createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
                 createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 11 {
+                createLabelFrame11(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 12 {
+                createLabelFrame12(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 13 {
+                createLabelFrame13(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 14 {
+                createLabelFrame14(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 15 {
+                createLabelFrame15(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }
         }
         else if whicAnswer == 5 {
@@ -1531,6 +1673,16 @@ Yanlış Sayısı: \(amountOf0)
                 createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
                 createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 11 {
+                createLabelFrame11(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 12 {
+                createLabelFrame12(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 13 {
+                createLabelFrame13(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 14 {
+                createLabelFrame14(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 15 {
+                createLabelFrame15(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }
         }
         else if whicAnswer == 6 {
@@ -1550,6 +1702,16 @@ Yanlış Sayısı: \(amountOf0)
                 createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
                 createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 11 {
+                createLabelFrame11(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 12 {
+                createLabelFrame12(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 13 {
+                createLabelFrame13(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 14 {
+                createLabelFrame14(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 15 {
+                createLabelFrame15(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }
         }
         else if whicAnswer == 7 {
@@ -1569,6 +1731,16 @@ Yanlış Sayısı: \(amountOf0)
                 createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
                 createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 11 {
+                createLabelFrame11(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 12 {
+                createLabelFrame12(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 13 {
+                createLabelFrame13(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 14 {
+                createLabelFrame14(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 15 {
+                createLabelFrame14(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }
         }
         else if whicAnswer == 8 {
@@ -1588,6 +1760,16 @@ Yanlış Sayısı: \(amountOf0)
                 createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
                 createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 11 {
+                createLabelFrame11(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 12 {
+                createLabelFrame12(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 13 {
+                createLabelFrame13(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 14 {
+                createLabelFrame14(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 15 {
+                createLabelFrame15 (isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }
         }
         else if whicAnswer == 9 {
@@ -1607,6 +1789,16 @@ Yanlış Sayısı: \(amountOf0)
                 createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
                 createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 11 {
+                createLabelFrame11(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 12 {
+                createLabelFrame12(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 13 {
+                createLabelFrame13(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 14 {
+                createLabelFrame14(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 15 {
+                createLabelFrame14(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }
         }
         else if whicAnswer == 10 {
@@ -1626,6 +1818,16 @@ Yanlış Sayısı: \(amountOf0)
                 createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
                 createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 11 {
+                createLabelFrame11(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 12 {
+                createLabelFrame12(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 13 {
+                createLabelFrame13(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 14 {
+                createLabelFrame14(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 15 {
+                createLabelFrame15(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }
         }
         else if whicAnswer == 11 {
@@ -1645,6 +1847,16 @@ Yanlış Sayısı: \(amountOf0)
                 createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
                 createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 11 {
+                createLabelFrame11(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 12 {
+                createLabelFrame12(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 13 {
+                createLabelFrame13(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 14 {
+                createLabelFrame14(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 15 {
+                createLabelFrame15(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }
         }
         else if whicAnswer == 12 {
@@ -1664,6 +1876,16 @@ Yanlış Sayısı: \(amountOf0)
                 createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
                 createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 11 {
+                createLabelFrame11(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 12 {
+                createLabelFrame12(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 13 {
+                createLabelFrame13(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 14 {
+                createLabelFrame14(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 15 {
+                createLabelFrame15(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }
         }
         else if whicAnswer == 13 {
@@ -1683,6 +1905,16 @@ Yanlış Sayısı: \(amountOf0)
                 createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
                 createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 11 {
+                createLabelFrame11(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 12 {
+                createLabelFrame12(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 13 {
+                createLabelFrame13(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 14 {
+                createLabelFrame14(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 15 {
+                createLabelFrame15(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }
         }
         else if whicAnswer == 14 {
@@ -1702,6 +1934,16 @@ Yanlış Sayısı: \(amountOf0)
                 createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
                 createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 11 {
+                createLabelFrame11(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 12 {
+                createLabelFrame12(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 13 {
+                createLabelFrame13(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 14 {
+                createLabelFrame14(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 15 {
+                createLabelFrame15(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }
         }
         else if whicAnswer == 15 {
@@ -1721,6 +1963,16 @@ Yanlış Sayısı: \(amountOf0)
                 createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
                 createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 11 {
+                createLabelFrame11(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 12 {
+                createLabelFrame12(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 13 {
+                createLabelFrame13(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 14 {
+                createLabelFrame14(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 15 {
+                createLabelFrame15(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }
         }
         else if whicAnswer == 16 {
@@ -1740,6 +1992,16 @@ Yanlış Sayısı: \(amountOf0)
                 createLabelFrame9(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 10 {
                 createLabelFrame10(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 11 {
+                createLabelFrame11(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 12 {
+                createLabelFrame12(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 13 {
+                createLabelFrame13(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 14 {
+                createLabelFrame14(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
+            }else if bulmacalar[index].TurkishWordsArray[whicAnswer - 1][1].count == 15 {
+                createLabelFrame15(isVertical: bulmacalar[index].isVerticalArrays[whicAnswer - 1], x: bulmacalar[index].locationXY[whicAnswer - 1][0], y: bulmacalar[index].locationXY[whicAnswer - 1][1], answer: answerArray, whicAnswer: whicAnswer)
             }
         }
         
@@ -9286,8 +9548,8507 @@ Yanlış Sayısı: \(amountOf0)
 
         }
     }
+    func createLabelFrame11(isVertical : Bool,x: CGFloat,y:CGFloat,answer : [String.Element],whicAnswer: Int) {
+        if whicAnswer == 1 {
+            answerLabel10.text = ""
+            answerLabel11.text = ""
+            answerLabel12.text = ""
+            answerLabel13.text = ""
+            answerLabel14.text = ""
+            answerLabel15.text = ""
+            answerLabel16.text = ""
+            answerLabel17.text = ""
+            answerLabel18.text = ""
+            answerLabel19.text = ""
+            answerLabel1eleven.text = ""
+            
+            answerLabel10.textAlignment = .center
+            answerLabel11.textAlignment = .center
+            answerLabel12.textAlignment = .center
+            answerLabel13.textAlignment = .center
+            answerLabel14.textAlignment = .center
+            answerLabel15.textAlignment = .center
+            answerLabel16.textAlignment = .center
+            answerLabel17.textAlignment = .center
+            answerLabel18.textAlignment = .center
+            answerLabel19.textAlignment = .center
+            answerLabel1eleven.textAlignment = .center
+            
+            for i in answer {
+                if answerLabel10.text == "" {
+                    answerLabel10.text = String(i)
+                }else  if answerLabel11.text == "" {
+                    answerLabel11.text = String(i)
+                }else  if answerLabel12.text == "" {
+                    answerLabel12.text = String(i)
+                }else if answerLabel13.text == "" {
+                    answerLabel13.text = String(i)
+                }else if answerLabel14.text == "" {
+                    answerLabel14.text = String(i)
+                }else if answerLabel15.text == "" {
+                    answerLabel15.text = String(i)
+                }else if answerLabel16.text == "" {
+                    answerLabel16.text = String(i)
+                }else if answerLabel17.text == "" {
+                    answerLabel17.text = String(i)
+                }else if answerLabel18.text == "" {
+                    answerLabel18.text = String(i)
+                }else if answerLabel19.text == "" {
+                    answerLabel19.text = String(i)
+                }else if answerLabel1eleven.text == "" {
+                    answerLabel1eleven.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel10.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel12.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel13.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel14.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel15.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel16.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel17.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel18.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel19.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel1eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+            }else { //Yatay
+                answerLabel10.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel12.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel13.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel14.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel15.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel16.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel17.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel18.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel19.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel1eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+            }
+            scrollView.addSubview(answerLabel10)
+            scrollView.addSubview(answerLabel11)
+            scrollView.addSubview(answerLabel12)
+            scrollView.addSubview(answerLabel13)
+            scrollView.addSubview(answerLabel14)
+            scrollView.addSubview(answerLabel15)
+            scrollView.addSubview(answerLabel16)
+            scrollView.addSubview(answerLabel17)
+            scrollView.addSubview(answerLabel18)
+            scrollView.addSubview(answerLabel19)
+            scrollView.addSubview(answerLabel1eleven)
+            
+        }else if whicAnswer == 2 {
+            answerLabel20.text = ""
+            answerLabel21.text = ""
+            answerLabel22.text = ""
+            answerLabel23.text = ""
+            answerLabel24.text = ""
+            answerLabel25.text = ""
+            answerLabel26.text = ""
+            answerLabel27.text = ""
+            answerLabel28.text = ""
+            answerLabel29.text = ""
+            answerLabel2eleven.text = ""
+            
+            answerLabel20.textAlignment = .center
+            answerLabel21.textAlignment = .center
+            answerLabel22.textAlignment = .center
+            answerLabel23.textAlignment = .center
+            answerLabel24.textAlignment = .center
+            answerLabel25.textAlignment = .center
+            answerLabel26.textAlignment = .center
+            answerLabel27.textAlignment = .center
+            answerLabel28.textAlignment = .center
+            answerLabel29.textAlignment = .center
+            answerLabel2eleven.textAlignment = .center
+
+            
+            for i in answer {
+                if answerLabel20.text == "" {
+                    answerLabel20.text = String(i)
+                }else  if answerLabel21.text == "" {
+                    answerLabel21.text = String(i)
+                }else  if answerLabel22.text == "" {
+                    answerLabel22.text = String(i)
+                }else if answerLabel23.text == "" {
+                    answerLabel23.text = String(i)
+                }else if answerLabel24.text == "" {
+                    answerLabel24.text = String(i)
+                }else if answerLabel25.text == "" {
+                    answerLabel25.text = String(i)
+                }else if answerLabel26.text == "" {
+                    answerLabel26.text = String(i)
+                }else if answerLabel27.text == "" {
+                    answerLabel27.text = String(i)
+                }else if answerLabel28.text == "" {
+                    answerLabel28.text = String(i)
+                }else if answerLabel29.text == "" {
+                    answerLabel29.text = String(i)
+                }else if answerLabel2eleven.text == "" {
+                    answerLabel2eleven.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel20.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel21.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel22.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel23.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel24.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel25.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel26.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel27.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel28.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel29.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel2eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+
+            }else { //Yatay
+                answerLabel20.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel21.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height: width * 0.07)
+                answerLabel22.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel23.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel24.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel25.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel26.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel27.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel28.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel29.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel2eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel20)
+            scrollView.addSubview(answerLabel21)
+            scrollView.addSubview(answerLabel22)
+            scrollView.addSubview(answerLabel23)
+            scrollView.addSubview(answerLabel24)
+            scrollView.addSubview(answerLabel25)
+            scrollView.addSubview(answerLabel26)
+            scrollView.addSubview(answerLabel27)
+            scrollView.addSubview(answerLabel28)
+            scrollView.addSubview(answerLabel29)
+            scrollView.addSubview(answerLabel2eleven)
+
+            
+        }else if whicAnswer == 3 {
+            answerLabel30.text = ""
+            answerLabel31.text = ""
+            answerLabel32.text = ""
+            answerLabel33.text = ""
+            answerLabel34.text = ""
+            answerLabel35.text = ""
+            answerLabel36.text = ""
+            answerLabel37.text = ""
+            answerLabel38.text = ""
+            answerLabel39.text = ""
+            answerLabel3eleven.text = ""
+
+            answerLabel30.textAlignment = .center
+            answerLabel31.textAlignment = .center
+            answerLabel32.textAlignment = .center
+            answerLabel33.textAlignment = .center
+            answerLabel34.textAlignment = .center
+            answerLabel35.textAlignment = .center
+            answerLabel36.textAlignment = .center
+            answerLabel37.textAlignment = .center
+            answerLabel38.textAlignment = .center
+            answerLabel39.textAlignment = .center
+            answerLabel3eleven.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel30.text == "" {
+                    answerLabel30.text = String(i)
+                }else  if answerLabel31.text == "" {
+                    answerLabel31.text = String(i)
+                }else  if answerLabel32.text == "" {
+                    answerLabel32.text = String(i)
+                }else  if answerLabel33.text == "" {
+                    answerLabel33.text = String(i)
+                }else  if answerLabel34.text == "" {
+                    answerLabel34.text = String(i)
+                }else  if answerLabel35.text == "" {
+                    answerLabel35.text = String(i)
+                }else  if answerLabel36.text == "" {
+                    answerLabel36.text = String(i)
+                }else  if answerLabel37.text == "" {
+                    answerLabel37.text = String(i)
+                }else  if answerLabel38.text == "" {
+                    answerLabel38.text = String(i)
+                }else  if answerLabel39.text == "" {
+                    answerLabel39.text = String(i)
+                }else  if answerLabel3eleven.text == "" {
+                    answerLabel3eleven.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel30.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel31.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel32.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel33.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel34.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel35.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel36.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel37.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel38.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel39.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel3eleven.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel30.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel31.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel32.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel33.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel34.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel35.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel36.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel37.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel38.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel39.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel3eleven.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel30)
+            scrollView.addSubview(answerLabel31)
+            scrollView.addSubview(answerLabel32)
+            scrollView.addSubview(answerLabel33)
+            scrollView.addSubview(answerLabel34)
+            scrollView.addSubview(answerLabel35)
+            scrollView.addSubview(answerLabel36)
+            scrollView.addSubview(answerLabel37)
+            scrollView.addSubview(answerLabel38)
+            scrollView.addSubview(answerLabel39)
+            scrollView.addSubview(answerLabel3eleven)
+
+
+            
+        }else if whicAnswer == 4 {
+            answerLabel40.text = ""
+            answerLabel41.text = ""
+            answerLabel42.text = ""
+            answerLabel43.text = ""
+            answerLabel44.text = ""
+            answerLabel45.text = ""
+            answerLabel46.text = ""
+            answerLabel47.text = ""
+            answerLabel48.text = ""
+            answerLabel49.text = ""
+            answerLabel4eleven.text = ""
+
+            answerLabel40.textAlignment = .center
+            answerLabel41.textAlignment = .center
+            answerLabel42.textAlignment = .center
+            answerLabel43.textAlignment = .center
+            answerLabel44.textAlignment = .center
+            answerLabel45.textAlignment = .center
+            answerLabel46.textAlignment = .center
+            answerLabel47.textAlignment = .center
+            answerLabel48.textAlignment = .center
+            answerLabel49.textAlignment = .center
+            answerLabel4eleven.textAlignment = .center
+
+
+            
+            for i in answer {
+                if answerLabel40.text == "" {
+                    answerLabel40.text = String(i)
+                }else  if answerLabel41.text == "" {
+                    answerLabel41.text = String(i)
+                }else  if answerLabel42.text == "" {
+                    answerLabel42.text = String(i)
+                }else if answerLabel43.text == "" {
+                    answerLabel43.text = String(i)
+                }else if answerLabel44.text == "" {
+                    answerLabel44.text = String(i)
+                }else if answerLabel45.text == "" {
+                    answerLabel45.text = String(i)
+                }else if answerLabel46.text == "" {
+                    answerLabel46.text = String(i)
+                }else if answerLabel47.text == "" {
+                    answerLabel47.text = String(i)
+                }else if answerLabel48.text == "" {
+                    answerLabel48.text = String(i)
+                }else if answerLabel49.text == "" {
+                    answerLabel49.text = String(i)
+                }else if answerLabel4eleven.text == "" {
+                    answerLabel4eleven.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel40.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel41.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel42.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel43.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel44.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel45.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel46.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel47.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel48.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel49.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel4eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel40.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel41.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel42.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel43.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel44.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel45.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel46.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel47.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel48.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel49.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel4eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel40)
+            scrollView.addSubview(answerLabel41)
+            scrollView.addSubview(answerLabel42)
+            scrollView.addSubview(answerLabel43)
+            scrollView.addSubview(answerLabel44)
+            scrollView.addSubview(answerLabel45)
+            scrollView.addSubview(answerLabel46)
+            scrollView.addSubview(answerLabel47)
+            scrollView.addSubview(answerLabel48)
+            scrollView.addSubview(answerLabel49)
+            scrollView.addSubview(answerLabel4eleven)
+
+            
+        }else if whicAnswer == 5 {
+            answerLabel50.text = ""
+            answerLabel51.text = ""
+            answerLabel52.text = ""
+            answerLabel53.text = ""
+            answerLabel54.text = ""
+            answerLabel55.text = ""
+            answerLabel56.text = ""
+            answerLabel57.text = ""
+            answerLabel58.text = ""
+            answerLabel59.text = ""
+            answerLabel5eleven.text = ""
+
+            answerLabel50.textAlignment = .center
+            answerLabel51.textAlignment = .center
+            answerLabel52.textAlignment = .center
+            answerLabel53.textAlignment = .center
+            answerLabel54.textAlignment = .center
+            answerLabel55.textAlignment = .center
+            answerLabel56.textAlignment = .center
+            answerLabel57.textAlignment = .center
+            answerLabel58.textAlignment = .center
+            answerLabel59.textAlignment = .center
+            answerLabel5eleven.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel50.text == "" {
+                    answerLabel50.text = String(i)
+                }else  if answerLabel51.text == "" {
+                    answerLabel51.text = String(i)
+                }else  if answerLabel52.text == "" {
+                    answerLabel52.text = String(i)
+                }else  if answerLabel53.text == "" {
+                    answerLabel53.text = String(i)
+                }else  if answerLabel54.text == "" {
+                    answerLabel54.text = String(i)
+                }else  if answerLabel55.text == "" {
+                    answerLabel55.text = String(i)
+                }else  if answerLabel56.text == "" {
+                    answerLabel56.text = String(i)
+                }else  if answerLabel57.text == "" {
+                    answerLabel57.text = String(i)
+                }else  if answerLabel58.text == "" {
+                    answerLabel58.text = String(i)
+                }else  if answerLabel59.text == "" {
+                    answerLabel59.text = String(i)
+                }else  if answerLabel5eleven.text == "" {
+                    answerLabel5eleven.text = String(i)
+                }
+                
+            }
+            if isVertical { //Dikey
+                answerLabel50.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel51.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel52.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel53.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel54.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel55.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel56.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel57.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel58.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel59.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel5eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else {//Yatay
+                answerLabel50.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel51.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel52.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel53.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel54.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel55.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel56.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel57.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel58.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel59.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel5eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel50)
+            scrollView.addSubview(answerLabel51)
+            scrollView.addSubview(answerLabel52)
+            scrollView.addSubview(answerLabel53)
+            scrollView.addSubview(answerLabel54)
+            scrollView.addSubview(answerLabel55)
+            scrollView.addSubview(answerLabel56)
+            scrollView.addSubview(answerLabel57)
+            scrollView.addSubview(answerLabel58)
+            scrollView.addSubview(answerLabel59)
+            scrollView.addSubview(answerLabel5eleven)
+
+
+        }else if whicAnswer == 6 {
+            answerLabel60.text = ""
+            answerLabel61.text = ""
+            answerLabel62.text = ""
+            answerLabel63.text = ""
+            answerLabel64.text = ""
+            answerLabel65.text = ""
+            answerLabel66.text = ""
+            answerLabel67.text = ""
+            answerLabel68.text = ""
+            answerLabel69.text = ""
+            answerLabel6eleven.text = ""
+
+            
+            answerLabel60.textAlignment = .center
+            answerLabel61.textAlignment = .center
+            answerLabel62.textAlignment = .center
+            answerLabel63.textAlignment = .center
+            answerLabel64.textAlignment = .center
+            answerLabel65.textAlignment = .center
+            answerLabel66.textAlignment = .center
+            answerLabel67.textAlignment = .center
+            answerLabel68.textAlignment = .center
+            answerLabel69.textAlignment = .center
+            answerLabel6eleven.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel60.text == "" {
+                    answerLabel60.text = String(i)
+                }else  if answerLabel61.text == "" {
+                    answerLabel61.text = String(i)
+                }else  if answerLabel62.text == "" {
+                    answerLabel62.text = String(i)
+                }else  if answerLabel63.text == "" {
+                    answerLabel63.text = String(i)
+                }else  if answerLabel64.text == "" {
+                    answerLabel64.text = String(i)
+                }else  if answerLabel65.text == "" {
+                    answerLabel65.text = String(i)
+                }else  if answerLabel66.text == "" {
+                    answerLabel66.text = String(i)
+                }else  if answerLabel67.text == "" {
+                    answerLabel67.text = String(i)
+                }else  if answerLabel68.text == "" {
+                    answerLabel68.text = String(i)
+                }else  if answerLabel69.text == "" {
+                    answerLabel69.text = String(i)
+                }else  if answerLabel6eleven.text == "" {
+                    answerLabel6eleven.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel60.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel61.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel62.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel63.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel64.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel65.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel66.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel67.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel68.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel69.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel6eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel60.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel61.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height: width * 0.07)
+                answerLabel62.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel63.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel64.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel65.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel66.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel67.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel68.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel69.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel6eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel60)
+            scrollView.addSubview(answerLabel61)
+            scrollView.addSubview(answerLabel62)
+            scrollView.addSubview(answerLabel63)
+            scrollView.addSubview(answerLabel64)
+            scrollView.addSubview(answerLabel65)
+            scrollView.addSubview(answerLabel66)
+            scrollView.addSubview(answerLabel67)
+            scrollView.addSubview(answerLabel68)
+            scrollView.addSubview(answerLabel69)
+            scrollView.addSubview(answerLabel6eleven)
+
+
+
+        }else if whicAnswer == 7 {
+            answerLabel70.text = ""
+            answerLabel71.text = ""
+            answerLabel72.text = ""
+            answerLabel73.text = ""
+            answerLabel74.text = ""
+            answerLabel75.text = ""
+            answerLabel76.text = ""
+            answerLabel77.text = ""
+            answerLabel78.text = ""
+            answerLabel79.text = ""
+            answerLabel7eleven.text = ""
+
+            answerLabel70.textAlignment = .center
+            answerLabel71.textAlignment = .center
+            answerLabel72.textAlignment = .center
+            answerLabel73.textAlignment = .center
+            answerLabel74.textAlignment = .center
+            answerLabel75.textAlignment = .center
+            answerLabel76.textAlignment = .center
+            answerLabel77.textAlignment = .center
+            answerLabel78.textAlignment = .center
+            answerLabel79.textAlignment = .center
+            answerLabel7eleven.textAlignment = .center
+
+
+            
+            for i in answer {
+                if answerLabel70.text == "" {
+                    answerLabel70.text = String(i)
+                }else  if answerLabel71.text == "" {
+                    answerLabel71.text = String(i)
+                }else  if answerLabel72.text == "" {
+                    answerLabel72.text = String(i)
+                }else  if answerLabel73.text == "" {
+                    answerLabel73.text = String(i)
+                }else  if answerLabel74.text == "" {
+                    answerLabel74.text = String(i)
+                }else  if answerLabel75.text == "" {
+                    answerLabel75.text = String(i)
+                }else  if answerLabel76.text == "" {
+                    answerLabel76.text = String(i)
+                }else  if answerLabel77.text == "" {
+                    answerLabel77.text = String(i)
+                }else  if answerLabel78.text == "" {
+                    answerLabel78.text = String(i)
+                }else  if answerLabel79.text == "" {
+                    answerLabel79.text = String(i)
+                }else  if answerLabel7eleven.text == "" {
+                    answerLabel7eleven.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel70.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel71.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel72.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel73.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel74.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel75.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel76.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel77.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel78.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel79.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel7eleven.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel70.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel71.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel72.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel73.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel74.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel75.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel76.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel77.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel78.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel79.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel7eleven.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel70)
+            scrollView.addSubview(answerLabel71)
+            scrollView.addSubview(answerLabel72)
+            scrollView.addSubview(answerLabel73)
+            scrollView.addSubview(answerLabel74)
+            scrollView.addSubview(answerLabel75)
+            scrollView.addSubview(answerLabel76)
+            scrollView.addSubview(answerLabel77)
+            scrollView.addSubview(answerLabel78)
+            scrollView.addSubview(answerLabel79)
+            scrollView.addSubview(answerLabel7eleven)
+
+
+        }else if whicAnswer == 8 {
+            answerLabel80.text = ""
+            answerLabel81.text = ""
+            answerLabel82.text = ""
+            answerLabel83.text = ""
+            answerLabel84.text = ""
+            answerLabel85.text = ""
+            answerLabel86.text = ""
+            answerLabel87.text = ""
+            answerLabel88.text = ""
+            answerLabel89.text = ""
+            answerLabel8eleven.text = ""
+
+            answerLabel80.textAlignment = .center
+            answerLabel81.textAlignment = .center
+            answerLabel82.textAlignment = .center
+            answerLabel83.textAlignment = .center
+            answerLabel84.textAlignment = .center
+            answerLabel85.textAlignment = .center
+            answerLabel86.textAlignment = .center
+            answerLabel87.textAlignment = .center
+            answerLabel88.textAlignment = .center
+            answerLabel89.textAlignment = .center
+            answerLabel8eleven.textAlignment = .center
+
+
+            
+            for i in answer {
+                if answerLabel80.text == "" {
+                    answerLabel80.text = String(i)
+                }else  if answerLabel81.text == "" {
+                    answerLabel81.text = String(i)
+                }else  if answerLabel82.text == "" {
+                    answerLabel82.text = String(i)
+                }else  if answerLabel83.text == "" {
+                    answerLabel83.text = String(i)
+                }else  if answerLabel84.text == "" {
+                    answerLabel84.text = String(i)
+                }else  if answerLabel85.text == "" {
+                    answerLabel85.text = String(i)
+                }else  if answerLabel86.text == "" {
+                    answerLabel86.text = String(i)
+                }else  if answerLabel87.text == "" {
+                    answerLabel87.text = String(i)
+                }else  if answerLabel88.text == "" {
+                    answerLabel88.text = String(i)
+                }else  if answerLabel89.text == "" {
+                    answerLabel89.text = String(i)
+                }else  if answerLabel8eleven.text == "" {
+                    answerLabel8eleven.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel80.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel81.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel82.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel83.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel84.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel85.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel86.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel87.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel88.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel89.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel8eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+
+            }else { //Yatay
+                answerLabel80.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel81.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel82.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel83.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel84.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel85.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel86.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel87.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel88.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel89.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel8eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel80)
+            scrollView.addSubview(answerLabel81)
+            scrollView.addSubview(answerLabel82)
+            scrollView.addSubview(answerLabel83)
+            scrollView.addSubview(answerLabel84)
+            scrollView.addSubview(answerLabel85)
+            scrollView.addSubview(answerLabel86)
+            scrollView.addSubview(answerLabel87)
+            scrollView.addSubview(answerLabel88)
+            scrollView.addSubview(answerLabel89)
+            scrollView.addSubview(answerLabel8eleven)
+
+            
+        }else if whicAnswer == 9 {
+            answerLabel90.text = ""
+            answerLabel91.text = ""
+            answerLabel92.text = ""
+            answerLabel93.text = ""
+            answerLabel94.text = ""
+            answerLabel95.text = ""
+            answerLabel96.text = ""
+            answerLabel97.text = ""
+            answerLabel98.text = ""
+            answerLabel99.text = ""
+            answerLabel9eleven.text = ""
+
+            answerLabel90.textAlignment = .center
+            answerLabel91.textAlignment = .center
+            answerLabel92.textAlignment = .center
+            answerLabel93.textAlignment = .center
+            answerLabel94.textAlignment = .center
+            answerLabel95.textAlignment = .center
+            answerLabel96.textAlignment = .center
+            answerLabel97.textAlignment = .center
+            answerLabel98.textAlignment = .center
+            answerLabel99.textAlignment = .center
+            answerLabel9eleven.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel90.text == "" {
+                    answerLabel90.text = String(i)
+                }else  if answerLabel91.text == "" {
+                    answerLabel91.text = String(i)
+                }else  if answerLabel92.text == "" {
+                    answerLabel92.text = String(i)
+                }else  if answerLabel93.text == "" {
+                    answerLabel93.text = String(i)
+                }else  if answerLabel94.text == "" {
+                    answerLabel94.text = String(i)
+                }else  if answerLabel95.text == "" {
+                    answerLabel95.text = String(i)
+                }else  if answerLabel96.text == "" {
+                    answerLabel96.text = String(i)
+                }else  if answerLabel97.text == "" {
+                    answerLabel97.text = String(i)
+                }else  if answerLabel98.text == "" {
+                    answerLabel98.text = String(i)
+                }else  if answerLabel99.text == "" {
+                    answerLabel99.text = String(i)
+                }else  if answerLabel9eleven.text == "" {
+                    answerLabel9eleven.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel90.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel91.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel92.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel93.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel94.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel95.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel96.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel97.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel98.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel99.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel9eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+            
+
+            }else { //Yatay
+                answerLabel90.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel91.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel92.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel93.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel94.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel95.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel96.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel97.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel98.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel99.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel9eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel90)
+            scrollView.addSubview(answerLabel91)
+            scrollView.addSubview(answerLabel92)
+            scrollView.addSubview(answerLabel93)
+            scrollView.addSubview(answerLabel94)
+            scrollView.addSubview(answerLabel95)
+            scrollView.addSubview(answerLabel96)
+            scrollView.addSubview(answerLabel97)
+            scrollView.addSubview(answerLabel98)
+            scrollView.addSubview(answerLabel99)
+            scrollView.addSubview(answerLabel9eleven)
+
+
+
+        }else if whicAnswer == 10 {
+            answerLabel100.text = ""
+            answerLabel101.text = ""
+            answerLabel102.text = ""
+            answerLabel103.text = ""
+            answerLabel104.text = ""
+            answerLabel105.text = ""
+            answerLabel106.text = ""
+            answerLabel107.text = ""
+            answerLabel108.text = ""
+            answerLabel109.text = ""
+            answerLabel10eleven.text = ""
+
+            answerLabel100.textAlignment = .center
+            answerLabel101.textAlignment = .center
+            answerLabel102.textAlignment = .center
+            answerLabel103.textAlignment = .center
+            answerLabel104.textAlignment = .center
+            answerLabel105.textAlignment = .center
+            answerLabel106.textAlignment = .center
+            answerLabel107.textAlignment = .center
+            answerLabel108.textAlignment = .center
+            answerLabel109.textAlignment = .center
+            answerLabel10eleven.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel100.text == "" {
+                    answerLabel100.text = String(i)
+                }else  if answerLabel101.text == "" {
+                    answerLabel101.text = String(i)
+                }else  if answerLabel102.text == "" {
+                    answerLabel102.text = String(i)
+                }else  if answerLabel103.text == "" {
+                    answerLabel103.text = String(i)
+                }else  if answerLabel104.text == "" {
+                    answerLabel104.text = String(i)
+                }else  if answerLabel105.text == "" {
+                    answerLabel105.text = String(i)
+                }else  if answerLabel106.text == "" {
+                    answerLabel106.text = String(i)
+                }else  if answerLabel107.text == "" {
+                    answerLabel107.text = String(i)
+                }else  if answerLabel108.text == "" {
+                    answerLabel108.text = String(i)
+                }else  if answerLabel109.text == "" {
+                    answerLabel109.text = String(i)
+                }else  if answerLabel10eleven.text == "" {
+                    answerLabel10eleven.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel100.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel101.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel102.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel103.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel104.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel105.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel106.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel107.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel108.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel109.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel10eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel100.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel101.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel102.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel103.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel104.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel105.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel106.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel107.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel108.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel109.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel10eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel100)
+            scrollView.addSubview(answerLabel101)
+            scrollView.addSubview(answerLabel102)
+            scrollView.addSubview(answerLabel103)
+            scrollView.addSubview(answerLabel104)
+            scrollView.addSubview(answerLabel105)
+            scrollView.addSubview(answerLabel106)
+            scrollView.addSubview(answerLabel107)
+            scrollView.addSubview(answerLabel108)
+            scrollView.addSubview(answerLabel109)
+            scrollView.addSubview(answerLabel10eleven)
+
+        }else if whicAnswer == 11 {
+            answerLabel110.text = ""
+            answerLabel111.text = ""
+            answerLabel112.text = ""
+            answerLabel113.text = ""
+            answerLabel114.text = ""
+            answerLabel115.text = ""
+            answerLabel116.text = ""
+            answerLabel117.text = ""
+            answerLabel118.text = ""
+            answerLabel119.text = ""
+            answerLabel11eleven.text = ""
+
+            answerLabel110.textAlignment = .center
+            answerLabel111.textAlignment = .center
+            answerLabel112.textAlignment = .center
+            answerLabel113.textAlignment = .center
+            answerLabel114.textAlignment = .center
+            answerLabel115.textAlignment = .center
+            answerLabel116.textAlignment = .center
+            answerLabel117.textAlignment = .center
+            answerLabel118.textAlignment = .center
+            answerLabel119.textAlignment = .center
+            answerLabel11eleven.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel110.text == "" {
+                    answerLabel110.text = String(i)
+                }else  if answerLabel111.text == "" {
+                    answerLabel111.text = String(i)
+                }else  if answerLabel112.text == "" {
+                    answerLabel112.text = String(i)
+                }else  if answerLabel113.text == "" {
+                    answerLabel113.text = String(i)
+                }else  if answerLabel114.text == "" {
+                    answerLabel114.text = String(i)
+                }else  if answerLabel115.text == "" {
+                    answerLabel115.text = String(i)
+                }else  if answerLabel116.text == "" {
+                    answerLabel116.text = String(i)
+                }else  if answerLabel117.text == "" {
+                    answerLabel117.text = String(i)
+                }else  if answerLabel118.text == "" {
+                    answerLabel118.text = String(i)
+                }else  if answerLabel119.text == "" {
+                    answerLabel119.text = String(i)
+                }else  if answerLabel11eleven.text == "" {
+                    answerLabel11eleven.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel110.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel111.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel112.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel113.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel114.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel115.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel116.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel117.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel118.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel119.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel11eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel110.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel111.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel112.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel113.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel114.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel115.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel116.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel117.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel118.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel119.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel110)
+            scrollView.addSubview(answerLabel111)
+            scrollView.addSubview(answerLabel112)
+            scrollView.addSubview(answerLabel113)
+            scrollView.addSubview(answerLabel114)
+            scrollView.addSubview(answerLabel115)
+            scrollView.addSubview(answerLabel116)
+            scrollView.addSubview(answerLabel117)
+            scrollView.addSubview(answerLabel118)
+            scrollView.addSubview(answerLabel119)
+            scrollView.addSubview(answerLabel11eleven)
+
+
+        }else if whicAnswer == 12 {
+            answerLabel120.text = ""
+            answerLabel121.text = ""
+            answerLabel122.text = ""
+            answerLabel123.text = ""
+            answerLabel124.text = ""
+            answerLabel125.text = ""
+            answerLabel126.text = ""
+            answerLabel127.text = ""
+            answerLabel128.text = ""
+            answerLabel129.text = ""
+            answerLabel12eleven.text = ""
+
+            answerLabel120.textAlignment = .center
+            answerLabel121.textAlignment = .center
+            answerLabel122.textAlignment = .center
+            answerLabel123.textAlignment = .center
+            answerLabel124.textAlignment = .center
+            answerLabel125.textAlignment = .center
+            answerLabel126.textAlignment = .center
+            answerLabel127.textAlignment = .center
+            answerLabel128.textAlignment = .center
+            answerLabel129.textAlignment = .center
+            answerLabel12eleven.textAlignment = .center
+
+
+            
+            for i in answer {
+                if answerLabel120.text == "" {
+                    answerLabel120.text = String(i)
+                }else  if answerLabel121.text == "" {
+                    answerLabel121.text = String(i)
+                }else  if answerLabel122.text == "" {
+                    answerLabel122.text = String(i)
+                }else  if answerLabel123.text == "" {
+                    answerLabel123.text = String(i)
+                }else  if answerLabel124.text == "" {
+                    answerLabel124.text = String(i)
+                }else  if answerLabel125.text == "" {
+                    answerLabel125.text = String(i)
+                }else  if answerLabel126.text == "" {
+                    answerLabel126.text = String(i)
+                }else  if answerLabel127.text == "" {
+                    answerLabel127.text = String(i)
+                }else  if answerLabel128.text == "" {
+                    answerLabel128.text = String(i)
+                }else  if answerLabel129.text == "" {
+                    answerLabel129.text = String(i)
+                }else  if answerLabel12eleven.text == "" {
+                    answerLabel12eleven.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel120.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel121.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel122.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel123.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel124.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel125.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel126.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel127.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel128.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel129.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel12eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel120.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel121.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel122.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel123.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel124.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel125.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel126.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel127.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel128.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel129.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel12eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel120)
+            scrollView.addSubview(answerLabel121)
+            scrollView.addSubview(answerLabel122)
+            scrollView.addSubview(answerLabel123)
+            scrollView.addSubview(answerLabel124)
+            scrollView.addSubview(answerLabel125)
+            scrollView.addSubview(answerLabel126)
+            scrollView.addSubview(answerLabel127)
+            scrollView.addSubview(answerLabel128)
+            scrollView.addSubview(answerLabel129)
+            scrollView.addSubview(answerLabel12eleven)
+
+        }else if whicAnswer == 13 {
+            answerLabel130.text = ""
+            answerLabel131.text = ""
+            answerLabel132.text = ""
+            answerLabel133.text = ""
+            answerLabel134.text = ""
+            answerLabel135.text = ""
+            answerLabel136.text = ""
+            answerLabel137.text = ""
+            answerLabel138.text = ""
+            answerLabel139.text = ""
+            answerLabel13eleven.text = ""
+
+            answerLabel130.textAlignment = .center
+            answerLabel131.textAlignment = .center
+            answerLabel132.textAlignment = .center
+            answerLabel133.textAlignment = .center
+            answerLabel134.textAlignment = .center
+            answerLabel135.textAlignment = .center
+            answerLabel136.textAlignment = .center
+            answerLabel137.textAlignment = .center
+            answerLabel138.textAlignment = .center
+            answerLabel139.textAlignment = .center
+            answerLabel13eleven.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel130.text == "" {
+                    answerLabel130.text = String(i)
+                }else  if answerLabel131.text == "" {
+                    answerLabel131.text = String(i)
+                }else  if answerLabel132.text == "" {
+                    answerLabel132.text = String(i)
+                }else  if answerLabel133.text == "" {
+                    answerLabel133.text = String(i)
+                }else  if answerLabel134.text == "" {
+                    answerLabel134.text = String(i)
+                }else  if answerLabel135.text == "" {
+                    answerLabel135.text = String(i)
+                }else  if answerLabel136.text == "" {
+                    answerLabel136.text = String(i)
+                }else  if answerLabel137.text == "" {
+                    answerLabel137.text = String(i)
+                }else  if answerLabel138.text == "" {
+                    answerLabel138.text = String(i)
+                }else  if answerLabel139.text == "" {
+                    answerLabel139.text = String(i)
+                }else  if answerLabel13eleven.text == "" {
+                    answerLabel13eleven.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel130.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel131.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel132.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel133.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel134.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel135.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel136.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel137.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel138.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel139.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel13eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel130.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel131.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel132.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel133.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel134.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel135.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel136.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel137.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel138.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel13eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+            }
+            scrollView.addSubview(answerLabel130)
+            scrollView.addSubview(answerLabel131)
+            scrollView.addSubview(answerLabel132)
+            scrollView.addSubview(answerLabel133)
+            scrollView.addSubview(answerLabel134)
+            scrollView.addSubview(answerLabel135)
+            scrollView.addSubview(answerLabel136)
+            scrollView.addSubview(answerLabel137)
+            scrollView.addSubview(answerLabel138)
+            scrollView.addSubview(answerLabel139)
+            scrollView.addSubview(answerLabel13eleven)
+
+
+        }else if whicAnswer == 14 {
+            answerLabel140.text = ""
+            answerLabel141.text = ""
+            answerLabel142.text = ""
+            answerLabel143.text = ""
+            answerLabel144.text = ""
+            answerLabel145.text = ""
+            answerLabel146.text = ""
+            answerLabel147.text = ""
+            answerLabel148.text = ""
+            answerLabel149.text = ""
+            answerLabel14eleven.text = ""
+
+            answerLabel140.textAlignment = .center
+            answerLabel141.textAlignment = .center
+            answerLabel142.textAlignment = .center
+            answerLabel143.textAlignment = .center
+            answerLabel144.textAlignment = .center
+            answerLabel145.textAlignment = .center
+            answerLabel146.textAlignment = .center
+            answerLabel147.textAlignment = .center
+            answerLabel148.textAlignment = .center
+            answerLabel149.textAlignment = .center
+            answerLabel14eleven.textAlignment = .center
+
+            
+            for i in answer {
+                if answerLabel140.text == "" {
+                    answerLabel140.text = String(i)
+                }else  if answerLabel141.text == "" {
+                    answerLabel141.text = String(i)
+                }else  if answerLabel142.text == "" {
+                    answerLabel142.text = String(i)
+                }else  if answerLabel143.text == "" {
+                    answerLabel143.text = String(i)
+                }else  if answerLabel144.text == "" {
+                    answerLabel144.text = String(i)
+                }else  if answerLabel145.text == "" {
+                    answerLabel145.text = String(i)
+                }else  if answerLabel146.text == "" {
+                    answerLabel146.text = String(i)
+                }else  if answerLabel147.text == "" {
+                    answerLabel147.text = String(i)
+                }else  if answerLabel148.text == "" {
+                    answerLabel148.text = String(i)
+                }else  if answerLabel149.text == "" {
+                    answerLabel149.text = String(i)
+                }else  if answerLabel14eleven.text == "" {
+                    answerLabel14eleven.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel140.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel141.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel142.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel143.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel144.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel145.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel146.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel147.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel148.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel149.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel14eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel140.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel141.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel142.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel143.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel144.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel145.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel146.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel147.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel148.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel149.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel14eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel140)
+            scrollView.addSubview(answerLabel141)
+            scrollView.addSubview(answerLabel142)
+            scrollView.addSubview(answerLabel143)
+            scrollView.addSubview(answerLabel144)
+            scrollView.addSubview(answerLabel145)
+            scrollView.addSubview(answerLabel146)
+            scrollView.addSubview(answerLabel147)
+            scrollView.addSubview(answerLabel148)
+            scrollView.addSubview(answerLabel149)
+            scrollView.addSubview(answerLabel14eleven)
+
+        }else if whicAnswer == 15 {
+            answerLabel150.text = ""
+            answerLabel151.text = ""
+            answerLabel152.text = ""
+            answerLabel153.text = ""
+            answerLabel154.text = ""
+            answerLabel155.text = ""
+            answerLabel156.text = ""
+            answerLabel157.text = ""
+            answerLabel158.text = ""
+            answerLabel159.text = ""
+            answerLabel15eleven.text = ""
+
+            answerLabel150.textAlignment = .center
+            answerLabel151.textAlignment = .center
+            answerLabel152.textAlignment = .center
+            answerLabel153.textAlignment = .center
+            answerLabel154.textAlignment = .center
+            answerLabel155.textAlignment = .center
+            answerLabel156.textAlignment = .center
+            answerLabel157.textAlignment = .center
+            answerLabel158.textAlignment = .center
+            answerLabel159.textAlignment = .center
+            answerLabel15eleven.textAlignment = .center
+
+
+            
+            for i in answer {
+                if answerLabel150.text == "" {
+                    answerLabel150.text = String(i)
+                }else  if answerLabel151.text == "" {
+                    answerLabel151.text = String(i)
+                }else  if answerLabel152.text == "" {
+                    answerLabel152.text = String(i)
+                }else  if answerLabel153.text == "" {
+                    answerLabel153.text = String(i)
+                }else  if answerLabel154.text == "" {
+                    answerLabel154.text = String(i)
+                }else  if answerLabel155.text == "" {
+                    answerLabel155.text = String(i)
+                }else  if answerLabel156.text == "" {
+                    answerLabel156.text = String(i)
+                }else  if answerLabel157.text == "" {
+                    answerLabel157.text = String(i)
+                }else  if answerLabel158.text == "" {
+                    answerLabel158.text = String(i)
+                }else  if answerLabel159.text == "" {
+                    answerLabel159.text = String(i)
+                }else  if answerLabel15eleven.text == "" {
+                    answerLabel15eleven.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel150.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel151.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel152.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel153.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel154.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel155.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel156.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel157.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel158.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel159.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel15eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel150.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel151.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel152.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel153.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel154.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel155.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel156.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel157.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel158.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel159.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel15eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel150)
+            scrollView.addSubview(answerLabel151)
+            scrollView.addSubview(answerLabel152)
+            scrollView.addSubview(answerLabel153)
+            scrollView.addSubview(answerLabel154)
+            scrollView.addSubview(answerLabel155)
+            scrollView.addSubview(answerLabel156)
+            scrollView.addSubview(answerLabel157)
+            scrollView.addSubview(answerLabel158)
+            scrollView.addSubview(answerLabel159)
+            scrollView.addSubview(answerLabel15eleven)
+
+
+        }else if whicAnswer == 16 {
+            answerLabel160.text = ""
+            answerLabel161.text = ""
+            answerLabel162.text = ""
+            answerLabel163.text = ""
+            answerLabel164.text = ""
+            answerLabel165.text = ""
+            answerLabel166.text = ""
+            answerLabel167.text = ""
+            answerLabel168.text = ""
+            answerLabel169.text = ""
+            answerLabel16eleven.text = ""
+
+            answerLabel160.textAlignment = .center
+            answerLabel161.textAlignment = .center
+            answerLabel162.textAlignment = .center
+            answerLabel163.textAlignment = .center
+            answerLabel164.textAlignment = .center
+            answerLabel165.textAlignment = .center
+            answerLabel166.textAlignment = .center
+            answerLabel167.textAlignment = .center
+            answerLabel168.textAlignment = .center
+            answerLabel169.textAlignment = .center
+            answerLabel16eleven.textAlignment = .center
+
+            
+            for i in answer {
+                if answerLabel160.text == "" {
+                    answerLabel160.text = String(i)
+                }else  if answerLabel161.text == "" {
+                    answerLabel161.text = String(i)
+                }else  if answerLabel162.text == "" {
+                    answerLabel162.text = String(i)
+                }else if answerLabel163.text == "" {
+                    answerLabel163.text = String(i)
+                }else if answerLabel164.text == "" {
+                    answerLabel164.text = String(i)
+                }else if answerLabel165.text == "" {
+                    answerLabel165.text = String(i)
+                }else if answerLabel166.text == "" {
+                    answerLabel166.text = String(i)
+                }else if answerLabel167.text == "" {
+                    answerLabel167.text = String(i)
+                }else if answerLabel168.text == "" {
+                    answerLabel168.text = String(i)
+                }else if answerLabel169.text == "" {
+                    answerLabel169.text = String(i)
+                }else if answerLabel16eleven.text == "" {
+                    answerLabel16eleven.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel160.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel161.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel162.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel163.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel164.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel165.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel166.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel167.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel168.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel169.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel16eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel160.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel161.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel162.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel163.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel164.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel165.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel166.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel167.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel168.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel169.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel16eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel160)
+            scrollView.addSubview(answerLabel161)
+            scrollView.addSubview(answerLabel162)
+            scrollView.addSubview(answerLabel163)
+            scrollView.addSubview(answerLabel164)
+            scrollView.addSubview(answerLabel165)
+            scrollView.addSubview(answerLabel166)
+            scrollView.addSubview(answerLabel167)
+            scrollView.addSubview(answerLabel168)
+            scrollView.addSubview(answerLabel169)
+            scrollView.addSubview(answerLabel16eleven)
+
+        }
+    }
     
-   
+    func createLabelFrame12(isVertical : Bool,x: CGFloat,y:CGFloat,answer : [String.Element],whicAnswer: Int) {
+        if whicAnswer == 1 {
+            answerLabel10.text = ""
+            answerLabel11.text = ""
+            answerLabel12.text = ""
+            answerLabel13.text = ""
+            answerLabel14.text = ""
+            answerLabel15.text = ""
+            answerLabel16.text = ""
+            answerLabel17.text = ""
+            answerLabel18.text = ""
+            answerLabel19.text = ""
+            answerLabel1eleven.text = ""
+            answerLabel1twelve.text = ""
+            
+            answerLabel10.textAlignment = .center
+            answerLabel11.textAlignment = .center
+            answerLabel12.textAlignment = .center
+            answerLabel13.textAlignment = .center
+            answerLabel14.textAlignment = .center
+            answerLabel15.textAlignment = .center
+            answerLabel16.textAlignment = .center
+            answerLabel17.textAlignment = .center
+            answerLabel18.textAlignment = .center
+            answerLabel19.textAlignment = .center
+            answerLabel1eleven.textAlignment = .center
+            answerLabel1twelve.textAlignment = .center
+
+            for i in answer {
+                if answerLabel10.text == "" {
+                    answerLabel10.text = String(i)
+                }else  if answerLabel11.text == "" {
+                    answerLabel11.text = String(i)
+                }else  if answerLabel12.text == "" {
+                    answerLabel12.text = String(i)
+                }else if answerLabel13.text == "" {
+                    answerLabel13.text = String(i)
+                }else if answerLabel14.text == "" {
+                    answerLabel14.text = String(i)
+                }else if answerLabel15.text == "" {
+                    answerLabel15.text = String(i)
+                }else if answerLabel16.text == "" {
+                    answerLabel16.text = String(i)
+                }else if answerLabel17.text == "" {
+                    answerLabel17.text = String(i)
+                }else if answerLabel18.text == "" {
+                    answerLabel18.text = String(i)
+                }else if answerLabel19.text == "" {
+                    answerLabel19.text = String(i)
+                }else if answerLabel1eleven.text == "" {
+                    answerLabel1eleven.text = String(i)
+                }else if answerLabel1twelve.text == "" {
+                    answerLabel1twelve.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel10.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel12.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel13.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel14.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel15.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel16.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel17.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel18.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel19.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel1eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel1twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+
+            }else { //Yatay
+                answerLabel10.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel12.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel13.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel14.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel15.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel16.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel17.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel18.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel19.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel1eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel1twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel10)
+            scrollView.addSubview(answerLabel11)
+            scrollView.addSubview(answerLabel12)
+            scrollView.addSubview(answerLabel13)
+            scrollView.addSubview(answerLabel14)
+            scrollView.addSubview(answerLabel15)
+            scrollView.addSubview(answerLabel16)
+            scrollView.addSubview(answerLabel17)
+            scrollView.addSubview(answerLabel18)
+            scrollView.addSubview(answerLabel19)
+            scrollView.addSubview(answerLabel1eleven)
+            scrollView.addSubview(answerLabel1twelve)
+
+        }else if whicAnswer == 2 {
+            answerLabel20.text = ""
+            answerLabel21.text = ""
+            answerLabel22.text = ""
+            answerLabel23.text = ""
+            answerLabel24.text = ""
+            answerLabel25.text = ""
+            answerLabel26.text = ""
+            answerLabel27.text = ""
+            answerLabel28.text = ""
+            answerLabel29.text = ""
+            answerLabel2eleven.text = ""
+            answerLabel2twelve.text = ""
+
+            answerLabel20.textAlignment = .center
+            answerLabel21.textAlignment = .center
+            answerLabel22.textAlignment = .center
+            answerLabel23.textAlignment = .center
+            answerLabel24.textAlignment = .center
+            answerLabel25.textAlignment = .center
+            answerLabel26.textAlignment = .center
+            answerLabel27.textAlignment = .center
+            answerLabel28.textAlignment = .center
+            answerLabel29.textAlignment = .center
+            answerLabel2eleven.textAlignment = .center
+            answerLabel2twelve.textAlignment = .center
+
+            
+            for i in answer {
+                if answerLabel20.text == "" {
+                    answerLabel20.text = String(i)
+                }else  if answerLabel21.text == "" {
+                    answerLabel21.text = String(i)
+                }else  if answerLabel22.text == "" {
+                    answerLabel22.text = String(i)
+                }else if answerLabel23.text == "" {
+                    answerLabel23.text = String(i)
+                }else if answerLabel24.text == "" {
+                    answerLabel24.text = String(i)
+                }else if answerLabel25.text == "" {
+                    answerLabel25.text = String(i)
+                }else if answerLabel26.text == "" {
+                    answerLabel26.text = String(i)
+                }else if answerLabel27.text == "" {
+                    answerLabel27.text = String(i)
+                }else if answerLabel28.text == "" {
+                    answerLabel28.text = String(i)
+                }else if answerLabel29.text == "" {
+                    answerLabel29.text = String(i)
+                }else if answerLabel2eleven.text == "" {
+                    answerLabel2eleven.text = String(i)
+                }else if answerLabel2twelve.text == "" {
+                    answerLabel2twelve.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel20.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel21.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel22.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel23.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel24.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel25.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel26.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel27.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel28.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel29.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel2eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel2twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+
+
+            }else { //Yatay
+                answerLabel20.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel21.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height: width * 0.07)
+                answerLabel22.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel23.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel24.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel25.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel26.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel27.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel28.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel29.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel2eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel2twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel20)
+            scrollView.addSubview(answerLabel21)
+            scrollView.addSubview(answerLabel22)
+            scrollView.addSubview(answerLabel23)
+            scrollView.addSubview(answerLabel24)
+            scrollView.addSubview(answerLabel25)
+            scrollView.addSubview(answerLabel26)
+            scrollView.addSubview(answerLabel27)
+            scrollView.addSubview(answerLabel28)
+            scrollView.addSubview(answerLabel29)
+            scrollView.addSubview(answerLabel2eleven)
+            scrollView.addSubview(answerLabel2twelve)
+
+            
+        }else if whicAnswer == 3 {
+            answerLabel30.text = ""
+            answerLabel31.text = ""
+            answerLabel32.text = ""
+            answerLabel33.text = ""
+            answerLabel34.text = ""
+            answerLabel35.text = ""
+            answerLabel36.text = ""
+            answerLabel37.text = ""
+            answerLabel38.text = ""
+            answerLabel39.text = ""
+            answerLabel3eleven.text = ""
+            answerLabel3twelve.text = ""
+
+            answerLabel30.textAlignment = .center
+            answerLabel31.textAlignment = .center
+            answerLabel32.textAlignment = .center
+            answerLabel33.textAlignment = .center
+            answerLabel34.textAlignment = .center
+            answerLabel35.textAlignment = .center
+            answerLabel36.textAlignment = .center
+            answerLabel37.textAlignment = .center
+            answerLabel38.textAlignment = .center
+            answerLabel39.textAlignment = .center
+            answerLabel3eleven.textAlignment = .center
+            answerLabel3twelve.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel30.text == "" {
+                    answerLabel30.text = String(i)
+                }else  if answerLabel31.text == "" {
+                    answerLabel31.text = String(i)
+                }else  if answerLabel32.text == "" {
+                    answerLabel32.text = String(i)
+                }else  if answerLabel33.text == "" {
+                    answerLabel33.text = String(i)
+                }else  if answerLabel34.text == "" {
+                    answerLabel34.text = String(i)
+                }else  if answerLabel35.text == "" {
+                    answerLabel35.text = String(i)
+                }else  if answerLabel36.text == "" {
+                    answerLabel36.text = String(i)
+                }else  if answerLabel37.text == "" {
+                    answerLabel37.text = String(i)
+                }else  if answerLabel38.text == "" {
+                    answerLabel38.text = String(i)
+                }else  if answerLabel39.text == "" {
+                    answerLabel39.text = String(i)
+                }else  if answerLabel3eleven.text == "" {
+                    answerLabel3eleven.text = String(i)
+                }else  if answerLabel3twelve.text == "" {
+                    answerLabel3twelve.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel30.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel31.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel32.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel33.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel34.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel35.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel36.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel37.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel38.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel39.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel3eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel3twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel30.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel31.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel32.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel33.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel34.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel35.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel36.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel37.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel38.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel39.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel3eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel3twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel30)
+            scrollView.addSubview(answerLabel31)
+            scrollView.addSubview(answerLabel32)
+            scrollView.addSubview(answerLabel33)
+            scrollView.addSubview(answerLabel34)
+            scrollView.addSubview(answerLabel35)
+            scrollView.addSubview(answerLabel36)
+            scrollView.addSubview(answerLabel37)
+            scrollView.addSubview(answerLabel38)
+            scrollView.addSubview(answerLabel39)
+            scrollView.addSubview(answerLabel3eleven)
+            scrollView.addSubview(answerLabel3twelve)
+
+
+            
+        }else if whicAnswer == 4 {
+            answerLabel40.text = ""
+            answerLabel41.text = ""
+            answerLabel42.text = ""
+            answerLabel43.text = ""
+            answerLabel44.text = ""
+            answerLabel45.text = ""
+            answerLabel46.text = ""
+            answerLabel47.text = ""
+            answerLabel48.text = ""
+            answerLabel49.text = ""
+            answerLabel4eleven.text = ""
+            answerLabel4twelve.text = ""
+
+            answerLabel40.textAlignment = .center
+            answerLabel41.textAlignment = .center
+            answerLabel42.textAlignment = .center
+            answerLabel43.textAlignment = .center
+            answerLabel44.textAlignment = .center
+            answerLabel45.textAlignment = .center
+            answerLabel46.textAlignment = .center
+            answerLabel47.textAlignment = .center
+            answerLabel48.textAlignment = .center
+            answerLabel49.textAlignment = .center
+            answerLabel4eleven.textAlignment = .center
+            answerLabel4twelve.textAlignment = .center
+
+
+            
+            for i in answer {
+                if answerLabel40.text == "" {
+                    answerLabel40.text = String(i)
+                }else  if answerLabel41.text == "" {
+                    answerLabel41.text = String(i)
+                }else  if answerLabel42.text == "" {
+                    answerLabel42.text = String(i)
+                }else if answerLabel43.text == "" {
+                    answerLabel43.text = String(i)
+                }else if answerLabel44.text == "" {
+                    answerLabel44.text = String(i)
+                }else if answerLabel45.text == "" {
+                    answerLabel45.text = String(i)
+                }else if answerLabel46.text == "" {
+                    answerLabel46.text = String(i)
+                }else if answerLabel47.text == "" {
+                    answerLabel47.text = String(i)
+                }else if answerLabel48.text == "" {
+                    answerLabel48.text = String(i)
+                }else if answerLabel49.text == "" {
+                    answerLabel49.text = String(i)
+                }else if answerLabel4eleven.text == "" {
+                    answerLabel4eleven.text = String(i)
+                }else if answerLabel4twelve.text == "" {
+                    answerLabel4twelve.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel40.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel41.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel42.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel43.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel44.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel45.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel46.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel47.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel48.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel49.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel4eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel4twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+
+            }else { //Yatay
+                answerLabel40.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel41.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel42.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel43.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel44.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel45.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel46.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel47.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel48.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel49.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel4eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel4twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel40)
+            scrollView.addSubview(answerLabel41)
+            scrollView.addSubview(answerLabel42)
+            scrollView.addSubview(answerLabel43)
+            scrollView.addSubview(answerLabel44)
+            scrollView.addSubview(answerLabel45)
+            scrollView.addSubview(answerLabel46)
+            scrollView.addSubview(answerLabel47)
+            scrollView.addSubview(answerLabel48)
+            scrollView.addSubview(answerLabel49)
+            scrollView.addSubview(answerLabel4eleven)
+            scrollView.addSubview(answerLabel4twelve)
+
+            
+        }else if whicAnswer == 5 {
+            answerLabel50.text = ""
+            answerLabel51.text = ""
+            answerLabel52.text = ""
+            answerLabel53.text = ""
+            answerLabel54.text = ""
+            answerLabel55.text = ""
+            answerLabel56.text = ""
+            answerLabel57.text = ""
+            answerLabel58.text = ""
+            answerLabel59.text = ""
+            answerLabel5eleven.text = ""
+            answerLabel5twelve.text = ""
+
+            answerLabel50.textAlignment = .center
+            answerLabel51.textAlignment = .center
+            answerLabel52.textAlignment = .center
+            answerLabel53.textAlignment = .center
+            answerLabel54.textAlignment = .center
+            answerLabel55.textAlignment = .center
+            answerLabel56.textAlignment = .center
+            answerLabel57.textAlignment = .center
+            answerLabel58.textAlignment = .center
+            answerLabel59.textAlignment = .center
+            answerLabel5eleven.textAlignment = .center
+            answerLabel5twelve.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel50.text == "" {
+                    answerLabel50.text = String(i)
+                }else  if answerLabel51.text == "" {
+                    answerLabel51.text = String(i)
+                }else  if answerLabel52.text == "" {
+                    answerLabel52.text = String(i)
+                }else  if answerLabel53.text == "" {
+                    answerLabel53.text = String(i)
+                }else  if answerLabel54.text == "" {
+                    answerLabel54.text = String(i)
+                }else  if answerLabel55.text == "" {
+                    answerLabel55.text = String(i)
+                }else  if answerLabel56.text == "" {
+                    answerLabel56.text = String(i)
+                }else  if answerLabel57.text == "" {
+                    answerLabel57.text = String(i)
+                }else  if answerLabel58.text == "" {
+                    answerLabel58.text = String(i)
+                }else  if answerLabel59.text == "" {
+                    answerLabel59.text = String(i)
+                }else  if answerLabel5eleven.text == "" {
+                    answerLabel5eleven.text = String(i)
+                }else  if answerLabel5twelve.text == "" {
+                    answerLabel5twelve.text = String(i)
+                }
+                
+            }
+            if isVertical { //Dikey
+                answerLabel50.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel51.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel52.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel53.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel54.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel55.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel56.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel57.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel58.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel59.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel5eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel5twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else {//Yatay
+                answerLabel50.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel51.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel52.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel53.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel54.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel55.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel56.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel57.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel58.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel59.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel5eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel5twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel50)
+            scrollView.addSubview(answerLabel51)
+            scrollView.addSubview(answerLabel52)
+            scrollView.addSubview(answerLabel53)
+            scrollView.addSubview(answerLabel54)
+            scrollView.addSubview(answerLabel55)
+            scrollView.addSubview(answerLabel56)
+            scrollView.addSubview(answerLabel57)
+            scrollView.addSubview(answerLabel58)
+            scrollView.addSubview(answerLabel59)
+            scrollView.addSubview(answerLabel5eleven)
+            scrollView.addSubview(answerLabel5twelve)
+
+
+        }else if whicAnswer == 6 {
+            answerLabel60.text = ""
+            answerLabel61.text = ""
+            answerLabel62.text = ""
+            answerLabel63.text = ""
+            answerLabel64.text = ""
+            answerLabel65.text = ""
+            answerLabel66.text = ""
+            answerLabel67.text = ""
+            answerLabel68.text = ""
+            answerLabel69.text = ""
+            answerLabel6eleven.text = ""
+            answerLabel6twelve.text = ""
+
+            
+            answerLabel60.textAlignment = .center
+            answerLabel61.textAlignment = .center
+            answerLabel62.textAlignment = .center
+            answerLabel63.textAlignment = .center
+            answerLabel64.textAlignment = .center
+            answerLabel65.textAlignment = .center
+            answerLabel66.textAlignment = .center
+            answerLabel67.textAlignment = .center
+            answerLabel68.textAlignment = .center
+            answerLabel69.textAlignment = .center
+            answerLabel6eleven.textAlignment = .center
+            answerLabel6twelve.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel60.text == "" {
+                    answerLabel60.text = String(i)
+                }else  if answerLabel61.text == "" {
+                    answerLabel61.text = String(i)
+                }else  if answerLabel62.text == "" {
+                    answerLabel62.text = String(i)
+                }else  if answerLabel63.text == "" {
+                    answerLabel63.text = String(i)
+                }else  if answerLabel64.text == "" {
+                    answerLabel64.text = String(i)
+                }else  if answerLabel65.text == "" {
+                    answerLabel65.text = String(i)
+                }else  if answerLabel66.text == "" {
+                    answerLabel66.text = String(i)
+                }else  if answerLabel67.text == "" {
+                    answerLabel67.text = String(i)
+                }else  if answerLabel68.text == "" {
+                    answerLabel68.text = String(i)
+                }else  if answerLabel69.text == "" {
+                    answerLabel69.text = String(i)
+                }else  if answerLabel6eleven.text == "" {
+                    answerLabel6eleven.text = String(i)
+                }else  if answerLabel6twelve.text == "" {
+                    answerLabel6twelve.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel60.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel61.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel62.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel63.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel64.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel65.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel66.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel67.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel68.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel69.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel6eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel6twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel60.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel61.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height: width * 0.07)
+                answerLabel62.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel63.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel64.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel65.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel66.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel67.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel68.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel69.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel6eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel6twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel60)
+            scrollView.addSubview(answerLabel61)
+            scrollView.addSubview(answerLabel62)
+            scrollView.addSubview(answerLabel63)
+            scrollView.addSubview(answerLabel64)
+            scrollView.addSubview(answerLabel65)
+            scrollView.addSubview(answerLabel66)
+            scrollView.addSubview(answerLabel67)
+            scrollView.addSubview(answerLabel68)
+            scrollView.addSubview(answerLabel69)
+            scrollView.addSubview(answerLabel6eleven)
+            scrollView.addSubview(answerLabel6twelve)
+
+
+
+        }else if whicAnswer == 7 {
+            answerLabel70.text = ""
+            answerLabel71.text = ""
+            answerLabel72.text = ""
+            answerLabel73.text = ""
+            answerLabel74.text = ""
+            answerLabel75.text = ""
+            answerLabel76.text = ""
+            answerLabel77.text = ""
+            answerLabel78.text = ""
+            answerLabel79.text = ""
+            answerLabel7eleven.text = ""
+            answerLabel7twelve.text = ""
+
+            answerLabel70.textAlignment = .center
+            answerLabel71.textAlignment = .center
+            answerLabel72.textAlignment = .center
+            answerLabel73.textAlignment = .center
+            answerLabel74.textAlignment = .center
+            answerLabel75.textAlignment = .center
+            answerLabel76.textAlignment = .center
+            answerLabel77.textAlignment = .center
+            answerLabel78.textAlignment = .center
+            answerLabel79.textAlignment = .center
+            answerLabel7eleven.textAlignment = .center
+            answerLabel7twelve.textAlignment = .center
+
+
+            
+            for i in answer {
+                if answerLabel70.text == "" {
+                    answerLabel70.text = String(i)
+                }else  if answerLabel71.text == "" {
+                    answerLabel71.text = String(i)
+                }else  if answerLabel72.text == "" {
+                    answerLabel72.text = String(i)
+                }else  if answerLabel73.text == "" {
+                    answerLabel73.text = String(i)
+                }else  if answerLabel74.text == "" {
+                    answerLabel74.text = String(i)
+                }else  if answerLabel75.text == "" {
+                    answerLabel75.text = String(i)
+                }else  if answerLabel76.text == "" {
+                    answerLabel76.text = String(i)
+                }else  if answerLabel77.text == "" {
+                    answerLabel77.text = String(i)
+                }else  if answerLabel78.text == "" {
+                    answerLabel78.text = String(i)
+                }else  if answerLabel79.text == "" {
+                    answerLabel79.text = String(i)
+                }else  if answerLabel7eleven.text == "" {
+                    answerLabel7eleven.text = String(i)
+                }else  if answerLabel7twelve.text == "" {
+                    answerLabel7twelve.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel70.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel71.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel72.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel73.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel74.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel75.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel76.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel77.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel78.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel79.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel7eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel7twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel70.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel71.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel72.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel73.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel74.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel75.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel76.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel77.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel78.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel79.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel7eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel7twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel70)
+            scrollView.addSubview(answerLabel71)
+            scrollView.addSubview(answerLabel72)
+            scrollView.addSubview(answerLabel73)
+            scrollView.addSubview(answerLabel74)
+            scrollView.addSubview(answerLabel75)
+            scrollView.addSubview(answerLabel76)
+            scrollView.addSubview(answerLabel77)
+            scrollView.addSubview(answerLabel78)
+            scrollView.addSubview(answerLabel79)
+            scrollView.addSubview(answerLabel7eleven)
+            scrollView.addSubview(answerLabel7twelve)
+
+
+        }else if whicAnswer == 8 {
+            answerLabel80.text = ""
+            answerLabel81.text = ""
+            answerLabel82.text = ""
+            answerLabel83.text = ""
+            answerLabel84.text = ""
+            answerLabel85.text = ""
+            answerLabel86.text = ""
+            answerLabel87.text = ""
+            answerLabel88.text = ""
+            answerLabel89.text = ""
+            answerLabel8eleven.text = ""
+            answerLabel8twelve.text = ""
+
+            answerLabel80.textAlignment = .center
+            answerLabel81.textAlignment = .center
+            answerLabel82.textAlignment = .center
+            answerLabel83.textAlignment = .center
+            answerLabel84.textAlignment = .center
+            answerLabel85.textAlignment = .center
+            answerLabel86.textAlignment = .center
+            answerLabel87.textAlignment = .center
+            answerLabel88.textAlignment = .center
+            answerLabel89.textAlignment = .center
+            answerLabel8eleven.textAlignment = .center
+            answerLabel8twelve.textAlignment = .center
+
+
+            
+            for i in answer {
+                if answerLabel80.text == "" {
+                    answerLabel80.text = String(i)
+                }else  if answerLabel81.text == "" {
+                    answerLabel81.text = String(i)
+                }else  if answerLabel82.text == "" {
+                    answerLabel82.text = String(i)
+                }else  if answerLabel83.text == "" {
+                    answerLabel83.text = String(i)
+                }else  if answerLabel84.text == "" {
+                    answerLabel84.text = String(i)
+                }else  if answerLabel85.text == "" {
+                    answerLabel85.text = String(i)
+                }else  if answerLabel86.text == "" {
+                    answerLabel86.text = String(i)
+                }else  if answerLabel87.text == "" {
+                    answerLabel87.text = String(i)
+                }else  if answerLabel88.text == "" {
+                    answerLabel88.text = String(i)
+                }else  if answerLabel89.text == "" {
+                    answerLabel89.text = String(i)
+                }else  if answerLabel8eleven.text == "" {
+                    answerLabel8eleven.text = String(i)
+                }else  if answerLabel8twelve.text == "" {
+                    answerLabel8twelve.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel80.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel81.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel82.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel83.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel84.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel85.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel86.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel87.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel88.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel89.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel8eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel8twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+
+            }else { //Yatay
+                answerLabel80.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel81.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel82.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel83.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel84.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel85.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel86.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel87.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel88.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel89.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel8eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel8twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel80)
+            scrollView.addSubview(answerLabel81)
+            scrollView.addSubview(answerLabel82)
+            scrollView.addSubview(answerLabel83)
+            scrollView.addSubview(answerLabel84)
+            scrollView.addSubview(answerLabel85)
+            scrollView.addSubview(answerLabel86)
+            scrollView.addSubview(answerLabel87)
+            scrollView.addSubview(answerLabel88)
+            scrollView.addSubview(answerLabel89)
+            scrollView.addSubview(answerLabel8eleven)
+            scrollView.addSubview(answerLabel8twelve)
+
+            
+        }else if whicAnswer == 9 {
+            answerLabel90.text = ""
+            answerLabel91.text = ""
+            answerLabel92.text = ""
+            answerLabel93.text = ""
+            answerLabel94.text = ""
+            answerLabel95.text = ""
+            answerLabel96.text = ""
+            answerLabel97.text = ""
+            answerLabel98.text = ""
+            answerLabel99.text = ""
+            answerLabel9eleven.text = ""
+            answerLabel9twelve.text = ""
+
+            answerLabel90.textAlignment = .center
+            answerLabel91.textAlignment = .center
+            answerLabel92.textAlignment = .center
+            answerLabel93.textAlignment = .center
+            answerLabel94.textAlignment = .center
+            answerLabel95.textAlignment = .center
+            answerLabel96.textAlignment = .center
+            answerLabel97.textAlignment = .center
+            answerLabel98.textAlignment = .center
+            answerLabel99.textAlignment = .center
+            answerLabel9eleven.textAlignment = .center
+            answerLabel9twelve.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel90.text == "" {
+                    answerLabel90.text = String(i)
+                }else  if answerLabel91.text == "" {
+                    answerLabel91.text = String(i)
+                }else  if answerLabel92.text == "" {
+                    answerLabel92.text = String(i)
+                }else  if answerLabel93.text == "" {
+                    answerLabel93.text = String(i)
+                }else  if answerLabel94.text == "" {
+                    answerLabel94.text = String(i)
+                }else  if answerLabel95.text == "" {
+                    answerLabel95.text = String(i)
+                }else  if answerLabel96.text == "" {
+                    answerLabel96.text = String(i)
+                }else  if answerLabel97.text == "" {
+                    answerLabel97.text = String(i)
+                }else  if answerLabel98.text == "" {
+                    answerLabel98.text = String(i)
+                }else  if answerLabel99.text == "" {
+                    answerLabel99.text = String(i)
+                }else  if answerLabel9eleven.text == "" {
+                    answerLabel9eleven.text = String(i)
+                }else  if answerLabel9twelve.text == "" {
+                    answerLabel9twelve.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel90.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel91.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel92.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel93.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel94.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel95.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel96.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel97.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel98.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel99.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel9eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel9twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel90.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel91.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel92.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel93.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel94.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel95.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel96.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel97.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel98.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel99.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel9eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel9twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel90)
+            scrollView.addSubview(answerLabel91)
+            scrollView.addSubview(answerLabel92)
+            scrollView.addSubview(answerLabel93)
+            scrollView.addSubview(answerLabel94)
+            scrollView.addSubview(answerLabel95)
+            scrollView.addSubview(answerLabel96)
+            scrollView.addSubview(answerLabel97)
+            scrollView.addSubview(answerLabel98)
+            scrollView.addSubview(answerLabel99)
+            scrollView.addSubview(answerLabel9eleven)
+            scrollView.addSubview(answerLabel9twelve)
+
+
+
+        }else if whicAnswer == 10 {
+            answerLabel100.text = ""
+            answerLabel101.text = ""
+            answerLabel102.text = ""
+            answerLabel103.text = ""
+            answerLabel104.text = ""
+            answerLabel105.text = ""
+            answerLabel106.text = ""
+            answerLabel107.text = ""
+            answerLabel108.text = ""
+            answerLabel109.text = ""
+            answerLabel10eleven.text = ""
+            answerLabel10twelve.text = ""
+
+            answerLabel100.textAlignment = .center
+            answerLabel101.textAlignment = .center
+            answerLabel102.textAlignment = .center
+            answerLabel103.textAlignment = .center
+            answerLabel104.textAlignment = .center
+            answerLabel105.textAlignment = .center
+            answerLabel106.textAlignment = .center
+            answerLabel107.textAlignment = .center
+            answerLabel108.textAlignment = .center
+            answerLabel109.textAlignment = .center
+            answerLabel10eleven.textAlignment = .center
+            answerLabel10twelve.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel100.text == "" {
+                    answerLabel100.text = String(i)
+                }else  if answerLabel101.text == "" {
+                    answerLabel101.text = String(i)
+                }else  if answerLabel102.text == "" {
+                    answerLabel102.text = String(i)
+                }else  if answerLabel103.text == "" {
+                    answerLabel103.text = String(i)
+                }else  if answerLabel104.text == "" {
+                    answerLabel104.text = String(i)
+                }else  if answerLabel105.text == "" {
+                    answerLabel105.text = String(i)
+                }else  if answerLabel106.text == "" {
+                    answerLabel106.text = String(i)
+                }else  if answerLabel107.text == "" {
+                    answerLabel107.text = String(i)
+                }else  if answerLabel108.text == "" {
+                    answerLabel108.text = String(i)
+                }else  if answerLabel109.text == "" {
+                    answerLabel109.text = String(i)
+                }else  if answerLabel10eleven.text == "" {
+                    answerLabel10eleven.text = String(i)
+                }else  if answerLabel10twelve.text == "" {
+                    answerLabel10twelve.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel100.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel101.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel102.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel103.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel104.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel105.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel106.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel107.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel108.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel109.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel10eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel10twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel100.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel101.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel102.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel103.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel104.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel105.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel106.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel107.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel108.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel109.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel10eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel10twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel100)
+            scrollView.addSubview(answerLabel101)
+            scrollView.addSubview(answerLabel102)
+            scrollView.addSubview(answerLabel103)
+            scrollView.addSubview(answerLabel104)
+            scrollView.addSubview(answerLabel105)
+            scrollView.addSubview(answerLabel106)
+            scrollView.addSubview(answerLabel107)
+            scrollView.addSubview(answerLabel108)
+            scrollView.addSubview(answerLabel109)
+            scrollView.addSubview(answerLabel10eleven)
+            scrollView.addSubview(answerLabel10twelve)
+
+        }else if whicAnswer == 11 {
+            answerLabel110.text = ""
+            answerLabel111.text = ""
+            answerLabel112.text = ""
+            answerLabel113.text = ""
+            answerLabel114.text = ""
+            answerLabel115.text = ""
+            answerLabel116.text = ""
+            answerLabel117.text = ""
+            answerLabel118.text = ""
+            answerLabel119.text = ""
+            answerLabel11eleven.text = ""
+            answerLabel11twelve.text = ""
+
+            answerLabel110.textAlignment = .center
+            answerLabel111.textAlignment = .center
+            answerLabel112.textAlignment = .center
+            answerLabel113.textAlignment = .center
+            answerLabel114.textAlignment = .center
+            answerLabel115.textAlignment = .center
+            answerLabel116.textAlignment = .center
+            answerLabel117.textAlignment = .center
+            answerLabel118.textAlignment = .center
+            answerLabel119.textAlignment = .center
+            answerLabel11eleven.textAlignment = .center
+            answerLabel11twelve.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel110.text == "" {
+                    answerLabel110.text = String(i)
+                }else  if answerLabel111.text == "" {
+                    answerLabel111.text = String(i)
+                }else  if answerLabel112.text == "" {
+                    answerLabel112.text = String(i)
+                }else  if answerLabel113.text == "" {
+                    answerLabel113.text = String(i)
+                }else  if answerLabel114.text == "" {
+                    answerLabel114.text = String(i)
+                }else  if answerLabel115.text == "" {
+                    answerLabel115.text = String(i)
+                }else  if answerLabel116.text == "" {
+                    answerLabel116.text = String(i)
+                }else  if answerLabel117.text == "" {
+                    answerLabel117.text = String(i)
+                }else  if answerLabel118.text == "" {
+                    answerLabel118.text = String(i)
+                }else  if answerLabel119.text == "" {
+                    answerLabel119.text = String(i)
+                }else  if answerLabel11eleven.text == "" {
+                    answerLabel11eleven.text = String(i)
+                }else  if answerLabel11twelve.text == "" {
+                    answerLabel11twelve.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel110.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel111.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel112.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel113.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel114.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel115.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel116.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel117.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel118.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel119.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel11eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel11twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel110.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel111.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel112.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel113.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel114.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel115.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel116.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel117.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel118.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel119.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel110)
+            scrollView.addSubview(answerLabel111)
+            scrollView.addSubview(answerLabel112)
+            scrollView.addSubview(answerLabel113)
+            scrollView.addSubview(answerLabel114)
+            scrollView.addSubview(answerLabel115)
+            scrollView.addSubview(answerLabel116)
+            scrollView.addSubview(answerLabel117)
+            scrollView.addSubview(answerLabel118)
+            scrollView.addSubview(answerLabel119)
+            scrollView.addSubview(answerLabel11eleven)
+            scrollView.addSubview(answerLabel11twelve)
+
+
+        }else if whicAnswer == 12 {
+            answerLabel120.text = ""
+            answerLabel121.text = ""
+            answerLabel122.text = ""
+            answerLabel123.text = ""
+            answerLabel124.text = ""
+            answerLabel125.text = ""
+            answerLabel126.text = ""
+            answerLabel127.text = ""
+            answerLabel128.text = ""
+            answerLabel129.text = ""
+            answerLabel12eleven.text = ""
+            answerLabel12twelve.text = ""
+
+            answerLabel120.textAlignment = .center
+            answerLabel121.textAlignment = .center
+            answerLabel122.textAlignment = .center
+            answerLabel123.textAlignment = .center
+            answerLabel124.textAlignment = .center
+            answerLabel125.textAlignment = .center
+            answerLabel126.textAlignment = .center
+            answerLabel127.textAlignment = .center
+            answerLabel128.textAlignment = .center
+            answerLabel129.textAlignment = .center
+            answerLabel12eleven.textAlignment = .center
+            answerLabel12twelve.textAlignment = .center
+
+
+            
+            for i in answer {
+                if answerLabel120.text == "" {
+                    answerLabel120.text = String(i)
+                }else  if answerLabel121.text == "" {
+                    answerLabel121.text = String(i)
+                }else  if answerLabel122.text == "" {
+                    answerLabel122.text = String(i)
+                }else  if answerLabel123.text == "" {
+                    answerLabel123.text = String(i)
+                }else  if answerLabel124.text == "" {
+                    answerLabel124.text = String(i)
+                }else  if answerLabel125.text == "" {
+                    answerLabel125.text = String(i)
+                }else  if answerLabel126.text == "" {
+                    answerLabel126.text = String(i)
+                }else  if answerLabel127.text == "" {
+                    answerLabel127.text = String(i)
+                }else  if answerLabel128.text == "" {
+                    answerLabel128.text = String(i)
+                }else  if answerLabel129.text == "" {
+                    answerLabel129.text = String(i)
+                }else  if answerLabel12eleven.text == "" {
+                    answerLabel12eleven.text = String(i)
+                }else  if answerLabel12twelve.text == "" {
+                    answerLabel12twelve.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel120.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel121.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel122.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel123.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel124.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel125.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel126.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel127.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel128.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel129.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel12eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel12twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel120.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel121.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel122.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel123.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel124.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel125.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel126.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel127.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel128.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel129.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel12eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel12twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel120)
+            scrollView.addSubview(answerLabel121)
+            scrollView.addSubview(answerLabel122)
+            scrollView.addSubview(answerLabel123)
+            scrollView.addSubview(answerLabel124)
+            scrollView.addSubview(answerLabel125)
+            scrollView.addSubview(answerLabel126)
+            scrollView.addSubview(answerLabel127)
+            scrollView.addSubview(answerLabel128)
+            scrollView.addSubview(answerLabel129)
+            scrollView.addSubview(answerLabel12eleven)
+            scrollView.addSubview(answerLabel12twelve)
+
+        }else if whicAnswer == 13 {
+            answerLabel130.text = ""
+            answerLabel131.text = ""
+            answerLabel132.text = ""
+            answerLabel133.text = ""
+            answerLabel134.text = ""
+            answerLabel135.text = ""
+            answerLabel136.text = ""
+            answerLabel137.text = ""
+            answerLabel138.text = ""
+            answerLabel139.text = ""
+            answerLabel13eleven.text = ""
+            answerLabel13twelve.text = ""
+            
+            answerLabel130.textAlignment = .center
+            answerLabel131.textAlignment = .center
+            answerLabel132.textAlignment = .center
+            answerLabel133.textAlignment = .center
+            answerLabel134.textAlignment = .center
+            answerLabel135.textAlignment = .center
+            answerLabel136.textAlignment = .center
+            answerLabel137.textAlignment = .center
+            answerLabel138.textAlignment = .center
+            answerLabel139.textAlignment = .center
+            answerLabel13eleven.textAlignment = .center
+            answerLabel13twelve.textAlignment = .center
+            
+            
+            
+            
+            for i in answer {
+                if answerLabel130.text == "" {
+                    answerLabel130.text = String(i)
+                }else  if answerLabel131.text == "" {
+                    answerLabel131.text = String(i)
+                }else  if answerLabel132.text == "" {
+                    answerLabel132.text = String(i)
+                }else  if answerLabel133.text == "" {
+                    answerLabel133.text = String(i)
+                }else  if answerLabel134.text == "" {
+                    answerLabel134.text = String(i)
+                }else  if answerLabel135.text == "" {
+                    answerLabel135.text = String(i)
+                }else  if answerLabel136.text == "" {
+                    answerLabel136.text = String(i)
+                }else  if answerLabel137.text == "" {
+                    answerLabel137.text = String(i)
+                }else  if answerLabel138.text == "" {
+                    answerLabel138.text = String(i)
+                }else  if answerLabel139.text == "" {
+                    answerLabel139.text = String(i)
+                }else  if answerLabel13eleven.text == "" {
+                    answerLabel13eleven.text = String(i)
+                }else  if answerLabel13twelve.text == "" {
+                    answerLabel13twelve.text = String(i)
+                    }
+                }
+                if isVertical { //Dikey
+                    answerLabel130.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel131.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel132.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel133.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel134.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel135.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel136.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel137.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel138.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel139.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel13eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel13twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    
+                    
+                }else { //Yatay
+                    answerLabel130.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel131.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel132.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel133.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel134.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel135.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel136.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel137.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel138.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel139.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel13eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel13twelve.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    
+                }
+                scrollView.addSubview(answerLabel130)
+                scrollView.addSubview(answerLabel131)
+                scrollView.addSubview(answerLabel132)
+                scrollView.addSubview(answerLabel133)
+                scrollView.addSubview(answerLabel134)
+                scrollView.addSubview(answerLabel135)
+                scrollView.addSubview(answerLabel136)
+                scrollView.addSubview(answerLabel137)
+                scrollView.addSubview(answerLabel138)
+                scrollView.addSubview(answerLabel139)
+                scrollView.addSubview(answerLabel13eleven)
+                scrollView.addSubview(answerLabel13twelve)
+            
+                
+            }else if whicAnswer == 14 {
+                answerLabel140.text = ""
+                answerLabel141.text = ""
+                answerLabel142.text = ""
+                answerLabel143.text = ""
+                answerLabel144.text = ""
+                answerLabel145.text = ""
+                answerLabel146.text = ""
+                answerLabel147.text = ""
+                answerLabel148.text = ""
+                answerLabel149.text = ""
+                answerLabel14eleven.text = ""
+                answerLabel14twelve.text = ""
+                
+                answerLabel140.textAlignment = .center
+                answerLabel141.textAlignment = .center
+                answerLabel142.textAlignment = .center
+                answerLabel143.textAlignment = .center
+                answerLabel144.textAlignment = .center
+                answerLabel145.textAlignment = .center
+                answerLabel146.textAlignment = .center
+                answerLabel147.textAlignment = .center
+                answerLabel148.textAlignment = .center
+                answerLabel149.textAlignment = .center
+                answerLabel14eleven.textAlignment = .center
+                answerLabel14twelve.textAlignment = .center
+                
+                
+                for i in answer {
+                    if answerLabel140.text == "" {
+                        answerLabel140.text = String(i)
+                    }else  if answerLabel141.text == "" {
+                        answerLabel141.text = String(i)
+                    }else  if answerLabel142.text == "" {
+                        answerLabel142.text = String(i)
+                    }else  if answerLabel143.text == "" {
+                        answerLabel143.text = String(i)
+                    }else  if answerLabel144.text == "" {
+                        answerLabel144.text = String(i)
+                    }else  if answerLabel145.text == "" {
+                        answerLabel145.text = String(i)
+                    }else  if answerLabel146.text == "" {
+                        answerLabel146.text = String(i)
+                    }else  if answerLabel147.text == "" {
+                        answerLabel147.text = String(i)
+                    }else  if answerLabel148.text == "" {
+                        answerLabel148.text = String(i)
+                    }else  if answerLabel149.text == "" {
+                        answerLabel149.text = String(i)
+                    }else  if answerLabel14eleven.text == "" {
+                        answerLabel14eleven.text = String(i)
+                    }else  if answerLabel14twelve.text == "" {
+                        answerLabel14twelve.text = String(i)
+                    }
+                }
+                if isVertical { //Dikey
+                    answerLabel140.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel141.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel142.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel143.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel144.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel145.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel146.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel147.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel148.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel149.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel14eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel14twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    
+                }else { //Yatay
+                    answerLabel140.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel141.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel142.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel143.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel144.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel145.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel146.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel147.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel148.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel149.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel14eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel14twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    
+                }
+                scrollView.addSubview(answerLabel140)
+                scrollView.addSubview(answerLabel141)
+                scrollView.addSubview(answerLabel142)
+                scrollView.addSubview(answerLabel143)
+                scrollView.addSubview(answerLabel144)
+                scrollView.addSubview(answerLabel145)
+                scrollView.addSubview(answerLabel146)
+                scrollView.addSubview(answerLabel147)
+                scrollView.addSubview(answerLabel148)
+                scrollView.addSubview(answerLabel149)
+                scrollView.addSubview(answerLabel14eleven)
+                scrollView.addSubview(answerLabel14twelve)
+            
+            
+            }else if whicAnswer == 15 {
+                answerLabel150.text = ""
+                answerLabel151.text = ""
+                answerLabel152.text = ""
+                answerLabel153.text = ""
+                answerLabel154.text = ""
+                answerLabel155.text = ""
+                answerLabel156.text = ""
+                answerLabel157.text = ""
+                answerLabel158.text = ""
+                answerLabel159.text = ""
+                answerLabel15eleven.text = ""
+                answerLabel15twelve.text = ""
+                
+                answerLabel150.textAlignment = .center
+                answerLabel151.textAlignment = .center
+                answerLabel152.textAlignment = .center
+                answerLabel153.textAlignment = .center
+                answerLabel154.textAlignment = .center
+                answerLabel155.textAlignment = .center
+                answerLabel156.textAlignment = .center
+                answerLabel157.textAlignment = .center
+                answerLabel158.textAlignment = .center
+                answerLabel159.textAlignment = .center
+                answerLabel15eleven.textAlignment = .center
+                answerLabel15twelve.textAlignment = .center
+                
+                
+                
+                for i in answer {
+                    if answerLabel150.text == "" {
+                        answerLabel150.text = String(i)
+                    }else  if answerLabel151.text == "" {
+                        answerLabel151.text = String(i)
+                    }else  if answerLabel152.text == "" {
+                        answerLabel152.text = String(i)
+                    }else  if answerLabel153.text == "" {
+                        answerLabel153.text = String(i)
+                    }else  if answerLabel154.text == "" {
+                        answerLabel154.text = String(i)
+                    }else  if answerLabel155.text == "" {
+                        answerLabel155.text = String(i)
+                    }else  if answerLabel156.text == "" {
+                        answerLabel156.text = String(i)
+                    }else  if answerLabel157.text == "" {
+                        answerLabel157.text = String(i)
+                    }else  if answerLabel158.text == "" {
+                        answerLabel158.text = String(i)
+                    }else  if answerLabel159.text == "" {
+                        answerLabel159.text = String(i)
+                    }else  if answerLabel15eleven.text == "" {
+                        answerLabel15eleven.text = String(i)
+                    }else  if answerLabel15twelve.text == "" {
+                        answerLabel15twelve.text = String(i)
+                    }
+                }
+                if isVertical { //Dikey
+                    answerLabel150.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel151.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel152.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel153.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel154.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel155.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel156.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel157.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel158.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel159.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel15eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel15twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    
+                }else { //Yatay
+                    answerLabel150.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel151.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel152.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel153.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel154.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel155.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel156.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel157.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel158.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel159.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel15eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel15twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    
+                }
+                scrollView.addSubview(answerLabel150)
+                scrollView.addSubview(answerLabel151)
+                scrollView.addSubview(answerLabel152)
+                scrollView.addSubview(answerLabel153)
+                scrollView.addSubview(answerLabel154)
+                scrollView.addSubview(answerLabel155)
+                scrollView.addSubview(answerLabel156)
+                scrollView.addSubview(answerLabel157)
+                scrollView.addSubview(answerLabel158)
+                scrollView.addSubview(answerLabel159)
+                scrollView.addSubview(answerLabel15eleven)
+                scrollView.addSubview(answerLabel15twelve)
+                
+                
+            }else if whicAnswer == 16 {
+                answerLabel160.text = ""
+                answerLabel161.text = ""
+                answerLabel162.text = ""
+                answerLabel163.text = ""
+                answerLabel164.text = ""
+                answerLabel165.text = ""
+                answerLabel166.text = ""
+                answerLabel167.text = ""
+                answerLabel168.text = ""
+                answerLabel169.text = ""
+                answerLabel16eleven.text = ""
+                answerLabel16twelve.text = ""
+                
+                answerLabel160.textAlignment = .center
+                answerLabel161.textAlignment = .center
+                answerLabel162.textAlignment = .center
+                answerLabel163.textAlignment = .center
+                answerLabel164.textAlignment = .center
+                answerLabel165.textAlignment = .center
+                answerLabel166.textAlignment = .center
+                answerLabel167.textAlignment = .center
+                answerLabel168.textAlignment = .center
+                answerLabel169.textAlignment = .center
+                answerLabel16eleven.textAlignment = .center
+                answerLabel16twelve.textAlignment = .center
+                
+                
+                for i in answer {
+                    if answerLabel160.text == "" {
+                        answerLabel160.text = String(i)
+                    }else  if answerLabel161.text == "" {
+                        answerLabel161.text = String(i)
+                    }else  if answerLabel162.text == "" {
+                        answerLabel162.text = String(i)
+                    }else if answerLabel163.text == "" {
+                        answerLabel163.text = String(i)
+                    }else if answerLabel164.text == "" {
+                        answerLabel164.text = String(i)
+                    }else if answerLabel165.text == "" {
+                        answerLabel165.text = String(i)
+                    }else if answerLabel166.text == "" {
+                        answerLabel166.text = String(i)
+                    }else if answerLabel167.text == "" {
+                        answerLabel167.text = String(i)
+                    }else if answerLabel168.text == "" {
+                        answerLabel168.text = String(i)
+                    }else if answerLabel169.text == "" {
+                        answerLabel169.text = String(i)
+                    }else if answerLabel16eleven.text == "" {
+                        answerLabel16eleven.text = String(i)
+                    }else if answerLabel16twelve.text == "" {
+                        answerLabel169.text = String(i)
+                    }
+                }
+                if isVertical { //Dikey
+                    answerLabel160.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel161.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel162.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel163.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel164.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel165.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel166.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel167.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel168.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel169.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel16eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel16twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    
+                }else { //Yatay
+                    answerLabel160.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel161.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel162.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel163.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel164.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel165.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel166.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel167.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel168.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel169.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel16eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel16twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    
+                }
+                scrollView.addSubview(answerLabel160)
+                scrollView.addSubview(answerLabel161)
+                scrollView.addSubview(answerLabel162)
+                scrollView.addSubview(answerLabel163)
+                scrollView.addSubview(answerLabel164)
+                scrollView.addSubview(answerLabel165)
+                scrollView.addSubview(answerLabel166)
+                scrollView.addSubview(answerLabel167)
+                scrollView.addSubview(answerLabel168)
+                scrollView.addSubview(answerLabel169)
+                scrollView.addSubview(answerLabel16eleven)
+                scrollView.addSubview(answerLabel16twelve)
+                
+            }
+        }
+    
+    func createLabelFrame13(isVertical : Bool,x: CGFloat,y:CGFloat,answer : [String.Element],whicAnswer: Int) {
+        if whicAnswer == 1 {
+            answerLabel10.text = ""
+            answerLabel11.text = ""
+            answerLabel12.text = ""
+            answerLabel13.text = ""
+            answerLabel14.text = ""
+            answerLabel15.text = ""
+            answerLabel16.text = ""
+            answerLabel17.text = ""
+            answerLabel18.text = ""
+            answerLabel19.text = ""
+            answerLabel1eleven.text = ""
+            answerLabel1twelve.text = ""
+            answerLabel1thirteen.text = ""
+            
+            answerLabel10.textAlignment = .center
+            answerLabel11.textAlignment = .center
+            answerLabel12.textAlignment = .center
+            answerLabel13.textAlignment = .center
+            answerLabel14.textAlignment = .center
+            answerLabel15.textAlignment = .center
+            answerLabel16.textAlignment = .center
+            answerLabel17.textAlignment = .center
+            answerLabel18.textAlignment = .center
+            answerLabel19.textAlignment = .center
+            answerLabel1eleven.textAlignment = .center
+            answerLabel1twelve.textAlignment = .center
+            answerLabel1thirteen.textAlignment = .center
+            
+            for i in answer {
+                if answerLabel10.text == "" {
+                    answerLabel10.text = String(i)
+                }else  if answerLabel11.text == "" {
+                    answerLabel11.text = String(i)
+                }else  if answerLabel12.text == "" {
+                    answerLabel12.text = String(i)
+                }else if answerLabel13.text == "" {
+                    answerLabel13.text = String(i)
+                }else if answerLabel14.text == "" {
+                    answerLabel14.text = String(i)
+                }else if answerLabel15.text == "" {
+                    answerLabel15.text = String(i)
+                }else if answerLabel16.text == "" {
+                    answerLabel16.text = String(i)
+                }else if answerLabel17.text == "" {
+                    answerLabel17.text = String(i)
+                }else if answerLabel18.text == "" {
+                    answerLabel18.text = String(i)
+                }else if answerLabel19.text == "" {
+                    answerLabel19.text = String(i)
+                }else if answerLabel1eleven.text == "" {
+                    answerLabel1eleven.text = String(i)
+                }else if answerLabel1twelve.text == "" {
+                    answerLabel1twelve.text = String(i)
+                }else if answerLabel1thirteen.text == "" {
+                    answerLabel1thirteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel10.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel12.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel13.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel14.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel15.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel16.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel17.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel18.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel19.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel1eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel1twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel1thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+
+
+            }else { //Yatay
+                answerLabel10.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel12.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel13.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel14.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel15.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel16.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel17.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel18.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel19.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel1eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel1twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel1thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel10)
+            scrollView.addSubview(answerLabel11)
+            scrollView.addSubview(answerLabel12)
+            scrollView.addSubview(answerLabel13)
+            scrollView.addSubview(answerLabel14)
+            scrollView.addSubview(answerLabel15)
+            scrollView.addSubview(answerLabel16)
+            scrollView.addSubview(answerLabel17)
+            scrollView.addSubview(answerLabel18)
+            scrollView.addSubview(answerLabel19)
+            scrollView.addSubview(answerLabel1eleven)
+            scrollView.addSubview(answerLabel1twelve)
+            scrollView.addSubview(answerLabel1thirteen)
+
+        }else if whicAnswer == 2 {
+            answerLabel20.text = ""
+            answerLabel21.text = ""
+            answerLabel22.text = ""
+            answerLabel23.text = ""
+            answerLabel24.text = ""
+            answerLabel25.text = ""
+            answerLabel26.text = ""
+            answerLabel27.text = ""
+            answerLabel28.text = ""
+            answerLabel29.text = ""
+            answerLabel2eleven.text = ""
+            answerLabel2twelve.text = ""
+            answerLabel2thirteen.text = ""
+
+            answerLabel20.textAlignment = .center
+            answerLabel21.textAlignment = .center
+            answerLabel22.textAlignment = .center
+            answerLabel23.textAlignment = .center
+            answerLabel24.textAlignment = .center
+            answerLabel25.textAlignment = .center
+            answerLabel26.textAlignment = .center
+            answerLabel27.textAlignment = .center
+            answerLabel28.textAlignment = .center
+            answerLabel29.textAlignment = .center
+            answerLabel2eleven.textAlignment = .center
+            answerLabel2twelve.textAlignment = .center
+            answerLabel2thirteen.textAlignment = .center
+
+            
+            for i in answer {
+                if answerLabel20.text == "" {
+                    answerLabel20.text = String(i)
+                }else  if answerLabel21.text == "" {
+                    answerLabel21.text = String(i)
+                }else  if answerLabel22.text == "" {
+                    answerLabel22.text = String(i)
+                }else if answerLabel23.text == "" {
+                    answerLabel23.text = String(i)
+                }else if answerLabel24.text == "" {
+                    answerLabel24.text = String(i)
+                }else if answerLabel25.text == "" {
+                    answerLabel25.text = String(i)
+                }else if answerLabel26.text == "" {
+                    answerLabel26.text = String(i)
+                }else if answerLabel27.text == "" {
+                    answerLabel27.text = String(i)
+                }else if answerLabel28.text == "" {
+                    answerLabel28.text = String(i)
+                }else if answerLabel29.text == "" {
+                    answerLabel29.text = String(i)
+                }else if answerLabel2eleven.text == "" {
+                    answerLabel2eleven.text = String(i)
+                }else if answerLabel2twelve.text == "" {
+                    answerLabel2twelve.text = String(i)
+                }else if answerLabel2thirteen.text == "" {
+                    answerLabel2thirteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel20.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel21.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel22.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel23.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel24.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel25.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel26.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel27.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel28.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel29.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel2eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel2twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel2thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+
+
+            }else { //Yatay
+                answerLabel20.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel21.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height: width * 0.07)
+                answerLabel22.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel23.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel24.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel25.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel26.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel27.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel28.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel29.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel2eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel2twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel2thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel20)
+            scrollView.addSubview(answerLabel21)
+            scrollView.addSubview(answerLabel22)
+            scrollView.addSubview(answerLabel23)
+            scrollView.addSubview(answerLabel24)
+            scrollView.addSubview(answerLabel25)
+            scrollView.addSubview(answerLabel26)
+            scrollView.addSubview(answerLabel27)
+            scrollView.addSubview(answerLabel28)
+            scrollView.addSubview(answerLabel29)
+            scrollView.addSubview(answerLabel2eleven)
+            scrollView.addSubview(answerLabel2twelve)
+            scrollView.addSubview(answerLabel2thirteen)
+
+            
+        }else if whicAnswer == 3 {
+            answerLabel30.text = ""
+            answerLabel31.text = ""
+            answerLabel32.text = ""
+            answerLabel33.text = ""
+            answerLabel34.text = ""
+            answerLabel35.text = ""
+            answerLabel36.text = ""
+            answerLabel37.text = ""
+            answerLabel38.text = ""
+            answerLabel39.text = ""
+            answerLabel3eleven.text = ""
+            answerLabel3twelve.text = ""
+            answerLabel3thirteen.text = ""
+
+            answerLabel30.textAlignment = .center
+            answerLabel31.textAlignment = .center
+            answerLabel32.textAlignment = .center
+            answerLabel33.textAlignment = .center
+            answerLabel34.textAlignment = .center
+            answerLabel35.textAlignment = .center
+            answerLabel36.textAlignment = .center
+            answerLabel37.textAlignment = .center
+            answerLabel38.textAlignment = .center
+            answerLabel39.textAlignment = .center
+            answerLabel3eleven.textAlignment = .center
+            answerLabel3twelve.textAlignment = .center
+            answerLabel3thirteen.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel30.text == "" {
+                    answerLabel30.text = String(i)
+                }else  if answerLabel31.text == "" {
+                    answerLabel31.text = String(i)
+                }else  if answerLabel32.text == "" {
+                    answerLabel32.text = String(i)
+                }else  if answerLabel33.text == "" {
+                    answerLabel33.text = String(i)
+                }else  if answerLabel34.text == "" {
+                    answerLabel34.text = String(i)
+                }else  if answerLabel35.text == "" {
+                    answerLabel35.text = String(i)
+                }else  if answerLabel36.text == "" {
+                    answerLabel36.text = String(i)
+                }else  if answerLabel37.text == "" {
+                    answerLabel37.text = String(i)
+                }else  if answerLabel38.text == "" {
+                    answerLabel38.text = String(i)
+                }else  if answerLabel39.text == "" {
+                    answerLabel39.text = String(i)
+                }else  if answerLabel3eleven.text == "" {
+                    answerLabel3eleven.text = String(i)
+                }else  if answerLabel3twelve.text == "" {
+                    answerLabel3twelve.text = String(i)
+                }else  if answerLabel3thirteen.text == "" {
+                    answerLabel3thirteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel30.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel31.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel32.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel33.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel34.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel35.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel36.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel37.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel38.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel39.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel3eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel3twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel3thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel30.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel31.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel32.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel33.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel34.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel35.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel36.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel37.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel38.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel39.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel3eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel3twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel3thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel30)
+            scrollView.addSubview(answerLabel31)
+            scrollView.addSubview(answerLabel32)
+            scrollView.addSubview(answerLabel33)
+            scrollView.addSubview(answerLabel34)
+            scrollView.addSubview(answerLabel35)
+            scrollView.addSubview(answerLabel36)
+            scrollView.addSubview(answerLabel37)
+            scrollView.addSubview(answerLabel38)
+            scrollView.addSubview(answerLabel39)
+            scrollView.addSubview(answerLabel3eleven)
+            scrollView.addSubview(answerLabel3twelve)
+            scrollView.addSubview(answerLabel3thirteen)
+
+            
+        }else if whicAnswer == 4 {
+            answerLabel40.text = ""
+            answerLabel41.text = ""
+            answerLabel42.text = ""
+            answerLabel43.text = ""
+            answerLabel44.text = ""
+            answerLabel45.text = ""
+            answerLabel46.text = ""
+            answerLabel47.text = ""
+            answerLabel48.text = ""
+            answerLabel49.text = ""
+            answerLabel4eleven.text = ""
+            answerLabel4twelve.text = ""
+            answerLabel4thirteen.text = ""
+
+            answerLabel40.textAlignment = .center
+            answerLabel41.textAlignment = .center
+            answerLabel42.textAlignment = .center
+            answerLabel43.textAlignment = .center
+            answerLabel44.textAlignment = .center
+            answerLabel45.textAlignment = .center
+            answerLabel46.textAlignment = .center
+            answerLabel47.textAlignment = .center
+            answerLabel48.textAlignment = .center
+            answerLabel49.textAlignment = .center
+            answerLabel4eleven.textAlignment = .center
+            answerLabel4twelve.textAlignment = .center
+            answerLabel4thirteen.textAlignment = .center
+
+
+            
+            for i in answer {
+                if answerLabel40.text == "" {
+                    answerLabel40.text = String(i)
+                }else  if answerLabel41.text == "" {
+                    answerLabel41.text = String(i)
+                }else  if answerLabel42.text == "" {
+                    answerLabel42.text = String(i)
+                }else if answerLabel43.text == "" {
+                    answerLabel43.text = String(i)
+                }else if answerLabel44.text == "" {
+                    answerLabel44.text = String(i)
+                }else if answerLabel45.text == "" {
+                    answerLabel45.text = String(i)
+                }else if answerLabel46.text == "" {
+                    answerLabel46.text = String(i)
+                }else if answerLabel47.text == "" {
+                    answerLabel47.text = String(i)
+                }else if answerLabel48.text == "" {
+                    answerLabel48.text = String(i)
+                }else if answerLabel49.text == "" {
+                    answerLabel49.text = String(i)
+                }else if answerLabel4eleven.text == "" {
+                    answerLabel4eleven.text = String(i)
+                }else if answerLabel4twelve.text == "" {
+                    answerLabel4twelve.text = String(i)
+                }else if answerLabel4thirteen.text == "" {
+                    answerLabel4thirteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel40.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel41.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel42.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel43.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel44.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel45.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel46.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel47.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel48.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel49.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel4eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel4twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel4thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+
+            }else { //Yatay
+                answerLabel40.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel41.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel42.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel43.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel44.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel45.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel46.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel47.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel48.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel49.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel4eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel4twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel4thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel40)
+            scrollView.addSubview(answerLabel41)
+            scrollView.addSubview(answerLabel42)
+            scrollView.addSubview(answerLabel43)
+            scrollView.addSubview(answerLabel44)
+            scrollView.addSubview(answerLabel45)
+            scrollView.addSubview(answerLabel46)
+            scrollView.addSubview(answerLabel47)
+            scrollView.addSubview(answerLabel48)
+            scrollView.addSubview(answerLabel49)
+            scrollView.addSubview(answerLabel4eleven)
+            scrollView.addSubview(answerLabel4twelve)
+            scrollView.addSubview(answerLabel4thirteen)
+            
+        }else if whicAnswer == 5 {
+            answerLabel50.text = ""
+            answerLabel51.text = ""
+            answerLabel52.text = ""
+            answerLabel53.text = ""
+            answerLabel54.text = ""
+            answerLabel55.text = ""
+            answerLabel56.text = ""
+            answerLabel57.text = ""
+            answerLabel58.text = ""
+            answerLabel59.text = ""
+            answerLabel5eleven.text = ""
+            answerLabel5twelve.text = ""
+            answerLabel5thirteen.text = ""
+
+            answerLabel50.textAlignment = .center
+            answerLabel51.textAlignment = .center
+            answerLabel52.textAlignment = .center
+            answerLabel53.textAlignment = .center
+            answerLabel54.textAlignment = .center
+            answerLabel55.textAlignment = .center
+            answerLabel56.textAlignment = .center
+            answerLabel57.textAlignment = .center
+            answerLabel58.textAlignment = .center
+            answerLabel59.textAlignment = .center
+            answerLabel5eleven.textAlignment = .center
+            answerLabel5twelve.textAlignment = .center
+            answerLabel5thirteen.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel50.text == "" {
+                    answerLabel50.text = String(i)
+                }else  if answerLabel51.text == "" {
+                    answerLabel51.text = String(i)
+                }else  if answerLabel52.text == "" {
+                    answerLabel52.text = String(i)
+                }else  if answerLabel53.text == "" {
+                    answerLabel53.text = String(i)
+                }else  if answerLabel54.text == "" {
+                    answerLabel54.text = String(i)
+                }else  if answerLabel55.text == "" {
+                    answerLabel55.text = String(i)
+                }else  if answerLabel56.text == "" {
+                    answerLabel56.text = String(i)
+                }else  if answerLabel57.text == "" {
+                    answerLabel57.text = String(i)
+                }else  if answerLabel58.text == "" {
+                    answerLabel58.text = String(i)
+                }else  if answerLabel59.text == "" {
+                    answerLabel59.text = String(i)
+                }else  if answerLabel5eleven.text == "" {
+                    answerLabel5eleven.text = String(i)
+                }else  if answerLabel5twelve.text == "" {
+                    answerLabel5twelve.text = String(i)
+                }else if answerLabel5thirteen.text == "" {
+                    answerLabel5thirteen.text = String(i)
+                }
+                
+            }
+            if isVertical { //Dikey
+                answerLabel50.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel51.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel52.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel53.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel54.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel55.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel56.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel57.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel58.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel59.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel5eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel5twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel5thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else {//Yatay
+                answerLabel50.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel51.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel52.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel53.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel54.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel55.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel56.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel57.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel58.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel59.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel5eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel5twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel5thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel50)
+            scrollView.addSubview(answerLabel51)
+            scrollView.addSubview(answerLabel52)
+            scrollView.addSubview(answerLabel53)
+            scrollView.addSubview(answerLabel54)
+            scrollView.addSubview(answerLabel55)
+            scrollView.addSubview(answerLabel56)
+            scrollView.addSubview(answerLabel57)
+            scrollView.addSubview(answerLabel58)
+            scrollView.addSubview(answerLabel59)
+            scrollView.addSubview(answerLabel5eleven)
+            scrollView.addSubview(answerLabel5twelve)
+            scrollView.addSubview(answerLabel5thirteen)
+
+        }else if whicAnswer == 6 {
+            answerLabel60.text = ""
+            answerLabel61.text = ""
+            answerLabel62.text = ""
+            answerLabel63.text = ""
+            answerLabel64.text = ""
+            answerLabel65.text = ""
+            answerLabel66.text = ""
+            answerLabel67.text = ""
+            answerLabel68.text = ""
+            answerLabel69.text = ""
+            answerLabel6eleven.text = ""
+            answerLabel6twelve.text = ""
+            answerLabel6thirteen.text = ""
+
+            
+            answerLabel60.textAlignment = .center
+            answerLabel61.textAlignment = .center
+            answerLabel62.textAlignment = .center
+            answerLabel63.textAlignment = .center
+            answerLabel64.textAlignment = .center
+            answerLabel65.textAlignment = .center
+            answerLabel66.textAlignment = .center
+            answerLabel67.textAlignment = .center
+            answerLabel68.textAlignment = .center
+            answerLabel69.textAlignment = .center
+            answerLabel6eleven.textAlignment = .center
+            answerLabel6twelve.textAlignment = .center
+            answerLabel6thirteen.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel60.text == "" {
+                    answerLabel60.text = String(i)
+                }else  if answerLabel61.text == "" {
+                    answerLabel61.text = String(i)
+                }else  if answerLabel62.text == "" {
+                    answerLabel62.text = String(i)
+                }else  if answerLabel63.text == "" {
+                    answerLabel63.text = String(i)
+                }else  if answerLabel64.text == "" {
+                    answerLabel64.text = String(i)
+                }else  if answerLabel65.text == "" {
+                    answerLabel65.text = String(i)
+                }else  if answerLabel66.text == "" {
+                    answerLabel66.text = String(i)
+                }else  if answerLabel67.text == "" {
+                    answerLabel67.text = String(i)
+                }else  if answerLabel68.text == "" {
+                    answerLabel68.text = String(i)
+                }else  if answerLabel69.text == "" {
+                    answerLabel69.text = String(i)
+                }else  if answerLabel6eleven.text == "" {
+                    answerLabel6eleven.text = String(i)
+                }else  if answerLabel6twelve.text == "" {
+                    answerLabel6twelve.text = String(i)
+                }else if answerLabel6thirteen.text == "" {
+                    answerLabel6thirteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel60.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel61.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel62.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel63.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel64.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel65.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel66.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel67.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel68.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel69.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel6eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel6twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel6thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel60.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel61.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height: width * 0.07)
+                answerLabel62.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel63.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel64.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel65.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel66.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel67.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel68.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel69.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel6eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel6twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel6thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel60)
+            scrollView.addSubview(answerLabel61)
+            scrollView.addSubview(answerLabel62)
+            scrollView.addSubview(answerLabel63)
+            scrollView.addSubview(answerLabel64)
+            scrollView.addSubview(answerLabel65)
+            scrollView.addSubview(answerLabel66)
+            scrollView.addSubview(answerLabel67)
+            scrollView.addSubview(answerLabel68)
+            scrollView.addSubview(answerLabel69)
+            scrollView.addSubview(answerLabel6eleven)
+            scrollView.addSubview(answerLabel6twelve)
+            scrollView.addSubview(answerLabel6thirteen)
+
+
+        }else if whicAnswer == 7 {
+            answerLabel70.text = ""
+            answerLabel71.text = ""
+            answerLabel72.text = ""
+            answerLabel73.text = ""
+            answerLabel74.text = ""
+            answerLabel75.text = ""
+            answerLabel76.text = ""
+            answerLabel77.text = ""
+            answerLabel78.text = ""
+            answerLabel79.text = ""
+            answerLabel7eleven.text = ""
+            answerLabel7twelve.text = ""
+            answerLabel7thirteen.text = ""
+
+            answerLabel70.textAlignment = .center
+            answerLabel71.textAlignment = .center
+            answerLabel72.textAlignment = .center
+            answerLabel73.textAlignment = .center
+            answerLabel74.textAlignment = .center
+            answerLabel75.textAlignment = .center
+            answerLabel76.textAlignment = .center
+            answerLabel77.textAlignment = .center
+            answerLabel78.textAlignment = .center
+            answerLabel79.textAlignment = .center
+            answerLabel7eleven.textAlignment = .center
+            answerLabel7twelve.textAlignment = .center
+            answerLabel7thirteen.textAlignment = .center
+
+
+            
+            for i in answer {
+                if answerLabel70.text == "" {
+                    answerLabel70.text = String(i)
+                }else  if answerLabel71.text == "" {
+                    answerLabel71.text = String(i)
+                }else  if answerLabel72.text == "" {
+                    answerLabel72.text = String(i)
+                }else  if answerLabel73.text == "" {
+                    answerLabel73.text = String(i)
+                }else  if answerLabel74.text == "" {
+                    answerLabel74.text = String(i)
+                }else  if answerLabel75.text == "" {
+                    answerLabel75.text = String(i)
+                }else  if answerLabel76.text == "" {
+                    answerLabel76.text = String(i)
+                }else  if answerLabel77.text == "" {
+                    answerLabel77.text = String(i)
+                }else  if answerLabel78.text == "" {
+                    answerLabel78.text = String(i)
+                }else  if answerLabel79.text == "" {
+                    answerLabel79.text = String(i)
+                }else  if answerLabel7eleven.text == "" {
+                    answerLabel7eleven.text = String(i)
+                }else  if answerLabel7twelve.text == "" {
+                    answerLabel7twelve.text = String(i)
+                }else if answerLabel7thirteen.text == "" {
+                    answerLabel7thirteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel70.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel71.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel72.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel73.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel74.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel75.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel76.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel77.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel78.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel79.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel7eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel7twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel7thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel70.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel71.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel72.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel73.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel74.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel75.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel76.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel77.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel78.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel79.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel7eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel7twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel7thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel70)
+            scrollView.addSubview(answerLabel71)
+            scrollView.addSubview(answerLabel72)
+            scrollView.addSubview(answerLabel73)
+            scrollView.addSubview(answerLabel74)
+            scrollView.addSubview(answerLabel75)
+            scrollView.addSubview(answerLabel76)
+            scrollView.addSubview(answerLabel77)
+            scrollView.addSubview(answerLabel78)
+            scrollView.addSubview(answerLabel79)
+            scrollView.addSubview(answerLabel7eleven)
+            scrollView.addSubview(answerLabel7twelve)
+            scrollView.addSubview(answerLabel7thirteen)
+
+        }else if whicAnswer == 8 {
+            answerLabel80.text = ""
+            answerLabel81.text = ""
+            answerLabel82.text = ""
+            answerLabel83.text = ""
+            answerLabel84.text = ""
+            answerLabel85.text = ""
+            answerLabel86.text = ""
+            answerLabel87.text = ""
+            answerLabel88.text = ""
+            answerLabel89.text = ""
+            answerLabel8eleven.text = ""
+            answerLabel8twelve.text = ""
+            answerLabel8thirteen.text = ""
+
+            answerLabel80.textAlignment = .center
+            answerLabel81.textAlignment = .center
+            answerLabel82.textAlignment = .center
+            answerLabel83.textAlignment = .center
+            answerLabel84.textAlignment = .center
+            answerLabel85.textAlignment = .center
+            answerLabel86.textAlignment = .center
+            answerLabel87.textAlignment = .center
+            answerLabel88.textAlignment = .center
+            answerLabel89.textAlignment = .center
+            answerLabel8eleven.textAlignment = .center
+            answerLabel8twelve.textAlignment = .center
+            answerLabel8thirteen.textAlignment = .center
+
+
+            
+            for i in answer {
+                if answerLabel80.text == "" {
+                    answerLabel80.text = String(i)
+                }else  if answerLabel81.text == "" {
+                    answerLabel81.text = String(i)
+                }else  if answerLabel82.text == "" {
+                    answerLabel82.text = String(i)
+                }else  if answerLabel83.text == "" {
+                    answerLabel83.text = String(i)
+                }else  if answerLabel84.text == "" {
+                    answerLabel84.text = String(i)
+                }else  if answerLabel85.text == "" {
+                    answerLabel85.text = String(i)
+                }else  if answerLabel86.text == "" {
+                    answerLabel86.text = String(i)
+                }else  if answerLabel87.text == "" {
+                    answerLabel87.text = String(i)
+                }else  if answerLabel88.text == "" {
+                    answerLabel88.text = String(i)
+                }else  if answerLabel89.text == "" {
+                    answerLabel89.text = String(i)
+                }else  if answerLabel8eleven.text == "" {
+                    answerLabel8eleven.text = String(i)
+                }else  if answerLabel8twelve.text == "" {
+                    answerLabel8twelve.text = String(i)
+                }else if answerLabel8thirteen.text == "" {
+                    answerLabel8thirteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel80.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel81.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel82.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel83.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel84.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel85.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel86.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel87.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel88.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel89.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel8eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel8twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel8thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+
+            }else { //Yatay
+                answerLabel80.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel81.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel82.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel83.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel84.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel85.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel86.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel87.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel88.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel89.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel8eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel8twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel8thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel80)
+            scrollView.addSubview(answerLabel81)
+            scrollView.addSubview(answerLabel82)
+            scrollView.addSubview(answerLabel83)
+            scrollView.addSubview(answerLabel84)
+            scrollView.addSubview(answerLabel85)
+            scrollView.addSubview(answerLabel86)
+            scrollView.addSubview(answerLabel87)
+            scrollView.addSubview(answerLabel88)
+            scrollView.addSubview(answerLabel89)
+            scrollView.addSubview(answerLabel8eleven)
+            scrollView.addSubview(answerLabel8twelve)
+            scrollView.addSubview(answerLabel8thirteen)
+            
+        }else if whicAnswer == 9 {
+            answerLabel90.text = ""
+            answerLabel91.text = ""
+            answerLabel92.text = ""
+            answerLabel93.text = ""
+            answerLabel94.text = ""
+            answerLabel95.text = ""
+            answerLabel96.text = ""
+            answerLabel97.text = ""
+            answerLabel98.text = ""
+            answerLabel99.text = ""
+            answerLabel9eleven.text = ""
+            answerLabel9twelve.text = ""
+            answerLabel9thirteen.text = ""
+
+            answerLabel90.textAlignment = .center
+            answerLabel91.textAlignment = .center
+            answerLabel92.textAlignment = .center
+            answerLabel93.textAlignment = .center
+            answerLabel94.textAlignment = .center
+            answerLabel95.textAlignment = .center
+            answerLabel96.textAlignment = .center
+            answerLabel97.textAlignment = .center
+            answerLabel98.textAlignment = .center
+            answerLabel99.textAlignment = .center
+            answerLabel9eleven.textAlignment = .center
+            answerLabel9twelve.textAlignment = .center
+            answerLabel9thirteen.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel90.text == "" {
+                    answerLabel90.text = String(i)
+                }else  if answerLabel91.text == "" {
+                    answerLabel91.text = String(i)
+                }else  if answerLabel92.text == "" {
+                    answerLabel92.text = String(i)
+                }else  if answerLabel93.text == "" {
+                    answerLabel93.text = String(i)
+                }else  if answerLabel94.text == "" {
+                    answerLabel94.text = String(i)
+                }else  if answerLabel95.text == "" {
+                    answerLabel95.text = String(i)
+                }else  if answerLabel96.text == "" {
+                    answerLabel96.text = String(i)
+                }else  if answerLabel97.text == "" {
+                    answerLabel97.text = String(i)
+                }else  if answerLabel98.text == "" {
+                    answerLabel98.text = String(i)
+                }else  if answerLabel99.text == "" {
+                    answerLabel99.text = String(i)
+                }else  if answerLabel9eleven.text == "" {
+                    answerLabel9eleven.text = String(i)
+                }else  if answerLabel9twelve.text == "" {
+                    answerLabel9twelve.text = String(i)
+                }else if answerLabel9thirteen.text == "" {
+                    answerLabel9thirteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel90.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel91.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel92.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel93.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel94.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel95.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel96.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel97.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel98.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel99.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel9eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel9twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel9thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel90.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel91.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel92.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel93.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel94.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel95.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel96.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel97.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel98.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel99.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel9eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel9twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel9thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel90)
+            scrollView.addSubview(answerLabel91)
+            scrollView.addSubview(answerLabel92)
+            scrollView.addSubview(answerLabel93)
+            scrollView.addSubview(answerLabel94)
+            scrollView.addSubview(answerLabel95)
+            scrollView.addSubview(answerLabel96)
+            scrollView.addSubview(answerLabel97)
+            scrollView.addSubview(answerLabel98)
+            scrollView.addSubview(answerLabel99)
+            scrollView.addSubview(answerLabel9eleven)
+            scrollView.addSubview(answerLabel9twelve)
+            scrollView.addSubview(answerLabel9thirteen)
+
+
+        }else if whicAnswer == 10 {
+            answerLabel100.text = ""
+            answerLabel101.text = ""
+            answerLabel102.text = ""
+            answerLabel103.text = ""
+            answerLabel104.text = ""
+            answerLabel105.text = ""
+            answerLabel106.text = ""
+            answerLabel107.text = ""
+            answerLabel108.text = ""
+            answerLabel109.text = ""
+            answerLabel10eleven.text = ""
+            answerLabel10twelve.text = ""
+            answerLabel10thirteen.text = ""
+
+            answerLabel100.textAlignment = .center
+            answerLabel101.textAlignment = .center
+            answerLabel102.textAlignment = .center
+            answerLabel103.textAlignment = .center
+            answerLabel104.textAlignment = .center
+            answerLabel105.textAlignment = .center
+            answerLabel106.textAlignment = .center
+            answerLabel107.textAlignment = .center
+            answerLabel108.textAlignment = .center
+            answerLabel109.textAlignment = .center
+            answerLabel10eleven.textAlignment = .center
+            answerLabel10twelve.textAlignment = .center
+            answerLabel10thirteen.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel100.text == "" {
+                    answerLabel100.text = String(i)
+                }else  if answerLabel101.text == "" {
+                    answerLabel101.text = String(i)
+                }else  if answerLabel102.text == "" {
+                    answerLabel102.text = String(i)
+                }else  if answerLabel103.text == "" {
+                    answerLabel103.text = String(i)
+                }else  if answerLabel104.text == "" {
+                    answerLabel104.text = String(i)
+                }else  if answerLabel105.text == "" {
+                    answerLabel105.text = String(i)
+                }else  if answerLabel106.text == "" {
+                    answerLabel106.text = String(i)
+                }else  if answerLabel107.text == "" {
+                    answerLabel107.text = String(i)
+                }else  if answerLabel108.text == "" {
+                    answerLabel108.text = String(i)
+                }else  if answerLabel109.text == "" {
+                    answerLabel109.text = String(i)
+                }else  if answerLabel10eleven.text == "" {
+                    answerLabel10eleven.text = String(i)
+                }else  if answerLabel10twelve.text == "" {
+                    answerLabel10twelve.text = String(i)
+                }else if answerLabel10thirteen.text == "" {
+                    answerLabel10thirteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel100.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel101.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel102.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel103.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel104.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel105.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel106.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel107.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel108.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel109.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel10eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel10twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel10thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel100.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel101.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel102.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel103.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel104.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel105.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel106.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel107.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel108.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel109.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel10eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel10twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel10thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel100)
+            scrollView.addSubview(answerLabel101)
+            scrollView.addSubview(answerLabel102)
+            scrollView.addSubview(answerLabel103)
+            scrollView.addSubview(answerLabel104)
+            scrollView.addSubview(answerLabel105)
+            scrollView.addSubview(answerLabel106)
+            scrollView.addSubview(answerLabel107)
+            scrollView.addSubview(answerLabel108)
+            scrollView.addSubview(answerLabel109)
+            scrollView.addSubview(answerLabel10eleven)
+            scrollView.addSubview(answerLabel10twelve)
+            scrollView.addSubview(answerLabel10thirteen)
+            
+        }else if whicAnswer == 11 {
+            answerLabel110.text = ""
+            answerLabel111.text = ""
+            answerLabel112.text = ""
+            answerLabel113.text = ""
+            answerLabel114.text = ""
+            answerLabel115.text = ""
+            answerLabel116.text = ""
+            answerLabel117.text = ""
+            answerLabel118.text = ""
+            answerLabel119.text = ""
+            answerLabel11eleven.text = ""
+            answerLabel11twelve.text = ""
+            answerLabel11thirteen.text = ""
+
+            answerLabel110.textAlignment = .center
+            answerLabel111.textAlignment = .center
+            answerLabel112.textAlignment = .center
+            answerLabel113.textAlignment = .center
+            answerLabel114.textAlignment = .center
+            answerLabel115.textAlignment = .center
+            answerLabel116.textAlignment = .center
+            answerLabel117.textAlignment = .center
+            answerLabel118.textAlignment = .center
+            answerLabel119.textAlignment = .center
+            answerLabel11eleven.textAlignment = .center
+            answerLabel11twelve.textAlignment = .center
+            answerLabel11thirteen.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel110.text == "" {
+                    answerLabel110.text = String(i)
+                }else  if answerLabel111.text == "" {
+                    answerLabel111.text = String(i)
+                }else  if answerLabel112.text == "" {
+                    answerLabel112.text = String(i)
+                }else  if answerLabel113.text == "" {
+                    answerLabel113.text = String(i)
+                }else  if answerLabel114.text == "" {
+                    answerLabel114.text = String(i)
+                }else  if answerLabel115.text == "" {
+                    answerLabel115.text = String(i)
+                }else  if answerLabel116.text == "" {
+                    answerLabel116.text = String(i)
+                }else  if answerLabel117.text == "" {
+                    answerLabel117.text = String(i)
+                }else  if answerLabel118.text == "" {
+                    answerLabel118.text = String(i)
+                }else  if answerLabel119.text == "" {
+                    answerLabel119.text = String(i)
+                }else  if answerLabel11eleven.text == "" {
+                    answerLabel11eleven.text = String(i)
+                }else  if answerLabel11twelve.text == "" {
+                    answerLabel11twelve.text = String(i)
+                }else if answerLabel11thirteen.text == "" {
+                    answerLabel11thirteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel110.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel111.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel112.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel113.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel114.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel115.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel116.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel117.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel118.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel119.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel11eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel11twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel11thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel110.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel111.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel112.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel113.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel114.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel115.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel116.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel117.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel118.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel119.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel110)
+            scrollView.addSubview(answerLabel111)
+            scrollView.addSubview(answerLabel112)
+            scrollView.addSubview(answerLabel113)
+            scrollView.addSubview(answerLabel114)
+            scrollView.addSubview(answerLabel115)
+            scrollView.addSubview(answerLabel116)
+            scrollView.addSubview(answerLabel117)
+            scrollView.addSubview(answerLabel118)
+            scrollView.addSubview(answerLabel119)
+            scrollView.addSubview(answerLabel11eleven)
+            scrollView.addSubview(answerLabel11twelve)
+            scrollView.addSubview(answerLabel11thirteen)
+
+        }else if whicAnswer == 12 {
+            answerLabel120.text = ""
+            answerLabel121.text = ""
+            answerLabel122.text = ""
+            answerLabel123.text = ""
+            answerLabel124.text = ""
+            answerLabel125.text = ""
+            answerLabel126.text = ""
+            answerLabel127.text = ""
+            answerLabel128.text = ""
+            answerLabel129.text = ""
+            answerLabel12eleven.text = ""
+            answerLabel12twelve.text = ""
+            answerLabel12thirteen.text = ""
+
+            answerLabel120.textAlignment = .center
+            answerLabel121.textAlignment = .center
+            answerLabel122.textAlignment = .center
+            answerLabel123.textAlignment = .center
+            answerLabel124.textAlignment = .center
+            answerLabel125.textAlignment = .center
+            answerLabel126.textAlignment = .center
+            answerLabel127.textAlignment = .center
+            answerLabel128.textAlignment = .center
+            answerLabel129.textAlignment = .center
+            answerLabel12eleven.textAlignment = .center
+            answerLabel12twelve.textAlignment = .center
+            answerLabel12thirteen.textAlignment = .center
+
+
+            
+            for i in answer {
+                if answerLabel120.text == "" {
+                    answerLabel120.text = String(i)
+                }else  if answerLabel121.text == "" {
+                    answerLabel121.text = String(i)
+                }else  if answerLabel122.text == "" {
+                    answerLabel122.text = String(i)
+                }else  if answerLabel123.text == "" {
+                    answerLabel123.text = String(i)
+                }else  if answerLabel124.text == "" {
+                    answerLabel124.text = String(i)
+                }else  if answerLabel125.text == "" {
+                    answerLabel125.text = String(i)
+                }else  if answerLabel126.text == "" {
+                    answerLabel126.text = String(i)
+                }else  if answerLabel127.text == "" {
+                    answerLabel127.text = String(i)
+                }else  if answerLabel128.text == "" {
+                    answerLabel128.text = String(i)
+                }else  if answerLabel129.text == "" {
+                    answerLabel129.text = String(i)
+                }else  if answerLabel12eleven.text == "" {
+                    answerLabel12eleven.text = String(i)
+                }else  if answerLabel12twelve.text == "" {
+                    answerLabel12twelve.text = String(i)
+                }else if answerLabel12thirteen.text == "" {
+                    answerLabel12thirteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel120.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel121.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel122.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel123.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel124.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel125.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel126.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel127.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel128.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel129.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel12eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel12twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel12thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel120.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel121.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel122.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel123.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel124.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel125.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel126.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel127.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel128.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel129.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel12eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel12twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel12thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel120)
+            scrollView.addSubview(answerLabel121)
+            scrollView.addSubview(answerLabel122)
+            scrollView.addSubview(answerLabel123)
+            scrollView.addSubview(answerLabel124)
+            scrollView.addSubview(answerLabel125)
+            scrollView.addSubview(answerLabel126)
+            scrollView.addSubview(answerLabel127)
+            scrollView.addSubview(answerLabel128)
+            scrollView.addSubview(answerLabel129)
+            scrollView.addSubview(answerLabel12eleven)
+            scrollView.addSubview(answerLabel12twelve)
+            scrollView.addSubview(answerLabel12thirteen)
+            
+        }else if whicAnswer == 13 {
+            answerLabel130.text = ""
+            answerLabel131.text = ""
+            answerLabel132.text = ""
+            answerLabel133.text = ""
+            answerLabel134.text = ""
+            answerLabel135.text = ""
+            answerLabel136.text = ""
+            answerLabel137.text = ""
+            answerLabel138.text = ""
+            answerLabel139.text = ""
+            answerLabel13eleven.text = ""
+            answerLabel13twelve.text = ""
+            answerLabel13thirteen.text = ""
+
+            answerLabel130.textAlignment = .center
+            answerLabel131.textAlignment = .center
+            answerLabel132.textAlignment = .center
+            answerLabel133.textAlignment = .center
+            answerLabel134.textAlignment = .center
+            answerLabel135.textAlignment = .center
+            answerLabel136.textAlignment = .center
+            answerLabel137.textAlignment = .center
+            answerLabel138.textAlignment = .center
+            answerLabel139.textAlignment = .center
+            answerLabel13eleven.textAlignment = .center
+            answerLabel13twelve.textAlignment = .center
+            answerLabel13thirteen.textAlignment = .center
+
+            
+            
+            
+            for i in answer {
+                if answerLabel130.text == "" {
+                    answerLabel130.text = String(i)
+                }else  if answerLabel131.text == "" {
+                    answerLabel131.text = String(i)
+                }else  if answerLabel132.text == "" {
+                    answerLabel132.text = String(i)
+                }else  if answerLabel133.text == "" {
+                    answerLabel133.text = String(i)
+                }else  if answerLabel134.text == "" {
+                    answerLabel134.text = String(i)
+                }else  if answerLabel135.text == "" {
+                    answerLabel135.text = String(i)
+                }else  if answerLabel136.text == "" {
+                    answerLabel136.text = String(i)
+                }else  if answerLabel137.text == "" {
+                    answerLabel137.text = String(i)
+                }else  if answerLabel138.text == "" {
+                    answerLabel138.text = String(i)
+                }else  if answerLabel139.text == "" {
+                    answerLabel139.text = String(i)
+                }else  if answerLabel13eleven.text == "" {
+                    answerLabel13eleven.text = String(i)
+                }else  if answerLabel13twelve.text == "" {
+                    answerLabel13twelve.text = String(i)
+                }else if answerLabel13thirteen.text == "" {
+                    answerLabel13thirteen.text = String(i)
+                }
+                
+                }
+                if isVertical { //Dikey
+                    answerLabel130.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel131.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel132.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel133.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel134.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel135.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel136.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel137.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel138.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel139.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel13eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel13twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel13thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+                    
+                }else { //Yatay
+                    answerLabel130.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel131.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel132.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel133.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel134.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel135.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel136.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel137.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel138.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel139.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel13eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel13twelve.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel13thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+                }
+                scrollView.addSubview(answerLabel130)
+                scrollView.addSubview(answerLabel131)
+                scrollView.addSubview(answerLabel132)
+                scrollView.addSubview(answerLabel133)
+                scrollView.addSubview(answerLabel134)
+                scrollView.addSubview(answerLabel135)
+                scrollView.addSubview(answerLabel136)
+                scrollView.addSubview(answerLabel137)
+                scrollView.addSubview(answerLabel138)
+                scrollView.addSubview(answerLabel139)
+                scrollView.addSubview(answerLabel13eleven)
+                scrollView.addSubview(answerLabel13twelve)
+                scrollView.addSubview(answerLabel13thirteen)
+                
+            }else if whicAnswer == 14 {
+                answerLabel140.text = ""
+                answerLabel141.text = ""
+                answerLabel142.text = ""
+                answerLabel143.text = ""
+                answerLabel144.text = ""
+                answerLabel145.text = ""
+                answerLabel146.text = ""
+                answerLabel147.text = ""
+                answerLabel148.text = ""
+                answerLabel149.text = ""
+                answerLabel14eleven.text = ""
+                answerLabel14twelve.text = ""
+                answerLabel14thirteen.text = ""
+
+                answerLabel140.textAlignment = .center
+                answerLabel141.textAlignment = .center
+                answerLabel142.textAlignment = .center
+                answerLabel143.textAlignment = .center
+                answerLabel144.textAlignment = .center
+                answerLabel145.textAlignment = .center
+                answerLabel146.textAlignment = .center
+                answerLabel147.textAlignment = .center
+                answerLabel148.textAlignment = .center
+                answerLabel149.textAlignment = .center
+                answerLabel14eleven.textAlignment = .center
+                answerLabel14twelve.textAlignment = .center
+                answerLabel14thirteen.textAlignment = .center
+
+                
+                for i in answer {
+                    if answerLabel140.text == "" {
+                        answerLabel140.text = String(i)
+                    }else  if answerLabel141.text == "" {
+                        answerLabel141.text = String(i)
+                    }else  if answerLabel142.text == "" {
+                        answerLabel142.text = String(i)
+                    }else  if answerLabel143.text == "" {
+                        answerLabel143.text = String(i)
+                    }else  if answerLabel144.text == "" {
+                        answerLabel144.text = String(i)
+                    }else  if answerLabel145.text == "" {
+                        answerLabel145.text = String(i)
+                    }else  if answerLabel146.text == "" {
+                        answerLabel146.text = String(i)
+                    }else  if answerLabel147.text == "" {
+                        answerLabel147.text = String(i)
+                    }else  if answerLabel148.text == "" {
+                        answerLabel148.text = String(i)
+                    }else  if answerLabel149.text == "" {
+                        answerLabel149.text = String(i)
+                    }else  if answerLabel14eleven.text == "" {
+                        answerLabel14eleven.text = String(i)
+                    }else  if answerLabel14twelve.text == "" {
+                        answerLabel14twelve.text = String(i)
+                    }else if answerLabel14thirteen.text == "" {
+                        answerLabel14thirteen.text = String(i)
+                    }
+                }
+                if isVertical { //Dikey
+                    answerLabel140.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel141.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel142.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel143.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel144.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel145.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel146.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel147.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel148.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel149.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel14eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel14twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel14thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+                }else { //Yatay
+                    answerLabel140.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel141.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel142.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel143.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel144.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel145.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel146.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel147.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel148.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel149.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel14eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel14twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel14thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+                }
+                scrollView.addSubview(answerLabel140)
+                scrollView.addSubview(answerLabel141)
+                scrollView.addSubview(answerLabel142)
+                scrollView.addSubview(answerLabel143)
+                scrollView.addSubview(answerLabel144)
+                scrollView.addSubview(answerLabel145)
+                scrollView.addSubview(answerLabel146)
+                scrollView.addSubview(answerLabel147)
+                scrollView.addSubview(answerLabel148)
+                scrollView.addSubview(answerLabel149)
+                scrollView.addSubview(answerLabel14eleven)
+                scrollView.addSubview(answerLabel14twelve)
+                scrollView.addSubview(answerLabel14thirteen)
+            
+            }else if whicAnswer == 15 {
+                answerLabel150.text = ""
+                answerLabel151.text = ""
+                answerLabel152.text = ""
+                answerLabel153.text = ""
+                answerLabel154.text = ""
+                answerLabel155.text = ""
+                answerLabel156.text = ""
+                answerLabel157.text = ""
+                answerLabel158.text = ""
+                answerLabel159.text = ""
+                answerLabel15eleven.text = ""
+                answerLabel15twelve.text = ""
+                answerLabel15thirteen.text = ""
+
+                answerLabel150.textAlignment = .center
+                answerLabel151.textAlignment = .center
+                answerLabel152.textAlignment = .center
+                answerLabel153.textAlignment = .center
+                answerLabel154.textAlignment = .center
+                answerLabel155.textAlignment = .center
+                answerLabel156.textAlignment = .center
+                answerLabel157.textAlignment = .center
+                answerLabel158.textAlignment = .center
+                answerLabel159.textAlignment = .center
+                answerLabel15eleven.textAlignment = .center
+                answerLabel15twelve.textAlignment = .center
+                answerLabel15thirteen.textAlignment = .center
+
+                
+                
+                for i in answer {
+                    if answerLabel150.text == "" {
+                        answerLabel150.text = String(i)
+                    }else  if answerLabel151.text == "" {
+                        answerLabel151.text = String(i)
+                    }else  if answerLabel152.text == "" {
+                        answerLabel152.text = String(i)
+                    }else  if answerLabel153.text == "" {
+                        answerLabel153.text = String(i)
+                    }else  if answerLabel154.text == "" {
+                        answerLabel154.text = String(i)
+                    }else  if answerLabel155.text == "" {
+                        answerLabel155.text = String(i)
+                    }else  if answerLabel156.text == "" {
+                        answerLabel156.text = String(i)
+                    }else  if answerLabel157.text == "" {
+                        answerLabel157.text = String(i)
+                    }else  if answerLabel158.text == "" {
+                        answerLabel158.text = String(i)
+                    }else  if answerLabel159.text == "" {
+                        answerLabel159.text = String(i)
+                    }else  if answerLabel15eleven.text == "" {
+                        answerLabel15eleven.text = String(i)
+                    }else  if answerLabel15twelve.text == "" {
+                        answerLabel15twelve.text = String(i)
+                    }else if answerLabel15thirteen.text == "" {
+                        answerLabel15thirteen.text = String(i)
+                    }
+                }
+                if isVertical { //Dikey
+                    answerLabel150.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel151.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel152.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel153.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel154.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel155.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel156.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel157.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel158.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel159.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel15eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel15twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel15thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+                }else { //Yatay
+                    answerLabel150.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel151.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel152.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel153.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel154.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel155.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel156.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel157.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel158.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel159.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel15eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel15twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel15thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+                }
+                scrollView.addSubview(answerLabel150)
+                scrollView.addSubview(answerLabel151)
+                scrollView.addSubview(answerLabel152)
+                scrollView.addSubview(answerLabel153)
+                scrollView.addSubview(answerLabel154)
+                scrollView.addSubview(answerLabel155)
+                scrollView.addSubview(answerLabel156)
+                scrollView.addSubview(answerLabel157)
+                scrollView.addSubview(answerLabel158)
+                scrollView.addSubview(answerLabel159)
+                scrollView.addSubview(answerLabel15eleven)
+                scrollView.addSubview(answerLabel15twelve)
+                scrollView.addSubview(answerLabel5thirteen)
+                
+            }else if whicAnswer == 16 {
+                answerLabel160.text = ""
+                answerLabel161.text = ""
+                answerLabel162.text = ""
+                answerLabel163.text = ""
+                answerLabel164.text = ""
+                answerLabel165.text = ""
+                answerLabel166.text = ""
+                answerLabel167.text = ""
+                answerLabel168.text = ""
+                answerLabel169.text = ""
+                answerLabel16eleven.text = ""
+                answerLabel16twelve.text = ""
+                answerLabel16thirteen.text = ""
+
+                answerLabel160.textAlignment = .center
+                answerLabel161.textAlignment = .center
+                answerLabel162.textAlignment = .center
+                answerLabel163.textAlignment = .center
+                answerLabel164.textAlignment = .center
+                answerLabel165.textAlignment = .center
+                answerLabel166.textAlignment = .center
+                answerLabel167.textAlignment = .center
+                answerLabel168.textAlignment = .center
+                answerLabel169.textAlignment = .center
+                answerLabel16eleven.textAlignment = .center
+                answerLabel16twelve.textAlignment = .center
+                answerLabel16thirteen.textAlignment = .center
+
+                
+                for i in answer {
+                    if answerLabel160.text == "" {
+                        answerLabel160.text = String(i)
+                    }else  if answerLabel161.text == "" {
+                        answerLabel161.text = String(i)
+                    }else  if answerLabel162.text == "" {
+                        answerLabel162.text = String(i)
+                    }else if answerLabel163.text == "" {
+                        answerLabel163.text = String(i)
+                    }else if answerLabel164.text == "" {
+                        answerLabel164.text = String(i)
+                    }else if answerLabel165.text == "" {
+                        answerLabel165.text = String(i)
+                    }else if answerLabel166.text == "" {
+                        answerLabel166.text = String(i)
+                    }else if answerLabel167.text == "" {
+                        answerLabel167.text = String(i)
+                    }else if answerLabel168.text == "" {
+                        answerLabel168.text = String(i)
+                    }else if answerLabel169.text == "" {
+                        answerLabel169.text = String(i)
+                    }else if answerLabel16eleven.text == "" {
+                        answerLabel16eleven.text = String(i)
+                    }else if answerLabel16twelve.text == "" {
+                        answerLabel169.text = String(i)
+                    }else if answerLabel16thirteen.text == "" {
+                        answerLabel16thirteen.text = String(i)
+                    }
+                }
+                if isVertical { //Dikey
+                    answerLabel160.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel161.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel162.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel163.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel164.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel165.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel166.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel167.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel168.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel169.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel16eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel16twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel16thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+                }else { //Yatay
+                    answerLabel160.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel161.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel162.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel163.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel164.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel165.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel166.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel167.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel168.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel169.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel16eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel16twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel16thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+                }
+                scrollView.addSubview(answerLabel160)
+                scrollView.addSubview(answerLabel161)
+                scrollView.addSubview(answerLabel162)
+                scrollView.addSubview(answerLabel163)
+                scrollView.addSubview(answerLabel164)
+                scrollView.addSubview(answerLabel165)
+                scrollView.addSubview(answerLabel166)
+                scrollView.addSubview(answerLabel167)
+                scrollView.addSubview(answerLabel168)
+                scrollView.addSubview(answerLabel169)
+                scrollView.addSubview(answerLabel16eleven)
+                scrollView.addSubview(answerLabel16twelve)
+                scrollView.addSubview(answerLabel16thirteen)
+            }
+        }
+    
+    func createLabelFrame14(isVertical : Bool,x: CGFloat,y:CGFloat,answer : [String.Element],whicAnswer: Int) {
+        if whicAnswer == 1 {
+            answerLabel10.text = ""
+            answerLabel11.text = ""
+            answerLabel12.text = ""
+            answerLabel13.text = ""
+            answerLabel14.text = ""
+            answerLabel15.text = ""
+            answerLabel16.text = ""
+            answerLabel17.text = ""
+            answerLabel18.text = ""
+            answerLabel19.text = ""
+            answerLabel1eleven.text = ""
+            answerLabel1twelve.text = ""
+            answerLabel1thirteen.text = ""
+            answerLabel1fourteen.text = ""
+
+            answerLabel10.textAlignment = .center
+            answerLabel11.textAlignment = .center
+            answerLabel12.textAlignment = .center
+            answerLabel13.textAlignment = .center
+            answerLabel14.textAlignment = .center
+            answerLabel15.textAlignment = .center
+            answerLabel16.textAlignment = .center
+            answerLabel17.textAlignment = .center
+            answerLabel18.textAlignment = .center
+            answerLabel19.textAlignment = .center
+            answerLabel1eleven.textAlignment = .center
+            answerLabel1twelve.textAlignment = .center
+            answerLabel1thirteen.textAlignment = .center
+            answerLabel1fourteen.textAlignment = .center
+
+            for i in answer {
+                if answerLabel10.text == "" {
+                    answerLabel10.text = String(i)
+                }else  if answerLabel11.text == "" {
+                    answerLabel11.text = String(i)
+                }else  if answerLabel12.text == "" {
+                    answerLabel12.text = String(i)
+                }else if answerLabel13.text == "" {
+                    answerLabel13.text = String(i)
+                }else if answerLabel14.text == "" {
+                    answerLabel14.text = String(i)
+                }else if answerLabel15.text == "" {
+                    answerLabel15.text = String(i)
+                }else if answerLabel16.text == "" {
+                    answerLabel16.text = String(i)
+                }else if answerLabel17.text == "" {
+                    answerLabel17.text = String(i)
+                }else if answerLabel18.text == "" {
+                    answerLabel18.text = String(i)
+                }else if answerLabel19.text == "" {
+                    answerLabel19.text = String(i)
+                }else if answerLabel1eleven.text == "" {
+                    answerLabel1eleven.text = String(i)
+                }else if answerLabel1twelve.text == "" {
+                    answerLabel1twelve.text = String(i)
+                }else if answerLabel1thirteen.text == "" {
+                    answerLabel1thirteen.text = String(i)
+                }else if answerLabel1fourteen.text == "" {
+                    answerLabel1fourteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel10.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel12.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel13.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel14.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel15.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel16.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel17.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel18.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel19.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel1eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel1twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel1thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel1fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+
+
+            }else { //Yatay
+                answerLabel10.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel12.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel13.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel14.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel15.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel16.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel17.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel18.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel19.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel1eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel1twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel1thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel1fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel10)
+            scrollView.addSubview(answerLabel11)
+            scrollView.addSubview(answerLabel12)
+            scrollView.addSubview(answerLabel13)
+            scrollView.addSubview(answerLabel14)
+            scrollView.addSubview(answerLabel15)
+            scrollView.addSubview(answerLabel16)
+            scrollView.addSubview(answerLabel17)
+            scrollView.addSubview(answerLabel18)
+            scrollView.addSubview(answerLabel19)
+            scrollView.addSubview(answerLabel1eleven)
+            scrollView.addSubview(answerLabel1twelve)
+            scrollView.addSubview(answerLabel1thirteen)
+            scrollView.addSubview(answerLabel1fourteen)
+
+        }else if whicAnswer == 2 {
+            answerLabel20.text = ""
+            answerLabel21.text = ""
+            answerLabel22.text = ""
+            answerLabel23.text = ""
+            answerLabel24.text = ""
+            answerLabel25.text = ""
+            answerLabel26.text = ""
+            answerLabel27.text = ""
+            answerLabel28.text = ""
+            answerLabel29.text = ""
+            answerLabel2eleven.text = ""
+            answerLabel2twelve.text = ""
+            answerLabel2thirteen.text = ""
+            answerLabel2fourteen.text = ""
+
+            answerLabel20.textAlignment = .center
+            answerLabel21.textAlignment = .center
+            answerLabel22.textAlignment = .center
+            answerLabel23.textAlignment = .center
+            answerLabel24.textAlignment = .center
+            answerLabel25.textAlignment = .center
+            answerLabel26.textAlignment = .center
+            answerLabel27.textAlignment = .center
+            answerLabel28.textAlignment = .center
+            answerLabel29.textAlignment = .center
+            answerLabel2eleven.textAlignment = .center
+            answerLabel2twelve.textAlignment = .center
+            answerLabel2thirteen.textAlignment = .center
+            answerLabel2fourteen.textAlignment = .center
+
+            
+            for i in answer {
+                if answerLabel20.text == "" {
+                    answerLabel20.text = String(i)
+                }else  if answerLabel21.text == "" {
+                    answerLabel21.text = String(i)
+                }else  if answerLabel22.text == "" {
+                    answerLabel22.text = String(i)
+                }else if answerLabel23.text == "" {
+                    answerLabel23.text = String(i)
+                }else if answerLabel24.text == "" {
+                    answerLabel24.text = String(i)
+                }else if answerLabel25.text == "" {
+                    answerLabel25.text = String(i)
+                }else if answerLabel26.text == "" {
+                    answerLabel26.text = String(i)
+                }else if answerLabel27.text == "" {
+                    answerLabel27.text = String(i)
+                }else if answerLabel28.text == "" {
+                    answerLabel28.text = String(i)
+                }else if answerLabel29.text == "" {
+                    answerLabel29.text = String(i)
+                }else if answerLabel2eleven.text == "" {
+                    answerLabel2eleven.text = String(i)
+                }else if answerLabel2twelve.text == "" {
+                    answerLabel2twelve.text = String(i)
+                }else if answerLabel2thirteen.text == "" {
+                    answerLabel2thirteen.text = String(i)
+                }else if answerLabel2fourteen.text == "" {
+                    answerLabel2fourteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel20.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel21.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel22.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel23.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel24.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel25.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel26.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel27.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel28.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel29.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel2eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel2twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel2thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel2fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+
+
+            }else { //Yatay
+                answerLabel20.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel21.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height: width * 0.07)
+                answerLabel22.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel23.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel24.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel25.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel26.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel27.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel28.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel29.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel2eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel2twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel2thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel2fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel20)
+            scrollView.addSubview(answerLabel21)
+            scrollView.addSubview(answerLabel22)
+            scrollView.addSubview(answerLabel23)
+            scrollView.addSubview(answerLabel24)
+            scrollView.addSubview(answerLabel25)
+            scrollView.addSubview(answerLabel26)
+            scrollView.addSubview(answerLabel27)
+            scrollView.addSubview(answerLabel28)
+            scrollView.addSubview(answerLabel29)
+            scrollView.addSubview(answerLabel2eleven)
+            scrollView.addSubview(answerLabel2twelve)
+            scrollView.addSubview(answerLabel2thirteen)
+            scrollView.addSubview(answerLabel2fourteen)
+
+            
+        }else if whicAnswer == 3 {
+            answerLabel30.text = ""
+            answerLabel31.text = ""
+            answerLabel32.text = ""
+            answerLabel33.text = ""
+            answerLabel34.text = ""
+            answerLabel35.text = ""
+            answerLabel36.text = ""
+            answerLabel37.text = ""
+            answerLabel38.text = ""
+            answerLabel39.text = ""
+            answerLabel3eleven.text = ""
+            answerLabel3twelve.text = ""
+            answerLabel3thirteen.text = ""
+            answerLabel3fourteen.text = ""
+
+            answerLabel30.textAlignment = .center
+            answerLabel31.textAlignment = .center
+            answerLabel32.textAlignment = .center
+            answerLabel33.textAlignment = .center
+            answerLabel34.textAlignment = .center
+            answerLabel35.textAlignment = .center
+            answerLabel36.textAlignment = .center
+            answerLabel37.textAlignment = .center
+            answerLabel38.textAlignment = .center
+            answerLabel39.textAlignment = .center
+            answerLabel3eleven.textAlignment = .center
+            answerLabel3twelve.textAlignment = .center
+            answerLabel3thirteen.textAlignment = .center
+            answerLabel3fourteen.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel30.text == "" {
+                    answerLabel30.text = String(i)
+                }else  if answerLabel31.text == "" {
+                    answerLabel31.text = String(i)
+                }else  if answerLabel32.text == "" {
+                    answerLabel32.text = String(i)
+                }else  if answerLabel33.text == "" {
+                    answerLabel33.text = String(i)
+                }else  if answerLabel34.text == "" {
+                    answerLabel34.text = String(i)
+                }else  if answerLabel35.text == "" {
+                    answerLabel35.text = String(i)
+                }else  if answerLabel36.text == "" {
+                    answerLabel36.text = String(i)
+                }else  if answerLabel37.text == "" {
+                    answerLabel37.text = String(i)
+                }else  if answerLabel38.text == "" {
+                    answerLabel38.text = String(i)
+                }else  if answerLabel39.text == "" {
+                    answerLabel39.text = String(i)
+                }else  if answerLabel3eleven.text == "" {
+                    answerLabel3eleven.text = String(i)
+                }else  if answerLabel3twelve.text == "" {
+                    answerLabel3twelve.text = String(i)
+                }else  if answerLabel3thirteen.text == "" {
+                    answerLabel3thirteen.text = String(i)
+                }else  if answerLabel3fourteen.text == "" {
+                    answerLabel3fourteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel30.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel31.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel32.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel33.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel34.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel35.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel36.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel37.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel38.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel39.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel3eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel3twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel3thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel3fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel30.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel31.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel32.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel33.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel34.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel35.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel36.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel37.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel38.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel39.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel3eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel3twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel3thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel3fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel30)
+            scrollView.addSubview(answerLabel31)
+            scrollView.addSubview(answerLabel32)
+            scrollView.addSubview(answerLabel33)
+            scrollView.addSubview(answerLabel34)
+            scrollView.addSubview(answerLabel35)
+            scrollView.addSubview(answerLabel36)
+            scrollView.addSubview(answerLabel37)
+            scrollView.addSubview(answerLabel38)
+            scrollView.addSubview(answerLabel39)
+            scrollView.addSubview(answerLabel3eleven)
+            scrollView.addSubview(answerLabel3twelve)
+            scrollView.addSubview(answerLabel3thirteen)
+            scrollView.addSubview(answerLabel3fourteen)
+
+            
+        }else if whicAnswer == 4 {
+            answerLabel40.text = ""
+            answerLabel41.text = ""
+            answerLabel42.text = ""
+            answerLabel43.text = ""
+            answerLabel44.text = ""
+            answerLabel45.text = ""
+            answerLabel46.text = ""
+            answerLabel47.text = ""
+            answerLabel48.text = ""
+            answerLabel49.text = ""
+            answerLabel4eleven.text = ""
+            answerLabel4twelve.text = ""
+            answerLabel4thirteen.text = ""
+            answerLabel4fourteen.text = ""
+
+            answerLabel40.textAlignment = .center
+            answerLabel41.textAlignment = .center
+            answerLabel42.textAlignment = .center
+            answerLabel43.textAlignment = .center
+            answerLabel44.textAlignment = .center
+            answerLabel45.textAlignment = .center
+            answerLabel46.textAlignment = .center
+            answerLabel47.textAlignment = .center
+            answerLabel48.textAlignment = .center
+            answerLabel49.textAlignment = .center
+            answerLabel4eleven.textAlignment = .center
+            answerLabel4twelve.textAlignment = .center
+            answerLabel4thirteen.textAlignment = .center
+            answerLabel4fourteen.textAlignment = .center
+
+
+            
+            for i in answer {
+                if answerLabel40.text == "" {
+                    answerLabel40.text = String(i)
+                }else  if answerLabel41.text == "" {
+                    answerLabel41.text = String(i)
+                }else  if answerLabel42.text == "" {
+                    answerLabel42.text = String(i)
+                }else if answerLabel43.text == "" {
+                    answerLabel43.text = String(i)
+                }else if answerLabel44.text == "" {
+                    answerLabel44.text = String(i)
+                }else if answerLabel45.text == "" {
+                    answerLabel45.text = String(i)
+                }else if answerLabel46.text == "" {
+                    answerLabel46.text = String(i)
+                }else if answerLabel47.text == "" {
+                    answerLabel47.text = String(i)
+                }else if answerLabel48.text == "" {
+                    answerLabel48.text = String(i)
+                }else if answerLabel49.text == "" {
+                    answerLabel49.text = String(i)
+                }else if answerLabel4eleven.text == "" {
+                    answerLabel4eleven.text = String(i)
+                }else if answerLabel4twelve.text == "" {
+                    answerLabel4twelve.text = String(i)
+                }else if answerLabel4thirteen.text == "" {
+                    answerLabel4thirteen.text = String(i)
+                }else if answerLabel4fourteen.text == "" {
+                    answerLabel4fourteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel40.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel41.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel42.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel43.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel44.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel45.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel46.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel47.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel48.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel49.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel4eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel4twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel4thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel4fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+
+            }else { //Yatay
+                answerLabel40.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel41.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel42.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel43.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel44.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel45.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel46.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel47.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel48.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel49.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel4eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel4twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel4thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel4fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel40)
+            scrollView.addSubview(answerLabel41)
+            scrollView.addSubview(answerLabel42)
+            scrollView.addSubview(answerLabel43)
+            scrollView.addSubview(answerLabel44)
+            scrollView.addSubview(answerLabel45)
+            scrollView.addSubview(answerLabel46)
+            scrollView.addSubview(answerLabel47)
+            scrollView.addSubview(answerLabel48)
+            scrollView.addSubview(answerLabel49)
+            scrollView.addSubview(answerLabel4eleven)
+            scrollView.addSubview(answerLabel4twelve)
+            scrollView.addSubview(answerLabel4thirteen)
+            scrollView.addSubview(answerLabel4fourteen)
+
+        }else if whicAnswer == 5 {
+            answerLabel50.text = ""
+            answerLabel51.text = ""
+            answerLabel52.text = ""
+            answerLabel53.text = ""
+            answerLabel54.text = ""
+            answerLabel55.text = ""
+            answerLabel56.text = ""
+            answerLabel57.text = ""
+            answerLabel58.text = ""
+            answerLabel59.text = ""
+            answerLabel5eleven.text = ""
+            answerLabel5twelve.text = ""
+            answerLabel5thirteen.text = ""
+            answerLabel5fourteen.text = ""
+
+            answerLabel50.textAlignment = .center
+            answerLabel51.textAlignment = .center
+            answerLabel52.textAlignment = .center
+            answerLabel53.textAlignment = .center
+            answerLabel54.textAlignment = .center
+            answerLabel55.textAlignment = .center
+            answerLabel56.textAlignment = .center
+            answerLabel57.textAlignment = .center
+            answerLabel58.textAlignment = .center
+            answerLabel59.textAlignment = .center
+            answerLabel5eleven.textAlignment = .center
+            answerLabel5twelve.textAlignment = .center
+            answerLabel5thirteen.textAlignment = .center
+            answerLabel5fourteen.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel50.text == "" {
+                    answerLabel50.text = String(i)
+                }else  if answerLabel51.text == "" {
+                    answerLabel51.text = String(i)
+                }else  if answerLabel52.text == "" {
+                    answerLabel52.text = String(i)
+                }else  if answerLabel53.text == "" {
+                    answerLabel53.text = String(i)
+                }else  if answerLabel54.text == "" {
+                    answerLabel54.text = String(i)
+                }else  if answerLabel55.text == "" {
+                    answerLabel55.text = String(i)
+                }else  if answerLabel56.text == "" {
+                    answerLabel56.text = String(i)
+                }else  if answerLabel57.text == "" {
+                    answerLabel57.text = String(i)
+                }else  if answerLabel58.text == "" {
+                    answerLabel58.text = String(i)
+                }else  if answerLabel59.text == "" {
+                    answerLabel59.text = String(i)
+                }else  if answerLabel5eleven.text == "" {
+                    answerLabel5eleven.text = String(i)
+                }else  if answerLabel5twelve.text == "" {
+                    answerLabel5twelve.text = String(i)
+                }else if answerLabel5thirteen.text == "" {
+                    answerLabel5thirteen.text = String(i)
+                }else if answerLabel5fourteen.text == "" {
+                    answerLabel5fourteen.text = String(i)
+                }
+                
+            }
+            if isVertical { //Dikey
+                answerLabel50.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel51.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel52.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel53.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel54.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel55.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel56.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel57.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel58.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel59.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel5eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel5twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel5thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel5fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else {//Yatay
+                answerLabel50.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel51.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel52.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel53.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel54.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel55.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel56.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel57.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel58.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel59.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel5eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel5twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel5thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel5fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel50)
+            scrollView.addSubview(answerLabel51)
+            scrollView.addSubview(answerLabel52)
+            scrollView.addSubview(answerLabel53)
+            scrollView.addSubview(answerLabel54)
+            scrollView.addSubview(answerLabel55)
+            scrollView.addSubview(answerLabel56)
+            scrollView.addSubview(answerLabel57)
+            scrollView.addSubview(answerLabel58)
+            scrollView.addSubview(answerLabel59)
+            scrollView.addSubview(answerLabel5eleven)
+            scrollView.addSubview(answerLabel5twelve)
+            scrollView.addSubview(answerLabel5thirteen)
+            scrollView.addSubview(answerLabel5fourteen)
+
+        }else if whicAnswer == 6 {
+            answerLabel60.text = ""
+            answerLabel61.text = ""
+            answerLabel62.text = ""
+            answerLabel63.text = ""
+            answerLabel64.text = ""
+            answerLabel65.text = ""
+            answerLabel66.text = ""
+            answerLabel67.text = ""
+            answerLabel68.text = ""
+            answerLabel69.text = ""
+            answerLabel6eleven.text = ""
+            answerLabel6twelve.text = ""
+            answerLabel6thirteen.text = ""
+            answerLabel6fourteen.text = ""
+
+            
+            answerLabel60.textAlignment = .center
+            answerLabel61.textAlignment = .center
+            answerLabel62.textAlignment = .center
+            answerLabel63.textAlignment = .center
+            answerLabel64.textAlignment = .center
+            answerLabel65.textAlignment = .center
+            answerLabel66.textAlignment = .center
+            answerLabel67.textAlignment = .center
+            answerLabel68.textAlignment = .center
+            answerLabel69.textAlignment = .center
+            answerLabel6eleven.textAlignment = .center
+            answerLabel6twelve.textAlignment = .center
+            answerLabel6thirteen.textAlignment = .center
+            answerLabel6fourteen.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel60.text == "" {
+                    answerLabel60.text = String(i)
+                }else  if answerLabel61.text == "" {
+                    answerLabel61.text = String(i)
+                }else  if answerLabel62.text == "" {
+                    answerLabel62.text = String(i)
+                }else  if answerLabel63.text == "" {
+                    answerLabel63.text = String(i)
+                }else  if answerLabel64.text == "" {
+                    answerLabel64.text = String(i)
+                }else  if answerLabel65.text == "" {
+                    answerLabel65.text = String(i)
+                }else  if answerLabel66.text == "" {
+                    answerLabel66.text = String(i)
+                }else  if answerLabel67.text == "" {
+                    answerLabel67.text = String(i)
+                }else  if answerLabel68.text == "" {
+                    answerLabel68.text = String(i)
+                }else  if answerLabel69.text == "" {
+                    answerLabel69.text = String(i)
+                }else  if answerLabel6eleven.text == "" {
+                    answerLabel6eleven.text = String(i)
+                }else  if answerLabel6twelve.text == "" {
+                    answerLabel6twelve.text = String(i)
+                }else if answerLabel6thirteen.text == "" {
+                    answerLabel6thirteen.text = String(i)
+                }else if answerLabel6fourteen.text == "" {
+                    answerLabel6fourteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel60.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel61.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel62.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel63.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel64.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel65.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel66.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel67.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel68.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel69.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel6eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel6twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel6thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel6fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel60.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel61.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height: width * 0.07)
+                answerLabel62.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel63.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel64.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel65.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel66.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel67.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel68.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel69.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel6eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel6twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel6thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel6fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel60)
+            scrollView.addSubview(answerLabel61)
+            scrollView.addSubview(answerLabel62)
+            scrollView.addSubview(answerLabel63)
+            scrollView.addSubview(answerLabel64)
+            scrollView.addSubview(answerLabel65)
+            scrollView.addSubview(answerLabel66)
+            scrollView.addSubview(answerLabel67)
+            scrollView.addSubview(answerLabel68)
+            scrollView.addSubview(answerLabel69)
+            scrollView.addSubview(answerLabel6eleven)
+            scrollView.addSubview(answerLabel6twelve)
+            scrollView.addSubview(answerLabel6thirteen)
+            scrollView.addSubview(answerLabel6fourteen)
+
+
+        }else if whicAnswer == 7 {
+            answerLabel70.text = ""
+            answerLabel71.text = ""
+            answerLabel72.text = ""
+            answerLabel73.text = ""
+            answerLabel74.text = ""
+            answerLabel75.text = ""
+            answerLabel76.text = ""
+            answerLabel77.text = ""
+            answerLabel78.text = ""
+            answerLabel79.text = ""
+            answerLabel7eleven.text = ""
+            answerLabel7twelve.text = ""
+            answerLabel7thirteen.text = ""
+            answerLabel7fourteen.text = ""
+
+            answerLabel70.textAlignment = .center
+            answerLabel71.textAlignment = .center
+            answerLabel72.textAlignment = .center
+            answerLabel73.textAlignment = .center
+            answerLabel74.textAlignment = .center
+            answerLabel75.textAlignment = .center
+            answerLabel76.textAlignment = .center
+            answerLabel77.textAlignment = .center
+            answerLabel78.textAlignment = .center
+            answerLabel79.textAlignment = .center
+            answerLabel7eleven.textAlignment = .center
+            answerLabel7twelve.textAlignment = .center
+            answerLabel7thirteen.textAlignment = .center
+            answerLabel7fourteen.textAlignment = .center
+
+
+            
+            for i in answer {
+                if answerLabel70.text == "" {
+                    answerLabel70.text = String(i)
+                }else  if answerLabel71.text == "" {
+                    answerLabel71.text = String(i)
+                }else  if answerLabel72.text == "" {
+                    answerLabel72.text = String(i)
+                }else  if answerLabel73.text == "" {
+                    answerLabel73.text = String(i)
+                }else  if answerLabel74.text == "" {
+                    answerLabel74.text = String(i)
+                }else  if answerLabel75.text == "" {
+                    answerLabel75.text = String(i)
+                }else  if answerLabel76.text == "" {
+                    answerLabel76.text = String(i)
+                }else  if answerLabel77.text == "" {
+                    answerLabel77.text = String(i)
+                }else  if answerLabel78.text == "" {
+                    answerLabel78.text = String(i)
+                }else  if answerLabel79.text == "" {
+                    answerLabel79.text = String(i)
+                }else  if answerLabel7eleven.text == "" {
+                    answerLabel7eleven.text = String(i)
+                }else  if answerLabel7twelve.text == "" {
+                    answerLabel7twelve.text = String(i)
+                }else if answerLabel7thirteen.text == "" {
+                    answerLabel7thirteen.text = String(i)
+                }else if answerLabel7fourteen.text == "" {
+                    answerLabel7fourteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel70.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel71.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel72.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel73.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel74.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel75.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel76.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel77.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel78.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel79.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel7eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel7twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel7thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel7fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel70.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel71.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel72.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel73.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel74.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel75.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel76.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel77.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel78.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel79.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel7eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel7twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel7thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel7fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel70)
+            scrollView.addSubview(answerLabel71)
+            scrollView.addSubview(answerLabel72)
+            scrollView.addSubview(answerLabel73)
+            scrollView.addSubview(answerLabel74)
+            scrollView.addSubview(answerLabel75)
+            scrollView.addSubview(answerLabel76)
+            scrollView.addSubview(answerLabel77)
+            scrollView.addSubview(answerLabel78)
+            scrollView.addSubview(answerLabel79)
+            scrollView.addSubview(answerLabel7eleven)
+            scrollView.addSubview(answerLabel7twelve)
+            scrollView.addSubview(answerLabel7thirteen)
+            scrollView.addSubview(answerLabel7fourteen)
+
+        }else if whicAnswer == 8 {
+            answerLabel80.text = ""
+            answerLabel81.text = ""
+            answerLabel82.text = ""
+            answerLabel83.text = ""
+            answerLabel84.text = ""
+            answerLabel85.text = ""
+            answerLabel86.text = ""
+            answerLabel87.text = ""
+            answerLabel88.text = ""
+            answerLabel89.text = ""
+            answerLabel8eleven.text = ""
+            answerLabel8twelve.text = ""
+            answerLabel8thirteen.text = ""
+            answerLabel8fourteen.text = ""
+
+            answerLabel80.textAlignment = .center
+            answerLabel81.textAlignment = .center
+            answerLabel82.textAlignment = .center
+            answerLabel83.textAlignment = .center
+            answerLabel84.textAlignment = .center
+            answerLabel85.textAlignment = .center
+            answerLabel86.textAlignment = .center
+            answerLabel87.textAlignment = .center
+            answerLabel88.textAlignment = .center
+            answerLabel89.textAlignment = .center
+            answerLabel8eleven.textAlignment = .center
+            answerLabel8twelve.textAlignment = .center
+            answerLabel8thirteen.textAlignment = .center
+            answerLabel8fourteen.textAlignment = .center
+
+
+            
+            for i in answer {
+                if answerLabel80.text == "" {
+                    answerLabel80.text = String(i)
+                }else  if answerLabel81.text == "" {
+                    answerLabel81.text = String(i)
+                }else  if answerLabel82.text == "" {
+                    answerLabel82.text = String(i)
+                }else  if answerLabel83.text == "" {
+                    answerLabel83.text = String(i)
+                }else  if answerLabel84.text == "" {
+                    answerLabel84.text = String(i)
+                }else  if answerLabel85.text == "" {
+                    answerLabel85.text = String(i)
+                }else  if answerLabel86.text == "" {
+                    answerLabel86.text = String(i)
+                }else  if answerLabel87.text == "" {
+                    answerLabel87.text = String(i)
+                }else  if answerLabel88.text == "" {
+                    answerLabel88.text = String(i)
+                }else  if answerLabel89.text == "" {
+                    answerLabel89.text = String(i)
+                }else  if answerLabel8eleven.text == "" {
+                    answerLabel8eleven.text = String(i)
+                }else  if answerLabel8twelve.text == "" {
+                    answerLabel8twelve.text = String(i)
+                }else if answerLabel8thirteen.text == "" {
+                    answerLabel8thirteen.text = String(i)
+                }else if answerLabel8fourteen.text == "" {
+                    answerLabel8fourteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel80.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel81.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel82.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel83.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel84.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel85.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel86.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel87.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel88.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel89.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel8eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel8twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel8thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel8fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+
+            }else { //Yatay
+                answerLabel80.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel81.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel82.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel83.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel84.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel85.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel86.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel87.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel88.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel89.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel8eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel8twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel8thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel8fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel80)
+            scrollView.addSubview(answerLabel81)
+            scrollView.addSubview(answerLabel82)
+            scrollView.addSubview(answerLabel83)
+            scrollView.addSubview(answerLabel84)
+            scrollView.addSubview(answerLabel85)
+            scrollView.addSubview(answerLabel86)
+            scrollView.addSubview(answerLabel87)
+            scrollView.addSubview(answerLabel88)
+            scrollView.addSubview(answerLabel89)
+            scrollView.addSubview(answerLabel8eleven)
+            scrollView.addSubview(answerLabel8twelve)
+            scrollView.addSubview(answerLabel8thirteen)
+            scrollView.addSubview(answerLabel8fourteen)
+
+        }else if whicAnswer == 9 {
+            answerLabel90.text = ""
+            answerLabel91.text = ""
+            answerLabel92.text = ""
+            answerLabel93.text = ""
+            answerLabel94.text = ""
+            answerLabel95.text = ""
+            answerLabel96.text = ""
+            answerLabel97.text = ""
+            answerLabel98.text = ""
+            answerLabel99.text = ""
+            answerLabel9eleven.text = ""
+            answerLabel9twelve.text = ""
+            answerLabel9thirteen.text = ""
+            answerLabel9fourteen.text = ""
+
+            answerLabel90.textAlignment = .center
+            answerLabel91.textAlignment = .center
+            answerLabel92.textAlignment = .center
+            answerLabel93.textAlignment = .center
+            answerLabel94.textAlignment = .center
+            answerLabel95.textAlignment = .center
+            answerLabel96.textAlignment = .center
+            answerLabel97.textAlignment = .center
+            answerLabel98.textAlignment = .center
+            answerLabel99.textAlignment = .center
+            answerLabel9eleven.textAlignment = .center
+            answerLabel9twelve.textAlignment = .center
+            answerLabel9thirteen.textAlignment = .center
+            answerLabel9fourteen.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel90.text == "" {
+                    answerLabel90.text = String(i)
+                }else  if answerLabel91.text == "" {
+                    answerLabel91.text = String(i)
+                }else  if answerLabel92.text == "" {
+                    answerLabel92.text = String(i)
+                }else  if answerLabel93.text == "" {
+                    answerLabel93.text = String(i)
+                }else  if answerLabel94.text == "" {
+                    answerLabel94.text = String(i)
+                }else  if answerLabel95.text == "" {
+                    answerLabel95.text = String(i)
+                }else  if answerLabel96.text == "" {
+                    answerLabel96.text = String(i)
+                }else  if answerLabel97.text == "" {
+                    answerLabel97.text = String(i)
+                }else  if answerLabel98.text == "" {
+                    answerLabel98.text = String(i)
+                }else  if answerLabel99.text == "" {
+                    answerLabel99.text = String(i)
+                }else  if answerLabel9eleven.text == "" {
+                    answerLabel9eleven.text = String(i)
+                }else  if answerLabel9twelve.text == "" {
+                    answerLabel9twelve.text = String(i)
+                }else if answerLabel9thirteen.text == "" {
+                    answerLabel9thirteen.text = String(i)
+                }else if answerLabel9fourteen.text == "" {
+                    answerLabel9fourteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel90.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel91.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel92.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel93.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel94.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel95.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel96.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel97.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel98.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel99.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel9eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel9twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel9thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel9fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel90.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel91.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel92.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel93.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel94.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel95.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel96.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel97.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel98.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel99.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel9eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel9twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel9thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel9fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel90)
+            scrollView.addSubview(answerLabel91)
+            scrollView.addSubview(answerLabel92)
+            scrollView.addSubview(answerLabel93)
+            scrollView.addSubview(answerLabel94)
+            scrollView.addSubview(answerLabel95)
+            scrollView.addSubview(answerLabel96)
+            scrollView.addSubview(answerLabel97)
+            scrollView.addSubview(answerLabel98)
+            scrollView.addSubview(answerLabel99)
+            scrollView.addSubview(answerLabel9eleven)
+            scrollView.addSubview(answerLabel9twelve)
+            scrollView.addSubview(answerLabel9thirteen)
+            scrollView.addSubview(answerLabel9fourteen)
+
+
+        }else if whicAnswer == 10 {
+            answerLabel100.text = ""
+            answerLabel101.text = ""
+            answerLabel102.text = ""
+            answerLabel103.text = ""
+            answerLabel104.text = ""
+            answerLabel105.text = ""
+            answerLabel106.text = ""
+            answerLabel107.text = ""
+            answerLabel108.text = ""
+            answerLabel109.text = ""
+            answerLabel10eleven.text = ""
+            answerLabel10twelve.text = ""
+            answerLabel10thirteen.text = ""
+            answerLabel10fourteen.text = ""
+
+            answerLabel100.textAlignment = .center
+            answerLabel101.textAlignment = .center
+            answerLabel102.textAlignment = .center
+            answerLabel103.textAlignment = .center
+            answerLabel104.textAlignment = .center
+            answerLabel105.textAlignment = .center
+            answerLabel106.textAlignment = .center
+            answerLabel107.textAlignment = .center
+            answerLabel108.textAlignment = .center
+            answerLabel109.textAlignment = .center
+            answerLabel10eleven.textAlignment = .center
+            answerLabel10twelve.textAlignment = .center
+            answerLabel10thirteen.textAlignment = .center
+            answerLabel10fourteen.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel100.text == "" {
+                    answerLabel100.text = String(i)
+                }else  if answerLabel101.text == "" {
+                    answerLabel101.text = String(i)
+                }else  if answerLabel102.text == "" {
+                    answerLabel102.text = String(i)
+                }else  if answerLabel103.text == "" {
+                    answerLabel103.text = String(i)
+                }else  if answerLabel104.text == "" {
+                    answerLabel104.text = String(i)
+                }else  if answerLabel105.text == "" {
+                    answerLabel105.text = String(i)
+                }else  if answerLabel106.text == "" {
+                    answerLabel106.text = String(i)
+                }else  if answerLabel107.text == "" {
+                    answerLabel107.text = String(i)
+                }else  if answerLabel108.text == "" {
+                    answerLabel108.text = String(i)
+                }else  if answerLabel109.text == "" {
+                    answerLabel109.text = String(i)
+                }else  if answerLabel10eleven.text == "" {
+                    answerLabel10eleven.text = String(i)
+                }else  if answerLabel10twelve.text == "" {
+                    answerLabel10twelve.text = String(i)
+                }else if answerLabel10thirteen.text == "" {
+                    answerLabel10thirteen.text = String(i)
+                }else if answerLabel10fourteen.text == "" {
+                    answerLabel10fourteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel100.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel101.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel102.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel103.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel104.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel105.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel106.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel107.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel108.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel109.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel10eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel10twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel10thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel10fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel100.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel101.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel102.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel103.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel104.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel105.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel106.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel107.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel108.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel109.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel10eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel10twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel10thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel10fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel100)
+            scrollView.addSubview(answerLabel101)
+            scrollView.addSubview(answerLabel102)
+            scrollView.addSubview(answerLabel103)
+            scrollView.addSubview(answerLabel104)
+            scrollView.addSubview(answerLabel105)
+            scrollView.addSubview(answerLabel106)
+            scrollView.addSubview(answerLabel107)
+            scrollView.addSubview(answerLabel108)
+            scrollView.addSubview(answerLabel109)
+            scrollView.addSubview(answerLabel10eleven)
+            scrollView.addSubview(answerLabel10twelve)
+            scrollView.addSubview(answerLabel10thirteen)
+            scrollView.addSubview(answerLabel10fourteen)
+
+        }else if whicAnswer == 11 {
+            answerLabel110.text = ""
+            answerLabel111.text = ""
+            answerLabel112.text = ""
+            answerLabel113.text = ""
+            answerLabel114.text = ""
+            answerLabel115.text = ""
+            answerLabel116.text = ""
+            answerLabel117.text = ""
+            answerLabel118.text = ""
+            answerLabel119.text = ""
+            answerLabel11eleven.text = ""
+            answerLabel11twelve.text = ""
+            answerLabel11thirteen.text = ""
+            answerLabel11fourteen.text = ""
+
+            answerLabel110.textAlignment = .center
+            answerLabel111.textAlignment = .center
+            answerLabel112.textAlignment = .center
+            answerLabel113.textAlignment = .center
+            answerLabel114.textAlignment = .center
+            answerLabel115.textAlignment = .center
+            answerLabel116.textAlignment = .center
+            answerLabel117.textAlignment = .center
+            answerLabel118.textAlignment = .center
+            answerLabel119.textAlignment = .center
+            answerLabel11eleven.textAlignment = .center
+            answerLabel11twelve.textAlignment = .center
+            answerLabel11thirteen.textAlignment = .center
+            answerLabel11fourteen.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel110.text == "" {
+                    answerLabel110.text = String(i)
+                }else  if answerLabel111.text == "" {
+                    answerLabel111.text = String(i)
+                }else  if answerLabel112.text == "" {
+                    answerLabel112.text = String(i)
+                }else  if answerLabel113.text == "" {
+                    answerLabel113.text = String(i)
+                }else  if answerLabel114.text == "" {
+                    answerLabel114.text = String(i)
+                }else  if answerLabel115.text == "" {
+                    answerLabel115.text = String(i)
+                }else  if answerLabel116.text == "" {
+                    answerLabel116.text = String(i)
+                }else  if answerLabel117.text == "" {
+                    answerLabel117.text = String(i)
+                }else  if answerLabel118.text == "" {
+                    answerLabel118.text = String(i)
+                }else  if answerLabel119.text == "" {
+                    answerLabel119.text = String(i)
+                }else  if answerLabel11eleven.text == "" {
+                    answerLabel11eleven.text = String(i)
+                }else  if answerLabel11twelve.text == "" {
+                    answerLabel11twelve.text = String(i)
+                }else if answerLabel11thirteen.text == "" {
+                    answerLabel11thirteen.text = String(i)
+                }else if answerLabel11fourteen.text == "" {
+                    answerLabel11fourteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel110.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel111.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel112.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel113.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel114.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel115.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel116.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel117.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel118.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel119.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel11eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel11twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel11thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel11fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel110.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel111.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel112.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel113.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel114.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel115.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel116.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel117.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel118.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel119.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel110)
+            scrollView.addSubview(answerLabel111)
+            scrollView.addSubview(answerLabel112)
+            scrollView.addSubview(answerLabel113)
+            scrollView.addSubview(answerLabel114)
+            scrollView.addSubview(answerLabel115)
+            scrollView.addSubview(answerLabel116)
+            scrollView.addSubview(answerLabel117)
+            scrollView.addSubview(answerLabel118)
+            scrollView.addSubview(answerLabel119)
+            scrollView.addSubview(answerLabel11eleven)
+            scrollView.addSubview(answerLabel11twelve)
+            scrollView.addSubview(answerLabel11thirteen)
+            scrollView.addSubview(answerLabel11fourteen)
+
+        }else if whicAnswer == 12 {
+            answerLabel120.text = ""
+            answerLabel121.text = ""
+            answerLabel122.text = ""
+            answerLabel123.text = ""
+            answerLabel124.text = ""
+            answerLabel125.text = ""
+            answerLabel126.text = ""
+            answerLabel127.text = ""
+            answerLabel128.text = ""
+            answerLabel129.text = ""
+            answerLabel12eleven.text = ""
+            answerLabel12twelve.text = ""
+            answerLabel12thirteen.text = ""
+            answerLabel12fourteen.text = ""
+
+            answerLabel120.textAlignment = .center
+            answerLabel121.textAlignment = .center
+            answerLabel122.textAlignment = .center
+            answerLabel123.textAlignment = .center
+            answerLabel124.textAlignment = .center
+            answerLabel125.textAlignment = .center
+            answerLabel126.textAlignment = .center
+            answerLabel127.textAlignment = .center
+            answerLabel128.textAlignment = .center
+            answerLabel129.textAlignment = .center
+            answerLabel12eleven.textAlignment = .center
+            answerLabel12twelve.textAlignment = .center
+            answerLabel12thirteen.textAlignment = .center
+            answerLabel12fourteen.textAlignment = .center
+
+
+            
+            for i in answer {
+                if answerLabel120.text == "" {
+                    answerLabel120.text = String(i)
+                }else  if answerLabel121.text == "" {
+                    answerLabel121.text = String(i)
+                }else  if answerLabel122.text == "" {
+                    answerLabel122.text = String(i)
+                }else  if answerLabel123.text == "" {
+                    answerLabel123.text = String(i)
+                }else  if answerLabel124.text == "" {
+                    answerLabel124.text = String(i)
+                }else  if answerLabel125.text == "" {
+                    answerLabel125.text = String(i)
+                }else  if answerLabel126.text == "" {
+                    answerLabel126.text = String(i)
+                }else  if answerLabel127.text == "" {
+                    answerLabel127.text = String(i)
+                }else  if answerLabel128.text == "" {
+                    answerLabel128.text = String(i)
+                }else  if answerLabel129.text == "" {
+                    answerLabel129.text = String(i)
+                }else  if answerLabel12eleven.text == "" {
+                    answerLabel12eleven.text = String(i)
+                }else  if answerLabel12twelve.text == "" {
+                    answerLabel12twelve.text = String(i)
+                }else if answerLabel12thirteen.text == "" {
+                    answerLabel12thirteen.text = String(i)
+                }else if answerLabel12fourteen.text == "" {
+                    answerLabel12fourteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel120.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel121.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel122.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel123.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel124.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel125.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel126.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel127.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel128.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel129.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel12eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel12twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel12thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel12fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel120.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel121.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel122.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel123.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel124.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel125.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel126.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel127.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel128.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel129.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel12eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel12twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel12thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel12fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel120)
+            scrollView.addSubview(answerLabel121)
+            scrollView.addSubview(answerLabel122)
+            scrollView.addSubview(answerLabel123)
+            scrollView.addSubview(answerLabel124)
+            scrollView.addSubview(answerLabel125)
+            scrollView.addSubview(answerLabel126)
+            scrollView.addSubview(answerLabel127)
+            scrollView.addSubview(answerLabel128)
+            scrollView.addSubview(answerLabel129)
+            scrollView.addSubview(answerLabel12eleven)
+            scrollView.addSubview(answerLabel12twelve)
+            scrollView.addSubview(answerLabel12thirteen)
+            scrollView.addSubview(answerLabel12fourteen)
+
+        }else if whicAnswer == 13 {
+            answerLabel130.text = ""
+            answerLabel131.text = ""
+            answerLabel132.text = ""
+            answerLabel133.text = ""
+            answerLabel134.text = ""
+            answerLabel135.text = ""
+            answerLabel136.text = ""
+            answerLabel137.text = ""
+            answerLabel138.text = ""
+            answerLabel139.text = ""
+            answerLabel13eleven.text = ""
+            answerLabel13twelve.text = ""
+            answerLabel13thirteen.text = ""
+            answerLabel13fourteen.text = ""
+
+            answerLabel130.textAlignment = .center
+            answerLabel131.textAlignment = .center
+            answerLabel132.textAlignment = .center
+            answerLabel133.textAlignment = .center
+            answerLabel134.textAlignment = .center
+            answerLabel135.textAlignment = .center
+            answerLabel136.textAlignment = .center
+            answerLabel137.textAlignment = .center
+            answerLabel138.textAlignment = .center
+            answerLabel139.textAlignment = .center
+            answerLabel13eleven.textAlignment = .center
+            answerLabel13twelve.textAlignment = .center
+            answerLabel13thirteen.textAlignment = .center
+            answerLabel13fourteen.textAlignment = .center
+
+            
+            
+            
+            for i in answer {
+                if answerLabel130.text == "" {
+                    answerLabel130.text = String(i)
+                }else  if answerLabel131.text == "" {
+                    answerLabel131.text = String(i)
+                }else  if answerLabel132.text == "" {
+                    answerLabel132.text = String(i)
+                }else  if answerLabel133.text == "" {
+                    answerLabel133.text = String(i)
+                }else  if answerLabel134.text == "" {
+                    answerLabel134.text = String(i)
+                }else  if answerLabel135.text == "" {
+                    answerLabel135.text = String(i)
+                }else  if answerLabel136.text == "" {
+                    answerLabel136.text = String(i)
+                }else  if answerLabel137.text == "" {
+                    answerLabel137.text = String(i)
+                }else  if answerLabel138.text == "" {
+                    answerLabel138.text = String(i)
+                }else  if answerLabel139.text == "" {
+                    answerLabel139.text = String(i)
+                }else  if answerLabel13eleven.text == "" {
+                    answerLabel13eleven.text = String(i)
+                }else  if answerLabel13twelve.text == "" {
+                    answerLabel13twelve.text = String(i)
+                }else if answerLabel13thirteen.text == "" {
+                    answerLabel13thirteen.text = String(i)
+                }else if answerLabel13fourteen.text == "" {
+                    answerLabel13fourteen.text = String(i)
+                }
+                
+                }
+                if isVertical { //Dikey
+                    answerLabel130.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel131.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel132.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel133.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel134.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel135.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel136.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel137.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel138.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel139.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel13eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel13twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel13thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel13fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+                    
+                }else { //Yatay
+                    answerLabel130.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel131.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel132.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel133.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel134.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel135.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel136.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel137.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel138.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel139.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel13eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel13twelve.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel13thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel13fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+                }
+                scrollView.addSubview(answerLabel130)
+                scrollView.addSubview(answerLabel131)
+                scrollView.addSubview(answerLabel132)
+                scrollView.addSubview(answerLabel133)
+                scrollView.addSubview(answerLabel134)
+                scrollView.addSubview(answerLabel135)
+                scrollView.addSubview(answerLabel136)
+                scrollView.addSubview(answerLabel137)
+                scrollView.addSubview(answerLabel138)
+                scrollView.addSubview(answerLabel139)
+                scrollView.addSubview(answerLabel13eleven)
+                scrollView.addSubview(answerLabel13twelve)
+                scrollView.addSubview(answerLabel13thirteen)
+                scrollView.addSubview(answerLabel13fourteen)
+
+            }else if whicAnswer == 14 {
+                answerLabel140.text = ""
+                answerLabel141.text = ""
+                answerLabel142.text = ""
+                answerLabel143.text = ""
+                answerLabel144.text = ""
+                answerLabel145.text = ""
+                answerLabel146.text = ""
+                answerLabel147.text = ""
+                answerLabel148.text = ""
+                answerLabel149.text = ""
+                answerLabel14eleven.text = ""
+                answerLabel14twelve.text = ""
+                answerLabel14thirteen.text = ""
+                answerLabel14fourteen.text = ""
+
+                answerLabel140.textAlignment = .center
+                answerLabel141.textAlignment = .center
+                answerLabel142.textAlignment = .center
+                answerLabel143.textAlignment = .center
+                answerLabel144.textAlignment = .center
+                answerLabel145.textAlignment = .center
+                answerLabel146.textAlignment = .center
+                answerLabel147.textAlignment = .center
+                answerLabel148.textAlignment = .center
+                answerLabel149.textAlignment = .center
+                answerLabel14eleven.textAlignment = .center
+                answerLabel14twelve.textAlignment = .center
+                answerLabel14thirteen.textAlignment = .center
+                answerLabel14fourteen.textAlignment = .center
+
+                
+                for i in answer {
+                    if answerLabel140.text == "" {
+                        answerLabel140.text = String(i)
+                    }else  if answerLabel141.text == "" {
+                        answerLabel141.text = String(i)
+                    }else  if answerLabel142.text == "" {
+                        answerLabel142.text = String(i)
+                    }else  if answerLabel143.text == "" {
+                        answerLabel143.text = String(i)
+                    }else  if answerLabel144.text == "" {
+                        answerLabel144.text = String(i)
+                    }else  if answerLabel145.text == "" {
+                        answerLabel145.text = String(i)
+                    }else  if answerLabel146.text == "" {
+                        answerLabel146.text = String(i)
+                    }else  if answerLabel147.text == "" {
+                        answerLabel147.text = String(i)
+                    }else  if answerLabel148.text == "" {
+                        answerLabel148.text = String(i)
+                    }else  if answerLabel149.text == "" {
+                        answerLabel149.text = String(i)
+                    }else  if answerLabel14eleven.text == "" {
+                        answerLabel14eleven.text = String(i)
+                    }else  if answerLabel14twelve.text == "" {
+                        answerLabel14twelve.text = String(i)
+                    }else if answerLabel14thirteen.text == "" {
+                        answerLabel14thirteen.text = String(i)
+                    }else if answerLabel14fourteen.text == "" {
+                        answerLabel14fourteen.text = String(i)
+                    }
+                }
+                if isVertical { //Dikey
+                    answerLabel140.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel141.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel142.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel143.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel144.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel145.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel146.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel147.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel148.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel149.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel14eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel14twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel14thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel14fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+                }else { //Yatay
+                    answerLabel140.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel141.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel142.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel143.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel144.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel145.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel146.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel147.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel148.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel149.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel14eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel14twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel14thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel14fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+                }
+                scrollView.addSubview(answerLabel140)
+                scrollView.addSubview(answerLabel141)
+                scrollView.addSubview(answerLabel142)
+                scrollView.addSubview(answerLabel143)
+                scrollView.addSubview(answerLabel144)
+                scrollView.addSubview(answerLabel145)
+                scrollView.addSubview(answerLabel146)
+                scrollView.addSubview(answerLabel147)
+                scrollView.addSubview(answerLabel148)
+                scrollView.addSubview(answerLabel149)
+                scrollView.addSubview(answerLabel14eleven)
+                scrollView.addSubview(answerLabel14twelve)
+                scrollView.addSubview(answerLabel14thirteen)
+                scrollView.addSubview(answerLabel14fourteen)
+
+            }else if whicAnswer == 15 {
+                answerLabel150.text = ""
+                answerLabel151.text = ""
+                answerLabel152.text = ""
+                answerLabel153.text = ""
+                answerLabel154.text = ""
+                answerLabel155.text = ""
+                answerLabel156.text = ""
+                answerLabel157.text = ""
+                answerLabel158.text = ""
+                answerLabel159.text = ""
+                answerLabel15eleven.text = ""
+                answerLabel15twelve.text = ""
+                answerLabel15thirteen.text = ""
+                answerLabel15fourteen.text = ""
+
+                answerLabel150.textAlignment = .center
+                answerLabel151.textAlignment = .center
+                answerLabel152.textAlignment = .center
+                answerLabel153.textAlignment = .center
+                answerLabel154.textAlignment = .center
+                answerLabel155.textAlignment = .center
+                answerLabel156.textAlignment = .center
+                answerLabel157.textAlignment = .center
+                answerLabel158.textAlignment = .center
+                answerLabel159.textAlignment = .center
+                answerLabel15eleven.textAlignment = .center
+                answerLabel15twelve.textAlignment = .center
+                answerLabel15thirteen.textAlignment = .center
+                answerLabel15fourteen.textAlignment = .center
+
+                
+                
+                for i in answer {
+                    if answerLabel150.text == "" {
+                        answerLabel150.text = String(i)
+                    }else  if answerLabel151.text == "" {
+                        answerLabel151.text = String(i)
+                    }else  if answerLabel152.text == "" {
+                        answerLabel152.text = String(i)
+                    }else  if answerLabel153.text == "" {
+                        answerLabel153.text = String(i)
+                    }else  if answerLabel154.text == "" {
+                        answerLabel154.text = String(i)
+                    }else  if answerLabel155.text == "" {
+                        answerLabel155.text = String(i)
+                    }else  if answerLabel156.text == "" {
+                        answerLabel156.text = String(i)
+                    }else  if answerLabel157.text == "" {
+                        answerLabel157.text = String(i)
+                    }else  if answerLabel158.text == "" {
+                        answerLabel158.text = String(i)
+                    }else  if answerLabel159.text == "" {
+                        answerLabel159.text = String(i)
+                    }else  if answerLabel15eleven.text == "" {
+                        answerLabel15eleven.text = String(i)
+                    }else  if answerLabel15twelve.text == "" {
+                        answerLabel15twelve.text = String(i)
+                    }else if answerLabel15thirteen.text == "" {
+                        answerLabel15thirteen.text = String(i)
+                    }else if answerLabel15fourteen.text == "" {
+                        answerLabel15fourteen.text = String(i)
+                    }
+                }
+                if isVertical { //Dikey
+                    answerLabel150.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel151.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel152.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel153.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel154.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel155.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel156.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel157.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel158.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel159.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel15eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel15twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel15thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel15fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+                }else { //Yatay
+                    answerLabel150.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel151.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel152.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel153.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel154.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel155.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel156.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel157.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel158.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel159.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel15eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel15twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel15thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel15fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+                }
+                scrollView.addSubview(answerLabel150)
+                scrollView.addSubview(answerLabel151)
+                scrollView.addSubview(answerLabel152)
+                scrollView.addSubview(answerLabel153)
+                scrollView.addSubview(answerLabel154)
+                scrollView.addSubview(answerLabel155)
+                scrollView.addSubview(answerLabel156)
+                scrollView.addSubview(answerLabel157)
+                scrollView.addSubview(answerLabel158)
+                scrollView.addSubview(answerLabel159)
+                scrollView.addSubview(answerLabel15eleven)
+                scrollView.addSubview(answerLabel15twelve)
+                scrollView.addSubview(answerLabel5thirteen)
+                scrollView.addSubview(answerLabel5fourteen)
+
+            }else if whicAnswer == 16 {
+                answerLabel160.text = ""
+                answerLabel161.text = ""
+                answerLabel162.text = ""
+                answerLabel163.text = ""
+                answerLabel164.text = ""
+                answerLabel165.text = ""
+                answerLabel166.text = ""
+                answerLabel167.text = ""
+                answerLabel168.text = ""
+                answerLabel169.text = ""
+                answerLabel16eleven.text = ""
+                answerLabel16twelve.text = ""
+                answerLabel16thirteen.text = ""
+                answerLabel16fourteen.text = ""
+
+                answerLabel160.textAlignment = .center
+                answerLabel161.textAlignment = .center
+                answerLabel162.textAlignment = .center
+                answerLabel163.textAlignment = .center
+                answerLabel164.textAlignment = .center
+                answerLabel165.textAlignment = .center
+                answerLabel166.textAlignment = .center
+                answerLabel167.textAlignment = .center
+                answerLabel168.textAlignment = .center
+                answerLabel169.textAlignment = .center
+                answerLabel16eleven.textAlignment = .center
+                answerLabel16twelve.textAlignment = .center
+                answerLabel16thirteen.textAlignment = .center
+                answerLabel16fourteen.textAlignment = .center
+
+                
+                for i in answer {
+                    if answerLabel160.text == "" {
+                        answerLabel160.text = String(i)
+                    }else  if answerLabel161.text == "" {
+                        answerLabel161.text = String(i)
+                    }else  if answerLabel162.text == "" {
+                        answerLabel162.text = String(i)
+                    }else if answerLabel163.text == "" {
+                        answerLabel163.text = String(i)
+                    }else if answerLabel164.text == "" {
+                        answerLabel164.text = String(i)
+                    }else if answerLabel165.text == "" {
+                        answerLabel165.text = String(i)
+                    }else if answerLabel166.text == "" {
+                        answerLabel166.text = String(i)
+                    }else if answerLabel167.text == "" {
+                        answerLabel167.text = String(i)
+                    }else if answerLabel168.text == "" {
+                        answerLabel168.text = String(i)
+                    }else if answerLabel169.text == "" {
+                        answerLabel169.text = String(i)
+                    }else if answerLabel16eleven.text == "" {
+                        answerLabel16eleven.text = String(i)
+                    }else if answerLabel16twelve.text == "" {
+                        answerLabel169.text = String(i)
+                    }else if answerLabel16thirteen.text == "" {
+                        answerLabel16thirteen.text = String(i)
+                    }else if answerLabel16fourteen.text == "" {
+                        answerLabel16fourteen.text = String(i)
+                    }
+                }
+                if isVertical { //Dikey
+                    answerLabel160.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel161.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel162.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel163.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel164.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel165.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel166.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel167.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel168.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel169.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel16eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel16twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel16thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel16thirteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+                }else { //Yatay
+                    answerLabel160.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel161.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel162.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel163.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel164.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel165.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel166.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel167.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel168.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel169.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel16eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel16twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel16thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel16fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+                }
+                scrollView.addSubview(answerLabel160)
+                scrollView.addSubview(answerLabel161)
+                scrollView.addSubview(answerLabel162)
+                scrollView.addSubview(answerLabel163)
+                scrollView.addSubview(answerLabel164)
+                scrollView.addSubview(answerLabel165)
+                scrollView.addSubview(answerLabel166)
+                scrollView.addSubview(answerLabel167)
+                scrollView.addSubview(answerLabel168)
+                scrollView.addSubview(answerLabel169)
+                scrollView.addSubview(answerLabel16eleven)
+                scrollView.addSubview(answerLabel16twelve)
+                scrollView.addSubview(answerLabel16thirteen)
+                scrollView.addSubview(answerLabel16fourteen)
+
+            }
+        }
+    
+    
+    func createLabelFrame15(isVertical : Bool,x: CGFloat,y:CGFloat,answer : [String.Element],whicAnswer: Int) {
+        if whicAnswer == 1 {
+            answerLabel10.text = ""
+            answerLabel11.text = ""
+            answerLabel12.text = ""
+            answerLabel13.text = ""
+            answerLabel14.text = ""
+            answerLabel15.text = ""
+            answerLabel16.text = ""
+            answerLabel17.text = ""
+            answerLabel18.text = ""
+            answerLabel19.text = ""
+            answerLabel1eleven.text = ""
+            answerLabel1twelve.text = ""
+            answerLabel1thirteen.text = ""
+            answerLabel1fourteen.text = ""
+            answerLabel1fifteen.text = ""
+
+            answerLabel10.textAlignment = .center
+            answerLabel11.textAlignment = .center
+            answerLabel12.textAlignment = .center
+            answerLabel13.textAlignment = .center
+            answerLabel14.textAlignment = .center
+            answerLabel15.textAlignment = .center
+            answerLabel16.textAlignment = .center
+            answerLabel17.textAlignment = .center
+            answerLabel18.textAlignment = .center
+            answerLabel19.textAlignment = .center
+            answerLabel1eleven.textAlignment = .center
+            answerLabel1twelve.textAlignment = .center
+            answerLabel1thirteen.textAlignment = .center
+            answerLabel1fourteen.textAlignment = .center
+            answerLabel1fifteen.textAlignment = .center
+
+            for i in answer {
+                if answerLabel10.text == "" {
+                    answerLabel10.text = String(i)
+                }else  if answerLabel11.text == "" {
+                    answerLabel11.text = String(i)
+                }else  if answerLabel12.text == "" {
+                    answerLabel12.text = String(i)
+                }else if answerLabel13.text == "" {
+                    answerLabel13.text = String(i)
+                }else if answerLabel14.text == "" {
+                    answerLabel14.text = String(i)
+                }else if answerLabel15.text == "" {
+                    answerLabel15.text = String(i)
+                }else if answerLabel16.text == "" {
+                    answerLabel16.text = String(i)
+                }else if answerLabel17.text == "" {
+                    answerLabel17.text = String(i)
+                }else if answerLabel18.text == "" {
+                    answerLabel18.text = String(i)
+                }else if answerLabel19.text == "" {
+                    answerLabel19.text = String(i)
+                }else if answerLabel1eleven.text == "" {
+                    answerLabel1eleven.text = String(i)
+                }else if answerLabel1twelve.text == "" {
+                    answerLabel1twelve.text = String(i)
+                }else if answerLabel1thirteen.text == "" {
+                    answerLabel1thirteen.text = String(i)
+                }else if answerLabel1fourteen.text == "" {
+                    answerLabel1fourteen.text = String(i)
+                }else if answerLabel1fifteen.text == "" {
+                    answerLabel1fifteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel10.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel12.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel13.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel14.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel15.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel16.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel17.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel18.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel19.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel1eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel1twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel1thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel1fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel1fifteen.frame = CGRect(x: x, y: y + (14 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+
+
+            }else { //Yatay
+                answerLabel10.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel12.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel13.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel14.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel15.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel16.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel17.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel18.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel19.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel1eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel1twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel1thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel1fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel1fifteen.frame = CGRect(x: x + (14 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel10)
+            scrollView.addSubview(answerLabel11)
+            scrollView.addSubview(answerLabel12)
+            scrollView.addSubview(answerLabel13)
+            scrollView.addSubview(answerLabel14)
+            scrollView.addSubview(answerLabel15)
+            scrollView.addSubview(answerLabel16)
+            scrollView.addSubview(answerLabel17)
+            scrollView.addSubview(answerLabel18)
+            scrollView.addSubview(answerLabel19)
+            scrollView.addSubview(answerLabel1eleven)
+            scrollView.addSubview(answerLabel1twelve)
+            scrollView.addSubview(answerLabel1thirteen)
+            scrollView.addSubview(answerLabel1fourteen)
+            scrollView.addSubview(answerLabel1fifteen)
+
+        }else if whicAnswer == 2 {
+            answerLabel20.text = ""
+            answerLabel21.text = ""
+            answerLabel22.text = ""
+            answerLabel23.text = ""
+            answerLabel24.text = ""
+            answerLabel25.text = ""
+            answerLabel26.text = ""
+            answerLabel27.text = ""
+            answerLabel28.text = ""
+            answerLabel29.text = ""
+            answerLabel2eleven.text = ""
+            answerLabel2twelve.text = ""
+            answerLabel2thirteen.text = ""
+            answerLabel2fourteen.text = ""
+            answerLabel2fifteen.text = ""
+
+            answerLabel20.textAlignment = .center
+            answerLabel21.textAlignment = .center
+            answerLabel22.textAlignment = .center
+            answerLabel23.textAlignment = .center
+            answerLabel24.textAlignment = .center
+            answerLabel25.textAlignment = .center
+            answerLabel26.textAlignment = .center
+            answerLabel27.textAlignment = .center
+            answerLabel28.textAlignment = .center
+            answerLabel29.textAlignment = .center
+            answerLabel2eleven.textAlignment = .center
+            answerLabel2twelve.textAlignment = .center
+            answerLabel2thirteen.textAlignment = .center
+            answerLabel2fourteen.textAlignment = .center
+            answerLabel2fifteen.textAlignment = .center
+
+            
+            for i in answer {
+                if answerLabel20.text == "" {
+                    answerLabel20.text = String(i)
+                }else  if answerLabel21.text == "" {
+                    answerLabel21.text = String(i)
+                }else  if answerLabel22.text == "" {
+                    answerLabel22.text = String(i)
+                }else if answerLabel23.text == "" {
+                    answerLabel23.text = String(i)
+                }else if answerLabel24.text == "" {
+                    answerLabel24.text = String(i)
+                }else if answerLabel25.text == "" {
+                    answerLabel25.text = String(i)
+                }else if answerLabel26.text == "" {
+                    answerLabel26.text = String(i)
+                }else if answerLabel27.text == "" {
+                    answerLabel27.text = String(i)
+                }else if answerLabel28.text == "" {
+                    answerLabel28.text = String(i)
+                }else if answerLabel29.text == "" {
+                    answerLabel29.text = String(i)
+                }else if answerLabel2eleven.text == "" {
+                    answerLabel2eleven.text = String(i)
+                }else if answerLabel2twelve.text == "" {
+                    answerLabel2twelve.text = String(i)
+                }else if answerLabel2thirteen.text == "" {
+                    answerLabel2thirteen.text = String(i)
+                }else if answerLabel2fourteen.text == "" {
+                    answerLabel2fourteen.text = String(i)
+                }else if answerLabel2fifteen.text == "" {
+                    answerLabel2fifteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel20.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel21.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel22.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel23.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel24.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel25.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel26.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel27.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel28.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel29.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel2eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel2twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel2thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel2fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+                answerLabel2fifteen.frame = CGRect(x: x, y: y + (14 * (width * 0.07)), width: width * 0.07, height: width * 0.07)
+
+
+            }else { //Yatay
+                answerLabel20.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel21.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height: width * 0.07)
+                answerLabel22.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel23.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel24.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel25.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel26.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel27.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel28.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel29.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel2eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel2twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel2thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel2fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel2fifteen.frame = CGRect(x: x + (14 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel20)
+            scrollView.addSubview(answerLabel21)
+            scrollView.addSubview(answerLabel22)
+            scrollView.addSubview(answerLabel23)
+            scrollView.addSubview(answerLabel24)
+            scrollView.addSubview(answerLabel25)
+            scrollView.addSubview(answerLabel26)
+            scrollView.addSubview(answerLabel27)
+            scrollView.addSubview(answerLabel28)
+            scrollView.addSubview(answerLabel29)
+            scrollView.addSubview(answerLabel2eleven)
+            scrollView.addSubview(answerLabel2twelve)
+            scrollView.addSubview(answerLabel2thirteen)
+            scrollView.addSubview(answerLabel2fourteen)
+            scrollView.addSubview(answerLabel2fifteen)
+
+            
+        }else if whicAnswer == 3 {
+            answerLabel30.text = ""
+            answerLabel31.text = ""
+            answerLabel32.text = ""
+            answerLabel33.text = ""
+            answerLabel34.text = ""
+            answerLabel35.text = ""
+            answerLabel36.text = ""
+            answerLabel37.text = ""
+            answerLabel38.text = ""
+            answerLabel39.text = ""
+            answerLabel3eleven.text = ""
+            answerLabel3twelve.text = ""
+            answerLabel3thirteen.text = ""
+            answerLabel3fourteen.text = ""
+            answerLabel3fifteen.text = ""
+
+            answerLabel30.textAlignment = .center
+            answerLabel31.textAlignment = .center
+            answerLabel32.textAlignment = .center
+            answerLabel33.textAlignment = .center
+            answerLabel34.textAlignment = .center
+            answerLabel35.textAlignment = .center
+            answerLabel36.textAlignment = .center
+            answerLabel37.textAlignment = .center
+            answerLabel38.textAlignment = .center
+            answerLabel39.textAlignment = .center
+            answerLabel3eleven.textAlignment = .center
+            answerLabel3twelve.textAlignment = .center
+            answerLabel3thirteen.textAlignment = .center
+            answerLabel3fourteen.textAlignment = .center
+            answerLabel3fifteen.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel30.text == "" {
+                    answerLabel30.text = String(i)
+                }else  if answerLabel31.text == "" {
+                    answerLabel31.text = String(i)
+                }else  if answerLabel32.text == "" {
+                    answerLabel32.text = String(i)
+                }else  if answerLabel33.text == "" {
+                    answerLabel33.text = String(i)
+                }else  if answerLabel34.text == "" {
+                    answerLabel34.text = String(i)
+                }else  if answerLabel35.text == "" {
+                    answerLabel35.text = String(i)
+                }else  if answerLabel36.text == "" {
+                    answerLabel36.text = String(i)
+                }else  if answerLabel37.text == "" {
+                    answerLabel37.text = String(i)
+                }else  if answerLabel38.text == "" {
+                    answerLabel38.text = String(i)
+                }else  if answerLabel39.text == "" {
+                    answerLabel39.text = String(i)
+                }else  if answerLabel3eleven.text == "" {
+                    answerLabel3eleven.text = String(i)
+                }else  if answerLabel3twelve.text == "" {
+                    answerLabel3twelve.text = String(i)
+                }else  if answerLabel3thirteen.text == "" {
+                    answerLabel3thirteen.text = String(i)
+                }else  if answerLabel3fourteen.text == "" {
+                    answerLabel3fourteen.text = String(i)
+                }else  if answerLabel3fifteen.text == "" {
+                    answerLabel3fifteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel30.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel31.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel32.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel33.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel34.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel35.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel36.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel37.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel38.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel39.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel3eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel3twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel3thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel3fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel3fifteen.frame = CGRect(x: x, y: y + (14 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel30.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel31.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel32.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel33.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel34.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel35.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel36.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel37.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel38.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel39.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel3eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel3twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel3thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel3fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel3fifteen.frame = CGRect(x: x + (14 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel30)
+            scrollView.addSubview(answerLabel31)
+            scrollView.addSubview(answerLabel32)
+            scrollView.addSubview(answerLabel33)
+            scrollView.addSubview(answerLabel34)
+            scrollView.addSubview(answerLabel35)
+            scrollView.addSubview(answerLabel36)
+            scrollView.addSubview(answerLabel37)
+            scrollView.addSubview(answerLabel38)
+            scrollView.addSubview(answerLabel39)
+            scrollView.addSubview(answerLabel3eleven)
+            scrollView.addSubview(answerLabel3twelve)
+            scrollView.addSubview(answerLabel3thirteen)
+            scrollView.addSubview(answerLabel3fourteen)
+            scrollView.addSubview(answerLabel3fifteen)
+
+            
+        }else if whicAnswer == 4 {
+            answerLabel40.text = ""
+            answerLabel41.text = ""
+            answerLabel42.text = ""
+            answerLabel43.text = ""
+            answerLabel44.text = ""
+            answerLabel45.text = ""
+            answerLabel46.text = ""
+            answerLabel47.text = ""
+            answerLabel48.text = ""
+            answerLabel49.text = ""
+            answerLabel4eleven.text = ""
+            answerLabel4twelve.text = ""
+            answerLabel4thirteen.text = ""
+            answerLabel4fourteen.text = ""
+            answerLabel4fifteen.text = ""
+
+            answerLabel40.textAlignment = .center
+            answerLabel41.textAlignment = .center
+            answerLabel42.textAlignment = .center
+            answerLabel43.textAlignment = .center
+            answerLabel44.textAlignment = .center
+            answerLabel45.textAlignment = .center
+            answerLabel46.textAlignment = .center
+            answerLabel47.textAlignment = .center
+            answerLabel48.textAlignment = .center
+            answerLabel49.textAlignment = .center
+            answerLabel4eleven.textAlignment = .center
+            answerLabel4twelve.textAlignment = .center
+            answerLabel4thirteen.textAlignment = .center
+            answerLabel4fourteen.textAlignment = .center
+            answerLabel4fifteen.textAlignment = .center
+
+
+            
+            for i in answer {
+                if answerLabel40.text == "" {
+                    answerLabel40.text = String(i)
+                }else  if answerLabel41.text == "" {
+                    answerLabel41.text = String(i)
+                }else  if answerLabel42.text == "" {
+                    answerLabel42.text = String(i)
+                }else if answerLabel43.text == "" {
+                    answerLabel43.text = String(i)
+                }else if answerLabel44.text == "" {
+                    answerLabel44.text = String(i)
+                }else if answerLabel45.text == "" {
+                    answerLabel45.text = String(i)
+                }else if answerLabel46.text == "" {
+                    answerLabel46.text = String(i)
+                }else if answerLabel47.text == "" {
+                    answerLabel47.text = String(i)
+                }else if answerLabel48.text == "" {
+                    answerLabel48.text = String(i)
+                }else if answerLabel49.text == "" {
+                    answerLabel49.text = String(i)
+                }else if answerLabel4eleven.text == "" {
+                    answerLabel4eleven.text = String(i)
+                }else if answerLabel4twelve.text == "" {
+                    answerLabel4twelve.text = String(i)
+                }else if answerLabel4thirteen.text == "" {
+                    answerLabel4thirteen.text = String(i)
+                }else if answerLabel4fourteen.text == "" {
+                    answerLabel4fourteen.text = String(i)
+                }else if answerLabel4fifteen.text == "" {
+                    answerLabel4fifteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel40.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel41.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel42.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel43.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel44.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel45.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel46.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel47.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel48.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel49.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel4eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel4twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel4thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel4fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel4fifteen.frame = CGRect(x: x, y: y + (14 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+
+            }else { //Yatay
+                answerLabel40.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel41.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel42.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel43.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel44.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel45.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel46.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel47.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel48.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel49.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel4eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel4twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel4thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel4fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel4fifteen.frame = CGRect(x: x + (14 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel40)
+            scrollView.addSubview(answerLabel41)
+            scrollView.addSubview(answerLabel42)
+            scrollView.addSubview(answerLabel43)
+            scrollView.addSubview(answerLabel44)
+            scrollView.addSubview(answerLabel45)
+            scrollView.addSubview(answerLabel46)
+            scrollView.addSubview(answerLabel47)
+            scrollView.addSubview(answerLabel48)
+            scrollView.addSubview(answerLabel49)
+            scrollView.addSubview(answerLabel4eleven)
+            scrollView.addSubview(answerLabel4twelve)
+            scrollView.addSubview(answerLabel4thirteen)
+            scrollView.addSubview(answerLabel4fourteen)
+            scrollView.addSubview(answerLabel4fifteen)
+
+        }else if whicAnswer == 5 {
+            answerLabel50.text = ""
+            answerLabel51.text = ""
+            answerLabel52.text = ""
+            answerLabel53.text = ""
+            answerLabel54.text = ""
+            answerLabel55.text = ""
+            answerLabel56.text = ""
+            answerLabel57.text = ""
+            answerLabel58.text = ""
+            answerLabel59.text = ""
+            answerLabel5eleven.text = ""
+            answerLabel5twelve.text = ""
+            answerLabel5thirteen.text = ""
+            answerLabel5fourteen.text = ""
+            answerLabel5fifteen.text = ""
+
+            answerLabel50.textAlignment = .center
+            answerLabel51.textAlignment = .center
+            answerLabel52.textAlignment = .center
+            answerLabel53.textAlignment = .center
+            answerLabel54.textAlignment = .center
+            answerLabel55.textAlignment = .center
+            answerLabel56.textAlignment = .center
+            answerLabel57.textAlignment = .center
+            answerLabel58.textAlignment = .center
+            answerLabel59.textAlignment = .center
+            answerLabel5eleven.textAlignment = .center
+            answerLabel5twelve.textAlignment = .center
+            answerLabel5thirteen.textAlignment = .center
+            answerLabel5fourteen.textAlignment = .center
+            answerLabel5fifteen.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel50.text == "" {
+                    answerLabel50.text = String(i)
+                }else  if answerLabel51.text == "" {
+                    answerLabel51.text = String(i)
+                }else  if answerLabel52.text == "" {
+                    answerLabel52.text = String(i)
+                }else  if answerLabel53.text == "" {
+                    answerLabel53.text = String(i)
+                }else  if answerLabel54.text == "" {
+                    answerLabel54.text = String(i)
+                }else  if answerLabel55.text == "" {
+                    answerLabel55.text = String(i)
+                }else  if answerLabel56.text == "" {
+                    answerLabel56.text = String(i)
+                }else  if answerLabel57.text == "" {
+                    answerLabel57.text = String(i)
+                }else  if answerLabel58.text == "" {
+                    answerLabel58.text = String(i)
+                }else  if answerLabel59.text == "" {
+                    answerLabel59.text = String(i)
+                }else  if answerLabel5eleven.text == "" {
+                    answerLabel5eleven.text = String(i)
+                }else  if answerLabel5twelve.text == "" {
+                    answerLabel5twelve.text = String(i)
+                }else if answerLabel5thirteen.text == "" {
+                    answerLabel5thirteen.text = String(i)
+                }else if answerLabel5fourteen.text == "" {
+                    answerLabel5fourteen.text = String(i)
+                }else if answerLabel5fifteen.text == "" {
+                    answerLabel5fifteen.text = String(i)
+                }
+                
+            }
+            if isVertical { //Dikey
+                answerLabel50.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel51.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel52.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel53.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel54.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel55.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel56.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel57.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel58.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel59.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel5eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel5twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel5thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel5fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel5fifteen.frame = CGRect(x: x, y: y + (14 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else {//Yatay
+                answerLabel50.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel51.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel52.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel53.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel54.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel55.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel56.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel57.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel58.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel59.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel5eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel5twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel5thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel5fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel5fifteen.frame = CGRect(x: x + (14 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel50)
+            scrollView.addSubview(answerLabel51)
+            scrollView.addSubview(answerLabel52)
+            scrollView.addSubview(answerLabel53)
+            scrollView.addSubview(answerLabel54)
+            scrollView.addSubview(answerLabel55)
+            scrollView.addSubview(answerLabel56)
+            scrollView.addSubview(answerLabel57)
+            scrollView.addSubview(answerLabel58)
+            scrollView.addSubview(answerLabel59)
+            scrollView.addSubview(answerLabel5eleven)
+            scrollView.addSubview(answerLabel5twelve)
+            scrollView.addSubview(answerLabel5thirteen)
+            scrollView.addSubview(answerLabel5fourteen)
+            scrollView.addSubview(answerLabel5fifteen)
+
+        }else if whicAnswer == 6 {
+            answerLabel60.text = ""
+            answerLabel61.text = ""
+            answerLabel62.text = ""
+            answerLabel63.text = ""
+            answerLabel64.text = ""
+            answerLabel65.text = ""
+            answerLabel66.text = ""
+            answerLabel67.text = ""
+            answerLabel68.text = ""
+            answerLabel69.text = ""
+            answerLabel6eleven.text = ""
+            answerLabel6twelve.text = ""
+            answerLabel6thirteen.text = ""
+            answerLabel6fourteen.text = ""
+            answerLabel6fifteen.text = ""
+
+            
+            answerLabel60.textAlignment = .center
+            answerLabel61.textAlignment = .center
+            answerLabel62.textAlignment = .center
+            answerLabel63.textAlignment = .center
+            answerLabel64.textAlignment = .center
+            answerLabel65.textAlignment = .center
+            answerLabel66.textAlignment = .center
+            answerLabel67.textAlignment = .center
+            answerLabel68.textAlignment = .center
+            answerLabel69.textAlignment = .center
+            answerLabel6eleven.textAlignment = .center
+            answerLabel6twelve.textAlignment = .center
+            answerLabel6thirteen.textAlignment = .center
+            answerLabel6fourteen.textAlignment = .center
+            answerLabel6fifteen.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel60.text == "" {
+                    answerLabel60.text = String(i)
+                }else  if answerLabel61.text == "" {
+                    answerLabel61.text = String(i)
+                }else  if answerLabel62.text == "" {
+                    answerLabel62.text = String(i)
+                }else  if answerLabel63.text == "" {
+                    answerLabel63.text = String(i)
+                }else  if answerLabel64.text == "" {
+                    answerLabel64.text = String(i)
+                }else  if answerLabel65.text == "" {
+                    answerLabel65.text = String(i)
+                }else  if answerLabel66.text == "" {
+                    answerLabel66.text = String(i)
+                }else  if answerLabel67.text == "" {
+                    answerLabel67.text = String(i)
+                }else  if answerLabel68.text == "" {
+                    answerLabel68.text = String(i)
+                }else  if answerLabel69.text == "" {
+                    answerLabel69.text = String(i)
+                }else  if answerLabel6eleven.text == "" {
+                    answerLabel6eleven.text = String(i)
+                }else  if answerLabel6twelve.text == "" {
+                    answerLabel6twelve.text = String(i)
+                }else if answerLabel6thirteen.text == "" {
+                    answerLabel6thirteen.text = String(i)
+                }else if answerLabel6fourteen.text == "" {
+                    answerLabel6fourteen.text = String(i)
+                }else if answerLabel6fifteen.text == "" {
+                    answerLabel6fifteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel60.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel61.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel62.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel63.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel64.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel65.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel66.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel67.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel68.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel69.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel6eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel6twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel6thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel6fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel6fifteen.frame = CGRect(x: x, y: y + (14 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel60.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel61.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height: width * 0.07)
+                answerLabel62.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel63.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel64.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel65.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel66.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel67.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel68.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel69.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel6eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel6twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel6thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel6fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel6fifteen.frame = CGRect(x: x + (14 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel60)
+            scrollView.addSubview(answerLabel61)
+            scrollView.addSubview(answerLabel62)
+            scrollView.addSubview(answerLabel63)
+            scrollView.addSubview(answerLabel64)
+            scrollView.addSubview(answerLabel65)
+            scrollView.addSubview(answerLabel66)
+            scrollView.addSubview(answerLabel67)
+            scrollView.addSubview(answerLabel68)
+            scrollView.addSubview(answerLabel69)
+            scrollView.addSubview(answerLabel6eleven)
+            scrollView.addSubview(answerLabel6twelve)
+            scrollView.addSubview(answerLabel6thirteen)
+            scrollView.addSubview(answerLabel6fourteen)
+            scrollView.addSubview(answerLabel6fifteen)
+
+
+        }else if whicAnswer == 7 {
+            answerLabel70.text = ""
+            answerLabel71.text = ""
+            answerLabel72.text = ""
+            answerLabel73.text = ""
+            answerLabel74.text = ""
+            answerLabel75.text = ""
+            answerLabel76.text = ""
+            answerLabel77.text = ""
+            answerLabel78.text = ""
+            answerLabel79.text = ""
+            answerLabel7eleven.text = ""
+            answerLabel7twelve.text = ""
+            answerLabel7thirteen.text = ""
+            answerLabel7fourteen.text = ""
+            answerLabel7fifteen.text = ""
+
+            answerLabel70.textAlignment = .center
+            answerLabel71.textAlignment = .center
+            answerLabel72.textAlignment = .center
+            answerLabel73.textAlignment = .center
+            answerLabel74.textAlignment = .center
+            answerLabel75.textAlignment = .center
+            answerLabel76.textAlignment = .center
+            answerLabel77.textAlignment = .center
+            answerLabel78.textAlignment = .center
+            answerLabel79.textAlignment = .center
+            answerLabel7eleven.textAlignment = .center
+            answerLabel7twelve.textAlignment = .center
+            answerLabel7thirteen.textAlignment = .center
+            answerLabel7fourteen.textAlignment = .center
+            answerLabel7fifteen.textAlignment = .center
+
+
+            
+            for i in answer {
+                if answerLabel70.text == "" {
+                    answerLabel70.text = String(i)
+                }else  if answerLabel71.text == "" {
+                    answerLabel71.text = String(i)
+                }else  if answerLabel72.text == "" {
+                    answerLabel72.text = String(i)
+                }else  if answerLabel73.text == "" {
+                    answerLabel73.text = String(i)
+                }else  if answerLabel74.text == "" {
+                    answerLabel74.text = String(i)
+                }else  if answerLabel75.text == "" {
+                    answerLabel75.text = String(i)
+                }else  if answerLabel76.text == "" {
+                    answerLabel76.text = String(i)
+                }else  if answerLabel77.text == "" {
+                    answerLabel77.text = String(i)
+                }else  if answerLabel78.text == "" {
+                    answerLabel78.text = String(i)
+                }else  if answerLabel79.text == "" {
+                    answerLabel79.text = String(i)
+                }else  if answerLabel7eleven.text == "" {
+                    answerLabel7eleven.text = String(i)
+                }else  if answerLabel7twelve.text == "" {
+                    answerLabel7twelve.text = String(i)
+                }else if answerLabel7thirteen.text == "" {
+                    answerLabel7thirteen.text = String(i)
+                }else if answerLabel7fourteen.text == "" {
+                    answerLabel7fourteen.text = String(i)
+                }else if answerLabel7fifteen.text == "" {
+                    answerLabel7fifteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel70.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel71.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel72.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel73.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel74.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel75.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel76.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel77.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel78.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel79.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel7eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel7twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel7thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel7fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel7fifteen.frame = CGRect(x: x, y: y + (14 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel70.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel71.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel72.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel73.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel74.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel75.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel76.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel77.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel78.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel79.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel7eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel7twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel7thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel7fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel7fifteen.frame = CGRect(x: x + (14 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel70)
+            scrollView.addSubview(answerLabel71)
+            scrollView.addSubview(answerLabel72)
+            scrollView.addSubview(answerLabel73)
+            scrollView.addSubview(answerLabel74)
+            scrollView.addSubview(answerLabel75)
+            scrollView.addSubview(answerLabel76)
+            scrollView.addSubview(answerLabel77)
+            scrollView.addSubview(answerLabel78)
+            scrollView.addSubview(answerLabel79)
+            scrollView.addSubview(answerLabel7eleven)
+            scrollView.addSubview(answerLabel7twelve)
+            scrollView.addSubview(answerLabel7thirteen)
+            scrollView.addSubview(answerLabel7fourteen)
+            scrollView.addSubview(answerLabel7fifteen)
+
+        }else if whicAnswer == 8 {
+            answerLabel80.text = ""
+            answerLabel81.text = ""
+            answerLabel82.text = ""
+            answerLabel83.text = ""
+            answerLabel84.text = ""
+            answerLabel85.text = ""
+            answerLabel86.text = ""
+            answerLabel87.text = ""
+            answerLabel88.text = ""
+            answerLabel89.text = ""
+            answerLabel8eleven.text = ""
+            answerLabel8twelve.text = ""
+            answerLabel8thirteen.text = ""
+            answerLabel8fourteen.text = ""
+            answerLabel8fifteen.text = ""
+
+            answerLabel80.textAlignment = .center
+            answerLabel81.textAlignment = .center
+            answerLabel82.textAlignment = .center
+            answerLabel83.textAlignment = .center
+            answerLabel84.textAlignment = .center
+            answerLabel85.textAlignment = .center
+            answerLabel86.textAlignment = .center
+            answerLabel87.textAlignment = .center
+            answerLabel88.textAlignment = .center
+            answerLabel89.textAlignment = .center
+            answerLabel8eleven.textAlignment = .center
+            answerLabel8twelve.textAlignment = .center
+            answerLabel8thirteen.textAlignment = .center
+            answerLabel8fourteen.textAlignment = .center
+            answerLabel8fifteen.textAlignment = .center
+
+
+            
+            for i in answer {
+                if answerLabel80.text == "" {
+                    answerLabel80.text = String(i)
+                }else  if answerLabel81.text == "" {
+                    answerLabel81.text = String(i)
+                }else  if answerLabel82.text == "" {
+                    answerLabel82.text = String(i)
+                }else  if answerLabel83.text == "" {
+                    answerLabel83.text = String(i)
+                }else  if answerLabel84.text == "" {
+                    answerLabel84.text = String(i)
+                }else  if answerLabel85.text == "" {
+                    answerLabel85.text = String(i)
+                }else  if answerLabel86.text == "" {
+                    answerLabel86.text = String(i)
+                }else  if answerLabel87.text == "" {
+                    answerLabel87.text = String(i)
+                }else  if answerLabel88.text == "" {
+                    answerLabel88.text = String(i)
+                }else  if answerLabel89.text == "" {
+                    answerLabel89.text = String(i)
+                }else  if answerLabel8eleven.text == "" {
+                    answerLabel8eleven.text = String(i)
+                }else  if answerLabel8twelve.text == "" {
+                    answerLabel8twelve.text = String(i)
+                }else if answerLabel8thirteen.text == "" {
+                    answerLabel8thirteen.text = String(i)
+                }else if answerLabel8fourteen.text == "" {
+                    answerLabel8fourteen.text = String(i)
+                }else if answerLabel8fifteen.text == "" {
+                    answerLabel8fifteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel80.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel81.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel82.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel83.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel84.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel85.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel86.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel87.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel88.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel89.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel8eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel8twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel8thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel8fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel8fifteen.frame = CGRect(x: x, y: y + (14 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+
+            }else { //Yatay
+                answerLabel80.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel81.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel82.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel83.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel84.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel85.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel86.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel87.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel88.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel89.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel8eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel8twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel8thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel8fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel8fifteen.frame = CGRect(x: x + (14 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel80)
+            scrollView.addSubview(answerLabel81)
+            scrollView.addSubview(answerLabel82)
+            scrollView.addSubview(answerLabel83)
+            scrollView.addSubview(answerLabel84)
+            scrollView.addSubview(answerLabel85)
+            scrollView.addSubview(answerLabel86)
+            scrollView.addSubview(answerLabel87)
+            scrollView.addSubview(answerLabel88)
+            scrollView.addSubview(answerLabel89)
+            scrollView.addSubview(answerLabel8eleven)
+            scrollView.addSubview(answerLabel8twelve)
+            scrollView.addSubview(answerLabel8thirteen)
+            scrollView.addSubview(answerLabel8fourteen)
+            scrollView.addSubview(answerLabel8fifteen)
+
+        }else if whicAnswer == 9 {
+            answerLabel90.text = ""
+            answerLabel91.text = ""
+            answerLabel92.text = ""
+            answerLabel93.text = ""
+            answerLabel94.text = ""
+            answerLabel95.text = ""
+            answerLabel96.text = ""
+            answerLabel97.text = ""
+            answerLabel98.text = ""
+            answerLabel99.text = ""
+            answerLabel9eleven.text = ""
+            answerLabel9twelve.text = ""
+            answerLabel9thirteen.text = ""
+            answerLabel9fourteen.text = ""
+            answerLabel9fifteen.text = ""
+
+            answerLabel90.textAlignment = .center
+            answerLabel91.textAlignment = .center
+            answerLabel92.textAlignment = .center
+            answerLabel93.textAlignment = .center
+            answerLabel94.textAlignment = .center
+            answerLabel95.textAlignment = .center
+            answerLabel96.textAlignment = .center
+            answerLabel97.textAlignment = .center
+            answerLabel98.textAlignment = .center
+            answerLabel99.textAlignment = .center
+            answerLabel9eleven.textAlignment = .center
+            answerLabel9twelve.textAlignment = .center
+            answerLabel9thirteen.textAlignment = .center
+            answerLabel9fourteen.textAlignment = .center
+            answerLabel9fifteen.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel90.text == "" {
+                    answerLabel90.text = String(i)
+                }else  if answerLabel91.text == "" {
+                    answerLabel91.text = String(i)
+                }else  if answerLabel92.text == "" {
+                    answerLabel92.text = String(i)
+                }else  if answerLabel93.text == "" {
+                    answerLabel93.text = String(i)
+                }else  if answerLabel94.text == "" {
+                    answerLabel94.text = String(i)
+                }else  if answerLabel95.text == "" {
+                    answerLabel95.text = String(i)
+                }else  if answerLabel96.text == "" {
+                    answerLabel96.text = String(i)
+                }else  if answerLabel97.text == "" {
+                    answerLabel97.text = String(i)
+                }else  if answerLabel98.text == "" {
+                    answerLabel98.text = String(i)
+                }else  if answerLabel99.text == "" {
+                    answerLabel99.text = String(i)
+                }else  if answerLabel9eleven.text == "" {
+                    answerLabel9eleven.text = String(i)
+                }else  if answerLabel9twelve.text == "" {
+                    answerLabel9twelve.text = String(i)
+                }else if answerLabel9thirteen.text == "" {
+                    answerLabel9thirteen.text = String(i)
+                }else if answerLabel9fourteen.text == "" {
+                    answerLabel9fourteen.text = String(i)
+                }else if answerLabel9fifteen.text == "" {
+                    answerLabel9fifteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel90.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel91.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel92.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel93.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel94.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel95.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel96.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel97.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel98.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel99.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel9eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel9twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel9thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel9fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel9fifteen.frame = CGRect(x: x, y: y + (14 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel90.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel91.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel92.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel93.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel94.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel95.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel96.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel97.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel98.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel99.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel9eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel9twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel9thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel9fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel9fifteen.frame = CGRect(x: x + (14 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel90)
+            scrollView.addSubview(answerLabel91)
+            scrollView.addSubview(answerLabel92)
+            scrollView.addSubview(answerLabel93)
+            scrollView.addSubview(answerLabel94)
+            scrollView.addSubview(answerLabel95)
+            scrollView.addSubview(answerLabel96)
+            scrollView.addSubview(answerLabel97)
+            scrollView.addSubview(answerLabel98)
+            scrollView.addSubview(answerLabel99)
+            scrollView.addSubview(answerLabel9eleven)
+            scrollView.addSubview(answerLabel9twelve)
+            scrollView.addSubview(answerLabel9thirteen)
+            scrollView.addSubview(answerLabel9fourteen)
+            scrollView.addSubview(answerLabel9fifteen)
+
+
+        }else if whicAnswer == 10 {
+            answerLabel100.text = ""
+            answerLabel101.text = ""
+            answerLabel102.text = ""
+            answerLabel103.text = ""
+            answerLabel104.text = ""
+            answerLabel105.text = ""
+            answerLabel106.text = ""
+            answerLabel107.text = ""
+            answerLabel108.text = ""
+            answerLabel109.text = ""
+            answerLabel10eleven.text = ""
+            answerLabel10twelve.text = ""
+            answerLabel10thirteen.text = ""
+            answerLabel10fourteen.text = ""
+            answerLabel10fifteen.text = ""
+ 
+            answerLabel100.textAlignment = .center
+            answerLabel101.textAlignment = .center
+            answerLabel102.textAlignment = .center
+            answerLabel103.textAlignment = .center
+            answerLabel104.textAlignment = .center
+            answerLabel105.textAlignment = .center
+            answerLabel106.textAlignment = .center
+            answerLabel107.textAlignment = .center
+            answerLabel108.textAlignment = .center
+            answerLabel109.textAlignment = .center
+            answerLabel10eleven.textAlignment = .center
+            answerLabel10twelve.textAlignment = .center
+            answerLabel10thirteen.textAlignment = .center
+            answerLabel10fourteen.textAlignment = .center
+            answerLabel10fifteen.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel100.text == "" {
+                    answerLabel100.text = String(i)
+                }else  if answerLabel101.text == "" {
+                    answerLabel101.text = String(i)
+                }else  if answerLabel102.text == "" {
+                    answerLabel102.text = String(i)
+                }else  if answerLabel103.text == "" {
+                    answerLabel103.text = String(i)
+                }else  if answerLabel104.text == "" {
+                    answerLabel104.text = String(i)
+                }else  if answerLabel105.text == "" {
+                    answerLabel105.text = String(i)
+                }else  if answerLabel106.text == "" {
+                    answerLabel106.text = String(i)
+                }else  if answerLabel107.text == "" {
+                    answerLabel107.text = String(i)
+                }else  if answerLabel108.text == "" {
+                    answerLabel108.text = String(i)
+                }else  if answerLabel109.text == "" {
+                    answerLabel109.text = String(i)
+                }else  if answerLabel10eleven.text == "" {
+                    answerLabel10eleven.text = String(i)
+                }else  if answerLabel10twelve.text == "" {
+                    answerLabel10twelve.text = String(i)
+                }else if answerLabel10thirteen.text == "" {
+                    answerLabel10thirteen.text = String(i)
+                }else if answerLabel10fourteen.text == "" {
+                    answerLabel10fourteen.text = String(i)
+                }else if answerLabel10fifteen.text == "" {
+                    answerLabel10fifteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel100.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel101.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel102.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel103.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel104.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel105.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel106.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel107.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel108.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel109.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel10eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel10twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel10thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel10fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel10fifteen.frame = CGRect(x: x, y: y + (14 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel100.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel101.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel102.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel103.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel104.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel105.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel106.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel107.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel108.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel109.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel10eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel10twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel10thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel10fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel10fifteen.frame = CGRect(x: x + (14 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel100)
+            scrollView.addSubview(answerLabel101)
+            scrollView.addSubview(answerLabel102)
+            scrollView.addSubview(answerLabel103)
+            scrollView.addSubview(answerLabel104)
+            scrollView.addSubview(answerLabel105)
+            scrollView.addSubview(answerLabel106)
+            scrollView.addSubview(answerLabel107)
+            scrollView.addSubview(answerLabel108)
+            scrollView.addSubview(answerLabel109)
+            scrollView.addSubview(answerLabel10eleven)
+            scrollView.addSubview(answerLabel10twelve)
+            scrollView.addSubview(answerLabel10thirteen)
+            scrollView.addSubview(answerLabel10fourteen)
+            scrollView.addSubview(answerLabel10fifteen)
+
+        }else if whicAnswer == 11 {
+            answerLabel110.text = ""
+            answerLabel111.text = ""
+            answerLabel112.text = ""
+            answerLabel113.text = ""
+            answerLabel114.text = ""
+            answerLabel115.text = ""
+            answerLabel116.text = ""
+            answerLabel117.text = ""
+            answerLabel118.text = ""
+            answerLabel119.text = ""
+            answerLabel11eleven.text = ""
+            answerLabel11twelve.text = ""
+            answerLabel11thirteen.text = ""
+            answerLabel11fourteen.text = ""
+            answerLabel11fifteen.text = ""
+
+            answerLabel110.textAlignment = .center
+            answerLabel111.textAlignment = .center
+            answerLabel112.textAlignment = .center
+            answerLabel113.textAlignment = .center
+            answerLabel114.textAlignment = .center
+            answerLabel115.textAlignment = .center
+            answerLabel116.textAlignment = .center
+            answerLabel117.textAlignment = .center
+            answerLabel118.textAlignment = .center
+            answerLabel119.textAlignment = .center
+            answerLabel11eleven.textAlignment = .center
+            answerLabel11twelve.textAlignment = .center
+            answerLabel11thirteen.textAlignment = .center
+            answerLabel11fourteen.textAlignment = .center
+            answerLabel11fifteen.textAlignment = .center
+
+
+
+            
+            for i in answer {
+                if answerLabel110.text == "" {
+                    answerLabel110.text = String(i)
+                }else  if answerLabel111.text == "" {
+                    answerLabel111.text = String(i)
+                }else  if answerLabel112.text == "" {
+                    answerLabel112.text = String(i)
+                }else  if answerLabel113.text == "" {
+                    answerLabel113.text = String(i)
+                }else  if answerLabel114.text == "" {
+                    answerLabel114.text = String(i)
+                }else  if answerLabel115.text == "" {
+                    answerLabel115.text = String(i)
+                }else  if answerLabel116.text == "" {
+                    answerLabel116.text = String(i)
+                }else  if answerLabel117.text == "" {
+                    answerLabel117.text = String(i)
+                }else  if answerLabel118.text == "" {
+                    answerLabel118.text = String(i)
+                }else  if answerLabel119.text == "" {
+                    answerLabel119.text = String(i)
+                }else  if answerLabel11eleven.text == "" {
+                    answerLabel11eleven.text = String(i)
+                }else  if answerLabel11twelve.text == "" {
+                    answerLabel11twelve.text = String(i)
+                }else if answerLabel11thirteen.text == "" {
+                    answerLabel11thirteen.text = String(i)
+                }else if answerLabel11fourteen.text == "" {
+                    answerLabel11fourteen.text = String(i)
+                }else if answerLabel11fifteen.text == "" {
+                    answerLabel11fifteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel110.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel111.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel112.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel113.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel114.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel115.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel116.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel117.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel118.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel119.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel11eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel11twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel11thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel11fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel11fifteen.frame = CGRect(x: x, y: y + (14 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel110.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel111.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel112.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel113.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel114.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel115.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel116.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel117.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel118.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel119.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel11fifteen.frame = CGRect(x: x + (14 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel110)
+            scrollView.addSubview(answerLabel111)
+            scrollView.addSubview(answerLabel112)
+            scrollView.addSubview(answerLabel113)
+            scrollView.addSubview(answerLabel114)
+            scrollView.addSubview(answerLabel115)
+            scrollView.addSubview(answerLabel116)
+            scrollView.addSubview(answerLabel117)
+            scrollView.addSubview(answerLabel118)
+            scrollView.addSubview(answerLabel119)
+            scrollView.addSubview(answerLabel11eleven)
+            scrollView.addSubview(answerLabel11twelve)
+            scrollView.addSubview(answerLabel11thirteen)
+            scrollView.addSubview(answerLabel11fourteen)
+            scrollView.addSubview(answerLabel11fifteen)
+
+        }else if whicAnswer == 12 {
+            answerLabel120.text = ""
+            answerLabel121.text = ""
+            answerLabel122.text = ""
+            answerLabel123.text = ""
+            answerLabel124.text = ""
+            answerLabel125.text = ""
+            answerLabel126.text = ""
+            answerLabel127.text = ""
+            answerLabel128.text = ""
+            answerLabel129.text = ""
+            answerLabel12eleven.text = ""
+            answerLabel12twelve.text = ""
+            answerLabel12thirteen.text = ""
+            answerLabel12fourteen.text = ""
+            answerLabel12fifteen.text = ""
+
+            answerLabel120.textAlignment = .center
+            answerLabel121.textAlignment = .center
+            answerLabel122.textAlignment = .center
+            answerLabel123.textAlignment = .center
+            answerLabel124.textAlignment = .center
+            answerLabel125.textAlignment = .center
+            answerLabel126.textAlignment = .center
+            answerLabel127.textAlignment = .center
+            answerLabel128.textAlignment = .center
+            answerLabel129.textAlignment = .center
+            answerLabel12eleven.textAlignment = .center
+            answerLabel12twelve.textAlignment = .center
+            answerLabel12thirteen.textAlignment = .center
+            answerLabel12fourteen.textAlignment = .center
+            answerLabel12fifteen.textAlignment = .center
+
+
+            
+            for i in answer {
+                if answerLabel120.text == "" {
+                    answerLabel120.text = String(i)
+                }else  if answerLabel121.text == "" {
+                    answerLabel121.text = String(i)
+                }else  if answerLabel122.text == "" {
+                    answerLabel122.text = String(i)
+                }else  if answerLabel123.text == "" {
+                    answerLabel123.text = String(i)
+                }else  if answerLabel124.text == "" {
+                    answerLabel124.text = String(i)
+                }else  if answerLabel125.text == "" {
+                    answerLabel125.text = String(i)
+                }else  if answerLabel126.text == "" {
+                    answerLabel126.text = String(i)
+                }else  if answerLabel127.text == "" {
+                    answerLabel127.text = String(i)
+                }else  if answerLabel128.text == "" {
+                    answerLabel128.text = String(i)
+                }else  if answerLabel129.text == "" {
+                    answerLabel129.text = String(i)
+                }else  if answerLabel12eleven.text == "" {
+                    answerLabel12eleven.text = String(i)
+                }else  if answerLabel12twelve.text == "" {
+                    answerLabel12twelve.text = String(i)
+                }else if answerLabel12thirteen.text == "" {
+                    answerLabel12thirteen.text = String(i)
+                }else if answerLabel12fourteen.text == "" {
+                    answerLabel12fourteen.text = String(i)
+                }else if answerLabel12fifteen.text == "" {
+                    answerLabel12fifteen.text = String(i)
+                }
+            }
+            if isVertical { //Dikey
+                answerLabel120.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel121.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel122.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel123.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel124.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel125.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel126.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel127.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel128.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel129.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel12eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel12twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel12thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel12fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                answerLabel12fifteen.frame = CGRect(x: x, y: y + (14 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+            }else { //Yatay
+                answerLabel120.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel121.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel122.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel123.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel124.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel125.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel126.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel127.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel128.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel129.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel12eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel12twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel12thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel12fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                answerLabel12fifteen.frame = CGRect(x: x + (14 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+            }
+            scrollView.addSubview(answerLabel120)
+            scrollView.addSubview(answerLabel121)
+            scrollView.addSubview(answerLabel122)
+            scrollView.addSubview(answerLabel123)
+            scrollView.addSubview(answerLabel124)
+            scrollView.addSubview(answerLabel125)
+            scrollView.addSubview(answerLabel126)
+            scrollView.addSubview(answerLabel127)
+            scrollView.addSubview(answerLabel128)
+            scrollView.addSubview(answerLabel129)
+            scrollView.addSubview(answerLabel12eleven)
+            scrollView.addSubview(answerLabel12twelve)
+            scrollView.addSubview(answerLabel12thirteen)
+            scrollView.addSubview(answerLabel12fourteen)
+            scrollView.addSubview(answerLabel12fifteen)
+
+        }else if whicAnswer == 13 {
+            answerLabel130.text = ""
+            answerLabel131.text = ""
+            answerLabel132.text = ""
+            answerLabel133.text = ""
+            answerLabel134.text = ""
+            answerLabel135.text = ""
+            answerLabel136.text = ""
+            answerLabel137.text = ""
+            answerLabel138.text = ""
+            answerLabel139.text = ""
+            answerLabel13eleven.text = ""
+            answerLabel13twelve.text = ""
+            answerLabel13thirteen.text = ""
+            answerLabel13fourteen.text = ""
+            answerLabel13fifteen.text = ""
+
+            answerLabel130.textAlignment = .center
+            answerLabel131.textAlignment = .center
+            answerLabel132.textAlignment = .center
+            answerLabel133.textAlignment = .center
+            answerLabel134.textAlignment = .center
+            answerLabel135.textAlignment = .center
+            answerLabel136.textAlignment = .center
+            answerLabel137.textAlignment = .center
+            answerLabel138.textAlignment = .center
+            answerLabel139.textAlignment = .center
+            answerLabel13eleven.textAlignment = .center
+            answerLabel13twelve.textAlignment = .center
+            answerLabel13thirteen.textAlignment = .center
+            answerLabel13fourteen.textAlignment = .center
+            answerLabel13fifteen.textAlignment = .center
+
+            
+            
+            
+            for i in answer {
+                if answerLabel130.text == "" {
+                    answerLabel130.text = String(i)
+                }else  if answerLabel131.text == "" {
+                    answerLabel131.text = String(i)
+                }else  if answerLabel132.text == "" {
+                    answerLabel132.text = String(i)
+                }else  if answerLabel133.text == "" {
+                    answerLabel133.text = String(i)
+                }else  if answerLabel134.text == "" {
+                    answerLabel134.text = String(i)
+                }else  if answerLabel135.text == "" {
+                    answerLabel135.text = String(i)
+                }else  if answerLabel136.text == "" {
+                    answerLabel136.text = String(i)
+                }else  if answerLabel137.text == "" {
+                    answerLabel137.text = String(i)
+                }else  if answerLabel138.text == "" {
+                    answerLabel138.text = String(i)
+                }else  if answerLabel139.text == "" {
+                    answerLabel139.text = String(i)
+                }else  if answerLabel13eleven.text == "" {
+                    answerLabel13eleven.text = String(i)
+                }else  if answerLabel13twelve.text == "" {
+                    answerLabel13twelve.text = String(i)
+                }else if answerLabel13thirteen.text == "" {
+                    answerLabel13thirteen.text = String(i)
+                }else if answerLabel13fourteen.text == "" {
+                    answerLabel13fourteen.text = String(i)
+                }else if answerLabel13fifteen.text == "" {
+                    answerLabel13fifteen.text = String(i)
+                }
+                
+                }
+                if isVertical { //Dikey
+                    answerLabel130.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel131.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel132.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel133.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel134.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel135.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel136.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel137.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel138.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel139.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel13eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel13twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel13thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel13fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel13fifteen.frame = CGRect(x: x, y: y + (14 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+                    
+                }else { //Yatay
+                    answerLabel130.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel131.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel132.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel133.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel134.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel135.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel136.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel137.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel138.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel139.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel13eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel13twelve.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel13thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel13fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel13fifteen.frame = CGRect(x: x + (14 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+                }
+                scrollView.addSubview(answerLabel130)
+                scrollView.addSubview(answerLabel131)
+                scrollView.addSubview(answerLabel132)
+                scrollView.addSubview(answerLabel133)
+                scrollView.addSubview(answerLabel134)
+                scrollView.addSubview(answerLabel135)
+                scrollView.addSubview(answerLabel136)
+                scrollView.addSubview(answerLabel137)
+                scrollView.addSubview(answerLabel138)
+                scrollView.addSubview(answerLabel139)
+                scrollView.addSubview(answerLabel13eleven)
+                scrollView.addSubview(answerLabel13twelve)
+                scrollView.addSubview(answerLabel13thirteen)
+                scrollView.addSubview(answerLabel13fourteen)
+                scrollView.addSubview(answerLabel13fifteen)
+
+            }else if whicAnswer == 14 {
+                answerLabel140.text = ""
+                answerLabel141.text = ""
+                answerLabel142.text = ""
+                answerLabel143.text = ""
+                answerLabel144.text = ""
+                answerLabel145.text = ""
+                answerLabel146.text = ""
+                answerLabel147.text = ""
+                answerLabel148.text = ""
+                answerLabel149.text = ""
+                answerLabel14eleven.text = ""
+                answerLabel14twelve.text = ""
+                answerLabel14thirteen.text = ""
+                answerLabel14fourteen.text = ""
+                answerLabel14fifteen.text = ""
+
+                answerLabel140.textAlignment = .center
+                answerLabel141.textAlignment = .center
+                answerLabel142.textAlignment = .center
+                answerLabel143.textAlignment = .center
+                answerLabel144.textAlignment = .center
+                answerLabel145.textAlignment = .center
+                answerLabel146.textAlignment = .center
+                answerLabel147.textAlignment = .center
+                answerLabel148.textAlignment = .center
+                answerLabel149.textAlignment = .center
+                answerLabel14eleven.textAlignment = .center
+                answerLabel14twelve.textAlignment = .center
+                answerLabel14thirteen.textAlignment = .center
+                answerLabel14fourteen.textAlignment = .center
+                answerLabel14fifteen.textAlignment = .center
+
+                
+                for i in answer {
+                    if answerLabel140.text == "" {
+                        answerLabel140.text = String(i)
+                    }else  if answerLabel141.text == "" {
+                        answerLabel141.text = String(i)
+                    }else  if answerLabel142.text == "" {
+                        answerLabel142.text = String(i)
+                    }else  if answerLabel143.text == "" {
+                        answerLabel143.text = String(i)
+                    }else  if answerLabel144.text == "" {
+                        answerLabel144.text = String(i)
+                    }else  if answerLabel145.text == "" {
+                        answerLabel145.text = String(i)
+                    }else  if answerLabel146.text == "" {
+                        answerLabel146.text = String(i)
+                    }else  if answerLabel147.text == "" {
+                        answerLabel147.text = String(i)
+                    }else  if answerLabel148.text == "" {
+                        answerLabel148.text = String(i)
+                    }else  if answerLabel149.text == "" {
+                        answerLabel149.text = String(i)
+                    }else  if answerLabel14eleven.text == "" {
+                        answerLabel14eleven.text = String(i)
+                    }else  if answerLabel14twelve.text == "" {
+                        answerLabel14twelve.text = String(i)
+                    }else if answerLabel14thirteen.text == "" {
+                        answerLabel14thirteen.text = String(i)
+                    }else if answerLabel14fourteen.text == "" {
+                        answerLabel14fourteen.text = String(i)
+                    }else if answerLabel14fifteen.text == "" {
+                        answerLabel14fifteen.text = String(i)
+                    }
+                }
+                if isVertical { //Dikey
+                    answerLabel140.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel141.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel142.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel143.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel144.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel145.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel146.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel147.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel148.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel149.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel14eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel14twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel14thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel14fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel14fifteen.frame = CGRect(x: x, y: y + (14 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+                }else { //Yatay
+                    answerLabel140.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel141.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel142.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel143.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel144.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel145.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel146.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel147.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel148.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel149.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel14eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel14twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel14thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel14fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel14fifteen.frame = CGRect(x: x + (14 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+                }
+                scrollView.addSubview(answerLabel140)
+                scrollView.addSubview(answerLabel141)
+                scrollView.addSubview(answerLabel142)
+                scrollView.addSubview(answerLabel143)
+                scrollView.addSubview(answerLabel144)
+                scrollView.addSubview(answerLabel145)
+                scrollView.addSubview(answerLabel146)
+                scrollView.addSubview(answerLabel147)
+                scrollView.addSubview(answerLabel148)
+                scrollView.addSubview(answerLabel149)
+                scrollView.addSubview(answerLabel14eleven)
+                scrollView.addSubview(answerLabel14twelve)
+                scrollView.addSubview(answerLabel14thirteen)
+                scrollView.addSubview(answerLabel14fourteen)
+                scrollView.addSubview(answerLabel14fifteen)
+
+            }else if whicAnswer == 15 {
+                answerLabel150.text = ""
+                answerLabel151.text = ""
+                answerLabel152.text = ""
+                answerLabel153.text = ""
+                answerLabel154.text = ""
+                answerLabel155.text = ""
+                answerLabel156.text = ""
+                answerLabel157.text = ""
+                answerLabel158.text = ""
+                answerLabel159.text = ""
+                answerLabel15eleven.text = ""
+                answerLabel15twelve.text = ""
+                answerLabel15thirteen.text = ""
+                answerLabel15fourteen.text = ""
+                answerLabel15fifteen.text = ""
+
+                answerLabel150.textAlignment = .center
+                answerLabel151.textAlignment = .center
+                answerLabel152.textAlignment = .center
+                answerLabel153.textAlignment = .center
+                answerLabel154.textAlignment = .center
+                answerLabel155.textAlignment = .center
+                answerLabel156.textAlignment = .center
+                answerLabel157.textAlignment = .center
+                answerLabel158.textAlignment = .center
+                answerLabel159.textAlignment = .center
+                answerLabel15eleven.textAlignment = .center
+                answerLabel15twelve.textAlignment = .center
+                answerLabel15thirteen.textAlignment = .center
+                answerLabel15fourteen.textAlignment = .center
+                answerLabel15fifteen.textAlignment = .center
+
+                
+                
+                for i in answer {
+                    if answerLabel150.text == "" {
+                        answerLabel150.text = String(i)
+                    }else  if answerLabel151.text == "" {
+                        answerLabel151.text = String(i)
+                    }else  if answerLabel152.text == "" {
+                        answerLabel152.text = String(i)
+                    }else  if answerLabel153.text == "" {
+                        answerLabel153.text = String(i)
+                    }else  if answerLabel154.text == "" {
+                        answerLabel154.text = String(i)
+                    }else  if answerLabel155.text == "" {
+                        answerLabel155.text = String(i)
+                    }else  if answerLabel156.text == "" {
+                        answerLabel156.text = String(i)
+                    }else  if answerLabel157.text == "" {
+                        answerLabel157.text = String(i)
+                    }else  if answerLabel158.text == "" {
+                        answerLabel158.text = String(i)
+                    }else  if answerLabel159.text == "" {
+                        answerLabel159.text = String(i)
+                    }else  if answerLabel15eleven.text == "" {
+                        answerLabel15eleven.text = String(i)
+                    }else  if answerLabel15twelve.text == "" {
+                        answerLabel15twelve.text = String(i)
+                    }else if answerLabel15thirteen.text == "" {
+                        answerLabel15thirteen.text = String(i)
+                    }else if answerLabel15fourteen.text == "" {
+                        answerLabel15fourteen.text = String(i)
+                    }else if answerLabel15fifteen.text == "" {
+                        answerLabel15fifteen.text = String(i)
+                    }
+                }
+                if isVertical { //Dikey
+                    answerLabel150.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel151.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel152.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel153.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel154.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel155.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel156.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel157.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel158.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel159.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel15eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel15twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel15thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel15fourteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel15fifteen.frame = CGRect(x: x, y: y + (14 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+                }else { //Yatay
+                    answerLabel150.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel151.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel152.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel153.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel154.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel155.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel156.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel157.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel158.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel159.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel15eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel15twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel15thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel15fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel15fifteen.frame = CGRect(x: x + (14 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+                }
+                scrollView.addSubview(answerLabel150)
+                scrollView.addSubview(answerLabel151)
+                scrollView.addSubview(answerLabel152)
+                scrollView.addSubview(answerLabel153)
+                scrollView.addSubview(answerLabel154)
+                scrollView.addSubview(answerLabel155)
+                scrollView.addSubview(answerLabel156)
+                scrollView.addSubview(answerLabel157)
+                scrollView.addSubview(answerLabel158)
+                scrollView.addSubview(answerLabel159)
+                scrollView.addSubview(answerLabel15eleven)
+                scrollView.addSubview(answerLabel15twelve)
+                scrollView.addSubview(answerLabel5thirteen)
+                scrollView.addSubview(answerLabel5fourteen)
+                scrollView.addSubview(answerLabel5fifteen)
+
+            }else if whicAnswer == 16 {
+                answerLabel160.text = ""
+                answerLabel161.text = ""
+                answerLabel162.text = ""
+                answerLabel163.text = ""
+                answerLabel164.text = ""
+                answerLabel165.text = ""
+                answerLabel166.text = ""
+                answerLabel167.text = ""
+                answerLabel168.text = ""
+                answerLabel169.text = ""
+                answerLabel16eleven.text = ""
+                answerLabel16twelve.text = ""
+                answerLabel16thirteen.text = ""
+                answerLabel16fourteen.text = ""
+                answerLabel16fifteen.text = ""
+
+                answerLabel160.textAlignment = .center
+                answerLabel161.textAlignment = .center
+                answerLabel162.textAlignment = .center
+                answerLabel163.textAlignment = .center
+                answerLabel164.textAlignment = .center
+                answerLabel165.textAlignment = .center
+                answerLabel166.textAlignment = .center
+                answerLabel167.textAlignment = .center
+                answerLabel168.textAlignment = .center
+                answerLabel169.textAlignment = .center
+                answerLabel16eleven.textAlignment = .center
+                answerLabel16twelve.textAlignment = .center
+                answerLabel16thirteen.textAlignment = .center
+                answerLabel16fourteen.textAlignment = .center
+                answerLabel16fifteen.textAlignment = .center
+
+                
+                for i in answer {
+                    if answerLabel160.text == "" {
+                        answerLabel160.text = String(i)
+                    }else  if answerLabel161.text == "" {
+                        answerLabel161.text = String(i)
+                    }else  if answerLabel162.text == "" {
+                        answerLabel162.text = String(i)
+                    }else if answerLabel163.text == "" {
+                        answerLabel163.text = String(i)
+                    }else if answerLabel164.text == "" {
+                        answerLabel164.text = String(i)
+                    }else if answerLabel165.text == "" {
+                        answerLabel165.text = String(i)
+                    }else if answerLabel166.text == "" {
+                        answerLabel166.text = String(i)
+                    }else if answerLabel167.text == "" {
+                        answerLabel167.text = String(i)
+                    }else if answerLabel168.text == "" {
+                        answerLabel168.text = String(i)
+                    }else if answerLabel169.text == "" {
+                        answerLabel169.text = String(i)
+                    }else if answerLabel16eleven.text == "" {
+                        answerLabel16eleven.text = String(i)
+                    }else if answerLabel16twelve.text == "" {
+                        answerLabel169.text = String(i)
+                    }else if answerLabel16thirteen.text == "" {
+                        answerLabel16thirteen.text = String(i)
+                    }else if answerLabel16fourteen.text == "" {
+                        answerLabel16fourteen.text = String(i)
+                    }else if answerLabel16fifteen.text == "" {
+                        answerLabel16fifteen.text = String(i)
+                    }
+                }
+                if isVertical { //Dikey
+                    answerLabel160.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel161.frame = CGRect(x: x, y: y + (1 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel162.frame = CGRect(x: x, y: y + (2 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel163.frame = CGRect(x: x, y: y + (3 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel164.frame = CGRect(x: x, y: y + (4 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel165.frame = CGRect(x: x, y: y + (5 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel166.frame = CGRect(x: x, y: y + (6 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel167.frame = CGRect(x: x, y: y + (7 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel168.frame = CGRect(x: x, y: y + (8 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel169.frame = CGRect(x: x, y: y + (9 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel16eleven.frame = CGRect(x: x, y: y + (10 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel16twelve.frame = CGRect(x: x, y: y + (11 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel16thirteen.frame = CGRect(x: x, y: y + (12 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel16thirteen.frame = CGRect(x: x, y: y + (13 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+                    answerLabel16fifteen.frame = CGRect(x: x, y: y + (14 * (width * 0.07)), width:  width * 0.07, height:  width * 0.07)
+
+                }else { //Yatay
+                    answerLabel160.frame = CGRect(x: x, y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel161.frame = CGRect(x: x + (1 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel162.frame = CGRect(x: x + (2 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel163.frame = CGRect(x: x + (3 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel164.frame = CGRect(x: x + (4 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel165.frame = CGRect(x: x + (5 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel166.frame = CGRect(x: x + (6 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel167.frame = CGRect(x: x + (7 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel168.frame = CGRect(x: x + (8 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel169.frame = CGRect(x: x + (9 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel16eleven.frame = CGRect(x: x + (10 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel16twelve.frame = CGRect(x: x + (11 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel16thirteen.frame = CGRect(x: x + (12 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel16fourteen.frame = CGRect(x: x + (13 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+                    answerLabel16fifteen.frame = CGRect(x: x + (14 * (width * 0.07)), y: y, width: width * 0.07, height:  width * 0.07)
+
+                }
+                scrollView.addSubview(answerLabel160)
+                scrollView.addSubview(answerLabel161)
+                scrollView.addSubview(answerLabel162)
+                scrollView.addSubview(answerLabel163)
+                scrollView.addSubview(answerLabel164)
+                scrollView.addSubview(answerLabel165)
+                scrollView.addSubview(answerLabel166)
+                scrollView.addSubview(answerLabel167)
+                scrollView.addSubview(answerLabel168)
+                scrollView.addSubview(answerLabel169)
+                scrollView.addSubview(answerLabel16eleven)
+                scrollView.addSubview(answerLabel16twelve)
+                scrollView.addSubview(answerLabel16thirteen)
+                scrollView.addSubview(answerLabel16fourteen)
+                scrollView.addSubview(answerLabel16fifteen)
+
+            }
+        }
+    
     
 }
 

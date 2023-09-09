@@ -39,7 +39,6 @@ class MyProfileViewController: UIViewController {
         
         navigationController?.navigationBar.topItem?.backButtonTitle = "Ana Sayfa"
         
-        
         labelOfName.text = "Melih Şişkular"
         labelOfName.textAlignment = .center
         labelOfName.frame = CGRect(x: width * 0.5 - (width * 0.7)/2, y: height * 0.09, width: width * 0.7, height: height * 0.06)

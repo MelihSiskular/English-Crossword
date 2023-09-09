@@ -149,8 +149,21 @@ class ViewController: UIViewController {
     ///Diğer değerli indexi kullanarak prepare segue da atacağız
     override func viewWillAppear(_ animated: Bool) {
         BezierCrossWordView.whichCrossword = -1
+        getData()
     }
     
+    private func getData() {
+        for i in 0...bulmacalar.count - 1 {
+            if UserDefaults.standard.value(forKey: "\(i)") != nil {
+                bulmacalar[i].score = UserDefaults.standard.value(forKey: "\(i)") as! Int
+            }
+        }
+        for i in 0...bulmacalar.count - 1 {
+            if UserDefaults.standard.value(forKey: "Bulmaca \(i)") != nil {
+                bulmacalar[i].isCrosswordSolved = UserDefaults.standard.value(forKey: "Bulmaca \(i)") as! Int
+            }
+        }
+    }
     
     ///Functions for view
     func beginnerView() {

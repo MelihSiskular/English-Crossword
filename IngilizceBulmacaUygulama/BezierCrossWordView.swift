@@ -998,6 +998,1066 @@ class BezierCrossWordView: UIView {
         }
         
     }
+    
+    static func square11(isVertical:Bool,x:CGFloat,y:CGFloat) {
+        let width = SingletonView.shared.width
+        
+        
+        let myColor = UIColor(red: 88/255, green: 159/255, blue: 1.0, alpha: 1)
+        
+        if isVertical {
+            let kare1 = UIBezierPath()
+            kare1.move(to: CGPoint(x: x, y: y))
+            kare1.addLine(to: CGPoint(x: x + width * 0.07 , y: y))
+            kare1.addLine(to: CGPoint(x: x + width * 0.07  , y: y + width * 0.07))
+            kare1.addLine(to: CGPoint(x: x , y: y + width * 0.07))
+            kare1.close()
+            
+            let kare2 = UIBezierPath()
+            kare2.move(to: CGPoint(x:x   , y: y + width * 0.07))
+            kare2.addLine(to: CGPoint(x: x + width * 0.07 , y: y + width * 0.07))
+            kare2.addLine(to: CGPoint(x: x + width * 0.07, y: y + 2 * (width * 0.07)))
+            kare2.addLine(to: CGPoint(x: x, y: y + 2 * (width * 0.07)))
+            kare2.close()
+            
+            let kare3 = UIBezierPath()
+            kare3.move(to: CGPoint(x:x   , y: y + 2 * (width * 0.07)))
+            kare3.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 2 * (width * 0.07)))
+            kare3.addLine(to: CGPoint(x: x + width * 0.07, y: y + 3 * (width * 0.07)))
+            kare3.addLine(to: CGPoint(x: x, y: y + 3 * (width * 0.07)))
+            kare3.close()
+            
+            let kare4 = UIBezierPath()
+            kare4.move(to: CGPoint(x:x   , y: y + 3 * (width * 0.07)))
+            kare4.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 3 * (width * 0.07)))
+            kare4.addLine(to: CGPoint(x: x + width * 0.07, y: y + 4 * (width * 0.07)))
+            kare4.addLine(to: CGPoint(x: x, y: y + 4 * (width * 0.07)))
+            kare4.close()
+            
+            let kare5 = UIBezierPath()
+            kare5.move(to: CGPoint(x:x   , y: y + 4 * (width * 0.07)))
+            kare5.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 4 * (width * 0.07)))
+            kare5.addLine(to: CGPoint(x: x + width * 0.07, y: y + 5 * (width * 0.07)))
+            kare5.addLine(to: CGPoint(x: x, y: y + 5 * (width * 0.07)))
+            kare5.close()
+            
+            let kare6 = UIBezierPath()
+            kare6.move(to: CGPoint(x:x   , y: y + 5 * (width * 0.07)))
+            kare6.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 5 * (width * 0.07)))
+            kare6.addLine(to: CGPoint(x: x + width * 0.07, y: y + 6 * (width * 0.07)))
+            kare6.addLine(to: CGPoint(x: x, y: y + 6 * (width * 0.07)))
+            kare6.close()
+            
+            let kare7 = UIBezierPath()
+            kare7.move(to: CGPoint(x:x   , y: y + 6 * (width * 0.07)))
+            kare7.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 6 * (width * 0.07)))
+            kare7.addLine(to: CGPoint(x: x + width * 0.07, y: y + 7 * (width * 0.07)))
+            kare7.addLine(to: CGPoint(x: x, y: y + 7 * (width * 0.07)))
+            kare7.close()
+            
+            let kare8 = UIBezierPath()
+            kare8.move(to: CGPoint(x:x   , y: y + 7 * (width * 0.07)))
+            kare8.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 7 * (width * 0.07)))
+            kare8.addLine(to: CGPoint(x: x + width * 0.07, y: y + 8 * (width * 0.07)))
+            kare8.addLine(to: CGPoint(x: x, y: y + 8 * (width * 0.07)))
+            kare8.close()
+            
+            let kare9 = UIBezierPath()
+            kare9.move(to: CGPoint(x:x   , y: y + 8 * (width * 0.07)))
+            kare9.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 8 * (width * 0.07)))
+            kare9.addLine(to: CGPoint(x: x + width * 0.07, y: y + 9 * (width * 0.07)))
+            kare9.addLine(to: CGPoint(x: x, y: y + 9 * (width * 0.07)))
+            kare9.close()
+            
+            let kare10 = UIBezierPath()
+            kare10.move(to: CGPoint(x:x   , y: y + 9 * (width * 0.07)))
+            kare10.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 9 * (width * 0.07)))
+            kare10.addLine(to: CGPoint(x: x + width * 0.07, y: y + 10 * (width * 0.07)))
+            kare10.addLine(to: CGPoint(x: x, y: y + 10 * (width * 0.07)))
+            kare10.close()
+            
+            let kare11 = UIBezierPath()
+            kare11.move(to: CGPoint(x:x   , y: y + 10 * (width * 0.07)))
+            kare11.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 10 * (width * 0.07)))
+            kare11.addLine(to: CGPoint(x: x + width * 0.07, y: y + 11 * (width * 0.07)))
+            kare11.addLine(to: CGPoint(x: x, y: y + 11 * (width * 0.07)))
+            kare11.close()
+            
+            myColor.setStroke()
+            kare1.stroke()
+            kare2.stroke()
+            kare3.stroke()
+            kare4.stroke()
+            kare5.stroke()
+            kare6.stroke()
+            kare7.stroke()
+            kare8.stroke()
+            kare9.stroke()
+            kare10.stroke()
+            kare11.stroke()
+            
+            
+            
+        }else {
+            let kare1 = UIBezierPath()
+            kare1.move(to: CGPoint(x: x, y: y))
+            kare1.addLine(to: CGPoint(x: x + width * 0.07 , y: y))
+            kare1.addLine(to: CGPoint(x: x + width * 0.07  , y: y + width * 0.07))
+            kare1.addLine(to: CGPoint(x: x , y: y + width * 0.07))
+            kare1.close()
+            
+            let kare2 = UIBezierPath()
+            kare2.move(to: CGPoint(x:x + width * 0.07, y: y ))
+            kare2.addLine(to: CGPoint(x: x + 2 * (width * 0.07), y: y))
+            kare2.addLine(to: CGPoint(x: x + 2 * (width * 0.07), y: y + width * 0.07))
+            kare2.addLine(to: CGPoint(x: x + width * 0.07, y: y + width * 0.07))
+            
+            let kare3 = UIBezierPath()
+            kare3.move(to: CGPoint(x:x + 2 * (width * 0.07), y: y ))
+            kare3.addLine(to: CGPoint(x: x + 3 * (width * 0.07), y: y))
+            kare3.addLine(to: CGPoint(x: x + 3 * (width * 0.07), y: y + width * 0.07))
+            kare3.addLine(to: CGPoint(x: x + 2 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare4 = UIBezierPath()
+            kare4.move(to: CGPoint(x:x + 3 * (width * 0.07), y: y ))
+            kare4.addLine(to: CGPoint(x: x + 4 * (width * 0.07), y: y))
+            kare4.addLine(to: CGPoint(x: x + 4 * (width * 0.07), y: y + width * 0.07))
+            kare4.addLine(to: CGPoint(x: x + 3 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare5 = UIBezierPath()
+            kare5.move(to: CGPoint(x:x + 4 * (width * 0.07), y: y ))
+            kare5.addLine(to: CGPoint(x: x + 5 * (width * 0.07), y: y))
+            kare5.addLine(to: CGPoint(x: x + 5 * (width * 0.07), y: y + width * 0.07))
+            kare5.addLine(to: CGPoint(x: x + 4 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare6 = UIBezierPath()
+            kare6.move(to: CGPoint(x:x + 5 * (width * 0.07), y: y ))
+            kare6.addLine(to: CGPoint(x: x + 6 * (width * 0.07), y: y))
+            kare6.addLine(to: CGPoint(x: x + 6 * (width * 0.07), y: y + width * 0.07))
+            kare6.addLine(to: CGPoint(x: x + 5 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare7 = UIBezierPath()
+            kare7.move(to: CGPoint(x:x + 6 * (width * 0.07), y: y ))
+            kare7.addLine(to: CGPoint(x: x + 7 * (width * 0.07), y: y))
+            kare7.addLine(to: CGPoint(x: x + 7 * (width * 0.07), y: y + width * 0.07))
+            kare7.addLine(to: CGPoint(x: x + 6 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare8 = UIBezierPath()
+            kare8.move(to: CGPoint(x:x + 7 * (width * 0.07), y: y ))
+            kare8.addLine(to: CGPoint(x: x + 8 * (width * 0.07), y: y))
+            kare8.addLine(to: CGPoint(x: x + 8 * (width * 0.07), y: y + width * 0.07))
+            kare8.addLine(to: CGPoint(x: x + 7 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare9 = UIBezierPath()
+            kare9.move(to: CGPoint(x:x + 8 * (width * 0.07), y: y ))
+            kare9.addLine(to: CGPoint(x: x + 9 * (width * 0.07), y: y))
+            kare9.addLine(to: CGPoint(x: x + 9 * (width * 0.07), y: y + width * 0.07))
+            kare9.addLine(to: CGPoint(x: x + 8 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare10 = UIBezierPath()
+            kare10.move(to: CGPoint(x:x + 9 * (width * 0.07), y: y ))
+            kare10.addLine(to: CGPoint(x: x + 10 * (width * 0.07), y: y))
+            kare10.addLine(to: CGPoint(x: x + 10 * (width * 0.07), y: y + width * 0.07))
+            kare10.addLine(to: CGPoint(x: x + 9 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare11 = UIBezierPath()
+            kare11.move(to: CGPoint(x:x + 10 * (width * 0.07), y: y ))
+            kare11.addLine(to: CGPoint(x: x + 11 * (width * 0.07), y: y))
+            kare11.addLine(to: CGPoint(x: x + 11 * (width * 0.07), y: y + width * 0.07))
+            kare11.addLine(to: CGPoint(x: x + 10 * (width * 0.07), y: y + width * 0.07))
+            
+            myColor.setStroke()
+            kare1.stroke()
+            kare2.stroke()
+            kare3.stroke()
+            kare4.stroke()
+            kare5.stroke()
+            kare6.stroke()
+            kare7.stroke()
+            kare8.stroke()
+            kare9.stroke()
+            kare10.stroke()
+            kare11.stroke()
+        }
+    }
+        static func square12(isVertical:Bool,x:CGFloat,y:CGFloat) {
+            let width = SingletonView.shared.width
+            
+            
+            let myColor = UIColor(red: 88/255, green: 159/255, blue: 1.0, alpha: 1)
+            
+            if isVertical {
+                let kare1 = UIBezierPath()
+                kare1.move(to: CGPoint(x: x, y: y))
+                kare1.addLine(to: CGPoint(x: x + width * 0.07 , y: y))
+                kare1.addLine(to: CGPoint(x: x + width * 0.07  , y: y + width * 0.07))
+                kare1.addLine(to: CGPoint(x: x , y: y + width * 0.07))
+                kare1.close()
+                
+                let kare2 = UIBezierPath()
+                kare2.move(to: CGPoint(x:x   , y: y + width * 0.07))
+                kare2.addLine(to: CGPoint(x: x + width * 0.07 , y: y + width * 0.07))
+                kare2.addLine(to: CGPoint(x: x + width * 0.07, y: y + 2 * (width * 0.07)))
+                kare2.addLine(to: CGPoint(x: x, y: y + 2 * (width * 0.07)))
+                kare2.close()
+                
+                let kare3 = UIBezierPath()
+                kare3.move(to: CGPoint(x:x   , y: y + 2 * (width * 0.07)))
+                kare3.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 2 * (width * 0.07)))
+                kare3.addLine(to: CGPoint(x: x + width * 0.07, y: y + 3 * (width * 0.07)))
+                kare3.addLine(to: CGPoint(x: x, y: y + 3 * (width * 0.07)))
+                kare3.close()
+                
+                let kare4 = UIBezierPath()
+                kare4.move(to: CGPoint(x:x   , y: y + 3 * (width * 0.07)))
+                kare4.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 3 * (width * 0.07)))
+                kare4.addLine(to: CGPoint(x: x + width * 0.07, y: y + 4 * (width * 0.07)))
+                kare4.addLine(to: CGPoint(x: x, y: y + 4 * (width * 0.07)))
+                kare4.close()
+                
+                let kare5 = UIBezierPath()
+                kare5.move(to: CGPoint(x:x   , y: y + 4 * (width * 0.07)))
+                kare5.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 4 * (width * 0.07)))
+                kare5.addLine(to: CGPoint(x: x + width * 0.07, y: y + 5 * (width * 0.07)))
+                kare5.addLine(to: CGPoint(x: x, y: y + 5 * (width * 0.07)))
+                kare5.close()
+                
+                let kare6 = UIBezierPath()
+                kare6.move(to: CGPoint(x:x   , y: y + 5 * (width * 0.07)))
+                kare6.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 5 * (width * 0.07)))
+                kare6.addLine(to: CGPoint(x: x + width * 0.07, y: y + 6 * (width * 0.07)))
+                kare6.addLine(to: CGPoint(x: x, y: y + 6 * (width * 0.07)))
+                kare6.close()
+                
+                let kare7 = UIBezierPath()
+                kare7.move(to: CGPoint(x:x   , y: y + 6 * (width * 0.07)))
+                kare7.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 6 * (width * 0.07)))
+                kare7.addLine(to: CGPoint(x: x + width * 0.07, y: y + 7 * (width * 0.07)))
+                kare7.addLine(to: CGPoint(x: x, y: y + 7 * (width * 0.07)))
+                kare7.close()
+                
+                let kare8 = UIBezierPath()
+                kare8.move(to: CGPoint(x:x   , y: y + 7 * (width * 0.07)))
+                kare8.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 7 * (width * 0.07)))
+                kare8.addLine(to: CGPoint(x: x + width * 0.07, y: y + 8 * (width * 0.07)))
+                kare8.addLine(to: CGPoint(x: x, y: y + 8 * (width * 0.07)))
+                kare8.close()
+                
+                let kare9 = UIBezierPath()
+                kare9.move(to: CGPoint(x:x   , y: y + 8 * (width * 0.07)))
+                kare9.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 8 * (width * 0.07)))
+                kare9.addLine(to: CGPoint(x: x + width * 0.07, y: y + 9 * (width * 0.07)))
+                kare9.addLine(to: CGPoint(x: x, y: y + 9 * (width * 0.07)))
+                kare9.close()
+                
+                let kare10 = UIBezierPath()
+                kare10.move(to: CGPoint(x:x   , y: y + 9 * (width * 0.07)))
+                kare10.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 9 * (width * 0.07)))
+                kare10.addLine(to: CGPoint(x: x + width * 0.07, y: y + 10 * (width * 0.07)))
+                kare10.addLine(to: CGPoint(x: x, y: y + 10 * (width * 0.07)))
+                kare10.close()
+                
+                let kare11 = UIBezierPath()
+                kare11.move(to: CGPoint(x:x   , y: y + 10 * (width * 0.07)))
+                kare11.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 10 * (width * 0.07)))
+                kare11.addLine(to: CGPoint(x: x + width * 0.07, y: y + 11 * (width * 0.07)))
+                kare11.addLine(to: CGPoint(x: x, y: y + 11 * (width * 0.07)))
+                kare11.close()
+                
+                let kare12 = UIBezierPath()
+                kare12.move(to: CGPoint(x:x   , y: y + 11 * (width * 0.07)))
+                kare12.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 11 * (width * 0.07)))
+                kare12.addLine(to: CGPoint(x: x + width * 0.07, y: y + 12 * (width * 0.07)))
+                kare12.addLine(to: CGPoint(x: x, y: y + 12 * (width * 0.07)))
+                kare12.close()
+                
+                myColor.setStroke()
+                kare1.stroke()
+                kare2.stroke()
+                kare3.stroke()
+                kare4.stroke()
+                kare5.stroke()
+                kare6.stroke()
+                kare7.stroke()
+                kare8.stroke()
+                kare9.stroke()
+                kare10.stroke()
+                kare11.stroke()
+                kare12.stroke()
+                
+                
+                
+            }else {
+                let kare1 = UIBezierPath()
+                kare1.move(to: CGPoint(x: x, y: y))
+                kare1.addLine(to: CGPoint(x: x + width * 0.07 , y: y))
+                kare1.addLine(to: CGPoint(x: x + width * 0.07  , y: y + width * 0.07))
+                kare1.addLine(to: CGPoint(x: x , y: y + width * 0.07))
+                kare1.close()
+                
+                let kare2 = UIBezierPath()
+                kare2.move(to: CGPoint(x:x + width * 0.07, y: y ))
+                kare2.addLine(to: CGPoint(x: x + 2 * (width * 0.07), y: y))
+                kare2.addLine(to: CGPoint(x: x + 2 * (width * 0.07), y: y + width * 0.07))
+                kare2.addLine(to: CGPoint(x: x + width * 0.07, y: y + width * 0.07))
+                
+                let kare3 = UIBezierPath()
+                kare3.move(to: CGPoint(x:x + 2 * (width * 0.07), y: y ))
+                kare3.addLine(to: CGPoint(x: x + 3 * (width * 0.07), y: y))
+                kare3.addLine(to: CGPoint(x: x + 3 * (width * 0.07), y: y + width * 0.07))
+                kare3.addLine(to: CGPoint(x: x + 2 * (width * 0.07), y: y + width * 0.07))
+                
+                let kare4 = UIBezierPath()
+                kare4.move(to: CGPoint(x:x + 3 * (width * 0.07), y: y ))
+                kare4.addLine(to: CGPoint(x: x + 4 * (width * 0.07), y: y))
+                kare4.addLine(to: CGPoint(x: x + 4 * (width * 0.07), y: y + width * 0.07))
+                kare4.addLine(to: CGPoint(x: x + 3 * (width * 0.07), y: y + width * 0.07))
+                
+                let kare5 = UIBezierPath()
+                kare5.move(to: CGPoint(x:x + 4 * (width * 0.07), y: y ))
+                kare5.addLine(to: CGPoint(x: x + 5 * (width * 0.07), y: y))
+                kare5.addLine(to: CGPoint(x: x + 5 * (width * 0.07), y: y + width * 0.07))
+                kare5.addLine(to: CGPoint(x: x + 4 * (width * 0.07), y: y + width * 0.07))
+                
+                let kare6 = UIBezierPath()
+                kare6.move(to: CGPoint(x:x + 5 * (width * 0.07), y: y ))
+                kare6.addLine(to: CGPoint(x: x + 6 * (width * 0.07), y: y))
+                kare6.addLine(to: CGPoint(x: x + 6 * (width * 0.07), y: y + width * 0.07))
+                kare6.addLine(to: CGPoint(x: x + 5 * (width * 0.07), y: y + width * 0.07))
+                
+                let kare7 = UIBezierPath()
+                kare7.move(to: CGPoint(x:x + 6 * (width * 0.07), y: y ))
+                kare7.addLine(to: CGPoint(x: x + 7 * (width * 0.07), y: y))
+                kare7.addLine(to: CGPoint(x: x + 7 * (width * 0.07), y: y + width * 0.07))
+                kare7.addLine(to: CGPoint(x: x + 6 * (width * 0.07), y: y + width * 0.07))
+                
+                let kare8 = UIBezierPath()
+                kare8.move(to: CGPoint(x:x + 7 * (width * 0.07), y: y ))
+                kare8.addLine(to: CGPoint(x: x + 8 * (width * 0.07), y: y))
+                kare8.addLine(to: CGPoint(x: x + 8 * (width * 0.07), y: y + width * 0.07))
+                kare8.addLine(to: CGPoint(x: x + 7 * (width * 0.07), y: y + width * 0.07))
+                
+                let kare9 = UIBezierPath()
+                kare9.move(to: CGPoint(x:x + 8 * (width * 0.07), y: y ))
+                kare9.addLine(to: CGPoint(x: x + 9 * (width * 0.07), y: y))
+                kare9.addLine(to: CGPoint(x: x + 9 * (width * 0.07), y: y + width * 0.07))
+                kare9.addLine(to: CGPoint(x: x + 8 * (width * 0.07), y: y + width * 0.07))
+                
+                let kare10 = UIBezierPath()
+                kare10.move(to: CGPoint(x:x + 9 * (width * 0.07), y: y ))
+                kare10.addLine(to: CGPoint(x: x + 10 * (width * 0.07), y: y))
+                kare10.addLine(to: CGPoint(x: x + 10 * (width * 0.07), y: y + width * 0.07))
+                kare10.addLine(to: CGPoint(x: x + 9 * (width * 0.07), y: y + width * 0.07))
+                
+                let kare11 = UIBezierPath()
+                kare11.move(to: CGPoint(x:x + 10 * (width * 0.07), y: y ))
+                kare11.addLine(to: CGPoint(x: x + 11 * (width * 0.07), y: y))
+                kare11.addLine(to: CGPoint(x: x + 11 * (width * 0.07), y: y + width * 0.07))
+                kare11.addLine(to: CGPoint(x: x + 10 * (width * 0.07), y: y + width * 0.07))
+                
+                let kare12 = UIBezierPath()
+                kare12.move(to: CGPoint(x:x + 11 * (width * 0.07), y: y ))
+                kare12.addLine(to: CGPoint(x: x + 12 * (width * 0.07), y: y))
+                kare12.addLine(to: CGPoint(x: x + 12 * (width * 0.07), y: y + width * 0.07))
+                kare12.addLine(to: CGPoint(x: x + 11 * (width * 0.07), y: y + width * 0.07))
+                
+                myColor.setStroke()
+                kare1.stroke()
+                kare2.stroke()
+                kare3.stroke()
+                kare4.stroke()
+                kare5.stroke()
+                kare6.stroke()
+                kare7.stroke()
+                kare8.stroke()
+                kare9.stroke()
+                kare10.stroke()
+                kare11.stroke()
+                kare12.stroke()
+            }
+        
+    }
+    
+    static func square13(isVertical:Bool,x:CGFloat,y:CGFloat) {
+        let width = SingletonView.shared.width
+        
+        
+        let myColor = UIColor(red: 88/255, green: 159/255, blue: 1.0, alpha: 1)
+        
+        if isVertical {
+            let kare1 = UIBezierPath()
+            kare1.move(to: CGPoint(x: x, y: y))
+            kare1.addLine(to: CGPoint(x: x + width * 0.07 , y: y))
+            kare1.addLine(to: CGPoint(x: x + width * 0.07  , y: y + width * 0.07))
+            kare1.addLine(to: CGPoint(x: x , y: y + width * 0.07))
+            kare1.close()
+            
+            let kare2 = UIBezierPath()
+            kare2.move(to: CGPoint(x:x   , y: y + width * 0.07))
+            kare2.addLine(to: CGPoint(x: x + width * 0.07 , y: y + width * 0.07))
+            kare2.addLine(to: CGPoint(x: x + width * 0.07, y: y + 2 * (width * 0.07)))
+            kare2.addLine(to: CGPoint(x: x, y: y + 2 * (width * 0.07)))
+            kare2.close()
+            
+            let kare3 = UIBezierPath()
+            kare3.move(to: CGPoint(x:x   , y: y + 2 * (width * 0.07)))
+            kare3.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 2 * (width * 0.07)))
+            kare3.addLine(to: CGPoint(x: x + width * 0.07, y: y + 3 * (width * 0.07)))
+            kare3.addLine(to: CGPoint(x: x, y: y + 3 * (width * 0.07)))
+            kare3.close()
+            
+            let kare4 = UIBezierPath()
+            kare4.move(to: CGPoint(x:x   , y: y + 3 * (width * 0.07)))
+            kare4.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 3 * (width * 0.07)))
+            kare4.addLine(to: CGPoint(x: x + width * 0.07, y: y + 4 * (width * 0.07)))
+            kare4.addLine(to: CGPoint(x: x, y: y + 4 * (width * 0.07)))
+            kare4.close()
+            
+            let kare5 = UIBezierPath()
+            kare5.move(to: CGPoint(x:x   , y: y + 4 * (width * 0.07)))
+            kare5.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 4 * (width * 0.07)))
+            kare5.addLine(to: CGPoint(x: x + width * 0.07, y: y + 5 * (width * 0.07)))
+            kare5.addLine(to: CGPoint(x: x, y: y + 5 * (width * 0.07)))
+            kare5.close()
+            
+            let kare6 = UIBezierPath()
+            kare6.move(to: CGPoint(x:x   , y: y + 5 * (width * 0.07)))
+            kare6.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 5 * (width * 0.07)))
+            kare6.addLine(to: CGPoint(x: x + width * 0.07, y: y + 6 * (width * 0.07)))
+            kare6.addLine(to: CGPoint(x: x, y: y + 6 * (width * 0.07)))
+            kare6.close()
+            
+            let kare7 = UIBezierPath()
+            kare7.move(to: CGPoint(x:x   , y: y + 6 * (width * 0.07)))
+            kare7.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 6 * (width * 0.07)))
+            kare7.addLine(to: CGPoint(x: x + width * 0.07, y: y + 7 * (width * 0.07)))
+            kare7.addLine(to: CGPoint(x: x, y: y + 7 * (width * 0.07)))
+            kare7.close()
+            
+            let kare8 = UIBezierPath()
+            kare8.move(to: CGPoint(x:x   , y: y + 7 * (width * 0.07)))
+            kare8.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 7 * (width * 0.07)))
+            kare8.addLine(to: CGPoint(x: x + width * 0.07, y: y + 8 * (width * 0.07)))
+            kare8.addLine(to: CGPoint(x: x, y: y + 8 * (width * 0.07)))
+            kare8.close()
+            
+            let kare9 = UIBezierPath()
+            kare9.move(to: CGPoint(x:x   , y: y + 8 * (width * 0.07)))
+            kare9.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 8 * (width * 0.07)))
+            kare9.addLine(to: CGPoint(x: x + width * 0.07, y: y + 9 * (width * 0.07)))
+            kare9.addLine(to: CGPoint(x: x, y: y + 9 * (width * 0.07)))
+            kare9.close()
+            
+            let kare10 = UIBezierPath()
+            kare10.move(to: CGPoint(x:x   , y: y + 9 * (width * 0.07)))
+            kare10.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 9 * (width * 0.07)))
+            kare10.addLine(to: CGPoint(x: x + width * 0.07, y: y + 10 * (width * 0.07)))
+            kare10.addLine(to: CGPoint(x: x, y: y + 10 * (width * 0.07)))
+            kare10.close()
+            
+            let kare11 = UIBezierPath()
+            kare11.move(to: CGPoint(x:x   , y: y + 10 * (width * 0.07)))
+            kare11.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 10 * (width * 0.07)))
+            kare11.addLine(to: CGPoint(x: x + width * 0.07, y: y + 11 * (width * 0.07)))
+            kare11.addLine(to: CGPoint(x: x, y: y + 11 * (width * 0.07)))
+            kare11.close()
+            
+            let kare12 = UIBezierPath()
+            kare12.move(to: CGPoint(x:x   , y: y + 11 * (width * 0.07)))
+            kare12.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 11 * (width * 0.07)))
+            kare12.addLine(to: CGPoint(x: x + width * 0.07, y: y + 12 * (width * 0.07)))
+            kare12.addLine(to: CGPoint(x: x, y: y + 12 * (width * 0.07)))
+            kare12.close()
+            
+            let kare13 = UIBezierPath()
+            kare13.move(to: CGPoint(x:x   , y: y + 12 * (width * 0.07)))
+            kare13.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 12 * (width * 0.07)))
+            kare13.addLine(to: CGPoint(x: x + width * 0.07, y: y + 13 * (width * 0.07)))
+            kare13.addLine(to: CGPoint(x: x, y: y + 13 * (width * 0.07)))
+            kare13.close()
+            
+            myColor.setStroke()
+            kare1.stroke()
+            kare2.stroke()
+            kare3.stroke()
+            kare4.stroke()
+            kare5.stroke()
+            kare6.stroke()
+            kare7.stroke()
+            kare8.stroke()
+            kare9.stroke()
+            kare10.stroke()
+            kare11.stroke()
+            kare12.stroke()
+            kare13.stroke()
+            
+            
+        }else {
+            let kare1 = UIBezierPath()
+            kare1.move(to: CGPoint(x: x, y: y))
+            kare1.addLine(to: CGPoint(x: x + width * 0.07 , y: y))
+            kare1.addLine(to: CGPoint(x: x + width * 0.07  , y: y + width * 0.07))
+            kare1.addLine(to: CGPoint(x: x , y: y + width * 0.07))
+            kare1.close()
+            
+            let kare2 = UIBezierPath()
+            kare2.move(to: CGPoint(x:x + width * 0.07, y: y ))
+            kare2.addLine(to: CGPoint(x: x + 2 * (width * 0.07), y: y))
+            kare2.addLine(to: CGPoint(x: x + 2 * (width * 0.07), y: y + width * 0.07))
+            kare2.addLine(to: CGPoint(x: x + width * 0.07, y: y + width * 0.07))
+            
+            let kare3 = UIBezierPath()
+            kare3.move(to: CGPoint(x:x + 2 * (width * 0.07), y: y ))
+            kare3.addLine(to: CGPoint(x: x + 3 * (width * 0.07), y: y))
+            kare3.addLine(to: CGPoint(x: x + 3 * (width * 0.07), y: y + width * 0.07))
+            kare3.addLine(to: CGPoint(x: x + 2 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare4 = UIBezierPath()
+            kare4.move(to: CGPoint(x:x + 3 * (width * 0.07), y: y ))
+            kare4.addLine(to: CGPoint(x: x + 4 * (width * 0.07), y: y))
+            kare4.addLine(to: CGPoint(x: x + 4 * (width * 0.07), y: y + width * 0.07))
+            kare4.addLine(to: CGPoint(x: x + 3 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare5 = UIBezierPath()
+            kare5.move(to: CGPoint(x:x + 4 * (width * 0.07), y: y ))
+            kare5.addLine(to: CGPoint(x: x + 5 * (width * 0.07), y: y))
+            kare5.addLine(to: CGPoint(x: x + 5 * (width * 0.07), y: y + width * 0.07))
+            kare5.addLine(to: CGPoint(x: x + 4 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare6 = UIBezierPath()
+            kare6.move(to: CGPoint(x:x + 5 * (width * 0.07), y: y ))
+            kare6.addLine(to: CGPoint(x: x + 6 * (width * 0.07), y: y))
+            kare6.addLine(to: CGPoint(x: x + 6 * (width * 0.07), y: y + width * 0.07))
+            kare6.addLine(to: CGPoint(x: x + 5 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare7 = UIBezierPath()
+            kare7.move(to: CGPoint(x:x + 6 * (width * 0.07), y: y ))
+            kare7.addLine(to: CGPoint(x: x + 7 * (width * 0.07), y: y))
+            kare7.addLine(to: CGPoint(x: x + 7 * (width * 0.07), y: y + width * 0.07))
+            kare7.addLine(to: CGPoint(x: x + 6 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare8 = UIBezierPath()
+            kare8.move(to: CGPoint(x:x + 7 * (width * 0.07), y: y ))
+            kare8.addLine(to: CGPoint(x: x + 8 * (width * 0.07), y: y))
+            kare8.addLine(to: CGPoint(x: x + 8 * (width * 0.07), y: y + width * 0.07))
+            kare8.addLine(to: CGPoint(x: x + 7 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare9 = UIBezierPath()
+            kare9.move(to: CGPoint(x:x + 8 * (width * 0.07), y: y ))
+            kare9.addLine(to: CGPoint(x: x + 9 * (width * 0.07), y: y))
+            kare9.addLine(to: CGPoint(x: x + 9 * (width * 0.07), y: y + width * 0.07))
+            kare9.addLine(to: CGPoint(x: x + 8 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare10 = UIBezierPath()
+            kare10.move(to: CGPoint(x:x + 9 * (width * 0.07), y: y ))
+            kare10.addLine(to: CGPoint(x: x + 10 * (width * 0.07), y: y))
+            kare10.addLine(to: CGPoint(x: x + 10 * (width * 0.07), y: y + width * 0.07))
+            kare10.addLine(to: CGPoint(x: x + 9 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare11 = UIBezierPath()
+            kare11.move(to: CGPoint(x:x + 10 * (width * 0.07), y: y ))
+            kare11.addLine(to: CGPoint(x: x + 11 * (width * 0.07), y: y))
+            kare11.addLine(to: CGPoint(x: x + 11 * (width * 0.07), y: y + width * 0.07))
+            kare11.addLine(to: CGPoint(x: x + 10 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare12 = UIBezierPath()
+            kare12.move(to: CGPoint(x:x + 11 * (width * 0.07), y: y ))
+            kare12.addLine(to: CGPoint(x: x + 12 * (width * 0.07), y: y))
+            kare12.addLine(to: CGPoint(x: x + 12 * (width * 0.07), y: y + width * 0.07))
+            kare12.addLine(to: CGPoint(x: x + 11 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare13 = UIBezierPath()
+            kare13.move(to: CGPoint(x:x + 12 * (width * 0.07), y: y ))
+            kare13.addLine(to: CGPoint(x: x + 13 * (width * 0.07), y: y))
+            kare13.addLine(to: CGPoint(x: x + 13 * (width * 0.07), y: y + width * 0.07))
+            kare13.addLine(to: CGPoint(x: x + 12 * (width * 0.07), y: y + width * 0.07))
+            
+            myColor.setStroke()
+            kare1.stroke()
+            kare2.stroke()
+            kare3.stroke()
+            kare4.stroke()
+            kare5.stroke()
+            kare6.stroke()
+            kare7.stroke()
+            kare8.stroke()
+            kare9.stroke()
+            kare10.stroke()
+            kare11.stroke()
+            kare12.stroke()
+            kare13.stroke()
+        }
+    
+}
+    
+    static func square14(isVertical:Bool,x:CGFloat,y:CGFloat) {
+        let width = SingletonView.shared.width
+        
+        
+        let myColor = UIColor(red: 88/255, green: 159/255, blue: 1.0, alpha: 1)
+        
+        if isVertical {
+            let kare1 = UIBezierPath()
+            kare1.move(to: CGPoint(x: x, y: y))
+            kare1.addLine(to: CGPoint(x: x + width * 0.07 , y: y))
+            kare1.addLine(to: CGPoint(x: x + width * 0.07  , y: y + width * 0.07))
+            kare1.addLine(to: CGPoint(x: x , y: y + width * 0.07))
+            kare1.close()
+            
+            let kare2 = UIBezierPath()
+            kare2.move(to: CGPoint(x:x   , y: y + width * 0.07))
+            kare2.addLine(to: CGPoint(x: x + width * 0.07 , y: y + width * 0.07))
+            kare2.addLine(to: CGPoint(x: x + width * 0.07, y: y + 2 * (width * 0.07)))
+            kare2.addLine(to: CGPoint(x: x, y: y + 2 * (width * 0.07)))
+            kare2.close()
+            
+            let kare3 = UIBezierPath()
+            kare3.move(to: CGPoint(x:x   , y: y + 2 * (width * 0.07)))
+            kare3.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 2 * (width * 0.07)))
+            kare3.addLine(to: CGPoint(x: x + width * 0.07, y: y + 3 * (width * 0.07)))
+            kare3.addLine(to: CGPoint(x: x, y: y + 3 * (width * 0.07)))
+            kare3.close()
+            
+            let kare4 = UIBezierPath()
+            kare4.move(to: CGPoint(x:x   , y: y + 3 * (width * 0.07)))
+            kare4.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 3 * (width * 0.07)))
+            kare4.addLine(to: CGPoint(x: x + width * 0.07, y: y + 4 * (width * 0.07)))
+            kare4.addLine(to: CGPoint(x: x, y: y + 4 * (width * 0.07)))
+            kare4.close()
+            
+            let kare5 = UIBezierPath()
+            kare5.move(to: CGPoint(x:x   , y: y + 4 * (width * 0.07)))
+            kare5.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 4 * (width * 0.07)))
+            kare5.addLine(to: CGPoint(x: x + width * 0.07, y: y + 5 * (width * 0.07)))
+            kare5.addLine(to: CGPoint(x: x, y: y + 5 * (width * 0.07)))
+            kare5.close()
+            
+            let kare6 = UIBezierPath()
+            kare6.move(to: CGPoint(x:x   , y: y + 5 * (width * 0.07)))
+            kare6.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 5 * (width * 0.07)))
+            kare6.addLine(to: CGPoint(x: x + width * 0.07, y: y + 6 * (width * 0.07)))
+            kare6.addLine(to: CGPoint(x: x, y: y + 6 * (width * 0.07)))
+            kare6.close()
+            
+            let kare7 = UIBezierPath()
+            kare7.move(to: CGPoint(x:x   , y: y + 6 * (width * 0.07)))
+            kare7.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 6 * (width * 0.07)))
+            kare7.addLine(to: CGPoint(x: x + width * 0.07, y: y + 7 * (width * 0.07)))
+            kare7.addLine(to: CGPoint(x: x, y: y + 7 * (width * 0.07)))
+            kare7.close()
+            
+            let kare8 = UIBezierPath()
+            kare8.move(to: CGPoint(x:x   , y: y + 7 * (width * 0.07)))
+            kare8.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 7 * (width * 0.07)))
+            kare8.addLine(to: CGPoint(x: x + width * 0.07, y: y + 8 * (width * 0.07)))
+            kare8.addLine(to: CGPoint(x: x, y: y + 8 * (width * 0.07)))
+            kare8.close()
+            
+            let kare9 = UIBezierPath()
+            kare9.move(to: CGPoint(x:x   , y: y + 8 * (width * 0.07)))
+            kare9.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 8 * (width * 0.07)))
+            kare9.addLine(to: CGPoint(x: x + width * 0.07, y: y + 9 * (width * 0.07)))
+            kare9.addLine(to: CGPoint(x: x, y: y + 9 * (width * 0.07)))
+            kare9.close()
+            
+            let kare10 = UIBezierPath()
+            kare10.move(to: CGPoint(x:x   , y: y + 9 * (width * 0.07)))
+            kare10.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 9 * (width * 0.07)))
+            kare10.addLine(to: CGPoint(x: x + width * 0.07, y: y + 10 * (width * 0.07)))
+            kare10.addLine(to: CGPoint(x: x, y: y + 10 * (width * 0.07)))
+            kare10.close()
+            
+            let kare11 = UIBezierPath()
+            kare11.move(to: CGPoint(x:x   , y: y + 10 * (width * 0.07)))
+            kare11.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 10 * (width * 0.07)))
+            kare11.addLine(to: CGPoint(x: x + width * 0.07, y: y + 11 * (width * 0.07)))
+            kare11.addLine(to: CGPoint(x: x, y: y + 11 * (width * 0.07)))
+            kare11.close()
+            
+            let kare12 = UIBezierPath()
+            kare12.move(to: CGPoint(x:x   , y: y + 11 * (width * 0.07)))
+            kare12.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 11 * (width * 0.07)))
+            kare12.addLine(to: CGPoint(x: x + width * 0.07, y: y + 12 * (width * 0.07)))
+            kare12.addLine(to: CGPoint(x: x, y: y + 12 * (width * 0.07)))
+            kare12.close()
+            
+            let kare13 = UIBezierPath()
+            kare13.move(to: CGPoint(x:x   , y: y + 12 * (width * 0.07)))
+            kare13.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 12 * (width * 0.07)))
+            kare13.addLine(to: CGPoint(x: x + width * 0.07, y: y + 13 * (width * 0.07)))
+            kare13.addLine(to: CGPoint(x: x, y: y + 13 * (width * 0.07)))
+            kare13.close()
+            
+            let kare14 = UIBezierPath()
+            kare14.move(to: CGPoint(x:x   , y: y + 13 * (width * 0.07)))
+            kare14.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 13 * (width * 0.07)))
+            kare14.addLine(to: CGPoint(x: x + width * 0.07, y: y + 14 * (width * 0.07)))
+            kare14.addLine(to: CGPoint(x: x, y: y + 14 * (width * 0.07)))
+            kare14.close()
+            
+            myColor.setStroke()
+            kare1.stroke()
+            kare2.stroke()
+            kare3.stroke()
+            kare4.stroke()
+            kare5.stroke()
+            kare6.stroke()
+            kare7.stroke()
+            kare8.stroke()
+            kare9.stroke()
+            kare10.stroke()
+            kare11.stroke()
+            kare12.stroke()
+            kare13.stroke()
+            kare14.stroke()
+            
+        }else {
+            let kare1 = UIBezierPath()
+            kare1.move(to: CGPoint(x: x, y: y))
+            kare1.addLine(to: CGPoint(x: x + width * 0.07 , y: y))
+            kare1.addLine(to: CGPoint(x: x + width * 0.07  , y: y + width * 0.07))
+            kare1.addLine(to: CGPoint(x: x , y: y + width * 0.07))
+            kare1.close()
+            
+            let kare2 = UIBezierPath()
+            kare2.move(to: CGPoint(x:x + width * 0.07, y: y ))
+            kare2.addLine(to: CGPoint(x: x + 2 * (width * 0.07), y: y))
+            kare2.addLine(to: CGPoint(x: x + 2 * (width * 0.07), y: y + width * 0.07))
+            kare2.addLine(to: CGPoint(x: x + width * 0.07, y: y + width * 0.07))
+            
+            let kare3 = UIBezierPath()
+            kare3.move(to: CGPoint(x:x + 2 * (width * 0.07), y: y ))
+            kare3.addLine(to: CGPoint(x: x + 3 * (width * 0.07), y: y))
+            kare3.addLine(to: CGPoint(x: x + 3 * (width * 0.07), y: y + width * 0.07))
+            kare3.addLine(to: CGPoint(x: x + 2 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare4 = UIBezierPath()
+            kare4.move(to: CGPoint(x:x + 3 * (width * 0.07), y: y ))
+            kare4.addLine(to: CGPoint(x: x + 4 * (width * 0.07), y: y))
+            kare4.addLine(to: CGPoint(x: x + 4 * (width * 0.07), y: y + width * 0.07))
+            kare4.addLine(to: CGPoint(x: x + 3 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare5 = UIBezierPath()
+            kare5.move(to: CGPoint(x:x + 4 * (width * 0.07), y: y ))
+            kare5.addLine(to: CGPoint(x: x + 5 * (width * 0.07), y: y))
+            kare5.addLine(to: CGPoint(x: x + 5 * (width * 0.07), y: y + width * 0.07))
+            kare5.addLine(to: CGPoint(x: x + 4 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare6 = UIBezierPath()
+            kare6.move(to: CGPoint(x:x + 5 * (width * 0.07), y: y ))
+            kare6.addLine(to: CGPoint(x: x + 6 * (width * 0.07), y: y))
+            kare6.addLine(to: CGPoint(x: x + 6 * (width * 0.07), y: y + width * 0.07))
+            kare6.addLine(to: CGPoint(x: x + 5 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare7 = UIBezierPath()
+            kare7.move(to: CGPoint(x:x + 6 * (width * 0.07), y: y ))
+            kare7.addLine(to: CGPoint(x: x + 7 * (width * 0.07), y: y))
+            kare7.addLine(to: CGPoint(x: x + 7 * (width * 0.07), y: y + width * 0.07))
+            kare7.addLine(to: CGPoint(x: x + 6 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare8 = UIBezierPath()
+            kare8.move(to: CGPoint(x:x + 7 * (width * 0.07), y: y ))
+            kare8.addLine(to: CGPoint(x: x + 8 * (width * 0.07), y: y))
+            kare8.addLine(to: CGPoint(x: x + 8 * (width * 0.07), y: y + width * 0.07))
+            kare8.addLine(to: CGPoint(x: x + 7 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare9 = UIBezierPath()
+            kare9.move(to: CGPoint(x:x + 8 * (width * 0.07), y: y ))
+            kare9.addLine(to: CGPoint(x: x + 9 * (width * 0.07), y: y))
+            kare9.addLine(to: CGPoint(x: x + 9 * (width * 0.07), y: y + width * 0.07))
+            kare9.addLine(to: CGPoint(x: x + 8 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare10 = UIBezierPath()
+            kare10.move(to: CGPoint(x:x + 9 * (width * 0.07), y: y ))
+            kare10.addLine(to: CGPoint(x: x + 10 * (width * 0.07), y: y))
+            kare10.addLine(to: CGPoint(x: x + 10 * (width * 0.07), y: y + width * 0.07))
+            kare10.addLine(to: CGPoint(x: x + 9 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare11 = UIBezierPath()
+            kare11.move(to: CGPoint(x:x + 10 * (width * 0.07), y: y ))
+            kare11.addLine(to: CGPoint(x: x + 11 * (width * 0.07), y: y))
+            kare11.addLine(to: CGPoint(x: x + 11 * (width * 0.07), y: y + width * 0.07))
+            kare11.addLine(to: CGPoint(x: x + 10 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare12 = UIBezierPath()
+            kare12.move(to: CGPoint(x:x + 11 * (width * 0.07), y: y ))
+            kare12.addLine(to: CGPoint(x: x + 12 * (width * 0.07), y: y))
+            kare12.addLine(to: CGPoint(x: x + 12 * (width * 0.07), y: y + width * 0.07))
+            kare12.addLine(to: CGPoint(x: x + 11 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare13 = UIBezierPath()
+            kare13.move(to: CGPoint(x:x + 12 * (width * 0.07), y: y ))
+            kare13.addLine(to: CGPoint(x: x + 13 * (width * 0.07), y: y))
+            kare13.addLine(to: CGPoint(x: x + 13 * (width * 0.07), y: y + width * 0.07))
+            kare13.addLine(to: CGPoint(x: x + 12 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare14 = UIBezierPath()
+            kare14.move(to: CGPoint(x:x + 13 * (width * 0.07), y: y ))
+            kare14.addLine(to: CGPoint(x: x + 14 * (width * 0.07), y: y))
+            kare14.addLine(to: CGPoint(x: x + 14 * (width * 0.07), y: y + width * 0.07))
+            kare14.addLine(to: CGPoint(x: x + 13 * (width * 0.07), y: y + width * 0.07))
+            
+            myColor.setStroke()
+            kare1.stroke()
+            kare2.stroke()
+            kare3.stroke()
+            kare4.stroke()
+            kare5.stroke()
+            kare6.stroke()
+            kare7.stroke()
+            kare8.stroke()
+            kare9.stroke()
+            kare10.stroke()
+            kare11.stroke()
+            kare12.stroke()
+            kare13.stroke()
+            kare14.stroke()
+        }
+    
+}
+    static func square15(isVertical:Bool,x:CGFloat,y:CGFloat) {
+        let width = SingletonView.shared.width
+        
+        
+        let myColor = UIColor(red: 88/255, green: 159/255, blue: 1.0, alpha: 1)
+        
+        if isVertical {
+            let kare1 = UIBezierPath()
+            kare1.move(to: CGPoint(x: x, y: y))
+            kare1.addLine(to: CGPoint(x: x + width * 0.07 , y: y))
+            kare1.addLine(to: CGPoint(x: x + width * 0.07  , y: y + width * 0.07))
+            kare1.addLine(to: CGPoint(x: x , y: y + width * 0.07))
+            kare1.close()
+            
+            let kare2 = UIBezierPath()
+            kare2.move(to: CGPoint(x:x   , y: y + width * 0.07))
+            kare2.addLine(to: CGPoint(x: x + width * 0.07 , y: y + width * 0.07))
+            kare2.addLine(to: CGPoint(x: x + width * 0.07, y: y + 2 * (width * 0.07)))
+            kare2.addLine(to: CGPoint(x: x, y: y + 2 * (width * 0.07)))
+            kare2.close()
+            
+            let kare3 = UIBezierPath()
+            kare3.move(to: CGPoint(x:x   , y: y + 2 * (width * 0.07)))
+            kare3.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 2 * (width * 0.07)))
+            kare3.addLine(to: CGPoint(x: x + width * 0.07, y: y + 3 * (width * 0.07)))
+            kare3.addLine(to: CGPoint(x: x, y: y + 3 * (width * 0.07)))
+            kare3.close()
+            
+            let kare4 = UIBezierPath()
+            kare4.move(to: CGPoint(x:x   , y: y + 3 * (width * 0.07)))
+            kare4.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 3 * (width * 0.07)))
+            kare4.addLine(to: CGPoint(x: x + width * 0.07, y: y + 4 * (width * 0.07)))
+            kare4.addLine(to: CGPoint(x: x, y: y + 4 * (width * 0.07)))
+            kare4.close()
+            
+            let kare5 = UIBezierPath()
+            kare5.move(to: CGPoint(x:x   , y: y + 4 * (width * 0.07)))
+            kare5.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 4 * (width * 0.07)))
+            kare5.addLine(to: CGPoint(x: x + width * 0.07, y: y + 5 * (width * 0.07)))
+            kare5.addLine(to: CGPoint(x: x, y: y + 5 * (width * 0.07)))
+            kare5.close()
+            
+            let kare6 = UIBezierPath()
+            kare6.move(to: CGPoint(x:x   , y: y + 5 * (width * 0.07)))
+            kare6.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 5 * (width * 0.07)))
+            kare6.addLine(to: CGPoint(x: x + width * 0.07, y: y + 6 * (width * 0.07)))
+            kare6.addLine(to: CGPoint(x: x, y: y + 6 * (width * 0.07)))
+            kare6.close()
+            
+            let kare7 = UIBezierPath()
+            kare7.move(to: CGPoint(x:x   , y: y + 6 * (width * 0.07)))
+            kare7.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 6 * (width * 0.07)))
+            kare7.addLine(to: CGPoint(x: x + width * 0.07, y: y + 7 * (width * 0.07)))
+            kare7.addLine(to: CGPoint(x: x, y: y + 7 * (width * 0.07)))
+            kare7.close()
+            
+            let kare8 = UIBezierPath()
+            kare8.move(to: CGPoint(x:x   , y: y + 7 * (width * 0.07)))
+            kare8.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 7 * (width * 0.07)))
+            kare8.addLine(to: CGPoint(x: x + width * 0.07, y: y + 8 * (width * 0.07)))
+            kare8.addLine(to: CGPoint(x: x, y: y + 8 * (width * 0.07)))
+            kare8.close()
+            
+            let kare9 = UIBezierPath()
+            kare9.move(to: CGPoint(x:x   , y: y + 8 * (width * 0.07)))
+            kare9.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 8 * (width * 0.07)))
+            kare9.addLine(to: CGPoint(x: x + width * 0.07, y: y + 9 * (width * 0.07)))
+            kare9.addLine(to: CGPoint(x: x, y: y + 9 * (width * 0.07)))
+            kare9.close()
+            
+            let kare10 = UIBezierPath()
+            kare10.move(to: CGPoint(x:x   , y: y + 9 * (width * 0.07)))
+            kare10.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 9 * (width * 0.07)))
+            kare10.addLine(to: CGPoint(x: x + width * 0.07, y: y + 10 * (width * 0.07)))
+            kare10.addLine(to: CGPoint(x: x, y: y + 10 * (width * 0.07)))
+            kare10.close()
+            
+            let kare11 = UIBezierPath()
+            kare11.move(to: CGPoint(x:x   , y: y + 10 * (width * 0.07)))
+            kare11.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 10 * (width * 0.07)))
+            kare11.addLine(to: CGPoint(x: x + width * 0.07, y: y + 11 * (width * 0.07)))
+            kare11.addLine(to: CGPoint(x: x, y: y + 11 * (width * 0.07)))
+            kare11.close()
+            
+            let kare12 = UIBezierPath()
+            kare12.move(to: CGPoint(x:x   , y: y + 11 * (width * 0.07)))
+            kare12.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 11 * (width * 0.07)))
+            kare12.addLine(to: CGPoint(x: x + width * 0.07, y: y + 12 * (width * 0.07)))
+            kare12.addLine(to: CGPoint(x: x, y: y + 12 * (width * 0.07)))
+            kare12.close()
+            
+            let kare13 = UIBezierPath()
+            kare13.move(to: CGPoint(x:x   , y: y + 12 * (width * 0.07)))
+            kare13.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 12 * (width * 0.07)))
+            kare13.addLine(to: CGPoint(x: x + width * 0.07, y: y + 13 * (width * 0.07)))
+            kare13.addLine(to: CGPoint(x: x, y: y + 13 * (width * 0.07)))
+            kare13.close()
+            
+            let kare14 = UIBezierPath()
+            kare14.move(to: CGPoint(x:x   , y: y + 13 * (width * 0.07)))
+            kare14.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 13 * (width * 0.07)))
+            kare14.addLine(to: CGPoint(x: x + width * 0.07, y: y + 14 * (width * 0.07)))
+            kare14.addLine(to: CGPoint(x: x, y: y + 14 * (width * 0.07)))
+            kare14.close()
+            
+            let kare15 = UIBezierPath()
+            kare15.move(to: CGPoint(x:x   , y: y + 14 * (width * 0.07)))
+            kare15.addLine(to: CGPoint(x: x + width * 0.07 , y: y + 14 * (width * 0.07)))
+            kare15.addLine(to: CGPoint(x: x + width * 0.07, y: y + 15 * (width * 0.07)))
+            kare15.addLine(to: CGPoint(x: x, y: y + 15 * (width * 0.07)))
+            kare15.close()
+            
+            myColor.setStroke()
+            kare1.stroke()
+            kare2.stroke()
+            kare3.stroke()
+            kare4.stroke()
+            kare5.stroke()
+            kare6.stroke()
+            kare7.stroke()
+            kare8.stroke()
+            kare9.stroke()
+            kare10.stroke()
+            kare11.stroke()
+            kare12.stroke()
+            kare13.stroke()
+            kare14.stroke()
+            kare15.stroke()
+            
+            
+        }else {
+            let kare1 = UIBezierPath()
+            kare1.move(to: CGPoint(x: x, y: y))
+            kare1.addLine(to: CGPoint(x: x + width * 0.07 , y: y))
+            kare1.addLine(to: CGPoint(x: x + width * 0.07  , y: y + width * 0.07))
+            kare1.addLine(to: CGPoint(x: x , y: y + width * 0.07))
+            kare1.close()
+            
+            let kare2 = UIBezierPath()
+            kare2.move(to: CGPoint(x:x + width * 0.07, y: y ))
+            kare2.addLine(to: CGPoint(x: x + 2 * (width * 0.07), y: y))
+            kare2.addLine(to: CGPoint(x: x + 2 * (width * 0.07), y: y + width * 0.07))
+            kare2.addLine(to: CGPoint(x: x + width * 0.07, y: y + width * 0.07))
+            
+            let kare3 = UIBezierPath()
+            kare3.move(to: CGPoint(x:x + 2 * (width * 0.07), y: y ))
+            kare3.addLine(to: CGPoint(x: x + 3 * (width * 0.07), y: y))
+            kare3.addLine(to: CGPoint(x: x + 3 * (width * 0.07), y: y + width * 0.07))
+            kare3.addLine(to: CGPoint(x: x + 2 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare4 = UIBezierPath()
+            kare4.move(to: CGPoint(x:x + 3 * (width * 0.07), y: y ))
+            kare4.addLine(to: CGPoint(x: x + 4 * (width * 0.07), y: y))
+            kare4.addLine(to: CGPoint(x: x + 4 * (width * 0.07), y: y + width * 0.07))
+            kare4.addLine(to: CGPoint(x: x + 3 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare5 = UIBezierPath()
+            kare5.move(to: CGPoint(x:x + 4 * (width * 0.07), y: y ))
+            kare5.addLine(to: CGPoint(x: x + 5 * (width * 0.07), y: y))
+            kare5.addLine(to: CGPoint(x: x + 5 * (width * 0.07), y: y + width * 0.07))
+            kare5.addLine(to: CGPoint(x: x + 4 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare6 = UIBezierPath()
+            kare6.move(to: CGPoint(x:x + 5 * (width * 0.07), y: y ))
+            kare6.addLine(to: CGPoint(x: x + 6 * (width * 0.07), y: y))
+            kare6.addLine(to: CGPoint(x: x + 6 * (width * 0.07), y: y + width * 0.07))
+            kare6.addLine(to: CGPoint(x: x + 5 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare7 = UIBezierPath()
+            kare7.move(to: CGPoint(x:x + 6 * (width * 0.07), y: y ))
+            kare7.addLine(to: CGPoint(x: x + 7 * (width * 0.07), y: y))
+            kare7.addLine(to: CGPoint(x: x + 7 * (width * 0.07), y: y + width * 0.07))
+            kare7.addLine(to: CGPoint(x: x + 6 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare8 = UIBezierPath()
+            kare8.move(to: CGPoint(x:x + 7 * (width * 0.07), y: y ))
+            kare8.addLine(to: CGPoint(x: x + 8 * (width * 0.07), y: y))
+            kare8.addLine(to: CGPoint(x: x + 8 * (width * 0.07), y: y + width * 0.07))
+            kare8.addLine(to: CGPoint(x: x + 7 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare9 = UIBezierPath()
+            kare9.move(to: CGPoint(x:x + 8 * (width * 0.07), y: y ))
+            kare9.addLine(to: CGPoint(x: x + 9 * (width * 0.07), y: y))
+            kare9.addLine(to: CGPoint(x: x + 9 * (width * 0.07), y: y + width * 0.07))
+            kare9.addLine(to: CGPoint(x: x + 8 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare10 = UIBezierPath()
+            kare10.move(to: CGPoint(x:x + 9 * (width * 0.07), y: y ))
+            kare10.addLine(to: CGPoint(x: x + 10 * (width * 0.07), y: y))
+            kare10.addLine(to: CGPoint(x: x + 10 * (width * 0.07), y: y + width * 0.07))
+            kare10.addLine(to: CGPoint(x: x + 9 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare11 = UIBezierPath()
+            kare11.move(to: CGPoint(x:x + 10 * (width * 0.07), y: y ))
+            kare11.addLine(to: CGPoint(x: x + 11 * (width * 0.07), y: y))
+            kare11.addLine(to: CGPoint(x: x + 11 * (width * 0.07), y: y + width * 0.07))
+            kare11.addLine(to: CGPoint(x: x + 10 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare12 = UIBezierPath()
+            kare12.move(to: CGPoint(x:x + 11 * (width * 0.07), y: y ))
+            kare12.addLine(to: CGPoint(x: x + 12 * (width * 0.07), y: y))
+            kare12.addLine(to: CGPoint(x: x + 12 * (width * 0.07), y: y + width * 0.07))
+            kare12.addLine(to: CGPoint(x: x + 11 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare13 = UIBezierPath()
+            kare13.move(to: CGPoint(x:x + 12 * (width * 0.07), y: y ))
+            kare13.addLine(to: CGPoint(x: x + 13 * (width * 0.07), y: y))
+            kare13.addLine(to: CGPoint(x: x + 13 * (width * 0.07), y: y + width * 0.07))
+            kare13.addLine(to: CGPoint(x: x + 12 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare14 = UIBezierPath()
+            kare14.move(to: CGPoint(x:x + 13 * (width * 0.07), y: y ))
+            kare14.addLine(to: CGPoint(x: x + 14 * (width * 0.07), y: y))
+            kare14.addLine(to: CGPoint(x: x + 14 * (width * 0.07), y: y + width * 0.07))
+            kare14.addLine(to: CGPoint(x: x + 13 * (width * 0.07), y: y + width * 0.07))
+            
+            let kare15 = UIBezierPath()
+            kare15.move(to: CGPoint(x:x + 14 * (width * 0.07), y: y ))
+            kare15.addLine(to: CGPoint(x: x + 15 * (width * 0.07), y: y))
+            kare15.addLine(to: CGPoint(x: x + 15 * (width * 0.07), y: y + width * 0.07))
+            kare15.addLine(to: CGPoint(x: x + 14 * (width * 0.07), y: y + width * 0.07))
+            
+            myColor.setStroke()
+            kare1.stroke()
+            kare2.stroke()
+            kare3.stroke()
+            kare4.stroke()
+            kare5.stroke()
+            kare6.stroke()
+            kare7.stroke()
+            kare8.stroke()
+            kare9.stroke()
+            kare10.stroke()
+            kare11.stroke()
+            kare12.stroke()
+            kare13.stroke()
+            kare14.stroke()
+            kare15.stroke()
+
+        }
+    
+}
+    
     static func Line(is4count : Int,lineColor: UIColor) {
         let width = SingletonView.shared.width
         let cizgi = UIBezierPath()
@@ -1053,6 +2113,16 @@ class BezierCrossWordView: UIView {
                 BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[0], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[0][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[0][1])
             }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[0][1].count == 10 {
                 BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[0], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[0][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[0][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[0][1].count == 11 {
+                BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[0], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[0][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[0][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[0][1].count == 12 {
+                BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[0], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[0][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[0][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[0][1].count == 13 {
+                BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[0], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[0][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[0][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[0][1].count == 14 {
+                BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[0], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[0][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[0][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[0][1].count == 15 {
+                BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[0], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[0][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[0][1])
             }
             
             if bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[1][1].count == 3 {
@@ -1071,7 +2141,18 @@ class BezierCrossWordView: UIView {
                 BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[1], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[1][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[1][1])
             }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[1][1].count == 10 {
                 BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[1], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[1][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[1][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[1][1].count == 11 {
+                BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[1], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[1][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[1][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[1][1].count == 12 {
+                BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[1], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[1][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[1][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[1][1].count == 13 {
+                BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[1], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[1][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[1][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[1][1].count == 14 {
+                BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[1], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[1][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[1][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[1][1].count == 15 {
+                BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[1], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[1][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[1][1])
             }
+            
             if bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[2][1].count == 3 {
                 BezierCrossWordView.square3(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[2], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][1])
             }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[2][1].count == 4 {
@@ -1080,7 +2161,7 @@ class BezierCrossWordView: UIView {
                 BezierCrossWordView.square5(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[2], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][1])
             }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[2][1].count == 6 {
                 BezierCrossWordView.square6(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[2], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][1])
-            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[0][1].count == 7 {
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[2][1].count == 7 {
                 BezierCrossWordView.square7(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[2], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][1])
             }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[2][1].count == 8 {
                 BezierCrossWordView.square8(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[2], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][1])
@@ -1088,6 +2169,16 @@ class BezierCrossWordView: UIView {
                 BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[2], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][1])
             }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[2][1].count == 10 {
                 BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[2], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[2][1].count == 11 {
+                BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[2], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[2][1].count == 12 {
+                BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[2], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[2][1].count == 13 {
+                BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[2], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[2][1].count == 14 {
+                BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[2], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[2][1].count == 15 {
+                BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[2], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[2][1])
             }
             
             if bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[3][1].count == 3 {
@@ -1106,7 +2197,19 @@ class BezierCrossWordView: UIView {
                 BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[3], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[3][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[3][1])
             }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[3][1].count == 10 {
                 BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[3], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[3][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[3][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[3][1].count == 11 {
+                BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[3], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[3][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[3][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[3][1].count == 12 {
+                BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[3], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[3][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[3][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[3][1].count == 13 {
+                BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[3], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[3][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[3][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[3][1].count == 14 {
+                BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[3], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[3][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[3][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[3][1].count == 15 {
+                BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[3], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[3][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[3][1])
             }
+            
+            
             if bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[4][1].count == 3 {
                 BezierCrossWordView.square3(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[4], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[4][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[4][1])
             }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[4][1].count == 4 {
@@ -1123,6 +2226,16 @@ class BezierCrossWordView: UIView {
                 BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[4], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[4][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[4][1])
             }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[4][1].count == 10 {
                 BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[4], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[4][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[4][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[4][1].count == 11 {
+                BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[4], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[4][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[4][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[4][1].count == 12 {
+                BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[4], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[4][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[4][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[4][1].count == 13 {
+                BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[4], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[4][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[4][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[4][1].count == 14 {
+                BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[4], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[4][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[4][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[4][1].count == 15 {
+                BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[4], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[4][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[4][1])
             }
             
             if bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[5][1].count == 3 {
@@ -1141,7 +2254,19 @@ class BezierCrossWordView: UIView {
                 BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[5], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[5][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[5][1])
             }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[5][1].count == 10 {
                 BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[5], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[5][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[5][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[5][1].count == 11 {
+                BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[5], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[5][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[5][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[5][1].count == 12 {
+                BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[5], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[5][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[5][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[5][1].count == 13 {
+                BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[5], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[5][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[5][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[5][1].count == 14 {
+                BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[5], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[5][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[5][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[5][1].count == 15 {
+                BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[5], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[5][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[5][1])
             }
+            
+            
             if bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[6][1].count == 3 {
                 BezierCrossWordView.square3(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[6], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[6][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[6][1])
             }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[6][1].count == 4 {
@@ -1158,6 +2283,16 @@ class BezierCrossWordView: UIView {
                 BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[6], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[6][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[6][1])
             }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[6][1].count == 10 {
                 BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[6], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[6][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[6][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[6][1].count == 11 {
+                BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[6], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[6][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[6][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[6][1].count == 12 {
+                BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[6], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[6][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[6][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[6][1].count == 13 {
+                BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[6], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[6][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[6][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[6][1].count == 14 {
+                BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[6], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[6][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[6][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[6][1].count == 15 {
+                BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[6], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[6][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[6][1])
             }
             
             if bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[7][1].count == 3 {
@@ -1176,7 +2311,18 @@ class BezierCrossWordView: UIView {
                 BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[7], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[7][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[7][1])
             }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[7][1].count == 10 {
                 BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[7], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[7][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[7][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[7][1].count == 11 {
+                BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[7], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[7][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[7][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[7][1].count == 12 {
+                BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[7], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[7][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[7][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[7][1].count == 13 {
+                BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[7], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[7][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[7][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[7][1].count == 14 {
+                BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[7], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[7][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[7][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[7][1].count == 15 {
+                BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[7], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[7][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[7][1])
             }
+            
             if bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[8][1].count == 3 {
                 BezierCrossWordView.square3(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[8], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[8][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[8][1])
             }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[8][1].count == 4 {
@@ -1193,6 +2339,16 @@ class BezierCrossWordView: UIView {
                 BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[8], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[8][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[8][1])
             }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[8][1].count == 10 {
                 BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[8], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[8][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[8][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[8][1].count == 11 {
+                BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[8], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[8][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[8][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[8][1].count == 12 {
+                BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[8], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[8][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[8][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[8][1].count == 13 {
+                BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[8], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[8][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[8][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[8][1].count == 14 {
+                BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[8], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[8][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[8][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[8][1].count == 15 {
+                BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[8], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[8][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[8][1])
             }
             
             if bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[9][1].count == 3 {
@@ -1211,7 +2367,19 @@ class BezierCrossWordView: UIView {
                 BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[9], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[9][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[9][1])
             }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[9][1].count == 10 {
                 BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[9], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[9][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[9][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[9][1].count == 11 {
+                BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[9], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[9][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[9][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[9][1].count == 12 {
+                BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[9], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[9][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[9][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[9][1].count == 13 {
+                BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[9], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[9][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[9][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[9][1].count == 14 {
+                BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[9], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[9][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[9][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[9][1].count == 15 {
+                BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[9], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[9][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[9][1])
             }
+            
+            
             if bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[10][1].count == 3 {
                 BezierCrossWordView.square3(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[10], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[10][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[10][1])
             }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[10][1].count == 4 {
@@ -1228,6 +2396,16 @@ class BezierCrossWordView: UIView {
                 BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[10], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[10][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[10][1])
             }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[10][1].count == 10 {
                 BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[10], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[10][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[10][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[10][1].count == 11 {
+                BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[10], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[10][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[10][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[10][1].count == 12 {
+                BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[10], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[10][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[10][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[10][1].count == 13 {
+                BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[10], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[10][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[10][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[10][1].count == 14 {
+                BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[10], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[10][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[10][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[10][1].count == 15 {
+                BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[10], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[10][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[10][1])
             }
             
             if bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[11][1].count == 3 {
@@ -1246,7 +2424,18 @@ class BezierCrossWordView: UIView {
                 BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[11], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[11][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[11][1])
             }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[11][1].count == 10 {
                 BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[11], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[11][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[11][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[11][1].count == 11 {
+                BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[11], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[11][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[11][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[11][1].count == 12 {
+                BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[11], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[11][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[11][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[11][1].count == 13 {
+                BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[11], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[11][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[11][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[11][1].count == 14 {
+                BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[11], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[11][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[11][1])
+            }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[11][1].count == 15 {
+                BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[11], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[11][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[11][1])
             }
+            
             if bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray.count == 13 {
                 if bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 3 {
                     BezierCrossWordView.square3(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
@@ -1264,6 +2453,16 @@ class BezierCrossWordView: UIView {
                     BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
                 }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 10 {
                     BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 11 {
+                    BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 12 {
+                    BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 13 {
+                    BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 14 {
+                    BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 15 {
+                    BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
                 }
             }
             if bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray.count == 14 {
@@ -1283,6 +2482,16 @@ class BezierCrossWordView: UIView {
                     BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
                 }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 10 {
                     BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 11 {
+                    BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 12 {
+                    BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 13 {
+                    BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 14 {
+                    BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 15 {
+                    BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
                 }
                 
                 if bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[13][1].count == 3 {
@@ -1301,6 +2510,16 @@ class BezierCrossWordView: UIView {
                     BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[13], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][1])
                 }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[13][1].count == 10 {
                     BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[13], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[13][1].count == 11 {
+                    BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[13], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[13][1].count == 12 {
+                    BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[13], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[13][1].count == 13 {
+                    BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[13], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[13][1].count == 14 {
+                    BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[13], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[13][1].count == 15 {
+                    BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[13], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][1])
                 }
             }
             if bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray.count == 15 {
@@ -1320,6 +2539,16 @@ class BezierCrossWordView: UIView {
                     BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
                 }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 10 {
                     BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 11 {
+                    BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 12 {
+                    BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 13 {
+                    BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 14 {
+                    BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 15 {
+                    BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
                 }
                 
                 if bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[13][1].count == 3 {
@@ -1338,7 +2567,18 @@ class BezierCrossWordView: UIView {
                     BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[13], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][1])
                 }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[13][1].count == 10 {
                     BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[13], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[13][1].count == 11 {
+                    BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[13], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[13][1].count == 12 {
+                    BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[13], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[13][1].count == 13 {
+                    BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[13], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[13][1].count == 14 {
+                    BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[13], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[13][1].count == 15 {
+                    BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[13], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][1])
                 }
+                
                 if bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[14][1].count == 3 {
                     BezierCrossWordView.square3(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[14], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][1])
                 }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[14][1].count == 4 {
@@ -1355,6 +2595,16 @@ class BezierCrossWordView: UIView {
                     BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[14], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][1])
                 }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[14][1].count == 10 {
                     BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[14], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[14][1].count == 11 {
+                    BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[14], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[14][1].count == 12 {
+                    BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[14], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[14][1].count == 13 {
+                    BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[14], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[14][1].count == 14 {
+                    BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[14], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[14][1].count == 15 {
+                    BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[14], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][1])
                 }
              
                 
@@ -1376,6 +2626,16 @@ class BezierCrossWordView: UIView {
                     BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
                 }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 10 {
                     BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 11 {
+                    BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 12 {
+                    BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 13 {
+                    BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 14 {
+                    BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[12][1].count == 15 {
+                    BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[12], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[12][1])
                 }
                 
                 if bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[13][1].count == 3 {
@@ -1394,7 +2654,18 @@ class BezierCrossWordView: UIView {
                     BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[13], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][1])
                 }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[13][1].count == 10 {
                     BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[13], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[13][1].count == 11 {
+                    BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[13], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[13][1].count == 12 {
+                    BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[13], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[13][1].count == 13 {
+                    BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[13], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[13][1].count == 14 {
+                    BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[13], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[13][1].count == 15 {
+                    BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[13], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[13][1])
                 }
+                
                 if bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[14][1].count == 3 {
                     BezierCrossWordView.square3(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[14], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][1])
                 }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[14][1].count == 4 {
@@ -1411,7 +2682,18 @@ class BezierCrossWordView: UIView {
                     BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[14], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][1])
                 }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[14][1].count == 10 {
                     BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[14], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[14][1].count == 11 {
+                    BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[14], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[14][1].count == 12 {
+                    BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[14], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[14][1].count == 13 {
+                    BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[14], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[14][1].count == 14 {
+                    BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[14], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[14][1].count == 15 {
+                    BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[14], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[14][1])
                 }
+                
                 if bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[15][1].count == 3 {
                     BezierCrossWordView.square3(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[15], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[15][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[15][1])
                 }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[15][1].count == 4 {
@@ -1428,6 +2710,16 @@ class BezierCrossWordView: UIView {
                     BezierCrossWordView.square9(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[15], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[15][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[15][1])
                 }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[15][1].count == 10 {
                     BezierCrossWordView.square10(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[15], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[15][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[15][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[15][1].count == 11 {
+                    BezierCrossWordView.square11(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[15], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[15][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[15][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[15][1].count == 12 {
+                    BezierCrossWordView.square12(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[15], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[15][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[15][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[15][1].count == 13 {
+                    BezierCrossWordView.square13(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[15], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[15][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[15][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[15][1].count == 14 {
+                    BezierCrossWordView.square14(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[15], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[15][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[15][1])
+                }else if  bulmacalar[BezierCrossWordView.whichCrossword].TurkishWordsArray[15][1].count == 15 {
+                    BezierCrossWordView.square15(isVertical: bulmacalar[BezierCrossWordView.whichCrossword].isVerticalArrays[15], x: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[15][0], y: bulmacalar[BezierCrossWordView.whichCrossword].locationXY[15][1])
                 }
             }
             

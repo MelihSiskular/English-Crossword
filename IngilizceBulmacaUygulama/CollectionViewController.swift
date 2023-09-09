@@ -35,6 +35,20 @@ class CollectionViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         navigationItem.title = "Bulmacalar"
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+
+        
+        
+        getData()
+    }
+    
+    private func getData() {
+        for i in 0...bulmacalar.count - 1 {
+            if UserDefaults.standard.value(forKey: "\(i)") != nil {
+                bulmacalar[i].score = UserDefaults.standard.value(forKey: "\(i)") as! Int
+            }
+        }
+        collectionView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
